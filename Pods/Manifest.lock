@@ -1,0 +1,37 @@
+PODS:
+  - lottie-ios (3.1.9)
+  - PhoneNumberKit (3.3.1):
+    - PhoneNumberKit/PhoneNumberKitCore (= 3.3.1)
+    - PhoneNumberKit/UIKit (= 3.3.1)
+  - PhoneNumberKit/PhoneNumberKitCore (3.3.1)
+  - PhoneNumberKit/UIKit (3.3.1):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - R.swift (5.3.0):
+    - R.swift.Library (~> 5.3.0)
+  - R.swift.Library (5.3.0)
+  - SwiftDate (6.3.1)
+
+DEPENDENCIES:
+  - lottie-ios
+  - PhoneNumberKit
+  - R.swift
+  - SwiftDate
+
+SPEC REPOS:
+  trunk:
+    - lottie-ios
+    - PhoneNumberKit
+    - R.swift
+    - R.swift.Library
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
+  PhoneNumberKit: ff153d5e299f6da566cb73c6aa71e354933b2932
+  R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
+  R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
+
+PODFILE CHECKSUM: a9162d08f4fdd239bcf63b8fa633aa4ef5bc2991
+
+COCOAPODS: 1.10.0

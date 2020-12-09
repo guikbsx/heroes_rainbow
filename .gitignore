@@ -1,0 +1,5 @@
+xcuserdata
+Pods
+*.generated.swift
+/Config.plist
+.DS_Store
