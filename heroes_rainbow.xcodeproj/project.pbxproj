@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		12841F08E1B45B20E5ADFA75 /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */; };
 		3539B9BEAD3C6098E78F7065 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046744DA1580A6336CEE39A8 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework */; };
+		C423164D2581408B0034C171 /* UIDevice+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423164A2581408B0034C171 /* UIDevice+extensions.swift */; };
+		C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423165125814D3A0034C171 /* ItemNamingViewController.swift */; };
+		C423165725814D800034C171 /* ItemNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423165625814D800034C171 /* ItemNaming.swift */; };
 		C440A6292580EAF200873D14 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A6282580EAF200873D14 /* UIColor+Extensions.swift */; };
-		C440A6302580EB1A00873D14 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A62F2580EB1A00873D14 /* RadioButton.swift */; };
-		C440A6352580EB5A00873D14 /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A6342580EB5A00873D14 /* DayBox.swift */; };
 		C440A63B2580ECF500873D14 /* PrimaryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C440A63A2580ECF500873D14 /* PrimaryBtn.swift */; };
 		C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158D2580E33100F151D1 /* AppDelegate.swift */; };
 		C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158F2580E33100F151D1 /* SceneDelegate.swift */; };
@@ -60,7 +61,9 @@
 		C46D16C42580E55500F151D1 /* Gilroy-ExtraboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C46D16912580E55500F151D1 /* Gilroy-ExtraboldItalic.otf */; };
 		C46D16C52580E55500F151D1 /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C46D16922580E55500F151D1 /* Gilroy-Thin.otf */; };
 		C46D16CB2580E6AE00F151D1 /* TheVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D16CA2580E6AE00F151D1 /* TheVoice.swift */; };
-		C48229262580F9E90060C5CF /* InputDrop.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482291F2580F9E90060C5CF /* InputDrop.swift */; };
+		C46FDD9D2588ADAC00237728 /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FDD9C2588ADAC00237728 /* DatePickerVC.swift */; };
+		C46FDDB52588E95300237728 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46FDDB42588E95300237728 /* MonthView.swift */; };
+		C48229262580F9E90060C5CF /* InputPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482291F2580F9E90060C5CF /* InputPicker.swift */; };
 		C48229272580F9E90060C5CF /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229202580F9E90060C5CF /* InputText.swift */; };
 		C48229282580F9E90060C5CF /* InputPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229212580F9E90060C5CF /* InputPhone.swift */; };
 		C482292A2580F9E90060C5CF /* InputBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229232580F9E90060C5CF /* InputBirthday.swift */; };
@@ -68,9 +71,36 @@
 		C4822935258105050060C5CF /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822933258105050060C5CF /* Title.swift */; };
 		C482293B2581055C0060C5CF /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C482293A2581055C0060C5CF /* TopBar.swift */; };
 		C4822941258106690060C5CF /* CodeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822940258106690060C5CF /* CodeNumber.swift */; };
+		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
+		C4822A0C2581149B0060C5CF /* DSLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F32581149B0060C5CF /* DSLaunchViewController.swift */; };
+		C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F42581149B0060C5CF /* DSViewController.swift */; };
+		C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F62581149B0060C5CF /* RadioBtnViewController.swift */; };
+		C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F72581149B0060C5CF /* AutocompleteViewController.swift */; };
+		C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F82581149B0060C5CF /* ColorsViewController.swift */; };
+		C4822A112581149B0060C5CF /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F92581149B0060C5CF /* ButtonViewController.swift */; };
+		C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FA2581149B0060C5CF /* NavBarViewController.swift */; };
+		C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FB2581149B0060C5CF /* SettingsViewController.swift */; };
+		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
+		C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */; };
+		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
+		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
+		C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A012581149B0060C5CF /* DayBoxViewController.swift */; };
+		C4822A192581149B0060C5CF /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A022581149B0060C5CF /* CellViewController.swift */; };
+		C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A0A2581149B0060C5CF /* DividerViewController.swift */; };
+		C4822A34258115F40060C5CF /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B63612580EF1D00CD2D42 /* Divider.swift */; };
+		C4998E03258777E900ACB2AC /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = C4998DEE2587776800ACB2AC /* check.json */; };
+		C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4998E692587815F00ACB2AC /* CalendarViewController.swift */; };
+		C4998EE22587A45B00ACB2AC /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4998EE12587A45B00ACB2AC /* DayPicker.swift */; };
+		C4998EEA2587A4E300ACB2AC /* MonthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4998EE92587A4E300ACB2AC /* MonthDatePicker.swift */; };
 		C49B635A2580EDE500CD2D42 /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49B63592580EDE500CD2D42 /* UILabel+Extensions.swift */; };
+		C4ADC9822581324E00AC01E9 /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADC97F2581324D00AC01E9 /* DayBox.swift */; };
+		C4ADC9832581324E00AC01E9 /* ItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADC9802581324E00AC01E9 /* ItemAction.swift */; };
+		C4ADC9842581324E00AC01E9 /* ItemChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADC9812581324E00AC01E9 /* ItemChoice.swift */; };
+		C4D276BF2581629D0045B06A /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D276BE2581629D0045B06A /* ControlBar.swift */; };
+		C4D276C425816BE40045B06A /* thumbup.json in Resources */ = {isa = PBXBuildFile; fileRef = C4D276C325816BE40045B06A /* thumbup.json */; };
+		C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */; };
+		C4F283F72590D5120025641E /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F283F62590D5120025641E /* TimePicker.swift */; };
 		C4F2AC942580E7E400933407 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4F2AC932580E7E400933407 /* Images.xcassets */; };
-		C4F2ACA52580E8B000933407 /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2ACA12580E8B000933407 /* ItemNav.swift */; };
 		C4F2ACAD2580E90700933407 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F2ACAC2580E90700933407 /* UIView+Extensions.swift */; };
 		E2DDDF156D645BBE5B3F057F /* Pods_heroes_rainbowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05564DB120C98EEAF52F1CEC /* Pods_heroes_rainbowTests.framework */; };
 /* End PBXBuildFile section */
@@ -113,9 +143,10 @@
 		55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714D7EC566941EB213C98FE5 /* Pods-heroes_rainbowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87E74D6AB00EE26F9171CBE7 /* Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C423164A2581408B0034C171 /* UIDevice+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+extensions.swift"; sourceTree = "<group>"; };
+		C423165125814D3A0034C171 /* ItemNamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNamingViewController.swift; sourceTree = "<group>"; };
+		C423165625814D800034C171 /* ItemNaming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNaming.swift; sourceTree = "<group>"; };
 		C440A6282580EAF200873D14 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		C440A62F2580EB1A00873D14 /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
-		C440A6342580EB5A00873D14 /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
 		C440A63A2580ECF500873D14 /* PrimaryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryBtn.swift; sourceTree = "<group>"; };
 		C46D158A2580E33100F151D1 /* heroes_rainbow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroes_rainbow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46D158D2580E33100F151D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -172,7 +203,9 @@
 		C46D16922580E55500F151D1 /* Gilroy-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.otf"; sourceTree = "<group>"; };
 		C46D16932580E55500F151D1 /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
 		C46D16CA2580E6AE00F151D1 /* TheVoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoice.swift; sourceTree = "<group>"; };
-		C482291F2580F9E90060C5CF /* InputDrop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputDrop.swift; sourceTree = "<group>"; };
+		C46FDD9C2588ADAC00237728 /* DatePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		C46FDDB42588E95300237728 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		C482291F2580F9E90060C5CF /* InputPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPicker.swift; sourceTree = "<group>"; };
 		C48229202580F9E90060C5CF /* InputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
 		C48229212580F9E90060C5CF /* InputPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPhone.swift; sourceTree = "<group>"; };
 		C48229232580F9E90060C5CF /* InputBirthday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBirthday.swift; sourceTree = "<group>"; };
@@ -180,10 +213,36 @@
 		C4822933258105050060C5CF /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		C482293A2581055C0060C5CF /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		C4822940258106690060C5CF /* CodeNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeNumber.swift; sourceTree = "<group>"; };
+		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
+		C48229F32581149B0060C5CF /* DSLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSLaunchViewController.swift; sourceTree = "<group>"; };
+		C48229F42581149B0060C5CF /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
+		C48229F62581149B0060C5CF /* RadioBtnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioBtnViewController.swift; sourceTree = "<group>"; };
+		C48229F72581149B0060C5CF /* AutocompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteViewController.swift; sourceTree = "<group>"; };
+		C48229F82581149B0060C5CF /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
+		C48229F92581149B0060C5CF /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
+		C48229FA2581149B0060C5CF /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
+		C48229FB2581149B0060C5CF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
+		C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceViewController.swift; sourceTree = "<group>"; };
+		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
+		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
+		C4822A012581149B0060C5CF /* DayBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBoxViewController.swift; sourceTree = "<group>"; };
+		C4822A022581149B0060C5CF /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
+		C4822A0A2581149B0060C5CF /* DividerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
+		C4998DEE2587776800ACB2AC /* check.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		C4998E692587815F00ACB2AC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C4998EE12587A45B00ACB2AC /* DayPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
+		C4998EE92587A4E300ACB2AC /* MonthDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthDatePicker.swift; sourceTree = "<group>"; };
 		C49B63592580EDE500CD2D42 /* UILabel+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
 		C49B63612580EF1D00CD2D42 /* Divider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		C4ADC97F2581324D00AC01E9 /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
+		C4ADC9802581324E00AC01E9 /* ItemAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAction.swift; sourceTree = "<group>"; };
+		C4ADC9812581324E00AC01E9 /* ItemChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChoice.swift; sourceTree = "<group>"; };
+		C4D276BE2581629D0045B06A /* ControlBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
+		C4D276C325816BE40045B06A /* thumbup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbup.json; sourceTree = "<group>"; };
+		C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		C4F283F62590D5120025641E /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 		C4F2AC932580E7E400933407 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C4F2ACA12580E8B000933407 /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C4F2ACAC2580E90700933407 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		C717944000B6DB6CFFE474B4 /* Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0698EC927A0741C7C39271 /* Pods-heroes_rainbow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -275,6 +334,7 @@
 		C46D158C2580E33100F151D1 /* heroes_rainbow */ = {
 			isa = PBXGroup;
 			children = (
+				C48229F12581149B0060C5CF /* _Storybook */,
 				C46D158D2580E33100F151D1 /* AppDelegate.swift */,
 				C46D158F2580E33100F151D1 /* SceneDelegate.swift */,
 				C46D15912580E33100F151D1 /* ViewController.swift */,
@@ -338,9 +398,11 @@
 			isa = PBXGroup;
 			children = (
 				C482291E2580F9E90060C5CF /* Input */,
+				C4998EDE2587A43800ACB2AC /* Date Picker */,
+				C4F283F52590D4F00025641E /* Time Picker */,
 				C49B63602580EF1D00CD2D42 /* Divider */,
 				C46D16692580E55500F151D1 /* Autocomplete */,
-				C4F2ACA02580E8B000933407 /* Cells */,
+				C4F2ACA02580E8B000933407 /* Item */,
 				C46D16C92580E6AE00F151D1 /* TheVoice */,
 				C48229392581055C0060C5CF /* TopBar */,
 				C4822931258105050060C5CF /* Labels */,
@@ -373,6 +435,7 @@
 		C46D166F2580E55500F151D1 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C423164A2581408B0034C171 /* UIDevice+extensions.swift */,
 				C46D16702580E55500F151D1 /* UIView+Layout.swift */,
 				C4F2ACAC2580E90700933407 /* UIView+Extensions.swift */,
 				C440A6282580EAF200873D14 /* UIColor+Extensions.swift */,
@@ -384,6 +447,8 @@
 		C46D16712580E55500F151D1 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				C4D276C325816BE40045B06A /* thumbup.json */,
+				C4998DEE2587776800ACB2AC /* check.json */,
 				C46D16722580E55500F151D1 /* loading.json */,
 			);
 			path = Lottie;
@@ -447,7 +512,7 @@
 		C482291E2580F9E90060C5CF /* Input */ = {
 			isa = PBXGroup;
 			children = (
-				C482291F2580F9E90060C5CF /* InputDrop.swift */,
+				C482291F2580F9E90060C5CF /* InputPicker.swift */,
 				C48229202580F9E90060C5CF /* InputText.swift */,
 				C48229212580F9E90060C5CF /* InputPhone.swift */,
 				C48229232580F9E90060C5CF /* InputBirthday.swift */,
@@ -480,6 +545,59 @@
 			path = _More;
 			sourceTree = "<group>";
 		};
+		C48229F12581149B0060C5CF /* _Storybook */ = {
+			isa = PBXGroup;
+			children = (
+				C48229F22581149B0060C5CF /* DSViewModel.swift */,
+				C48229F32581149B0060C5CF /* DSLaunchViewController.swift */,
+				C48229F42581149B0060C5CF /* DSViewController.swift */,
+				C48229F52581149B0060C5CF /* ViewController */,
+			);
+			path = _Storybook;
+			sourceTree = "<group>";
+		};
+		C48229F52581149B0060C5CF /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C48229F72581149B0060C5CF /* AutocompleteViewController.swift */,
+				C48229F92581149B0060C5CF /* ButtonViewController.swift */,
+				C4998E692587815F00ACB2AC /* CalendarViewController.swift */,
+				C4822A022581149B0060C5CF /* CellViewController.swift */,
+				C48229F82581149B0060C5CF /* ColorsViewController.swift */,
+				C4822A012581149B0060C5CF /* DayBoxViewController.swift */,
+				C4822A0A2581149B0060C5CF /* DividerViewController.swift */,
+				C48229FC2581149B0060C5CF /* FieldViewController.swift */,
+				C423165125814D3A0034C171 /* ItemNamingViewController.swift */,
+				C48229FA2581149B0060C5CF /* NavBarViewController.swift */,
+				C48229F62581149B0060C5CF /* RadioBtnViewController.swift */,
+				C48229FB2581149B0060C5CF /* SettingsViewController.swift */,
+				C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */,
+				C48229FD2581149B0060C5CF /* TheVoice */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C48229FD2581149B0060C5CF /* TheVoice */ = {
+			isa = PBXGroup;
+			children = (
+				C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */,
+				C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */,
+				C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */,
+			);
+			path = TheVoice;
+			sourceTree = "<group>";
+		};
+		C4998EDE2587A43800ACB2AC /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C46FDD9C2588ADAC00237728 /* DatePickerVC.swift */,
+				C4998EE92587A4E300ACB2AC /* MonthDatePicker.swift */,
+				C4998EE12587A45B00ACB2AC /* DayPicker.swift */,
+				C46FDDB42588E95300237728 /* MonthView.swift */,
+			);
+			path = "Date Picker";
+			sourceTree = "<group>";
+		};
 		C49B63602580EF1D00CD2D42 /* Divider */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,14 +606,32 @@
 			path = Divider;
 			sourceTree = "<group>";
 		};
-		C4F2ACA02580E8B000933407 /* Cells */ = {
+		C4D276BD258157200045B06A /* Videos */ = {
 			isa = PBXGroup;
 			children = (
-				C4F2ACA12580E8B000933407 /* ItemNav.swift */,
-				C440A62F2580EB1A00873D14 /* RadioButton.swift */,
-				C440A6342580EB5A00873D14 /* DayBox.swift */,
+				C4D276BE2581629D0045B06A /* ControlBar.swift */,
 			);
-			path = Cells;
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		C4F283F52590D4F00025641E /* Time Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C4F283F62590D5120025641E /* TimePicker.swift */,
+			);
+			path = "Time Picker";
+			sourceTree = "<group>";
+		};
+		C4F2ACA02580E8B000933407 /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C4D276BD258157200045B06A /* Videos */,
+				C423165625814D800034C171 /* ItemNaming.swift */,
+				C4ADC9802581324E00AC01E9 /* ItemAction.swift */,
+				C4ADC97F2581324D00AC01E9 /* DayBox.swift */,
+				C4ADC9812581324E00AC01E9 /* ItemChoice.swift */,
+			);
+			path = Item;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -630,6 +766,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4998E03258777E900ACB2AC /* check.json in Resources */,
 				C46D16C32580E55500F151D1 /* Gilroy-MediumItalic.otf in Resources */,
 				C46D16A42580E55500F151D1 /* Localizable.strings in Resources */,
 				C46D16AF2580E55500F151D1 /* Gilroy-LightItalic.otf in Resources */,
@@ -644,6 +781,7 @@
 				C46D16BD2580E55500F151D1 /* Gilroy-Semibold.otf in Resources */,
 				C46D16B72580E55500F151D1 /* rift bold.otf in Resources */,
 				C46D16AB2580E55500F151D1 /* Gilroy-UltraLight.otf in Resources */,
+				C4D276C425816BE40045B06A /* thumbup.json in Resources */,
 				C46D16AD2580E55500F151D1 /* Gilroy-BlackItalic.otf in Resources */,
 				C4F2AC942580E7E400933407 /* Images.xcassets in Resources */,
 				C46D16B42580E55500F151D1 /* Gilroy-SemiboldItalic.otf in Resources */,
@@ -814,29 +952,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */,
+				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
+				C4ADC9832581324E00AC01E9 /* ItemAction.swift in Sources */,
+				C423165725814D800034C171 /* ItemNaming.swift in Sources */,
 				C46D16CB2580E6AE00F151D1 /* TheVoice.swift in Sources */,
+				C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */,
 				C482292A2580F9E90060C5CF /* InputBirthday.swift in Sources */,
 				C440A63B2580ECF500873D14 /* PrimaryBtn.swift in Sources */,
+				C4ADC9842581324E00AC01E9 /* ItemChoice.swift in Sources */,
 				C46D16A32580E55500F151D1 /* AutocompleteGeoloc.swift in Sources */,
-				C4F2ACA52580E8B000933407 /* ItemNav.swift in Sources */,
-				C440A6352580EB5A00873D14 /* DayBox.swift in Sources */,
-				C440A6302580EB1A00873D14 /* RadioButton.swift in Sources */,
+				C4822A34258115F40060C5CF /* Divider.swift in Sources */,
+				C4822A192581149B0060C5CF /* CellViewController.swift in Sources */,
 				C49B635A2580EDE500CD2D42 /* UILabel+Extensions.swift in Sources */,
 				C46D15922580E33100F151D1 /* ViewController.swift in Sources */,
 				C4822934258105050060C5CF /* Subtitle.swift in Sources */,
+				C4822A0C2581149B0060C5CF /* DSLaunchViewController.swift in Sources */,
 				C4F2ACAD2580E90700933407 /* UIView+Extensions.swift in Sources */,
+				C4D276BF2581629D0045B06A /* ControlBar.swift in Sources */,
+				C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */,
+				C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */,
+				C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */,
 				C48229282580F9E90060C5CF /* InputPhone.swift in Sources */,
+				C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */,
+				C46FDD9D2588ADAC00237728 /* DatePickerVC.swift in Sources */,
 				C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */,
+				C4822A112581149B0060C5CF /* ButtonViewController.swift in Sources */,
+				C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */,
+				C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
+				C4998EEA2587A4E300ACB2AC /* MonthDatePicker.swift in Sources */,
+				C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */,
 				C46D16012580E44000F151D1 /* R.generated.swift in Sources */,
+				C4ADC9822581324E00AC01E9 /* DayBox.swift in Sources */,
+				C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */,
+				C4998EE22587A45B00ACB2AC /* DayPicker.swift in Sources */,
+				C46FDDB52588E95300237728 /* MonthView.swift in Sources */,
+				C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */,
 				C482293B2581055C0060C5CF /* TopBar.swift in Sources */,
 				C440A6292580EAF200873D14 /* UIColor+Extensions.swift in Sources */,
 				C4822935258105050060C5CF /* Title.swift in Sources */,
+				C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */,
 				C46D16A52580E55500F151D1 /* UIView+Layout.swift in Sources */,
+				C4F283F72590D5120025641E /* TimePicker.swift in Sources */,
 				C4822941258106690060C5CF /* CodeNumber.swift in Sources */,
+				C423164D2581408B0034C171 /* UIDevice+extensions.swift in Sources */,
+				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
 				C48229272580F9E90060C5CF /* InputText.swift in Sources */,
 				C46D16A22580E55500F151D1 /* AutocompleteAddress.swift in Sources */,
-				C48229262580F9E90060C5CF /* InputDrop.swift in Sources */,
+				C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */,
+				C48229262580F9E90060C5CF /* InputPicker.swift in Sources */,
+				C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -62,5 +62,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gilroy-BoldItalic.otf</string>
+		<string>Gilroy-Regular.otf</string>
+		<string>Gilroy-Medium.otf</string>
+		<string>Gilroy-Bold.otf</string>
+		<string>Rift-BoldItalic.otf</string>
+		<string>rift italic.otf</string>
+		<string>Gilroy-RegularItalic.otf</string>
+		<string>Gilroy-Light.otf</string>
+		<string>SF-Compact-Display-Bold.otf</string>
+		<string>rift bold.otf</string>
+		<string>rift regular.otf</string>
+	</array>
 </dict>
 </plist>

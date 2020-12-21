@@ -1,4 +1,9 @@
 PODS:
+  - Hero (1.5.0)
+  - JTAppleCalendar (8.0.3)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - lottie-ios (3.1.9)
   - PhoneNumberKit (3.3.1):
     - PhoneNumberKit/PhoneNumberKitCore (= 3.3.1)
@@ -12,6 +17,9 @@ PODS:
   - SwiftDate (6.3.1)
 
 DEPENDENCIES:
+  - Hero
+  - JTAppleCalendar
+  - Kingfisher
   - lottie-ios
   - PhoneNumberKit
   - R.swift
@@ -19,6 +27,9 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
+    - Hero
+    - JTAppleCalendar
+    - Kingfisher
     - lottie-ios
     - PhoneNumberKit
     - R.swift
@@ -26,12 +37,15 @@ SPEC REPOS:
     - SwiftDate
 
 SPEC CHECKSUMS:
+  Hero: b7385b75e7259da62f4f85462f59a5082d66b058
+  JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   PhoneNumberKit: ff153d5e299f6da566cb73c6aa71e354933b2932
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
 
-PODFILE CHECKSUM: a9162d08f4fdd239bcf63b8fa633aa4ef5bc2991
+PODFILE CHECKSUM: 9e0c459a850fdc87676b1bdce417e9aa81637e4d
 
 COCOAPODS: 1.10.0

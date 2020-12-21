@@ -115,7 +115,7 @@ struct R: Rswift.Validatable {
   }
   #endif
 
-  /// This `R.color` struct is generated, and contains static references to 11 colors.
+  /// This `R.color` struct is generated, and contains static references to 12 colors.
   struct color {
     /// Color `AccentColor`.
     static let accentColor = Rswift.ColorResource(bundle: R.hostingBundle, name: "AccentColor")
@@ -125,6 +125,8 @@ struct R: Rswift.Validatable {
     static let boldGrey = Rswift.ColorResource(bundle: R.hostingBundle, name: "BoldGrey")
     /// Color `CornflowerBlue`.
     static let cornflowerBlue = Rswift.ColorResource(bundle: R.hostingBundle, name: "CornflowerBlue")
+    /// Color `DarkGrey`.
+    static let darkGrey = Rswift.ColorResource(bundle: R.hostingBundle, name: "DarkGrey")
     /// Color `LightBlueGrey`.
     static let lightBlueGrey = Rswift.ColorResource(bundle: R.hostingBundle, name: "LightBlueGrey")
     /// Color `LightGrey`.
@@ -173,6 +175,15 @@ struct R: Rswift.Validatable {
     @available(iOS 11.0, *)
     static func cornflowerBlue(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
       return UIKit.UIColor(resource: R.color.cornflowerBlue, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIColor(named: "DarkGrey", bundle: ..., traitCollection: ...)`
+    @available(tvOS 11.0, *)
+    @available(iOS 11.0, *)
+    static func darkGrey(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIColor? {
+      return UIKit.UIColor(resource: R.color.darkGrey, compatibleWith: traitCollection)
     }
     #endif
 
@@ -242,7 +253,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.file` struct is generated, and contains static references to 32 files.
+  /// This `R.file` struct is generated, and contains static references to 34 files.
   struct file {
     /// Resource file `Gilroy-Black.otf`.
     static let gilroyBlackOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Gilroy-Black", pathExtension: "otf")
@@ -288,6 +299,8 @@ struct R: Rswift.Validatable {
     static let riftBoldItalicOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "Rift-BoldItalic", pathExtension: "otf")
     /// Resource file `SF-Compact-Display-Bold.otf`.
     static let sfCompactDisplayBoldOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "SF-Compact-Display-Bold", pathExtension: "otf")
+    /// Resource file `check.json`.
+    static let checkJson = Rswift.FileResource(bundle: R.hostingBundle, name: "check", pathExtension: "json")
     /// Resource file `loading.json`.
     static let loadingJson = Rswift.FileResource(bundle: R.hostingBundle, name: "loading", pathExtension: "json")
     /// Resource file `rift bold.otf`.
@@ -308,6 +321,8 @@ struct R: Rswift.Validatable {
     static let riftMediumitalicOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "rift mediumitalic", pathExtension: "otf")
     /// Resource file `rift regular.otf`.
     static let riftRegularOtf = Rswift.FileResource(bundle: R.hostingBundle, name: "rift regular", pathExtension: "otf")
+    /// Resource file `thumbup.json`.
+    static let thumbupJson = Rswift.FileResource(bundle: R.hostingBundle, name: "thumbup", pathExtension: "json")
 
     /// `bundle.url(forResource: "Gilroy-Black", withExtension: "otf")`
     static func gilroyBlackOtf(_: Void = ()) -> Foundation.URL? {
@@ -441,6 +456,12 @@ struct R: Rswift.Validatable {
       return fileResource.bundle.url(forResource: fileResource)
     }
 
+    /// `bundle.url(forResource: "check", withExtension: "json")`
+    static func checkJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.checkJson
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
     /// `bundle.url(forResource: "loading", withExtension: "json")`
     static func loadingJson(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.loadingJson
@@ -498,6 +519,12 @@ struct R: Rswift.Validatable {
     /// `bundle.url(forResource: "rift regular", withExtension: "otf")`
     static func riftRegularOtf(_: Void = ()) -> Foundation.URL? {
       let fileResource = R.file.riftRegularOtf
+      return fileResource.bundle.url(forResource: fileResource)
+    }
+
+    /// `bundle.url(forResource: "thumbup", withExtension: "json")`
+    static func thumbupJson(_: Void = ()) -> Foundation.URL? {
+      let fileResource = R.file.thumbupJson
       return fileResource.bundle.url(forResource: fileResource)
     }
 
@@ -761,7 +788,7 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 272 images.
+  /// This `R.image` struct is generated, and contains static references to 278 images.
   struct image {
     /// Image `AD`.
     static let aD = Rswift.ImageResource(bundle: R.hostingBundle, name: "AD")
@@ -893,6 +920,8 @@ struct R: Rswift.Validatable {
     static let dZ = Rswift.ImageResource(bundle: R.hostingBundle, name: "DZ")
     /// Image `DeleteIcon`.
     static let deleteIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "DeleteIcon")
+    /// Image `DetailsIcon`.
+    static let detailsIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "DetailsIcon")
     /// Image `EC`.
     static let eC = Rswift.ImageResource(bundle: R.hostingBundle, name: "EC")
     /// Image `EE`.
@@ -1103,6 +1132,8 @@ struct R: Rswift.Validatable {
     static let mY = Rswift.ImageResource(bundle: R.hostingBundle, name: "MY")
     /// Image `MZ`.
     static let mZ = Rswift.ImageResource(bundle: R.hostingBundle, name: "MZ")
+    /// Image `MonthShadow`.
+    static let monthShadow = Rswift.ImageResource(bundle: R.hostingBundle, name: "MonthShadow")
     /// Image `NA`.
     static let nA = Rswift.ImageResource(bundle: R.hostingBundle, name: "NA")
     /// Image `NC`.
@@ -1171,6 +1202,8 @@ struct R: Rswift.Validatable {
     static let rW = Rswift.ImageResource(bundle: R.hostingBundle, name: "RW")
     /// Image `RateIcon`.
     static let rateIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "RateIcon")
+    /// Image `RejectIcon`.
+    static let rejectIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "RejectIcon")
     /// Image `ReportIcon`.
     static let reportIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "ReportIcon")
     /// Image `SA`.
@@ -1215,6 +1248,8 @@ struct R: Rswift.Validatable {
     static let sY = Rswift.ImageResource(bundle: R.hostingBundle, name: "SY")
     /// Image `SZ`.
     static let sZ = Rswift.ImageResource(bundle: R.hostingBundle, name: "SZ")
+    /// Image `StoreIcon`.
+    static let storeIcon = Rswift.ImageResource(bundle: R.hostingBundle, name: "StoreIcon")
     /// Image `TC`.
     static let tC = Rswift.ImageResource(bundle: R.hostingBundle, name: "TC")
     /// Image `TD`.
@@ -1297,6 +1332,8 @@ struct R: Rswift.Validatable {
     static let apply_addstory_updated = Rswift.ImageResource(bundle: R.hostingBundle, name: "apply_addstory_updated")
     /// Image `back`.
     static let back = Rswift.ImageResource(bundle: R.hostingBundle, name: "back")
+    /// Image `chevron_down`.
+    static let chevron_down = Rswift.ImageResource(bundle: R.hostingBundle, name: "chevron_down")
     /// Image `chevron_right`.
     static let chevron_right = Rswift.ImageResource(bundle: R.hostingBundle, name: "chevron_right")
     /// Image `close`.
@@ -1305,6 +1342,8 @@ struct R: Rswift.Validatable {
     static let dropList = Rswift.ImageResource(bundle: R.hostingBundle, name: "dropList")
     /// Image `graphic_overlay`.
     static let graphic_overlay = Rswift.ImageResource(bundle: R.hostingBundle, name: "graphic_overlay")
+    /// Image `overlay`.
+    static let overlay = Rswift.ImageResource(bundle: R.hostingBundle, name: "overlay")
     /// Image `shadow_filter`.
     static let shadow_filter = Rswift.ImageResource(bundle: R.hostingBundle, name: "shadow_filter")
 
@@ -1760,6 +1799,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "DeleteIcon", bundle: ..., traitCollection: ...)`
     static func deleteIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.deleteIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "DetailsIcon", bundle: ..., traitCollection: ...)`
+    static func detailsIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.detailsIcon, compatibleWith: traitCollection)
     }
     #endif
 
@@ -2499,6 +2545,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "MonthShadow", bundle: ..., traitCollection: ...)`
+    static func monthShadow(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.monthShadow, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "NA", bundle: ..., traitCollection: ...)`
     static func nA(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.nA, compatibleWith: traitCollection)
@@ -2737,6 +2790,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "RejectIcon", bundle: ..., traitCollection: ...)`
+    static func rejectIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.rejectIcon, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "ReportIcon", bundle: ..., traitCollection: ...)`
     static func reportIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.reportIcon, compatibleWith: traitCollection)
@@ -2887,6 +2947,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "SZ", bundle: ..., traitCollection: ...)`
     static func sZ(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.sZ, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "StoreIcon", bundle: ..., traitCollection: ...)`
+    static func storeIcon(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.storeIcon, compatibleWith: traitCollection)
     }
     #endif
 
@@ -3178,6 +3245,13 @@ struct R: Rswift.Validatable {
     #endif
 
     #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "chevron_down", bundle: ..., traitCollection: ...)`
+    static func chevron_down(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.chevron_down, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
     /// `UIImage(named: "chevron_right", bundle: ..., traitCollection: ...)`
     static func chevron_right(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.chevron_right, compatibleWith: traitCollection)
@@ -3202,6 +3276,13 @@ struct R: Rswift.Validatable {
     /// `UIImage(named: "graphic_overlay", bundle: ..., traitCollection: ...)`
     static func graphic_overlay(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
       return UIKit.UIImage(resource: R.image.graphic_overlay, compatibleWith: traitCollection)
+    }
+    #endif
+
+    #if os(iOS) || os(tvOS)
+    /// `UIImage(named: "overlay", bundle: ..., traitCollection: ...)`
+    static func overlay(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
+      return UIKit.UIImage(resource: R.image.overlay, compatibleWith: traitCollection)
     }
     #endif
 

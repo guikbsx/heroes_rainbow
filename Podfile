@@ -10,6 +10,9 @@ pod "lottie-ios"
 pod "PhoneNumberKit"
 pod "SwiftDate"
 pod 'R.swift'
+pod 'Hero'
+pod 'Kingfisher'
+pod 'JTAppleCalendar'
   target 'heroes_rainbowTests' do
     inherit! :search_paths
     # Pods for testing
