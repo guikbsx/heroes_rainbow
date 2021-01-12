@@ -39,10 +39,10 @@ class DSViewController: UITableViewController {
         tableView.separatorStyle = .none
         self.navigationController?.navigationBar.isHidden = false
         
-        /*TEST*/
-        let vc = TimePickerViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
-        /*TEST*/
+//        /*TEST*/
+//        let vc = TimePickerViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
+//        /*TEST*/
     }
     
     public override func viewDidAppear(_ animated: Bool) {
@@ -146,6 +146,10 @@ class DSViewController: UITableViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
 
+        case .modal:
+            let popup = DSPopupDialogManager()
+            popup.displayDesignSystemPopup(controller: self, emoji: "😀", title: "This is a title", body: "This is a paragraph to explain what is happening", okLbl: "That's OK to me", cancelLbl: "I don't like the idea", okHandler: {}, cancelHandler: {})
+            break
         }
     }
     
@@ -157,6 +161,8 @@ class DSViewController: UITableViewController {
         
         self.present(nvc, animated: false, completion: nil)
     }
+    
+    
 
 
 }

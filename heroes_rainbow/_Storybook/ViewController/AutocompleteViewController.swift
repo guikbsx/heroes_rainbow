@@ -11,10 +11,7 @@ import UIKit
 class AutocompleteViewController: UIViewController {
 
     // MARK: - Properties
-        
-    private var topBar = TopBar(backBtn: true, text: "Set up your location", actionBtn: .none)
-    private var textField = InputText(placeholder: "Type a precise address")
-    
+
     lazy private var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: UITableView.Style.grouped)
         tableView.register(AutocompleteAddress.self, forCellReuseIdentifier: "AutocompleteAddress")
@@ -43,14 +40,8 @@ class AutocompleteViewController: UIViewController {
     private func configure() {
         view.backgroundColor = .white
         
-        view.addSubview(topBar)
-        topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
-        
-        view.addSubview(textField)
-        textField.anchor(top: topBar.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
-        
         view.addSubview(tableView)
-        tableView.anchor(top: textField.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        tableView.fillSuperviewSafeAreaLayoutGuide()
     }
 }
 
@@ -67,6 +58,10 @@ extension AutocompleteViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AutocompleteGeoloc") as! AutocompleteGeoloc
+            return cell
+        } else if indexPath.row == 3 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AutocompleteAddress") as! AutocompleteAddress
+            cell.setup(address: NSAttributedString(string: "16 Rue Jean Jacques Rousseau"), city: NSAttributedString(string: "Cambrai, France"), separator: false)
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AutocompleteAddress") as! AutocompleteAddress

@@ -22,6 +22,7 @@ enum DesignSystemType {
     case navBars
     case theVoice
     case time
+    case modal
 }
 
 public final class DSViewModel {
@@ -58,7 +59,8 @@ public final class DSViewModel {
                 DesignSystem(type: .cellsRadioBtn, label: "Radio Button"),
                 DesignSystem(type: .input, label: "Input"),
                 DesignSystem(type: .theVoice, label: "The Voice"),
-                DesignSystem(type: .time, label: "Time Picker")
+                DesignSystem(type: .time, label: "Time Picker"),
+                DesignSystem(type: .modal, label: "Modal")
         ])
         components.designSystems.sort {
             $0.label < $1.label

@@ -13,6 +13,8 @@ pod 'R.swift'
 pod 'Hero'
 pod 'Kingfisher'
 pod 'JTAppleCalendar'
+pod 'PopupDialog'
+ 
   target 'heroes_rainbowTests' do
     inherit! :search_paths
     # Pods for testing
