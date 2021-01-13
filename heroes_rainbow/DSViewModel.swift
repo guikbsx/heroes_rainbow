@@ -38,8 +38,8 @@ public final class DSViewModel {
         var settings = (
             name: "Settings",
             designSystems: [
-                DesignSystem(type: .colors, label: "Colors"),
-                DesignSystem(type: .fonts, label: "Fonts"),
+                DesignSystem(type: .colors, label: "Colors 👨‍💻"),
+                DesignSystem(type: .fonts, label: "Fonts 🚧 👨‍💻"),
             ])
         settings.designSystems.sort {
             $0.label < $1.label
@@ -48,19 +48,19 @@ public final class DSViewModel {
         var components = (
             name: "Components",
             designSystems: [
-                DesignSystem(type: .autocomplete, label: "Autocomplete"),
+                DesignSystem(type: .autocomplete, label: "Autocomplete 👨‍💻"),
                 DesignSystem(type: .button, label: "Buttons"),
-                DesignSystem(type: .calendar, label: "Date Picker"),
-                DesignSystem(type: .days, label: "Day Box"),
-                DesignSystem(type: .divider, label: "Divider"),
-                DesignSystem(type: .itemAction, label: "Item Action"),
-                DesignSystem(type: .itemNaming, label: "Item Naming"),
-                DesignSystem(type: .navBars, label: "Navigation Bars"),
-                DesignSystem(type: .cellsRadioBtn, label: "Radio Button"),
-                DesignSystem(type: .input, label: "Input"),
-                DesignSystem(type: .theVoice, label: "The Voice"),
-                DesignSystem(type: .time, label: "Time Picker"),
-                DesignSystem(type: .modal, label: "Modal")
+                DesignSystem(type: .calendar, label: "Date Picker 👨‍💻"),
+                DesignSystem(type: .days, label: "Day Box 👨‍💻"),
+                DesignSystem(type: .divider, label: "Divider 👨‍💻"),
+                DesignSystem(type: .itemAction, label: "Item Action 👨‍💻"),
+                DesignSystem(type: .itemNaming, label: "Item Naming 👨‍💻"),
+                DesignSystem(type: .navBars, label: "Navigation Bars 👨‍💻"),
+                DesignSystem(type: .cellsRadioBtn, label: "Radio Button 👨‍💻"),
+                DesignSystem(type: .input, label: "Input 👨‍💻"),
+                DesignSystem(type: .theVoice, label: "The Voice 👨‍💻"),
+                DesignSystem(type: .time, label: "Time Picker 👨‍💻"),
+                DesignSystem(type: .modal, label: "Modal 👨‍💻")
         ])
         components.designSystems.sort {
             $0.label < $1.label
