@@ -19,6 +19,75 @@
 		C46D15A52580E33200F151D1 /* heroes_rainbowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15A42580E33200F151D1 /* heroes_rainbowTests.swift */; };
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
 		C46D16012580E44000F151D1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D16002580E44000F151D1 /* R.generated.swift */; };
+		C475335425ADCFAA002A637D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47532EF25ADCFA9002A637D /* Colors.xcassets */; };
+		C475335525ADCFAA002A637D /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F225ADCFA9002A637D /* ItemNav.swift */; };
+		C475335625ADCFAA002A637D /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F325ADCFA9002A637D /* RadioButton.swift */; };
+		C475335725ADCFAA002A637D /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F425ADCFA9002A637D /* DayBox.swift */; };
+		C475335825ADCFAA002A637D /* PrimaryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F625ADCFA9002A637D /* PrimaryBtn.swift */; };
+		C475335925ADCFAA002A637D /* AutocompleteAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F825ADCFA9002A637D /* AutocompleteAddress.swift */; };
+		C475335A25ADCFAA002A637D /* AutocompleteGeoloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F925ADCFA9002A637D /* AutocompleteGeoloc.swift */; };
+		C475335B25ADCFAA002A637D /* MonthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532FB25ADCFA9002A637D /* MonthDatePicker.swift */; };
+		C475335C25ADCFAA002A637D /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532FC25ADCFA9002A637D /* MonthView.swift */; };
+		C475335D25ADCFAA002A637D /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532FD25ADCFA9002A637D /* DatePickerVC.swift */; };
+		C475335E25ADCFAA002A637D /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532FE25ADCFA9002A637D /* DayPicker.swift */; };
+		C475335F25ADCFAA002A637D /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330025ADCFA9002A637D /* InputText.swift */; };
+		C475336025ADCFAA002A637D /* InputPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330125ADCFA9002A637D /* InputPhone.swift */; };
+		C475336125ADCFAA002A637D /* InputPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330225ADCFA9002A637D /* InputPicker.swift */; };
+		C475336225ADCFAA002A637D /* InputBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330325ADCFA9002A637D /* InputBirthday.swift */; };
+		C475336325ADCFAA002A637D /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330525ADCFA9002A637D /* Subtitle.swift */; };
+		C475336425ADCFAA002A637D /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330625ADCFA9002A637D /* Title.swift */; };
+		C475336525ADCFAA002A637D /* CodeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330825ADCFA9002A637D /* CodeNumber.swift */; };
+		C475336625ADCFAA002A637D /* TheVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330A25ADCFA9002A637D /* TheVoice.swift */; };
+		C475336725ADCFAA002A637D /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330C25ADCFA9002A637D /* TimePicker.swift */; };
+		C475336825ADCFAA002A637D /* ItemNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330E25ADCFA9002A637D /* ItemNaming.swift */; };
+		C475336925ADCFAA002A637D /* ItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475330F25ADCFA9002A637D /* ItemAction.swift */; };
+		C475336A25ADCFAA002A637D /* ItemChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331025ADCFA9002A637D /* ItemChoice.swift */; };
+		C475336B25ADCFAA002A637D /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331225ADCFA9002A637D /* Divider.swift */; };
+		C475336C25ADCFAA002A637D /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331425ADCFA9002A637D /* ControlBar.swift */; };
+		C475336D25ADCFAA002A637D /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331525ADCFA9002A637D /* TopBar.swift */; };
+		C475336F25ADCFAA002A637D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C475331925ADCFA9002A637D /* Images.xcassets */; };
+		C475337025ADCFAA002A637D /* DSUILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331C25ADCFA9002A637D /* DSUILabel+Extensions.swift */; };
+		C475337125ADCFAA002A637D /* DSUIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331D25ADCFA9002A637D /* DSUIView+Layout.swift */; };
+		C475337225ADCFAA002A637D /* DSUIDevice+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331E25ADCFA9002A637D /* DSUIDevice+extensions.swift */; };
+		C475337325ADCFAA002A637D /* DSUITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475331F25ADCFA9002A637D /* DSUITextField+Extensions.swift */; };
+		C475337425ADCFAA002A637D /* DSUIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475332025ADCFA9002A637D /* DSUIColor+Extensions.swift */; };
+		C475337525ADCFAA002A637D /* DSUIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C475332125ADCFA9002A637D /* DSUIView+Extensions.swift */; };
+		C475337625ADCFAA002A637D /* DSLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C475332225ADCFA9002A637D /* DSLocalizable.strings */; };
+		C475337725ADCFAA002A637D /* confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = C475332425ADCFA9002A637D /* confetti.json */; };
+		C475337825ADCFAA002A637D /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = C475332525ADCFA9002A637D /* loading.json */; };
+		C475337925ADCFAA002A637D /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = C475332625ADCFA9002A637D /* check.json */; };
+		C475337A25ADCFAA002A637D /* thumbup.json in Resources */ = {isa = PBXBuildFile; fileRef = C475332725ADCFA9002A637D /* thumbup.json */; };
+		C475337B25ADCFAA002A637D /* rift demiitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332925ADCFA9002A637D /* rift demiitalic.otf */; };
+		C475337C25ADCFAA002A637D /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332A25ADCFA9002A637D /* Gilroy-Regular.otf */; };
+		C475337D25ADCFAA002A637D /* rift medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332B25ADCFA9002A637D /* rift medium.otf */; };
+		C475337E25ADCFAA002A637D /* Gilroy-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332C25ADCFA9002A637D /* Gilroy-Black.otf */; };
+		C475337F25ADCFAA002A637D /* Gilroy-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332D25ADCFA9002A637D /* Gilroy-UltraLight.otf */; };
+		C475338025ADCFAA002A637D /* rift light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332E25ADCFA9002A637D /* rift light.otf */; };
+		C475338125ADCFAA002A637D /* Gilroy-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475332F25ADCFA9002A637D /* Gilroy-BlackItalic.otf */; };
+		C475338225ADCFAA002A637D /* Gilroy-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333025ADCFA9002A637D /* Gilroy-RegularItalic.otf */; };
+		C475338325ADCFAA002A637D /* Gilroy-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333125ADCFA9002A637D /* Gilroy-LightItalic.otf */; };
+		C475338425ADCFAA002A637D /* Gilroy-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333225ADCFA9002A637D /* Gilroy-ThinItalic.otf */; };
+		C475338525ADCFAA002A637D /* Gilroy-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333325ADCFA9002A637D /* Gilroy-HeavyItalic.otf */; };
+		C475338625ADCFAA002A637D /* Gilroy-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333425ADCFA9002A637D /* Gilroy-BoldItalic.otf */; };
+		C475338725ADCFAA002A637D /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333525ADCFA9002A637D /* SF-Compact-Display-Bold.otf */; };
+		C475338825ADCFAA002A637D /* Gilroy-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333625ADCFA9002A637D /* Gilroy-SemiboldItalic.otf */; };
+		C475338925ADCFAA002A637D /* Gilroy-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333725ADCFA9002A637D /* Gilroy-UltraLightItalic.otf */; };
+		C475338A25ADCFAA002A637D /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333825ADCFA9002A637D /* Gilroy-Medium.otf */; };
+		C475338B25ADCFAA002A637D /* rift bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333925ADCFA9002A637D /* rift bold.otf */; };
+		C475338C25ADCFAA002A637D /* Gilroy-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333A25ADCFA9002A637D /* Gilroy-Heavy.otf */; };
+		C475338D25ADCFAA002A637D /* rift lightitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333B25ADCFA9002A637D /* rift lightitalic.otf */; };
+		C475338E25ADCFAA002A637D /* Rift-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333C25ADCFA9002A637D /* Rift-BoldItalic.otf */; };
+		C475338F25ADCFAA002A637D /* rift demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333D25ADCFA9002A637D /* rift demi.otf */; };
+		C475339025ADCFAA002A637D /* Gilroy-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333E25ADCFA9002A637D /* Gilroy-Bold.otf */; };
+		C475339125ADCFAA002A637D /* Gilroy-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475333F25ADCFA9002A637D /* Gilroy-Semibold.otf */; };
+		C475339225ADCFAA002A637D /* rift italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334025ADCFA9002A637D /* rift italic.otf */; };
+		C475339325ADCFAA002A637D /* rift mediumitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334125ADCFA9002A637D /* rift mediumitalic.otf */; };
+		C475339425ADCFAA002A637D /* rift regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334225ADCFA9002A637D /* rift regular.otf */; };
+		C475339525ADCFAA002A637D /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334325ADCFA9002A637D /* Gilroy-Light.otf */; };
+		C475339625ADCFAA002A637D /* Gilroy-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334425ADCFA9002A637D /* Gilroy-Extrabold.otf */; };
+		C475339725ADCFAA002A637D /* Gilroy-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334525ADCFA9002A637D /* Gilroy-MediumItalic.otf */; };
+		C475339825ADCFAA002A637D /* Gilroy-ExtraboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334625ADCFA9002A637D /* Gilroy-ExtraboldItalic.otf */; };
+		C475339925ADCFAA002A637D /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334725ADCFA9002A637D /* Gilroy-Thin.otf */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
 		C4822A0C2581149B0060C5CF /* DSLaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F32581149B0060C5CF /* DSLaunchViewController.swift */; };
 		C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F42581149B0060C5CF /* DSViewController.swift */; };
@@ -35,76 +104,10 @@
 		C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A012581149B0060C5CF /* DayBoxViewController.swift */; };
 		C4822A192581149B0060C5CF /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A022581149B0060C5CF /* CellViewController.swift */; };
 		C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A0A2581149B0060C5CF /* DividerViewController.swift */; };
-		C488204925A5B537002AAFAC /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4881FE625A5B536002AAFAC /* Colors.xcassets */; };
-		C488204A25A5B537002AAFAC /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FE925A5B536002AAFAC /* ItemNav.swift */; };
-		C488204B25A5B537002AAFAC /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FEA25A5B536002AAFAC /* RadioButton.swift */; };
-		C488204D25A5B537002AAFAC /* PrimaryBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FED25A5B536002AAFAC /* PrimaryBtn.swift */; };
-		C488204E25A5B537002AAFAC /* AutocompleteAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FEF25A5B536002AAFAC /* AutocompleteAddress.swift */; };
-		C488204F25A5B537002AAFAC /* AutocompleteGeoloc.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF025A5B536002AAFAC /* AutocompleteGeoloc.swift */; };
-		C488205025A5B537002AAFAC /* MonthDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF225A5B536002AAFAC /* MonthDatePicker.swift */; };
-		C488205125A5B537002AAFAC /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF325A5B536002AAFAC /* MonthView.swift */; };
-		C488205225A5B537002AAFAC /* DatePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF425A5B536002AAFAC /* DatePickerVC.swift */; };
-		C488205325A5B537002AAFAC /* DayPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF525A5B536002AAFAC /* DayPicker.swift */; };
-		C488205425A5B537002AAFAC /* InputText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF725A5B536002AAFAC /* InputText.swift */; };
-		C488205525A5B537002AAFAC /* InputPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF825A5B536002AAFAC /* InputPhone.swift */; };
-		C488205625A5B537002AAFAC /* InputPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FF925A5B536002AAFAC /* InputPicker.swift */; };
-		C488205725A5B537002AAFAC /* InputBirthday.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FFA25A5B536002AAFAC /* InputBirthday.swift */; };
-		C488205825A5B537002AAFAC /* Subtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FFC25A5B536002AAFAC /* Subtitle.swift */; };
-		C488205925A5B537002AAFAC /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FFD25A5B536002AAFAC /* Title.swift */; };
-		C488205A25A5B537002AAFAC /* CodeNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4881FFF25A5B536002AAFAC /* CodeNumber.swift */; };
-		C488205B25A5B537002AAFAC /* TheVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200125A5B536002AAFAC /* TheVoice.swift */; };
-		C488205C25A5B537002AAFAC /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200325A5B536002AAFAC /* TimePicker.swift */; };
-		C488205D25A5B537002AAFAC /* ItemNaming.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200525A5B536002AAFAC /* ItemNaming.swift */; };
-		C488205E25A5B537002AAFAC /* ControlBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200725A5B536002AAFAC /* ControlBar.swift */; };
-		C488205F25A5B537002AAFAC /* ItemAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200825A5B536002AAFAC /* ItemAction.swift */; };
-		C488206025A5B537002AAFAC /* ItemChoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200925A5B536002AAFAC /* ItemChoice.swift */; };
-		C488206125A5B537002AAFAC /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200A25A5B536002AAFAC /* DayBox.swift */; };
-		C488206225A5B537002AAFAC /* Divider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200C25A5B536002AAFAC /* Divider.swift */; };
-		C488206325A5B537002AAFAC /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488200E25A5B536002AAFAC /* TopBar.swift */; };
-		C488206425A5B537002AAFAC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C488201025A5B536002AAFAC /* Images.xcassets */; };
-		C488206525A5B537002AAFAC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C488201225A5B536002AAFAC /* Localizable.strings */; };
-		C488206625A5B537002AAFAC /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488201425A5B537002AAFAC /* UIView+Extensions.swift */; };
-		C488206725A5B537002AAFAC /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488201525A5B537002AAFAC /* UIColor+Extensions.swift */; };
-		C488206825A5B537002AAFAC /* UIDevice+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488201625A5B537002AAFAC /* UIDevice+extensions.swift */; };
-		C488206925A5B537002AAFAC /* UIView+Layout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488201725A5B537002AAFAC /* UIView+Layout.swift */; };
-		C488206A25A5B537002AAFAC /* UILabel+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C488201825A5B537002AAFAC /* UILabel+Extensions.swift */; };
-		C488206B25A5B537002AAFAC /* loading.json in Resources */ = {isa = PBXBuildFile; fileRef = C488201A25A5B537002AAFAC /* loading.json */; };
-		C488206C25A5B537002AAFAC /* check.json in Resources */ = {isa = PBXBuildFile; fileRef = C488201B25A5B537002AAFAC /* check.json */; };
-		C488206D25A5B537002AAFAC /* thumbup.json in Resources */ = {isa = PBXBuildFile; fileRef = C488201C25A5B537002AAFAC /* thumbup.json */; };
-		C488206E25A5B537002AAFAC /* rift demiitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488201E25A5B537002AAFAC /* rift demiitalic.otf */; };
-		C488206F25A5B537002AAFAC /* Gilroy-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488201F25A5B537002AAFAC /* Gilroy-Regular.otf */; };
-		C488207025A5B537002AAFAC /* rift medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202025A5B537002AAFAC /* rift medium.otf */; };
-		C488207125A5B537002AAFAC /* Gilroy-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202125A5B537002AAFAC /* Gilroy-Black.otf */; };
-		C488207225A5B537002AAFAC /* Gilroy-UltraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202225A5B537002AAFAC /* Gilroy-UltraLight.otf */; };
-		C488207325A5B537002AAFAC /* rift light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202325A5B537002AAFAC /* rift light.otf */; };
-		C488207425A5B537002AAFAC /* Gilroy-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202425A5B537002AAFAC /* Gilroy-BlackItalic.otf */; };
-		C488207525A5B537002AAFAC /* Gilroy-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202525A5B537002AAFAC /* Gilroy-RegularItalic.otf */; };
-		C488207625A5B537002AAFAC /* Gilroy-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202625A5B537002AAFAC /* Gilroy-LightItalic.otf */; };
-		C488207725A5B537002AAFAC /* Gilroy-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202725A5B537002AAFAC /* Gilroy-ThinItalic.otf */; };
-		C488207825A5B537002AAFAC /* Gilroy-HeavyItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202825A5B537002AAFAC /* Gilroy-HeavyItalic.otf */; };
-		C488207925A5B537002AAFAC /* Gilroy-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202925A5B537002AAFAC /* Gilroy-BoldItalic.otf */; };
-		C488207A25A5B537002AAFAC /* SF-Compact-Display-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202A25A5B537002AAFAC /* SF-Compact-Display-Bold.otf */; };
-		C488207B25A5B537002AAFAC /* Gilroy-SemiboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202B25A5B537002AAFAC /* Gilroy-SemiboldItalic.otf */; };
-		C488207C25A5B537002AAFAC /* Gilroy-UltraLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202C25A5B537002AAFAC /* Gilroy-UltraLightItalic.otf */; };
-		C488207D25A5B537002AAFAC /* Gilroy-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202D25A5B537002AAFAC /* Gilroy-Medium.otf */; };
-		C488207E25A5B537002AAFAC /* rift bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202E25A5B537002AAFAC /* rift bold.otf */; };
-		C488207F25A5B537002AAFAC /* Gilroy-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488202F25A5B537002AAFAC /* Gilroy-Heavy.otf */; };
-		C488208025A5B537002AAFAC /* rift lightitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203025A5B537002AAFAC /* rift lightitalic.otf */; };
-		C488208125A5B537002AAFAC /* Rift-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203125A5B537002AAFAC /* Rift-BoldItalic.otf */; };
-		C488208225A5B537002AAFAC /* rift demi.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203225A5B537002AAFAC /* rift demi.otf */; };
-		C488208325A5B537002AAFAC /* Gilroy-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203325A5B537002AAFAC /* Gilroy-Bold.otf */; };
-		C488208425A5B537002AAFAC /* Gilroy-Semibold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203425A5B537002AAFAC /* Gilroy-Semibold.otf */; };
-		C488208525A5B537002AAFAC /* rift italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203525A5B537002AAFAC /* rift italic.otf */; };
-		C488208625A5B537002AAFAC /* rift mediumitalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203625A5B537002AAFAC /* rift mediumitalic.otf */; };
-		C488208725A5B537002AAFAC /* rift regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203725A5B537002AAFAC /* rift regular.otf */; };
-		C488208825A5B537002AAFAC /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203825A5B537002AAFAC /* Gilroy-Light.otf */; };
-		C488208925A5B537002AAFAC /* Gilroy-Extrabold.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203925A5B537002AAFAC /* Gilroy-Extrabold.otf */; };
-		C488208A25A5B537002AAFAC /* Gilroy-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203A25A5B537002AAFAC /* Gilroy-MediumItalic.otf */; };
-		C488208B25A5B537002AAFAC /* Gilroy-ExtraboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203B25A5B537002AAFAC /* Gilroy-ExtraboldItalic.otf */; };
-		C488208C25A5B537002AAFAC /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C488203C25A5B537002AAFAC /* Gilroy-Thin.otf */; };
-		C48820A825A5C64D002AAFAC /* DSPopupDialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48820A725A5C64D002AAFAC /* DSPopupDialogManager.swift */; };
-		C48820B125A5C79D002AAFAC /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48820B025A5C79D002AAFAC /* PopupViewController.swift */; };
 		C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4998E692587815F00ACB2AC /* CalendarViewController.swift */; };
+		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
+		C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */; };
+		C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */; };
 		C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */; };
 		E2DDDF156D645BBE5B3F057F /* Pods_heroes_rainbowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05564DB120C98EEAF52F1CEC /* Pods_heroes_rainbowTests.framework */; };
 /* End PBXBuildFile section */
@@ -124,16 +127,16 @@
 			remoteGlobalIDString = C46D15892580E33100F151D1;
 			remoteInfo = heroes_rainbow;
 		};
-		C488204225A5B537002AAFAC /* PBXContainerItemProxy */ = {
+		C475334D25ADCFA9002A637D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C488203D25A5B537002AAFAC /* framework_ios.xcodeproj */;
+			containerPortal = C475334825ADCFA9002A637D /* framework_ios.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C42C6C0B257FC877009C6641;
 			remoteInfo = framework_ios;
 		};
-		C488204425A5B537002AAFAC /* PBXContainerItemProxy */ = {
+		C475334F25ADCFA9002A637D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = C488203D25A5B537002AAFAC /* framework_ios.xcodeproj */;
+			containerPortal = C475334825ADCFA9002A637D /* framework_ios.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = C42C6C14257FC877009C6641;
 			remoteInfo = framework_iosTests;
@@ -163,6 +166,77 @@
 		C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heroes_rainbowUITests.swift; sourceTree = "<group>"; };
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46D16002580E44000F151D1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C47532EF25ADCFA9002A637D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		C47532F225ADCFA9002A637D /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
+		C47532F325ADCFA9002A637D /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		C47532F425ADCFA9002A637D /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
+		C47532F625ADCFA9002A637D /* PrimaryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryBtn.swift; sourceTree = "<group>"; };
+		C47532F825ADCFA9002A637D /* AutocompleteAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteAddress.swift; sourceTree = "<group>"; };
+		C47532F925ADCFA9002A637D /* AutocompleteGeoloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteGeoloc.swift; sourceTree = "<group>"; };
+		C47532FB25ADCFA9002A637D /* MonthDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthDatePicker.swift; sourceTree = "<group>"; };
+		C47532FC25ADCFA9002A637D /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		C47532FD25ADCFA9002A637D /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
+		C47532FE25ADCFA9002A637D /* DayPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
+		C475330025ADCFA9002A637D /* InputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
+		C475330125ADCFA9002A637D /* InputPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPhone.swift; sourceTree = "<group>"; };
+		C475330225ADCFA9002A637D /* InputPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPicker.swift; sourceTree = "<group>"; };
+		C475330325ADCFA9002A637D /* InputBirthday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBirthday.swift; sourceTree = "<group>"; };
+		C475330525ADCFA9002A637D /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
+		C475330625ADCFA9002A637D /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
+		C475330825ADCFA9002A637D /* CodeNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeNumber.swift; sourceTree = "<group>"; };
+		C475330A25ADCFA9002A637D /* TheVoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoice.swift; sourceTree = "<group>"; };
+		C475330C25ADCFA9002A637D /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
+		C475330E25ADCFA9002A637D /* ItemNaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNaming.swift; sourceTree = "<group>"; };
+		C475330F25ADCFA9002A637D /* ItemAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAction.swift; sourceTree = "<group>"; };
+		C475331025ADCFA9002A637D /* ItemChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChoice.swift; sourceTree = "<group>"; };
+		C475331225ADCFA9002A637D /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
+		C475331425ADCFA9002A637D /* ControlBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
+		C475331525ADCFA9002A637D /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		C475331825ADCFA9002A637D /* framework_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework_ios.h; sourceTree = "<group>"; };
+		C475331925ADCFA9002A637D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		C475331C25ADCFA9002A637D /* DSUILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUILabel+Extensions.swift"; sourceTree = "<group>"; };
+		C475331D25ADCFA9002A637D /* DSUIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUIView+Layout.swift"; sourceTree = "<group>"; };
+		C475331E25ADCFA9002A637D /* DSUIDevice+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUIDevice+extensions.swift"; sourceTree = "<group>"; };
+		C475331F25ADCFA9002A637D /* DSUITextField+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUITextField+Extensions.swift"; sourceTree = "<group>"; };
+		C475332025ADCFA9002A637D /* DSUIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUIColor+Extensions.swift"; sourceTree = "<group>"; };
+		C475332125ADCFA9002A637D /* DSUIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUIView+Extensions.swift"; sourceTree = "<group>"; };
+		C475332225ADCFA9002A637D /* DSLocalizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = DSLocalizable.strings; sourceTree = "<group>"; };
+		C475332425ADCFA9002A637D /* confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = confetti.json; sourceTree = "<group>"; };
+		C475332525ADCFA9002A637D /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
+		C475332625ADCFA9002A637D /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
+		C475332725ADCFA9002A637D /* thumbup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbup.json; sourceTree = "<group>"; };
+		C475332925ADCFA9002A637D /* rift demiitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift demiitalic.otf"; sourceTree = "<group>"; };
+		C475332A25ADCFA9002A637D /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
+		C475332B25ADCFA9002A637D /* rift medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift medium.otf"; sourceTree = "<group>"; };
+		C475332C25ADCFA9002A637D /* Gilroy-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.otf"; sourceTree = "<group>"; };
+		C475332D25ADCFA9002A637D /* Gilroy-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.otf"; sourceTree = "<group>"; };
+		C475332E25ADCFA9002A637D /* rift light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift light.otf"; sourceTree = "<group>"; };
+		C475332F25ADCFA9002A637D /* Gilroy-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BlackItalic.otf"; sourceTree = "<group>"; };
+		C475333025ADCFA9002A637D /* Gilroy-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-RegularItalic.otf"; sourceTree = "<group>"; };
+		C475333125ADCFA9002A637D /* Gilroy-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-LightItalic.otf"; sourceTree = "<group>"; };
+		C475333225ADCFA9002A637D /* Gilroy-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ThinItalic.otf"; sourceTree = "<group>"; };
+		C475333325ADCFA9002A637D /* Gilroy-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-HeavyItalic.otf"; sourceTree = "<group>"; };
+		C475333425ADCFA9002A637D /* Gilroy-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BoldItalic.otf"; sourceTree = "<group>"; };
+		C475333525ADCFA9002A637D /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
+		C475333625ADCFA9002A637D /* Gilroy-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiboldItalic.otf"; sourceTree = "<group>"; };
+		C475333725ADCFA9002A637D /* Gilroy-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.otf"; sourceTree = "<group>"; };
+		C475333825ADCFA9002A637D /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
+		C475333925ADCFA9002A637D /* rift bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift bold.otf"; sourceTree = "<group>"; };
+		C475333A25ADCFA9002A637D /* Gilroy-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.otf"; sourceTree = "<group>"; };
+		C475333B25ADCFA9002A637D /* rift lightitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift lightitalic.otf"; sourceTree = "<group>"; };
+		C475333C25ADCFA9002A637D /* Rift-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rift-BoldItalic.otf"; sourceTree = "<group>"; };
+		C475333D25ADCFA9002A637D /* rift demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift demi.otf"; sourceTree = "<group>"; };
+		C475333E25ADCFA9002A637D /* Gilroy-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.otf"; sourceTree = "<group>"; };
+		C475333F25ADCFA9002A637D /* Gilroy-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.otf"; sourceTree = "<group>"; };
+		C475334025ADCFA9002A637D /* rift italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift italic.otf"; sourceTree = "<group>"; };
+		C475334125ADCFA9002A637D /* rift mediumitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift mediumitalic.otf"; sourceTree = "<group>"; };
+		C475334225ADCFA9002A637D /* rift regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift regular.otf"; sourceTree = "<group>"; };
+		C475334325ADCFA9002A637D /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		C475334425ADCFA9002A637D /* Gilroy-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Extrabold.otf"; sourceTree = "<group>"; };
+		C475334525ADCFA9002A637D /* Gilroy-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-MediumItalic.otf"; sourceTree = "<group>"; };
+		C475334625ADCFA9002A637D /* Gilroy-ExtraboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraboldItalic.otf"; sourceTree = "<group>"; };
+		C475334725ADCFA9002A637D /* Gilroy-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.otf"; sourceTree = "<group>"; };
+		C475334825ADCFA9002A637D /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
 		C48229F32581149B0060C5CF /* DSLaunchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSLaunchViewController.swift; sourceTree = "<group>"; };
 		C48229F42581149B0060C5CF /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
@@ -179,78 +253,10 @@
 		C4822A012581149B0060C5CF /* DayBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBoxViewController.swift; sourceTree = "<group>"; };
 		C4822A022581149B0060C5CF /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		C4822A0A2581149B0060C5CF /* DividerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
-		C4881FE625A5B536002AAFAC /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C4881FE925A5B536002AAFAC /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
-		C4881FEA25A5B536002AAFAC /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
-		C4881FED25A5B536002AAFAC /* PrimaryBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimaryBtn.swift; sourceTree = "<group>"; };
-		C4881FEF25A5B536002AAFAC /* AutocompleteAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteAddress.swift; sourceTree = "<group>"; };
-		C4881FF025A5B536002AAFAC /* AutocompleteGeoloc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteGeoloc.swift; sourceTree = "<group>"; };
-		C4881FF225A5B536002AAFAC /* MonthDatePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthDatePicker.swift; sourceTree = "<group>"; };
-		C4881FF325A5B536002AAFAC /* MonthView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
-		C4881FF425A5B536002AAFAC /* DatePickerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerVC.swift; sourceTree = "<group>"; };
-		C4881FF525A5B536002AAFAC /* DayPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayPicker.swift; sourceTree = "<group>"; };
-		C4881FF725A5B536002AAFAC /* InputText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputText.swift; sourceTree = "<group>"; };
-		C4881FF825A5B536002AAFAC /* InputPhone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPhone.swift; sourceTree = "<group>"; };
-		C4881FF925A5B536002AAFAC /* InputPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPicker.swift; sourceTree = "<group>"; };
-		C4881FFA25A5B536002AAFAC /* InputBirthday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputBirthday.swift; sourceTree = "<group>"; };
-		C4881FFC25A5B536002AAFAC /* Subtitle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Subtitle.swift; sourceTree = "<group>"; };
-		C4881FFD25A5B536002AAFAC /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
-		C4881FFF25A5B536002AAFAC /* CodeNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeNumber.swift; sourceTree = "<group>"; };
-		C488200125A5B536002AAFAC /* TheVoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoice.swift; sourceTree = "<group>"; };
-		C488200325A5B536002AAFAC /* TimePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
-		C488200525A5B536002AAFAC /* ItemNaming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNaming.swift; sourceTree = "<group>"; };
-		C488200725A5B536002AAFAC /* ControlBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlBar.swift; sourceTree = "<group>"; };
-		C488200825A5B536002AAFAC /* ItemAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemAction.swift; sourceTree = "<group>"; };
-		C488200925A5B536002AAFAC /* ItemChoice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChoice.swift; sourceTree = "<group>"; };
-		C488200A25A5B536002AAFAC /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
-		C488200C25A5B536002AAFAC /* Divider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Divider.swift; sourceTree = "<group>"; };
-		C488200E25A5B536002AAFAC /* TopBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
-		C488200F25A5B536002AAFAC /* framework_ios.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = framework_ios.h; sourceTree = "<group>"; };
-		C488201025A5B536002AAFAC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		C488201225A5B536002AAFAC /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		C488201425A5B537002AAFAC /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		C488201525A5B537002AAFAC /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		C488201625A5B537002AAFAC /* UIDevice+extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+extensions.swift"; sourceTree = "<group>"; };
-		C488201725A5B537002AAFAC /* UIView+Layout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Layout.swift"; sourceTree = "<group>"; };
-		C488201825A5B537002AAFAC /* UILabel+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extensions.swift"; sourceTree = "<group>"; };
-		C488201A25A5B537002AAFAC /* loading.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading.json; sourceTree = "<group>"; };
-		C488201B25A5B537002AAFAC /* check.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = check.json; sourceTree = "<group>"; };
-		C488201C25A5B537002AAFAC /* thumbup.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = thumbup.json; sourceTree = "<group>"; };
-		C488201E25A5B537002AAFAC /* rift demiitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift demiitalic.otf"; sourceTree = "<group>"; };
-		C488201F25A5B537002AAFAC /* Gilroy-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Regular.otf"; sourceTree = "<group>"; };
-		C488202025A5B537002AAFAC /* rift medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift medium.otf"; sourceTree = "<group>"; };
-		C488202125A5B537002AAFAC /* Gilroy-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Black.otf"; sourceTree = "<group>"; };
-		C488202225A5B537002AAFAC /* Gilroy-UltraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLight.otf"; sourceTree = "<group>"; };
-		C488202325A5B537002AAFAC /* rift light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift light.otf"; sourceTree = "<group>"; };
-		C488202425A5B537002AAFAC /* Gilroy-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BlackItalic.otf"; sourceTree = "<group>"; };
-		C488202525A5B537002AAFAC /* Gilroy-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-RegularItalic.otf"; sourceTree = "<group>"; };
-		C488202625A5B537002AAFAC /* Gilroy-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-LightItalic.otf"; sourceTree = "<group>"; };
-		C488202725A5B537002AAFAC /* Gilroy-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ThinItalic.otf"; sourceTree = "<group>"; };
-		C488202825A5B537002AAFAC /* Gilroy-HeavyItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-HeavyItalic.otf"; sourceTree = "<group>"; };
-		C488202925A5B537002AAFAC /* Gilroy-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-BoldItalic.otf"; sourceTree = "<group>"; };
-		C488202A25A5B537002AAFAC /* SF-Compact-Display-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Compact-Display-Bold.otf"; sourceTree = "<group>"; };
-		C488202B25A5B537002AAFAC /* Gilroy-SemiboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-SemiboldItalic.otf"; sourceTree = "<group>"; };
-		C488202C25A5B537002AAFAC /* Gilroy-UltraLightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-UltraLightItalic.otf"; sourceTree = "<group>"; };
-		C488202D25A5B537002AAFAC /* Gilroy-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Medium.otf"; sourceTree = "<group>"; };
-		C488202E25A5B537002AAFAC /* rift bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift bold.otf"; sourceTree = "<group>"; };
-		C488202F25A5B537002AAFAC /* Gilroy-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Heavy.otf"; sourceTree = "<group>"; };
-		C488203025A5B537002AAFAC /* rift lightitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift lightitalic.otf"; sourceTree = "<group>"; };
-		C488203125A5B537002AAFAC /* Rift-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rift-BoldItalic.otf"; sourceTree = "<group>"; };
-		C488203225A5B537002AAFAC /* rift demi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift demi.otf"; sourceTree = "<group>"; };
-		C488203325A5B537002AAFAC /* Gilroy-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Bold.otf"; sourceTree = "<group>"; };
-		C488203425A5B537002AAFAC /* Gilroy-Semibold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Semibold.otf"; sourceTree = "<group>"; };
-		C488203525A5B537002AAFAC /* rift italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift italic.otf"; sourceTree = "<group>"; };
-		C488203625A5B537002AAFAC /* rift mediumitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift mediumitalic.otf"; sourceTree = "<group>"; };
-		C488203725A5B537002AAFAC /* rift regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "rift regular.otf"; sourceTree = "<group>"; };
-		C488203825A5B537002AAFAC /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
-		C488203925A5B537002AAFAC /* Gilroy-Extrabold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Extrabold.otf"; sourceTree = "<group>"; };
-		C488203A25A5B537002AAFAC /* Gilroy-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-MediumItalic.otf"; sourceTree = "<group>"; };
-		C488203B25A5B537002AAFAC /* Gilroy-ExtraboldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraboldItalic.otf"; sourceTree = "<group>"; };
-		C488203C25A5B537002AAFAC /* Gilroy-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.otf"; sourceTree = "<group>"; };
-		C488203D25A5B537002AAFAC /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
-		C48820A725A5C64D002AAFAC /* DSPopupDialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPopupDialogManager.swift; sourceTree = "<group>"; };
-		C48820B025A5C79D002AAFAC /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C4998E692587815F00ACB2AC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
+		C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookExampleViewController.swift; sourceTree = "<group>"; };
+		C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookTitle.swift; sourceTree = "<group>"; };
 		C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		C717944000B6DB6CFFE474B4 /* Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0698EC927A0741C7C39271 /* Pods-heroes_rainbow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.debug.xcconfig"; sourceTree = "<group>"; };
@@ -334,6 +340,9 @@
 		C46D158C2580E33100F151D1 /* heroes_rainbow */ = {
 			isa = PBXGroup;
 			children = (
+				C4DE277925AF8E020051C763 /* StoryBookView.swift */,
+				C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */,
+				C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */,
 				C48229F12581149B0060C5CF /* _Storybook */,
 				C46D158D2580E33100F151D1 /* AppDelegate.swift */,
 				C46D158F2580E33100F151D1 /* SceneDelegate.swift */,
@@ -368,9 +377,240 @@
 		C46D16612580E52600F151D1 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
-				C4881FE425A5B536002AAFAC /* heroes_framework_ds */,
+				C47532ED25ADCFA9002A637D /* heroes_framework_ds */,
 			);
 			path = Submodules;
+			sourceTree = "<group>";
+		};
+		C47532ED25ADCFA9002A637D /* heroes_framework_ds */ = {
+			isa = PBXGroup;
+			children = (
+				C47532EE25ADCFA9002A637D /* framework_ios */,
+				C475334825ADCFA9002A637D /* framework_ios.xcodeproj */,
+			);
+			path = heroes_framework_ds;
+			sourceTree = "<group>";
+		};
+		C47532EE25ADCFA9002A637D /* framework_ios */ = {
+			isa = PBXGroup;
+			children = (
+				C47532EF25ADCFA9002A637D /* Colors.xcassets */,
+				C47532F025ADCFA9002A637D /* Design System Component */,
+				C475331825ADCFA9002A637D /* framework_ios.h */,
+				C475331925ADCFA9002A637D /* Images.xcassets */,
+				C475331A25ADCFA9002A637D /* Ressources */,
+			);
+			path = framework_ios;
+			sourceTree = "<group>";
+		};
+		C47532F025ADCFA9002A637D /* Design System Component */ = {
+			isa = PBXGroup;
+			children = (
+				C47532F125ADCFA9002A637D /* Cells */,
+				C47532F525ADCFA9002A637D /* Buttons */,
+				C47532F725ADCFA9002A637D /* Autocomplete */,
+				C47532FA25ADCFA9002A637D /* Date Picker */,
+				C47532FF25ADCFA9002A637D /* Input */,
+				C475330425ADCFA9002A637D /* Labels */,
+				C475330725ADCFA9002A637D /* _More */,
+				C475330925ADCFA9002A637D /* TheVoice */,
+				C475330B25ADCFA9002A637D /* Time Picker */,
+				C475330D25ADCFA9002A637D /* Item */,
+				C475331125ADCFA9002A637D /* Divider */,
+				C475331325ADCFA9002A637D /* TopBar */,
+			);
+			path = "Design System Component";
+			sourceTree = "<group>";
+		};
+		C47532F125ADCFA9002A637D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C47532F225ADCFA9002A637D /* ItemNav.swift */,
+				C47532F325ADCFA9002A637D /* RadioButton.swift */,
+				C47532F425ADCFA9002A637D /* DayBox.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		C47532F525ADCFA9002A637D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				C47532F625ADCFA9002A637D /* PrimaryBtn.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		C47532F725ADCFA9002A637D /* Autocomplete */ = {
+			isa = PBXGroup;
+			children = (
+				C47532F825ADCFA9002A637D /* AutocompleteAddress.swift */,
+				C47532F925ADCFA9002A637D /* AutocompleteGeoloc.swift */,
+			);
+			path = Autocomplete;
+			sourceTree = "<group>";
+		};
+		C47532FA25ADCFA9002A637D /* Date Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C47532FB25ADCFA9002A637D /* MonthDatePicker.swift */,
+				C47532FC25ADCFA9002A637D /* MonthView.swift */,
+				C47532FD25ADCFA9002A637D /* DatePickerVC.swift */,
+				C47532FE25ADCFA9002A637D /* DayPicker.swift */,
+			);
+			path = "Date Picker";
+			sourceTree = "<group>";
+		};
+		C47532FF25ADCFA9002A637D /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				C475330025ADCFA9002A637D /* InputText.swift */,
+				C475330125ADCFA9002A637D /* InputPhone.swift */,
+				C475330225ADCFA9002A637D /* InputPicker.swift */,
+				C475330325ADCFA9002A637D /* InputBirthday.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		C475330425ADCFA9002A637D /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				C475330525ADCFA9002A637D /* Subtitle.swift */,
+				C475330625ADCFA9002A637D /* Title.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		C475330725ADCFA9002A637D /* _More */ = {
+			isa = PBXGroup;
+			children = (
+				C475330825ADCFA9002A637D /* CodeNumber.swift */,
+			);
+			path = _More;
+			sourceTree = "<group>";
+		};
+		C475330925ADCFA9002A637D /* TheVoice */ = {
+			isa = PBXGroup;
+			children = (
+				C475330A25ADCFA9002A637D /* TheVoice.swift */,
+			);
+			path = TheVoice;
+			sourceTree = "<group>";
+		};
+		C475330B25ADCFA9002A637D /* Time Picker */ = {
+			isa = PBXGroup;
+			children = (
+				C475330C25ADCFA9002A637D /* TimePicker.swift */,
+			);
+			path = "Time Picker";
+			sourceTree = "<group>";
+		};
+		C475330D25ADCFA9002A637D /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				C475330E25ADCFA9002A637D /* ItemNaming.swift */,
+				C475330F25ADCFA9002A637D /* ItemAction.swift */,
+				C475331025ADCFA9002A637D /* ItemChoice.swift */,
+			);
+			path = Item;
+			sourceTree = "<group>";
+		};
+		C475331125ADCFA9002A637D /* Divider */ = {
+			isa = PBXGroup;
+			children = (
+				C475331225ADCFA9002A637D /* Divider.swift */,
+			);
+			path = Divider;
+			sourceTree = "<group>";
+		};
+		C475331325ADCFA9002A637D /* TopBar */ = {
+			isa = PBXGroup;
+			children = (
+				C475331425ADCFA9002A637D /* ControlBar.swift */,
+				C475331525ADCFA9002A637D /* TopBar.swift */,
+			);
+			path = TopBar;
+			sourceTree = "<group>";
+		};
+		C475331A25ADCFA9002A637D /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				C475331B25ADCFA9002A637D /* Extensions */,
+				C475332225ADCFA9002A637D /* DSLocalizable.strings */,
+				C475332325ADCFA9002A637D /* Lottie */,
+				C475332825ADCFA9002A637D /* Fonts */,
+			);
+			path = Ressources;
+			sourceTree = "<group>";
+		};
+		C475331B25ADCFA9002A637D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C475331C25ADCFA9002A637D /* DSUILabel+Extensions.swift */,
+				C475331D25ADCFA9002A637D /* DSUIView+Layout.swift */,
+				C475331E25ADCFA9002A637D /* DSUIDevice+extensions.swift */,
+				C475331F25ADCFA9002A637D /* DSUITextField+Extensions.swift */,
+				C475332025ADCFA9002A637D /* DSUIColor+Extensions.swift */,
+				C475332125ADCFA9002A637D /* DSUIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C475332325ADCFA9002A637D /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				C475332425ADCFA9002A637D /* confetti.json */,
+				C475332525ADCFA9002A637D /* loading.json */,
+				C475332625ADCFA9002A637D /* check.json */,
+				C475332725ADCFA9002A637D /* thumbup.json */,
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
+		C475332825ADCFA9002A637D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				C475332925ADCFA9002A637D /* rift demiitalic.otf */,
+				C475332A25ADCFA9002A637D /* Gilroy-Regular.otf */,
+				C475332B25ADCFA9002A637D /* rift medium.otf */,
+				C475332C25ADCFA9002A637D /* Gilroy-Black.otf */,
+				C475332D25ADCFA9002A637D /* Gilroy-UltraLight.otf */,
+				C475332E25ADCFA9002A637D /* rift light.otf */,
+				C475332F25ADCFA9002A637D /* Gilroy-BlackItalic.otf */,
+				C475333025ADCFA9002A637D /* Gilroy-RegularItalic.otf */,
+				C475333125ADCFA9002A637D /* Gilroy-LightItalic.otf */,
+				C475333225ADCFA9002A637D /* Gilroy-ThinItalic.otf */,
+				C475333325ADCFA9002A637D /* Gilroy-HeavyItalic.otf */,
+				C475333425ADCFA9002A637D /* Gilroy-BoldItalic.otf */,
+				C475333525ADCFA9002A637D /* SF-Compact-Display-Bold.otf */,
+				C475333625ADCFA9002A637D /* Gilroy-SemiboldItalic.otf */,
+				C475333725ADCFA9002A637D /* Gilroy-UltraLightItalic.otf */,
+				C475333825ADCFA9002A637D /* Gilroy-Medium.otf */,
+				C475333925ADCFA9002A637D /* rift bold.otf */,
+				C475333A25ADCFA9002A637D /* Gilroy-Heavy.otf */,
+				C475333B25ADCFA9002A637D /* rift lightitalic.otf */,
+				C475333C25ADCFA9002A637D /* Rift-BoldItalic.otf */,
+				C475333D25ADCFA9002A637D /* rift demi.otf */,
+				C475333E25ADCFA9002A637D /* Gilroy-Bold.otf */,
+				C475333F25ADCFA9002A637D /* Gilroy-Semibold.otf */,
+				C475334025ADCFA9002A637D /* rift italic.otf */,
+				C475334125ADCFA9002A637D /* rift mediumitalic.otf */,
+				C475334225ADCFA9002A637D /* rift regular.otf */,
+				C475334325ADCFA9002A637D /* Gilroy-Light.otf */,
+				C475334425ADCFA9002A637D /* Gilroy-Extrabold.otf */,
+				C475334525ADCFA9002A637D /* Gilroy-MediumItalic.otf */,
+				C475334625ADCFA9002A637D /* Gilroy-ExtraboldItalic.otf */,
+				C475334725ADCFA9002A637D /* Gilroy-Thin.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C475334925ADCFA9002A637D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C475334E25ADCFA9002A637D /* framework_ios.framework */,
+				C475335025ADCFA9002A637D /* framework_iosTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		C48229F12581149B0060C5CF /* _Storybook */ = {
@@ -413,261 +653,6 @@
 				C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */,
 			);
 			path = TheVoice;
-			sourceTree = "<group>";
-		};
-		C4881FE425A5B536002AAFAC /* heroes_framework_ds */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FE525A5B536002AAFAC /* framework_ios */,
-				C488203D25A5B537002AAFAC /* framework_ios.xcodeproj */,
-			);
-			path = heroes_framework_ds;
-			sourceTree = "<group>";
-		};
-		C4881FE525A5B536002AAFAC /* framework_ios */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FE625A5B536002AAFAC /* Colors.xcassets */,
-				C4881FE725A5B536002AAFAC /* Design System Component */,
-				C488200F25A5B536002AAFAC /* framework_ios.h */,
-				C488201025A5B536002AAFAC /* Images.xcassets */,
-				C488201125A5B536002AAFAC /* Ressources */,
-				C48820B525A5C8D0002AAFAC /* Manager */,
-			);
-			path = framework_ios;
-			sourceTree = "<group>";
-		};
-		C4881FE725A5B536002AAFAC /* Design System Component */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FE825A5B536002AAFAC /* Cells */,
-				C4881FEC25A5B536002AAFAC /* Buttons */,
-				C4881FEE25A5B536002AAFAC /* Autocomplete */,
-				C4881FF125A5B536002AAFAC /* Date Picker */,
-				C4881FF625A5B536002AAFAC /* Input */,
-				C4881FFB25A5B536002AAFAC /* Labels */,
-				C4881FFE25A5B536002AAFAC /* _More */,
-				C488200025A5B536002AAFAC /* TheVoice */,
-				C488200225A5B536002AAFAC /* Time Picker */,
-				C488200425A5B536002AAFAC /* Item */,
-				C488200B25A5B536002AAFAC /* Divider */,
-				C488200D25A5B536002AAFAC /* TopBar */,
-				C48820AC25A5C72E002AAFAC /* Modal */,
-			);
-			path = "Design System Component";
-			sourceTree = "<group>";
-		};
-		C4881FE825A5B536002AAFAC /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FE925A5B536002AAFAC /* ItemNav.swift */,
-				C4881FEA25A5B536002AAFAC /* RadioButton.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		C4881FEC25A5B536002AAFAC /* Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FED25A5B536002AAFAC /* PrimaryBtn.swift */,
-			);
-			path = Buttons;
-			sourceTree = "<group>";
-		};
-		C4881FEE25A5B536002AAFAC /* Autocomplete */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FEF25A5B536002AAFAC /* AutocompleteAddress.swift */,
-				C4881FF025A5B536002AAFAC /* AutocompleteGeoloc.swift */,
-			);
-			path = Autocomplete;
-			sourceTree = "<group>";
-		};
-		C4881FF125A5B536002AAFAC /* Date Picker */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FF225A5B536002AAFAC /* MonthDatePicker.swift */,
-				C4881FF325A5B536002AAFAC /* MonthView.swift */,
-				C4881FF425A5B536002AAFAC /* DatePickerVC.swift */,
-				C4881FF525A5B536002AAFAC /* DayPicker.swift */,
-			);
-			path = "Date Picker";
-			sourceTree = "<group>";
-		};
-		C4881FF625A5B536002AAFAC /* Input */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FF725A5B536002AAFAC /* InputText.swift */,
-				C4881FF825A5B536002AAFAC /* InputPhone.swift */,
-				C4881FF925A5B536002AAFAC /* InputPicker.swift */,
-				C4881FFA25A5B536002AAFAC /* InputBirthday.swift */,
-			);
-			path = Input;
-			sourceTree = "<group>";
-		};
-		C4881FFB25A5B536002AAFAC /* Labels */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FFC25A5B536002AAFAC /* Subtitle.swift */,
-				C4881FFD25A5B536002AAFAC /* Title.swift */,
-			);
-			path = Labels;
-			sourceTree = "<group>";
-		};
-		C4881FFE25A5B536002AAFAC /* _More */ = {
-			isa = PBXGroup;
-			children = (
-				C4881FFF25A5B536002AAFAC /* CodeNumber.swift */,
-			);
-			path = _More;
-			sourceTree = "<group>";
-		};
-		C488200025A5B536002AAFAC /* TheVoice */ = {
-			isa = PBXGroup;
-			children = (
-				C488200125A5B536002AAFAC /* TheVoice.swift */,
-			);
-			path = TheVoice;
-			sourceTree = "<group>";
-		};
-		C488200225A5B536002AAFAC /* Time Picker */ = {
-			isa = PBXGroup;
-			children = (
-				C488200325A5B536002AAFAC /* TimePicker.swift */,
-			);
-			path = "Time Picker";
-			sourceTree = "<group>";
-		};
-		C488200425A5B536002AAFAC /* Item */ = {
-			isa = PBXGroup;
-			children = (
-				C488200525A5B536002AAFAC /* ItemNaming.swift */,
-				C488200625A5B536002AAFAC /* Videos */,
-				C488200825A5B536002AAFAC /* ItemAction.swift */,
-				C488200925A5B536002AAFAC /* ItemChoice.swift */,
-				C488200A25A5B536002AAFAC /* DayBox.swift */,
-			);
-			path = Item;
-			sourceTree = "<group>";
-		};
-		C488200625A5B536002AAFAC /* Videos */ = {
-			isa = PBXGroup;
-			children = (
-				C488200725A5B536002AAFAC /* ControlBar.swift */,
-			);
-			path = Videos;
-			sourceTree = "<group>";
-		};
-		C488200B25A5B536002AAFAC /* Divider */ = {
-			isa = PBXGroup;
-			children = (
-				C488200C25A5B536002AAFAC /* Divider.swift */,
-			);
-			path = Divider;
-			sourceTree = "<group>";
-		};
-		C488200D25A5B536002AAFAC /* TopBar */ = {
-			isa = PBXGroup;
-			children = (
-				C488200E25A5B536002AAFAC /* TopBar.swift */,
-			);
-			path = TopBar;
-			sourceTree = "<group>";
-		};
-		C488201125A5B536002AAFAC /* Ressources */ = {
-			isa = PBXGroup;
-			children = (
-				C488201225A5B536002AAFAC /* Localizable.strings */,
-				C488201325A5B537002AAFAC /* Extensions */,
-				C488201925A5B537002AAFAC /* Lottie */,
-				C488201D25A5B537002AAFAC /* Fonts */,
-			);
-			path = Ressources;
-			sourceTree = "<group>";
-		};
-		C488201325A5B537002AAFAC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				C488201425A5B537002AAFAC /* UIView+Extensions.swift */,
-				C488201525A5B537002AAFAC /* UIColor+Extensions.swift */,
-				C488201625A5B537002AAFAC /* UIDevice+extensions.swift */,
-				C488201725A5B537002AAFAC /* UIView+Layout.swift */,
-				C488201825A5B537002AAFAC /* UILabel+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		C488201925A5B537002AAFAC /* Lottie */ = {
-			isa = PBXGroup;
-			children = (
-				C488201A25A5B537002AAFAC /* loading.json */,
-				C488201B25A5B537002AAFAC /* check.json */,
-				C488201C25A5B537002AAFAC /* thumbup.json */,
-			);
-			path = Lottie;
-			sourceTree = "<group>";
-		};
-		C488201D25A5B537002AAFAC /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				C488201E25A5B537002AAFAC /* rift demiitalic.otf */,
-				C488201F25A5B537002AAFAC /* Gilroy-Regular.otf */,
-				C488202025A5B537002AAFAC /* rift medium.otf */,
-				C488202125A5B537002AAFAC /* Gilroy-Black.otf */,
-				C488202225A5B537002AAFAC /* Gilroy-UltraLight.otf */,
-				C488202325A5B537002AAFAC /* rift light.otf */,
-				C488202425A5B537002AAFAC /* Gilroy-BlackItalic.otf */,
-				C488202525A5B537002AAFAC /* Gilroy-RegularItalic.otf */,
-				C488202625A5B537002AAFAC /* Gilroy-LightItalic.otf */,
-				C488202725A5B537002AAFAC /* Gilroy-ThinItalic.otf */,
-				C488202825A5B537002AAFAC /* Gilroy-HeavyItalic.otf */,
-				C488202925A5B537002AAFAC /* Gilroy-BoldItalic.otf */,
-				C488202A25A5B537002AAFAC /* SF-Compact-Display-Bold.otf */,
-				C488202B25A5B537002AAFAC /* Gilroy-SemiboldItalic.otf */,
-				C488202C25A5B537002AAFAC /* Gilroy-UltraLightItalic.otf */,
-				C488202D25A5B537002AAFAC /* Gilroy-Medium.otf */,
-				C488202E25A5B537002AAFAC /* rift bold.otf */,
-				C488202F25A5B537002AAFAC /* Gilroy-Heavy.otf */,
-				C488203025A5B537002AAFAC /* rift lightitalic.otf */,
-				C488203125A5B537002AAFAC /* Rift-BoldItalic.otf */,
-				C488203225A5B537002AAFAC /* rift demi.otf */,
-				C488203325A5B537002AAFAC /* Gilroy-Bold.otf */,
-				C488203425A5B537002AAFAC /* Gilroy-Semibold.otf */,
-				C488203525A5B537002AAFAC /* rift italic.otf */,
-				C488203625A5B537002AAFAC /* rift mediumitalic.otf */,
-				C488203725A5B537002AAFAC /* rift regular.otf */,
-				C488203825A5B537002AAFAC /* Gilroy-Light.otf */,
-				C488203925A5B537002AAFAC /* Gilroy-Extrabold.otf */,
-				C488203A25A5B537002AAFAC /* Gilroy-MediumItalic.otf */,
-				C488203B25A5B537002AAFAC /* Gilroy-ExtraboldItalic.otf */,
-				C488203C25A5B537002AAFAC /* Gilroy-Thin.otf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
-		C488203E25A5B537002AAFAC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				C488204325A5B537002AAFAC /* framework_ios.framework */,
-				C488204525A5B537002AAFAC /* framework_iosTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		C48820AC25A5C72E002AAFAC /* Modal */ = {
-			isa = PBXGroup;
-			children = (
-				C48820B025A5C79D002AAFAC /* PopupViewController.swift */,
-			);
-			path = Modal;
-			sourceTree = "<group>";
-		};
-		C48820B525A5C8D0002AAFAC /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				C48820A725A5C64D002AAFAC /* DSPopupDialogManager.swift */,
-			);
-			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -767,8 +752,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = C488203E25A5B537002AAFAC /* Products */;
-					ProjectRef = C488203D25A5B537002AAFAC /* framework_ios.xcodeproj */;
+					ProductGroup = C475334925ADCFA9002A637D /* Products */;
+					ProjectRef = C475334825ADCFA9002A637D /* framework_ios.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -781,18 +766,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		C488204325A5B537002AAFAC /* framework_ios.framework */ = {
+		C475334E25ADCFA9002A637D /* framework_ios.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = framework_ios.framework;
-			remoteRef = C488204225A5B537002AAFAC /* PBXContainerItemProxy */;
+			remoteRef = C475334D25ADCFA9002A637D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		C488204525A5B537002AAFAC /* framework_iosTests.xctest */ = {
+		C475335025ADCFA9002A637D /* framework_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = framework_iosTests.xctest;
-			remoteRef = C488204425A5B537002AAFAC /* PBXContainerItemProxy */;
+			remoteRef = C475334F25ADCFA9002A637D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -802,46 +787,47 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C488206C25A5B537002AAFAC /* check.json in Resources */,
-				C488208325A5B537002AAFAC /* Gilroy-Bold.otf in Resources */,
-				C488207225A5B537002AAFAC /* Gilroy-UltraLight.otf in Resources */,
-				C488207D25A5B537002AAFAC /* Gilroy-Medium.otf in Resources */,
-				C488208B25A5B537002AAFAC /* Gilroy-ExtraboldItalic.otf in Resources */,
-				C488208725A5B537002AAFAC /* rift regular.otf in Resources */,
+				C475338B25ADCFAA002A637D /* rift bold.otf in Resources */,
+				C475338425ADCFAA002A637D /* Gilroy-ThinItalic.otf in Resources */,
+				C475339725ADCFAA002A637D /* Gilroy-MediumItalic.otf in Resources */,
+				C475337925ADCFAA002A637D /* check.json in Resources */,
+				C475338925ADCFAA002A637D /* Gilroy-UltraLightItalic.otf in Resources */,
+				C475338725ADCFAA002A637D /* SF-Compact-Display-Bold.otf in Resources */,
+				C475337E25ADCFAA002A637D /* Gilroy-Black.otf in Resources */,
+				C475338025ADCFAA002A637D /* rift light.otf in Resources */,
+				C475338D25ADCFAA002A637D /* rift lightitalic.otf in Resources */,
 				C46D159A2580E33200F151D1 /* LaunchScreen.storyboard in Resources */,
-				C488207425A5B537002AAFAC /* Gilroy-BlackItalic.otf in Resources */,
-				C488206E25A5B537002AAFAC /* rift demiitalic.otf in Resources */,
-				C488207E25A5B537002AAFAC /* rift bold.otf in Resources */,
-				C488208625A5B537002AAFAC /* rift mediumitalic.otf in Resources */,
-				C488206525A5B537002AAFAC /* Localizable.strings in Resources */,
-				C488206425A5B537002AAFAC /* Images.xcassets in Resources */,
-				C488206D25A5B537002AAFAC /* thumbup.json in Resources */,
-				C488207325A5B537002AAFAC /* rift light.otf in Resources */,
-				C488208825A5B537002AAFAC /* Gilroy-Light.otf in Resources */,
-				C488204925A5B537002AAFAC /* Colors.xcassets in Resources */,
-				C488208A25A5B537002AAFAC /* Gilroy-MediumItalic.otf in Resources */,
-				C488207B25A5B537002AAFAC /* Gilroy-SemiboldItalic.otf in Resources */,
-				C488207C25A5B537002AAFAC /* Gilroy-UltraLightItalic.otf in Resources */,
-				C488208225A5B537002AAFAC /* rift demi.otf in Resources */,
-				C488208025A5B537002AAFAC /* rift lightitalic.otf in Resources */,
-				C488206B25A5B537002AAFAC /* loading.json in Resources */,
-				C488207025A5B537002AAFAC /* rift medium.otf in Resources */,
-				C488207A25A5B537002AAFAC /* SF-Compact-Display-Bold.otf in Resources */,
+				C475339925ADCFAA002A637D /* Gilroy-Thin.otf in Resources */,
+				C475339325ADCFAA002A637D /* rift mediumitalic.otf in Resources */,
+				C475339125ADCFAA002A637D /* Gilroy-Semibold.otf in Resources */,
+				C475339625ADCFAA002A637D /* Gilroy-Extrabold.otf in Resources */,
+				C475336F25ADCFAA002A637D /* Images.xcassets in Resources */,
+				C475339025ADCFAA002A637D /* Gilroy-Bold.otf in Resources */,
+				C475338A25ADCFAA002A637D /* Gilroy-Medium.otf in Resources */,
+				C475338625ADCFAA002A637D /* Gilroy-BoldItalic.otf in Resources */,
+				C475338825ADCFAA002A637D /* Gilroy-SemiboldItalic.otf in Resources */,
+				C475337825ADCFAA002A637D /* loading.json in Resources */,
+				C475337F25ADCFAA002A637D /* Gilroy-UltraLight.otf in Resources */,
+				C475338E25ADCFAA002A637D /* Rift-BoldItalic.otf in Resources */,
+				C475338525ADCFAA002A637D /* Gilroy-HeavyItalic.otf in Resources */,
+				C475338125ADCFAA002A637D /* Gilroy-BlackItalic.otf in Resources */,
+				C475339825ADCFAA002A637D /* Gilroy-ExtraboldItalic.otf in Resources */,
+				C475337625ADCFAA002A637D /* DSLocalizable.strings in Resources */,
+				C475337B25ADCFAA002A637D /* rift demiitalic.otf in Resources */,
+				C475337C25ADCFAA002A637D /* Gilroy-Regular.otf in Resources */,
+				C475337A25ADCFAA002A637D /* thumbup.json in Resources */,
+				C475337725ADCFAA002A637D /* confetti.json in Resources */,
+				C475339225ADCFAA002A637D /* rift italic.otf in Resources */,
+				C475337D25ADCFAA002A637D /* rift medium.otf in Resources */,
+				C475338225ADCFAA002A637D /* Gilroy-RegularItalic.otf in Resources */,
+				C475338C25ADCFAA002A637D /* Gilroy-Heavy.otf in Resources */,
+				C475339525ADCFAA002A637D /* Gilroy-Light.otf in Resources */,
+				C475339425ADCFAA002A637D /* rift regular.otf in Resources */,
+				C475338F25ADCFAA002A637D /* rift demi.otf in Resources */,
+				C475335425ADCFAA002A637D /* Colors.xcassets in Resources */,
+				C475338325ADCFAA002A637D /* Gilroy-LightItalic.otf in Resources */,
 				C46D15972580E33200F151D1 /* Assets.xcassets in Resources */,
-				C488207725A5B537002AAFAC /* Gilroy-ThinItalic.otf in Resources */,
-				C488207525A5B537002AAFAC /* Gilroy-RegularItalic.otf in Resources */,
-				C488208C25A5B537002AAFAC /* Gilroy-Thin.otf in Resources */,
-				C488207125A5B537002AAFAC /* Gilroy-Black.otf in Resources */,
 				C46D15952580E33100F151D1 /* Main.storyboard in Resources */,
-				C488207625A5B537002AAFAC /* Gilroy-LightItalic.otf in Resources */,
-				C488207F25A5B537002AAFAC /* Gilroy-Heavy.otf in Resources */,
-				C488206F25A5B537002AAFAC /* Gilroy-Regular.otf in Resources */,
-				C488208425A5B537002AAFAC /* Gilroy-Semibold.otf in Resources */,
-				C488208525A5B537002AAFAC /* rift italic.otf in Resources */,
-				C488207825A5B537002AAFAC /* Gilroy-HeavyItalic.otf in Resources */,
-				C488208925A5B537002AAFAC /* Gilroy-Extrabold.otf in Resources */,
-				C488208125A5B537002AAFAC /* Rift-BoldItalic.otf in Resources */,
-				C488207925A5B537002AAFAC /* Gilroy-BoldItalic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -988,61 +974,63 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C48820B125A5C79D002AAFAC /* PopupViewController.swift in Sources */,
-				C488205125A5B537002AAFAC /* MonthView.swift in Sources */,
+				C475335C25ADCFAA002A637D /* MonthView.swift in Sources */,
 				C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */,
-				C488206625A5B537002AAFAC /* UIView+Extensions.swift in Sources */,
-				C488205225A5B537002AAFAC /* DatePickerVC.swift in Sources */,
-				C488205D25A5B537002AAFAC /* ItemNaming.swift in Sources */,
-				C48820A825A5C64D002AAFAC /* DSPopupDialogManager.swift in Sources */,
-				C488204F25A5B537002AAFAC /* AutocompleteGeoloc.swift in Sources */,
+				C475337225ADCFAA002A637D /* DSUIDevice+extensions.swift in Sources */,
+				C475337325ADCFAA002A637D /* DSUITextField+Extensions.swift in Sources */,
+				C475335D25ADCFAA002A637D /* DatePickerVC.swift in Sources */,
+				C475336825ADCFAA002A637D /* ItemNaming.swift in Sources */,
+				C475336925ADCFAA002A637D /* ItemAction.swift in Sources */,
+				C475335A25ADCFAA002A637D /* AutocompleteGeoloc.swift in Sources */,
 				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
 				C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */,
-				C488205325A5B537002AAFAC /* DayPicker.swift in Sources */,
-				C488205925A5B537002AAFAC /* Title.swift in Sources */,
-				C488205025A5B537002AAFAC /* MonthDatePicker.swift in Sources */,
+				C475335E25ADCFAA002A637D /* DayPicker.swift in Sources */,
+				C475336425ADCFAA002A637D /* Title.swift in Sources */,
+				C475335B25ADCFAA002A637D /* MonthDatePicker.swift in Sources */,
 				C4822A192581149B0060C5CF /* CellViewController.swift in Sources */,
-				C488205825A5B537002AAFAC /* Subtitle.swift in Sources */,
-				C488204E25A5B537002AAFAC /* AutocompleteAddress.swift in Sources */,
-				C488205525A5B537002AAFAC /* InputPhone.swift in Sources */,
+				C475336C25ADCFAA002A637D /* ControlBar.swift in Sources */,
+				C475336325ADCFAA002A637D /* Subtitle.swift in Sources */,
+				C475337425ADCFAA002A637D /* DSUIColor+Extensions.swift in Sources */,
+				C475335925ADCFAA002A637D /* AutocompleteAddress.swift in Sources */,
+				C475336025ADCFAA002A637D /* InputPhone.swift in Sources */,
 				C46D15922580E33100F151D1 /* ViewController.swift in Sources */,
-				C488206225A5B537002AAFAC /* Divider.swift in Sources */,
-				C488205F25A5B537002AAFAC /* ItemAction.swift in Sources */,
 				C4822A0C2581149B0060C5CF /* DSLaunchViewController.swift in Sources */,
-				C488205A25A5B537002AAFAC /* CodeNumber.swift in Sources */,
-				C488205E25A5B537002AAFAC /* ControlBar.swift in Sources */,
+				C475336525ADCFAA002A637D /* CodeNumber.swift in Sources */,
 				C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */,
-				C488206325A5B537002AAFAC /* TopBar.swift in Sources */,
 				C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */,
 				C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */,
-				C488206825A5B537002AAFAC /* UIDevice+extensions.swift in Sources */,
 				C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */,
 				C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */,
 				C4822A112581149B0060C5CF /* ButtonViewController.swift in Sources */,
-				C488206025A5B537002AAFAC /* ItemChoice.swift in Sources */,
-				C488204D25A5B537002AAFAC /* PrimaryBtn.swift in Sources */,
+				C475335825ADCFAA002A637D /* PrimaryBtn.swift in Sources */,
 				C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */,
+				C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */,
 				C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
 				C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */,
+				C475335725ADCFAA002A637D /* DayBox.swift in Sources */,
+				C475336D25ADCFAA002A637D /* TopBar.swift in Sources */,
 				C46D16012580E44000F151D1 /* R.generated.swift in Sources */,
-				C488205625A5B537002AAFAC /* InputPicker.swift in Sources */,
-				C488205C25A5B537002AAFAC /* TimePicker.swift in Sources */,
+				C475336125ADCFAA002A637D /* InputPicker.swift in Sources */,
+				C475336725ADCFAA002A637D /* TimePicker.swift in Sources */,
+				C475337025ADCFAA002A637D /* DSUILabel+Extensions.swift in Sources */,
 				C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */,
-				C488205725A5B537002AAFAC /* InputBirthday.swift in Sources */,
-				C488206925A5B537002AAFAC /* UIView+Layout.swift in Sources */,
-				C488205B25A5B537002AAFAC /* TheVoice.swift in Sources */,
-				C488206125A5B537002AAFAC /* DayBox.swift in Sources */,
+				C475336225ADCFAA002A637D /* InputBirthday.swift in Sources */,
+				C475336625ADCFAA002A637D /* TheVoice.swift in Sources */,
 				C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */,
+				C475336A25ADCFAA002A637D /* ItemChoice.swift in Sources */,
 				C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */,
-				C488204A25A5B537002AAFAC /* ItemNav.swift in Sources */,
+				C475335525ADCFAA002A637D /* ItemNav.swift in Sources */,
 				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
-				C488206A25A5B537002AAFAC /* UILabel+Extensions.swift in Sources */,
-				C488204B25A5B537002AAFAC /* RadioButton.swift in Sources */,
-				C488205425A5B537002AAFAC /* InputText.swift in Sources */,
+				C475335625ADCFAA002A637D /* RadioButton.swift in Sources */,
+				C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */,
+				C475337125ADCFAA002A637D /* DSUIView+Layout.swift in Sources */,
+				C475335F25ADCFAA002A637D /* InputText.swift in Sources */,
+				C475337525ADCFAA002A637D /* DSUIView+Extensions.swift in Sources */,
 				C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */,
-				C488206725A5B537002AAFAC /* UIColor+Extensions.swift in Sources */,
+				C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */,
 				C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */,
+				C475336B25ADCFAA002A637D /* Divider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

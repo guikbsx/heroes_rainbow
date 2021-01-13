@@ -37,11 +37,11 @@ class DSViewController: UITableViewController {
         tableView.register(ItemAction.self, forCellReuseIdentifier: "IconNavCell")
         tableView.backgroundColor = .white
         tableView.separatorStyle = .none
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
         
 //        /*TEST*/
-//        let vc = TimePickerViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
+//        let popup = DSPopupDialogManager()
+//        popup.displayDesignSystemPopup(controller: self, emoji: "😀", title: "This is a god damn very long title to show my support to this beautiful long title.", body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.", okLbl: "That's OK to me", cancelLbl: "I don't like the idea", okHandler: {}, cancelHandler: {})
 //        /*TEST*/
     }
     
@@ -85,7 +85,15 @@ class DSViewController: UITableViewController {
 
         /*Components*/
         case .button:
-            let vc = ButtonViewController()
+            let vc = StoryBookExampleViewController(
+                title: "Buttons",
+                components: [
+                    .init(title: "Disabled state",      view: PrimaryBtn(text: "OK", state: .disabled)),
+                    .init(title: "Enabled state",       view: PrimaryBtn(text: "Confirm Change", state: .enabled)),
+                    .init(title: "Loading state",       view: PrimaryBtn(text: "OK", state: .loading)),
+                    .init(title: "Trucated text",       view: PrimaryBtn(text: "This is a way to long text to be displayed", state: .enabled)),
+                    .init(title: "Shadow background",   view: PrimaryBtn(text: "Submit"), color: R.color.blueGrey()!),
+                ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
@@ -147,8 +155,8 @@ class DSViewController: UITableViewController {
             break
 
         case .modal:
-            let popup = DSPopupDialogManager()
-            popup.displayDesignSystemPopup(controller: self, emoji: "😀", title: "This is a title", body: "This is a paragraph to explain what is happening", okLbl: "That's OK to me", cancelLbl: "I don't like the idea", okHandler: {}, cancelHandler: {})
+//            let popup = DSPopupDialogManager()
+//            popup.displayDesignSystemPopup(controller: self, emoji: "😀", title: "This is a god damn very long title to show my support to this beautiful long title.", body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.", okLbl: "That's OK to me", cancelLbl: "I don't like the idea", okHandler: {}, cancelHandler: {})
             break
         }
     }

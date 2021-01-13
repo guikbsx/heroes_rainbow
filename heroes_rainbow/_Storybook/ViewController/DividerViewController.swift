@@ -7,7 +7,7 @@ class DividerViewController: UIViewController {
     var stackView = UIStackView()
     let emptyDivider = Divider()
     let orDivider = Divider(text: "or")
-    let textDivider = Divider(text: R.string.localizable.locationDividerTitle())
+    let textDivider = Divider(text: R.string.dsLocalizable.locationDividerTitle())
     // MARK: - Init
     
     override func viewDidLoad() {

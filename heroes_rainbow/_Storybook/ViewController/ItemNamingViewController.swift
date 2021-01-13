@@ -13,8 +13,6 @@ class ItemNamingViewController: UIViewController {
     
     var stackView = UIStackView()
     let candidateNaming = ItemNaming(user: .candidate, mainLbl: "Pierre Dupont", secondaryLbl: "Sales Associate")
-//    let recruiterNaming = ItemNaming(user: .recruiter, iconUrl: "https://upload.wikimedia.org/wikipedia/fr/thumb/3/35/Starbucks_Coffee_Logo.svg/200px-Starbucks_Coffee_Logo.svg.png", mainLbl: "Starbucks")
-    let controlBar = ControlBar()
         
     // MARK: - Init
     
@@ -32,17 +30,11 @@ class ItemNamingViewController: UIViewController {
         stackView.axis = .vertical
         
         stackView.addArrangedSubview(candidateNaming)
-//        stackView.addArrangedSubview(recruiterNaming)
-        
-        controlBar.delegate = self
-        view.addSubview(controlBar)
-        controlBar.centerInSuperview()
-        
     }
 }
-
-extension ItemNamingViewController: ControlBarDelegate {
-    func didTapMeetBtn() {
-        print("toutouch")
-    }
-}
+//
+//extension ItemNamingViewController: ControlBarDelegate {
+//    func didTapMeetBtn() {
+//        print("toutouch")
+//    }
+//}
