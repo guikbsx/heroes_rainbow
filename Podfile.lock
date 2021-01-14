@@ -17,6 +17,7 @@ PODS:
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - Spring (1.0.6)
   - SwiftDate (6.3.1)
 
 DEPENDENCIES:
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - PhoneNumberKit
   - PopupDialog
   - R.swift
+  - Spring (from `https://github.com/MengTo/Spring.git`)
   - SwiftDate
 
 SPEC REPOS:
@@ -42,6 +44,15 @@ SPEC REPOS:
     - R.swift.Library
     - SwiftDate
 
+EXTERNAL SOURCES:
+  Spring:
+    :git: https://github.com/MengTo/Spring.git
+
+CHECKOUT OPTIONS:
+  Spring:
+    :commit: 50d92a5b9e08848387ae95bf44c6ad20834f7083
+    :git: https://github.com/MengTo/Spring.git
+
 SPEC CHECKSUMS:
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
@@ -52,8 +63,9 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
 
-PODFILE CHECKSUM: 898f11611dd3ab1c22ce5955095d19c1fc4cfa1e
+PODFILE CHECKSUM: 7ca31b35187cc28ee038b87c1dfbf3cabb62257b
 
 COCOAPODS: 1.10.0

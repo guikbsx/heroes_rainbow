@@ -159,8 +159,8 @@ extension HomeViewController {
             let vc = StoryBookExampleViewController(
                 title: "Autocomplete",
                 components: [
-                    .init(title: "Autocomplete with geolocalisation", view: geolocCell),
-                    .init(title: "Autocomplete with address", view: addressCell),])
+                    .init(title: "Autocomplete with geolocalisation", view: geolocCell, color: .white),
+                    .init(title: "Autocomplete with address", view: addressCell, color: .white),])
 //            let vc = AutocompleteViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break

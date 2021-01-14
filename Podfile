@@ -14,7 +14,8 @@ pod 'Hero'
 pod 'Kingfisher'
 pod 'JTAppleCalendar'
 pod 'PopupDialog'
- 
+pod "Spring", :git => 'https://github.com/MengTo/Spring.git'
+
   target 'heroes_rainbowTests' do
     inherit! :search_paths
     # Pods for testing
