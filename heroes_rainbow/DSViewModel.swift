@@ -9,12 +9,12 @@ enum DesignSystemType {
     /*settings*/
     case colors
     case fonts
+    case lottie
     /*components*/
     case autocomplete
     case button
     case calendar
     case cellsRadioBtn
-    case days
     case divider
     case input
     case itemAction
@@ -35,36 +35,49 @@ public final class DSViewModel {
     }
     
     private func setupSections() {
-        var settings = (
-            name: "Settings",
-            designSystems: [
-                DesignSystem(type: .colors, label: "Colors 👨‍💻"),
-                DesignSystem(type: .fonts, label: "Fonts 🚧 👨‍💻"),
-            ])
-        settings.designSystems.sort {
-            $0.label < $1.label
-        }
-        sections.append(settings)
         var components = (
             name: "Components",
             designSystems: [
-                DesignSystem(type: .autocomplete, label: "Autocomplete 👨‍💻"),
+                DesignSystem(type: .autocomplete, label: "Autocomplete"),
                 DesignSystem(type: .button, label: "Buttons"),
-                DesignSystem(type: .calendar, label: "Date Picker 👨‍💻"),
-                DesignSystem(type: .days, label: "Day Box 👨‍💻"),
-                DesignSystem(type: .divider, label: "Divider 👨‍💻"),
-                DesignSystem(type: .itemAction, label: "Item Action 👨‍💻"),
-                DesignSystem(type: .itemNaming, label: "Item Naming 👨‍💻"),
-                DesignSystem(type: .navBars, label: "Navigation Bars 👨‍💻"),
-                DesignSystem(type: .cellsRadioBtn, label: "Radio Button 👨‍💻"),
-                DesignSystem(type: .input, label: "Input 👨‍💻"),
-                DesignSystem(type: .theVoice, label: "The Voice 👨‍💻"),
-                DesignSystem(type: .time, label: "Time Picker 👨‍💻"),
-                DesignSystem(type: .modal, label: "Modal 👨‍💻")
+                
+                ///La vue de calendar dépasse du cadre + ajouter les autres states du calendar
+                DesignSystem(type: .calendar, label: "Date Picker 🚧"),
+                
+                DesignSystem(type: .divider, label: "Divider"),
+                DesignSystem(type: .itemAction, label: "Item Action"),
+                DesignSystem(type: .itemNaming, label: "Item Naming 🚧"),
+                DesignSystem(type: .navBars, label: "Top Bar ✨"),
+                
+                ///Faire en sorte qu'on puisse mettre plusieurs lignes...
+                DesignSystem(type: .cellsRadioBtn, label: "Item Choice 🚧"),
+                
+                ///Il manque la barre au dessus des choix du picker, il faudrait l'intégrer dans le component
+                DesignSystem(type: .input, label: "Input"),
+                
+                DesignSystem(type: .theVoice, label: "The Voice"),
+                DesignSystem(type: .time, label: "Time Picker ✨"),
+                DesignSystem(type: .modal, label: "Modal ✨")
         ])
+        
+        var settings = (
+            name: "Settings",
+            designSystems: [
+                DesignSystem(type: .colors, label: "Colors"),
+                DesignSystem(type: .fonts, label: "Fonts ❌"),
+                DesignSystem(type: .lottie, label: "Animations ✨")
+            ])
+        sections.append(settings)
+
+        ///Trie par ordre alphabétique
+        settings.designSystems.sort {
+            $0.label < $1.label
+        }
+
         components.designSystems.sort {
             $0.label < $1.label
         }
+        
         sections.append(components)
     }
     

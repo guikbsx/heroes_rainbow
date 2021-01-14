@@ -1,13 +1,19 @@
 import UIKit
+import Lottie
 
 class FieldViewController: UIViewController {
     
     // MARK: - Properties
+        
+    private var scrollView = UIScrollView()
+    private var contentView = UIView()
+    private var stackView = UIStackView()
+    private var topBar = TopBar(backBtn: true)
+    private var titleLbl = StoryBookTitle(title: "Input")
+    private var components: [StoryBookPackage]?
+    var animation = AnimationView(name: "wave")
     
-    var stackView = UIStackView()
-    
-    let firstNameTextField = InputText(placeholder: "First name")
-    let lastNameTextField = InputText(placeholder: "Last name")
+    let firstNameTextField = InputText(placeholder: "Insert placeholder")
     let birthdayField = InputBirthday()
     let phoneField = InputPhone()
     let inputPicker = InputPicker(placeholder: "Duration")
@@ -24,16 +30,38 @@ class FieldViewController: UIViewController {
     // MARK: - Properties
     
     private func configure() {
-        view.backgroundColor = .white
+        view.addSubview(animation)
+        animation.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: -40, left: 0, bottom: 0, right: 0))
+        animation.play()
+        animation.loopMode = .autoReverse
         
-        view.addSubview(stackView)
-        stackView.anchor(top: view.layoutMarginsGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        view.addSubview(topBar)
+        topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        topBar.delegate = self
+
+        view.addSubview(titleLbl)
+        titleLbl.anchor(top: topBar.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+        
+        view.addSubview(scrollView)
+        scrollView.anchor(top: titleLbl.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
+        view.backgroundColor = R.color.lightGrey()
+        
+        scrollView.addSubview(stackView)
+        stackView.anchor(top: scrollView.topAnchor, leading: scrollView.leadingAnchor, bottom: scrollView.bottomAnchor, trailing: scrollView.trailingAnchor)
         stackView.axis = .vertical
-        stackView.addArrangedSubview(firstNameTextField)
-        stackView.addArrangedSubview(lastNameTextField)
-        stackView.addArrangedSubview(birthdayField)
-        stackView.addArrangedSubview(phoneField)
-        stackView.addArrangedSubview(inputPicker)
+        stackView.spacing = 0
+        stackView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        
+        components = [
+            .init(title: "Text", view: firstNameTextField),
+            .init(title: "Birthday", view: birthdayField),
+            .init(title: "Phone number", view: phoneField),
+            .init(title: "Input Picker (multiple choices)", view: inputPicker),]
+        
+        components?.forEach { component in
+            let storybook = StoryBookView(view: component.view, title: component.title, color: component.color)
+            stackView.addArrangedSubview(storybook)
+        }
         
         inputPicker.delegate = self
     }
@@ -68,4 +96,9 @@ extension FieldViewController: InputDropDelegate {
     }
     
     
+}
+
+extension FieldViewController: TopBarDelegate {
+    func didTapLeftBtn() { self.navigationController?.popViewController(animated: true) }
+    func didTapRightBtn() {}
 }

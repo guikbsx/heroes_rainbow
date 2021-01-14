@@ -17,9 +17,10 @@ class StoryBookTitle: UIView {
         return label
     }()
     
-    init(title: String) {
+    init(title: String, bigTitle: Bool = false) {
         super.init(frame: .zero)
         titleLbl.text = title
+        titleLbl.font = R.font.gilroyBold(size: bigTitle ? 42 : 32)
         configure()
     }
 

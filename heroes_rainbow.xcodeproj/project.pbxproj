@@ -18,6 +18,9 @@
 		C46D15A52580E33200F151D1 /* heroes_rainbowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15A42580E33200F151D1 /* heroes_rainbowTests.swift */; };
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
 		C46D16012580E44000F151D1 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D16002580E44000F151D1 /* R.generated.swift */; };
+		C472535C25B0505E005A9CC7 /* HomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* HomeExtension.swift */; };
+		C472536125B056B3005A9CC7 /* DSPopupDialogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472536025B056B3005A9CC7 /* DSPopupDialogManager.swift */; };
+		C472536625B0578E005A9CC7 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472536525B0578E005A9CC7 /* PopupViewController.swift */; };
 		C475335425ADCFAA002A637D /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47532EF25ADCFA9002A637D /* Colors.xcassets */; };
 		C475335525ADCFAA002A637D /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F225ADCFA9002A637D /* ItemNav.swift */; };
 		C475335625ADCFAA002A637D /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47532F325ADCFA9002A637D /* RadioButton.swift */; };
@@ -88,11 +91,9 @@
 		C475339825ADCFAA002A637D /* Gilroy-ExtraboldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334625ADCFA9002A637D /* Gilroy-ExtraboldItalic.otf */; };
 		C475339925ADCFAA002A637D /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C475334725ADCFA9002A637D /* Gilroy-Thin.otf */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
-		C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F42581149B0060C5CF /* DSViewController.swift */; };
 		C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F62581149B0060C5CF /* RadioBtnViewController.swift */; };
 		C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F72581149B0060C5CF /* AutocompleteViewController.swift */; };
 		C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F82581149B0060C5CF /* ColorsViewController.swift */; };
-		C4822A112581149B0060C5CF /* ButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F92581149B0060C5CF /* ButtonViewController.swift */; };
 		C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FA2581149B0060C5CF /* NavBarViewController.swift */; };
 		C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FB2581149B0060C5CF /* SettingsViewController.swift */; };
 		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
@@ -102,7 +103,6 @@
 		C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A012581149B0060C5CF /* DayBoxViewController.swift */; };
 		C4822A192581149B0060C5CF /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A022581149B0060C5CF /* CellViewController.swift */; };
 		C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A0A2581149B0060C5CF /* DividerViewController.swift */; };
-		C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4998E692587815F00ACB2AC /* CalendarViewController.swift */; };
 		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
 		C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */; };
 		C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */; };
@@ -166,6 +166,9 @@
 		C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heroes_rainbowUITests.swift; sourceTree = "<group>"; };
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46D16002580E44000F151D1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = heroes_rainbow/Ressources/R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C472535B25B0505E005A9CC7 /* HomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtension.swift; sourceTree = "<group>"; };
+		C472536025B056B3005A9CC7 /* DSPopupDialogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSPopupDialogManager.swift; sourceTree = "<group>"; };
+		C472536525B0578E005A9CC7 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		C47532EF25ADCFA9002A637D /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C47532F225ADCFA9002A637D /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C47532F325ADCFA9002A637D /* RadioButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
@@ -238,11 +241,9 @@
 		C475334725ADCFA9002A637D /* Gilroy-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Thin.otf"; sourceTree = "<group>"; };
 		C475334825ADCFA9002A637D /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
-		C48229F42581149B0060C5CF /* DSViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewController.swift; sourceTree = "<group>"; };
 		C48229F62581149B0060C5CF /* RadioBtnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioBtnViewController.swift; sourceTree = "<group>"; };
 		C48229F72581149B0060C5CF /* AutocompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteViewController.swift; sourceTree = "<group>"; };
 		C48229F82581149B0060C5CF /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
-		C48229F92581149B0060C5CF /* ButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonViewController.swift; sourceTree = "<group>"; };
 		C48229FA2581149B0060C5CF /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
 		C48229FB2581149B0060C5CF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
@@ -252,7 +253,6 @@
 		C4822A012581149B0060C5CF /* DayBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBoxViewController.swift; sourceTree = "<group>"; };
 		C4822A022581149B0060C5CF /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
 		C4822A0A2581149B0060C5CF /* DividerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
-		C4998E692587815F00ACB2AC /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
 		C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookExampleViewController.swift; sourceTree = "<group>"; };
 		C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookTitle.swift; sourceTree = "<group>"; };
@@ -343,8 +343,8 @@
 			isa = PBXGroup;
 			children = (
 				C4DE27A525AFA8DD0051C763 /* HomeViewController.swift */,
+				C472535B25B0505E005A9CC7 /* HomeExtension.swift */,
 				C48229F22581149B0060C5CF /* DSViewModel.swift */,
-				C48229F42581149B0060C5CF /* DSViewController.swift */,
 				C4DE27AA25AFACD10051C763 /* StoryBook Template */,
 				C48229F12581149B0060C5CF /* StoryBook Extensions */,
 				C4DE27AB25AFACE10051C763 /* Ressources */,
@@ -417,6 +417,7 @@
 				C475330D25ADCFA9002A637D /* Item */,
 				C475331125ADCFA9002A637D /* Divider */,
 				C475331325ADCFA9002A637D /* TopBar */,
+				C4DE27F725B042E30051C763 /* Modal */,
 			);
 			path = "Design System Component";
 			sourceTree = "<group>";
@@ -533,6 +534,7 @@
 		C475331A25ADCFA9002A637D /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C4DE27F825B0430A0051C763 /* Managers */,
 				C475331B25ADCFA9002A637D /* Extensions */,
 				C475332225ADCFA9002A637D /* DSLocalizable.strings */,
 				C475332325ADCFA9002A637D /* Lottie */,
@@ -617,8 +619,6 @@
 			isa = PBXGroup;
 			children = (
 				C48229F72581149B0060C5CF /* AutocompleteViewController.swift */,
-				C48229F92581149B0060C5CF /* ButtonViewController.swift */,
-				C4998E692587815F00ACB2AC /* CalendarViewController.swift */,
 				C4822A022581149B0060C5CF /* CellViewController.swift */,
 				C48229F82581149B0060C5CF /* ColorsViewController.swift */,
 				C4822A012581149B0060C5CF /* DayBoxViewController.swift */,
@@ -664,6 +664,22 @@
 				C46D15932580E33100F151D1 /* Main.storyboard */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		C4DE27F725B042E30051C763 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				C472536525B0578E005A9CC7 /* PopupViewController.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		C4DE27F825B0430A0051C763 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C472536025B056B3005A9CC7 /* DSPopupDialogManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -987,6 +1003,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C475335C25ADCFAA002A637D /* MonthView.swift in Sources */,
+				C472536125B056B3005A9CC7 /* DSPopupDialogManager.swift in Sources */,
 				C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */,
 				C475337225ADCFAA002A637D /* DSUIDevice+extensions.swift in Sources */,
 				C475337325ADCFAA002A637D /* DSUITextField+Extensions.swift in Sources */,
@@ -1013,13 +1030,11 @@
 				C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */,
 				C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */,
 				C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */,
-				C4822A112581149B0060C5CF /* ButtonViewController.swift in Sources */,
 				C475335825ADCFAA002A637D /* PrimaryBtn.swift in Sources */,
 				C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */,
 				C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */,
-				C4998E6A2587815F00ACB2AC /* CalendarViewController.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
-				C4822A0D2581149B0060C5CF /* DSViewController.swift in Sources */,
+				C472535C25B0505E005A9CC7 /* HomeExtension.swift in Sources */,
 				C475335725ADCFAA002A637D /* DayBox.swift in Sources */,
 				C475336D25ADCFAA002A637D /* TopBar.swift in Sources */,
 				C46D16012580E44000F151D1 /* R.generated.swift in Sources */,
@@ -1030,6 +1045,7 @@
 				C475336225ADCFAA002A637D /* InputBirthday.swift in Sources */,
 				C475336625ADCFAA002A637D /* TheVoice.swift in Sources */,
 				C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */,
+				C472536625B0578E005A9CC7 /* PopupViewController.swift in Sources */,
 				C475336A25ADCFAA002A637D /* ItemChoice.swift in Sources */,
 				C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */,
 				C475335525ADCFAA002A637D /* ItemNav.swift in Sources */,
