@@ -45,8 +45,8 @@ class StoryBookView: UIView {
         titleLbl.anchor(top: topAnchor, leading: leadingAnchor, bottom: nil, trailing: trailingAnchor, padding: .init(top: 8, left: 20, bottom: 0, right: 20))
         
         addSubview(mainView)
-        mainView.anchor(top: titleLbl.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 4, left: 20, bottom: 8, right: 20))
-        mainView.addShadowToView(shadowColor: R.color.lightBlueGrey()!, offset: .zero, shadowRadius: 5, shadowOpacity: 0.25, cornerRadius: 20)
+        mainView.anchor(top: titleLbl.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: .init(top: 4, left: 0, bottom: 8, right: 0))
+        mainView.addShadowToView(shadowColor: R.color.lightBlueGrey()!, offset: .zero, shadowRadius: 0, shadowOpacity: 0.25, cornerRadius: 0)
         mainView.clipsToBounds = true
         
         mainView.addSubview(contentView)
