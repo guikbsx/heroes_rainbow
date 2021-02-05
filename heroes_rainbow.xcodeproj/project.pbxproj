@@ -113,7 +113,7 @@
 		C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A0A2581149B0060C5CF /* DividerViewController.swift */; };
 		C4A699B825CC24320040DFE8 /* ItemChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A699B725CC24320040DFE8 /* ItemChatMessageTableViewCell.swift */; };
 		C4A699CD25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A699CC25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift */; };
-		C4A699F725CC5D870040DFE8 /* AppleColorEmoji@2x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A699F625CC5D870040DFE8 /* AppleColorEmoji@2x.ttf */; };
+		C4A699F725CC5D870040DFE8 /* JoyPixel.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4A699F625CC5D870040DFE8 /* JoyPixel.ttf */; };
 		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
 		C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */; };
 		C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */; };
@@ -274,7 +274,7 @@
 		C4822A0A2581149B0060C5CF /* DividerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
 		C4A699B725CC24320040DFE8 /* ItemChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		C4A699CC25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatAutomaticTableViewCell.swift; sourceTree = "<group>"; };
-		C4A699F625CC5D870040DFE8 /* AppleColorEmoji@2x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AppleColorEmoji@2x.ttf"; sourceTree = "<group>"; };
+		C4A699F625CC5D870040DFE8 /* JoyPixel.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = JoyPixel.ttf; sourceTree = "<group>"; };
 		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
 		C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookExampleViewController.swift; sourceTree = "<group>"; };
 		C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookTitle.swift; sourceTree = "<group>"; };
@@ -614,7 +614,7 @@
 				C44DBF9325CB165D00B7D1BF /* Gilroy-MediumItalic.otf */,
 				C44DBF9425CB165D00B7D1BF /* Gilroy-ExtraboldItalic.otf */,
 				C44DBF9525CB165D00B7D1BF /* Gilroy-Thin.otf */,
-				C4A699F625CC5D870040DFE8 /* AppleColorEmoji@2x.ttf */,
+				C4A699F625CC5D870040DFE8 /* JoyPixel.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -906,7 +906,7 @@
 				C44DBFE025CB165E00B7D1BF /* Gilroy-UltraLightItalic.otf in Resources */,
 				C44DBFCB25CB165D00B7D1BF /* confetti.json in Resources */,
 				C44DBFD525CB165D00B7D1BF /* Gilroy-Black.otf in Resources */,
-				C4A699F725CC5D870040DFE8 /* AppleColorEmoji@2x.ttf in Resources */,
+				C4A699F725CC5D870040DFE8 /* JoyPixel.ttf in Resources */,
 				C44DBFF025CB165E00B7D1BF /* Gilroy-ExtraboldItalic.otf in Resources */,
 				C44DBFDB25CB165D00B7D1BF /* Gilroy-ThinItalic.otf in Resources */,
 				C44DBFA425CB165D00B7D1BF /* Colors.xcassets in Resources */,

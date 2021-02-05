@@ -79,7 +79,9 @@ class HomeViewController: UIViewController {
 
         let automaticActiveInterview = ItemChatAutomaticTableViewCell()
         automaticActiveInterview.setup(type: .activeInterviewDetails)
-
+        let automaticCancelInterview = ItemChatAutomaticTableViewCell()
+        automaticCancelInterview.setup(type: .cancelInterviewDetails)
+        
         let vc = StoryBookExampleViewController(
             title: "Item Chat",
             components: [
@@ -92,6 +94,7 @@ class HomeViewController: UIViewController {
                 .init(title: "Automatic notification", view: automaticNotification),
                 .init(title: "Automatic booked", view: automaticBooked),
                 .init(title: "Automatic active interview", view: automaticActiveInterview),
+                .init(title: "Automatic cancel interview", view: automaticCancelInterview),
             ])
         self.navigationController?.pushViewController(vc, animated: true)
         /*TEST*/
