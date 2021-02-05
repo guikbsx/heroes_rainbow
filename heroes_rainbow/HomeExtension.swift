@@ -108,19 +108,13 @@ extension HomeViewController {
             break
             
         case .cellsRadioBtn:
-//            let longChoice = ItemChoice()
-//            longChoice.setup(label: "This is a long input name that lives int two lines on an item", selected: true)
             let shortChoice = ItemChoice()
             shortChoice.setup(label: "Input Name", selected: false)
             let vc = StoryBookExampleViewController(
                 title: "Item Choice",
                 components: [
-//                    .init(title: "Long text unselected", view: longChoice),
                     .init(title: "Short text selected", view: shortChoice),
                 ])
-            
-            
-//            let vc = RadioBtnViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break
  
@@ -169,8 +163,8 @@ extension HomeViewController {
             let vc = StoryBookExampleViewController(
                 title: "Date Picker",
                 components: [
-                    .init(title: "Days", view: MonthView()),
-                    .init(title: "Landing Picker", view: MonthDatePicker(month: .thisMonth))
+                    .init(title: "Days", view: MonthsView()),
+//                    .init(title: "Landing Picker", view: MonthDatePicker(month: .thisMonth))
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -179,8 +173,8 @@ extension HomeViewController {
             let vc = StoryBookExampleViewController(
                 title: "Time Picker",
                 components: [
-                    .init(title: "Picker with 15 minutes gap.", view: TimePicker(template: .startingHour, duration: 15)),
-                    .init(title: "Picker with 30 minutes gap.", view: TimePicker(template: .endingHour, duration: 30)),
+//                    .init(title: "Picker with 15 minutes gap.", view: TimePicker(template: .startingHour, duration: 15)),
+//                    .init(title: "Picker with 30 minutes gap.", view: TimePicker(template: .endingHour, duration: 30)),
             ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -208,8 +202,17 @@ extension HomeViewController: PrimaryBtnDelegate {
     func didTapPrimaryBtn(with tag: Int) {
         switch tag {
         case 0:
-            let popup = DSPopupDialogManager()
-            popup.displayDesignSystemPopup(controller: self, emoji: "😀", title: "This is a god damn very long title to show my support to this beautiful long title.", body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.", okLbl: "That's OK to me", cancelLbl: "I don't like the idea", okHandler: {}, cancelHandler: {})
+//            let popup = DSPopupDialogManager()
+//            popup.displayDesignSystemPopup(
+//                controller: self,
+//                type: .info,
+//                emoji: "😀",
+//                title: "This is a god damn very long title to show my support to this beautiful long title.",
+//                body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.",
+//                okLbl: "That's OK to me",
+//                cancelLbl: "I don't like the idea",
+//                okHandler: {},
+//                cancelHandler: {})
             break
         default:
             break
