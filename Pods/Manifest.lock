@@ -1,5 +1,6 @@
 PODS:
   - DynamicBlurView (4.1.0)
+  - Emojica (0.9.6)
   - Hero (1.5.0)
   - JTAppleCalendar (8.0.3)
   - Kingfisher (5.15.8):
@@ -21,6 +22,7 @@ PODS:
   - SwiftDate (6.3.1)
 
 DEPENDENCIES:
+  - Emojica
   - Hero
   - JTAppleCalendar
   - Kingfisher
@@ -34,6 +36,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - DynamicBlurView
+    - Emojica
     - Hero
     - JTAppleCalendar
     - Kingfisher
@@ -55,6 +58,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
+  Emojica: 97f8fd80445fe3014ba73637954c5a0e976cfa6b
   Hero: b7385b75e7259da62f4f85462f59a5082d66b058
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
   Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
@@ -66,6 +70,6 @@ SPEC CHECKSUMS:
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
 
-PODFILE CHECKSUM: 7ca31b35187cc28ee038b87c1dfbf3cabb62257b
+PODFILE CHECKSUM: 733d3fde0bd870e8120acb1176182bd6b11d4f0c
 
 COCOAPODS: 1.10.0

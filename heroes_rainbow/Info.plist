@@ -35,6 +35,7 @@
 		<string>SF-Compact-Display-Bold.otf</string>
 		<string>rift bold.otf</string>
 		<string>rift regular.otf</string>
+		<string>AppleColorEmoji@2x.ttf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
