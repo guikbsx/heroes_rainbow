@@ -202,17 +202,16 @@ extension HomeViewController: PrimaryBtnDelegate {
     func didTapPrimaryBtn(with tag: Int) {
         switch tag {
         case 0:
-//            let popup = DSPopupDialogManager()
-//            popup.displayDesignSystemPopup(
-//                controller: self,
-//                type: .info,
-//                emoji: "😀",
-//                title: "This is a god damn very long title to show my support to this beautiful long title.",
-//                body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.",
-//                okLbl: "That's OK to me",
-//                cancelLbl: "I don't like the idea",
-//                okHandler: {},
-//                cancelHandler: {})
+            let popup = DSPopupDialogManager().createPopup(
+                type: .info,
+                emoji: "🗑",
+                title: "This is a god damn very long title to show my support to this beautiful long title.",
+                body: "This is a paragraph to explain what is happening and it's happening a lot of nothing here.",
+                okLbl: "That's OK to me",
+                cancelLbl: "I don't like the idea",
+                okHandler: {},
+                cancelHandler: {})
+            self.present(popup, animated: true, completion: nil)
             break
         default:
             break
