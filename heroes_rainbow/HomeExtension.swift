@@ -1,10 +1,3 @@
-//
-//  HomeExtension.swift
-//  heroes_rainbow
-//
-//  Created by Guillaume Bisiaux on 14/01/2021.
-//
-
 import UIKit
 import Lottie
 
@@ -119,8 +112,6 @@ extension HomeViewController {
             break
  
         case .navBars:
-//            let cell = ItemAction()
-//            cell.setup(name: "This is a test", image: R.image.storeIcon())
             let vc = StoryBookExampleViewController(
                 title: "Top Bar",
                 components: [
@@ -129,7 +120,7 @@ extension HomeViewController {
                     .init(title: "Bar with back and skip button", view: TopBar(backBtn: true, actionBtn: .skip)),
                     .init(title: "Bar with back and left custom button", view: TopBar(backBtn: true, actionBtn: .custom, customActionLbl: "Delete")),
                     .init(title: "Bar with left and right button and text between us", view: TopBar(backBtn: true, text: "This is an info",actionBtn: .skip)),
-//                    .init(title: "Test", view: cell)
+                    .init(title: "Custom bar", view: TopBar(backBtn: true, customActionLbl: "See example")),
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -155,7 +146,6 @@ extension HomeViewController {
                 components: [
                     .init(title: "Autocomplete with geolocalisation", view: geolocCell, color: .white),
                     .init(title: "Autocomplete with address", view: addressCell, color: .white),])
-//            let vc = AutocompleteViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
