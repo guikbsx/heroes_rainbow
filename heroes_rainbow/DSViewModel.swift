@@ -19,6 +19,7 @@ enum DesignSystemType {
     case input
     case itemAction
     case itemNaming
+    case itemVideo
     case navBars
     case theVoice
     case time
@@ -47,7 +48,7 @@ public final class DSViewModel {
                 DesignSystem(type: .divider, label: "Divider"),
                 DesignSystem(type: .itemAction, label: "Item Action"),
                 DesignSystem(type: .itemNaming, label: "Item Naming 🚧"),
-                DesignSystem(type: .navBars, label: "Top Bar ✨"),
+                DesignSystem(type: .navBars, label: "Top Bar"),
                 
                 ///Faire en sorte qu'on puisse mettre plusieurs lignes...
                 DesignSystem(type: .cellsRadioBtn, label: "Item Choice 🚧"),
@@ -56,8 +57,9 @@ public final class DSViewModel {
                 DesignSystem(type: .input, label: "Input"),
                 
                 DesignSystem(type: .theVoice, label: "The Voice"),
-                DesignSystem(type: .time, label: "Time Picker ✨"),
-                DesignSystem(type: .modal, label: "Modal ✨")
+                DesignSystem(type: .time, label: "Time Picker"),
+                DesignSystem(type: .modal, label: "Modal"),
+                DesignSystem(type: .itemVideo, label: "Item Video  ✨🚧"),
         ])
         
         var settings = (

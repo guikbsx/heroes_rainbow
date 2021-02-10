@@ -180,6 +180,15 @@ extension HomeViewController {
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
+            
+        case .itemVideo:
+            let vc = StoryBookExampleViewController(
+            title: "Item Video",
+                components: [
+                    .init(title: "Item Video Rec", view: ItemVideoRec())
+                ])
+            self.navigationController?.pushViewController(vc, animated: true)
+            
         }
     }
 }

@@ -100,6 +100,7 @@
 		C47D035725CD885E004AFD6B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D035625CD885E004AFD6B /* R.generated.swift */; };
 		C47D039625CDCBC5004AFD6B /* AppleColorEmoji@2x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */; };
 		C47D03B125CDD45C004AFD6B /* Emojis.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47D03B025CDD45C004AFD6B /* Emojis.xcassets */; };
+		C47D042F25D3CB38004AFD6B /* ItemVideoRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
 		C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F62581149B0060C5CF /* RadioBtnViewController.swift */; };
 		C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F72581149B0060C5CF /* AutocompleteViewController.swift */; };
@@ -262,6 +263,7 @@
 		C47D035625CD885E004AFD6B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleColorEmoji@2x.ttf"; path = "../../../../../../../../Downloads/joypixels-6.1-free-fonts/ios/AppleColorEmoji@2x.ttf"; sourceTree = "<group>"; };
 		C47D03B025CDD45C004AFD6B /* Emojis.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Emojis.xcassets; sourceTree = "<group>"; };
+		C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoRec.swift; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
 		C48229F62581149B0060C5CF /* RadioBtnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioBtnViewController.swift; sourceTree = "<group>"; };
 		C48229F72581149B0060C5CF /* AutocompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +383,7 @@
 				C44DBF4025CB165D00B7D1BF /* Input */,
 				C44DBF5025CB165D00B7D1BF /* Item */,
 				C4A699B425CC234D0040DFE8 /* Item Chat */,
+				C47D042825D3CB17004AFD6B /* Item Video */,
 				C44DBF4725CB165D00B7D1BF /* Labels */,
 				C44DBF5A25CB165D00B7D1BF /* Modal */,
 				C44DBF4525CB165D00B7D1BF /* Profile Picker */,
@@ -694,6 +697,14 @@
 				C46D15B12580E33200F151D1 /* Info.plist */,
 			);
 			path = heroes_rainbowUITests;
+			sourceTree = "<group>";
+		};
+		C47D042825D3CB17004AFD6B /* Item Video */ = {
+			isa = PBXGroup;
+			children = (
+				C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */,
+			);
+			path = "Item Video";
 			sourceTree = "<group>";
 		};
 		C48229F12581149B0060C5CF /* StoryBook Extensions */ = {
@@ -1099,6 +1110,7 @@
 				C47D032A25CD68BC004AFD6B /* IconLabel.swift in Sources */,
 				C44DBFAD25CB165D00B7D1BF /* DayPicker.swift in Sources */,
 				C44DBFA825CB165D00B7D1BF /* AutocompleteAddress.swift in Sources */,
+				C47D042F25D3CB38004AFD6B /* ItemVideoRec.swift in Sources */,
 				C4822A192581149B0060C5CF /* CellViewController.swift in Sources */,
 				C44DBFC625CB165D00B7D1BF /* DSUIDevice+extensions.swift in Sources */,
 				C44DBFC225CB165D00B7D1BF /* MonthPickerData.swift in Sources */,

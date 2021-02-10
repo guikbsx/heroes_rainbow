@@ -16,6 +16,7 @@ pod 'JTAppleCalendar'
 pod 'PopupDialog'
 pod "Spring", :git => 'https://github.com/MengTo/Spring.git'
 pod 'Emojica'
+pod "UICircularProgressRing"
 
   target 'heroes_rainbowTests' do
     inherit! :search_paths
