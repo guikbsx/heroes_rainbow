@@ -273,6 +273,7 @@
 		C4EABF8925D5220D009CA4C6 /* ItemChatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatExtension.swift; sourceTree = "<group>"; };
 		C4EABF8E25D52281009CA4C6 /* DesignSystemsColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemsColor.swift; sourceTree = "<group>"; };
 		C4EABF9625D53DE7009CA4C6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
+		C4EABFA925D587CF009CA4C6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C717944000B6DB6CFFE474B4 /* Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0698EC927A0741C7C39271 /* Pods-heroes_rainbow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.debug.xcconfig"; sourceTree = "<group>"; };
 		F98A85454F27A3919FD4BFCF /* Pods-heroes_rainbowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -665,6 +666,7 @@
 				C46D15962580E33200F151D1 /* Assets.xcassets */,
 				C46D15982580E33200F151D1 /* LaunchScreen.storyboard */,
 				C46D159B2580E33200F151D1 /* Info.plist */,
+				C4EABFA925D587CF009CA4C6 /* README.md */,
 			);
 			path = heroes_rainbow;
 			sourceTree = "<group>";
@@ -1318,12 +1320,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = EXMMFK64K2;
 				INFOPLIST_FILE = heroes_rainbow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.heroes.heroes-rainbow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1338,12 +1342,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
 				DEVELOPMENT_TEAM = EXMMFK64K2;
 				INFOPLIST_FILE = heroes_rainbow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.heroes.heroes-rainbow";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
