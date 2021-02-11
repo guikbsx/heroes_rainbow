@@ -19,14 +19,6 @@ extension HomeViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
-        case .fonts:
-            let vc = StoryBookExampleViewController(
-                title: "Fonts",
-                components: [
-                ])
-            self.navigationController?.pushViewController(vc, animated: true)
-            break
-            
         case .lottie:
             let loading = AnimationView(name: "loading")
             let check = AnimationView(name: "check")
@@ -91,27 +83,22 @@ extension HomeViewController {
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
-        case .itemNaming:
-            let vc = StoryBookExampleViewController(
-                title: "Item Naming",
-                components: [
-                    .init(title: "Candidate component", view: ItemNaming(user: .candidate, mainLbl: "Pierre Dupont", secondaryLbl: "Sales Associate"), color: R.color.blueGrey()!)
-                ])
-            self.navigationController?.pushViewController(vc, animated: true)
-            break
-            
-        case .cellsRadioBtn:
-            let shortChoice = ItemChoice()
-            shortChoice.setup(label: "Input Name", selected: false)
+        case .itemChoice:
+            let unselectedChoice = ItemChoice()
+            unselectedChoice.setup(label: "This is a choice", selected: false)
+            let selectedChoice = ItemChoice()
+            selectedChoice.setup(label: "This is another choice", selected: true)
+
             let vc = StoryBookExampleViewController(
                 title: "Item Choice",
                 components: [
-                    .init(title: "Short text selected", view: shortChoice),
+                    .init(title: "Unselected choice", view: unselectedChoice),
+                    .init(title: "Selected choice", view: selectedChoice),
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
  
-        case .navBars:
+        case .topBar:
             let vc = StoryBookExampleViewController(
                 title: "Top Bar",
                 components: [
@@ -121,6 +108,16 @@ extension HomeViewController {
                     .init(title: "Bar with back and left custom button", view: TopBar(backBtn: true, actionBtn: .custom, customActionLbl: "Delete")),
                     .init(title: "Bar with left and right button and text between us", view: TopBar(backBtn: true, text: "This is an info",actionBtn: .skip)),
                     .init(title: "Custom bar", view: TopBar(backBtn: true, customActionLbl: "See example")),
+                ])
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+            
+        case .menuBar:
+            let vc = StoryBookExampleViewController(
+                title: "Menu Bar",
+                components: [
+                    .init(title: "Menu bar", view: MenuBar(text: "Filter", counter: 0), color: .black),
+                    .init(title: "Menu bar with activate filter", view: MenuBar(text: "Filter", counter: 3), color: .black),
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -150,12 +147,7 @@ extension HomeViewController {
             break
             
         case .calendar:
-            let vc = StoryBookExampleViewController(
-                title: "Date Picker",
-                components: [
-                    .init(title: "Days", view: MonthsView()),
-//                    .init(title: "Landing Picker", view: MonthDatePicker(month: .thisMonth))
-                ])
+            let vc = CalendarViewController()
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
@@ -163,8 +155,7 @@ extension HomeViewController {
             let vc = StoryBookExampleViewController(
                 title: "Time Picker",
                 components: [
-//                    .init(title: "Picker with 15 minutes gap.", view: TimePicker(template: .startingHour, duration: 15)),
-//                    .init(title: "Picker with 30 minutes gap.", view: TimePicker(template: .endingHour, duration: 30)),
+                    .init(title: "", view: TimePicker(date: Date(), duration: 15)),
             ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -183,12 +174,18 @@ extension HomeViewController {
             
         case .itemVideo:
             let vc = StoryBookExampleViewController(
-            title: "Item Video",
+                title: "Item Video",
                 components: [
-                    .init(title: "Item Video Rec", view: ItemVideoRec())
+                    .init(title: "Item Video Rec", view: ItemVideoRec(), color: R.color.boldGrey()!),
+                    .init(title: "Item Video Edit Retry", view: ItemVideoEdit(type: .retry), color: R.color.boldGrey()!),
+                    .init(title: "Item Video Edit Ok", view: ItemVideoEdit(type: .validate), color: R.color.boldGrey()!),
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
+            break
             
+        case .itemChat:
+            configureItemChat()
+            break
         }
     }
 }

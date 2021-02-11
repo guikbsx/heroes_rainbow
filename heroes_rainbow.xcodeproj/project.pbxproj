@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		12841F08E1B45B20E5ADFA75 /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */; };
 		3539B9BEAD3C6098E78F7065 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046744DA1580A6336CEE39A8 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework */; };
-		C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C423165125814D3A0034C171 /* ItemNamingViewController.swift */; };
 		C44DBFA425CB165D00B7D1BF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44DBF3125CB165D00B7D1BF /* Colors.xcassets */; };
 		C44DBFA525CB165D00B7D1BF /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3425CB165D00B7D1BF /* ItemNav.swift */; };
 		C44DBFA625CB165D00B7D1BF /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3525CB165D00B7D1BF /* DayBox.swift */; };
@@ -101,19 +100,12 @@
 		C47D039625CDCBC5004AFD6B /* AppleColorEmoji@2x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */; };
 		C47D03B125CDD45C004AFD6B /* Emojis.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C47D03B025CDD45C004AFD6B /* Emojis.xcassets */; };
 		C47D042F25D3CB38004AFD6B /* ItemVideoRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */; };
+		C47D043425D3F1B4004AFD6B /* ItemVideoEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D043325D3F1B4004AFD6B /* ItemVideoEdit.swift */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
-		C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F62581149B0060C5CF /* RadioBtnViewController.swift */; };
-		C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F72581149B0060C5CF /* AutocompleteViewController.swift */; };
-		C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F82581149B0060C5CF /* ColorsViewController.swift */; };
-		C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FA2581149B0060C5CF /* NavBarViewController.swift */; };
-		C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FB2581149B0060C5CF /* SettingsViewController.swift */; };
 		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
 		C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */; };
 		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
 		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
-		C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A012581149B0060C5CF /* DayBoxViewController.swift */; };
-		C4822A192581149B0060C5CF /* CellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A022581149B0060C5CF /* CellViewController.swift */; };
-		C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A0A2581149B0060C5CF /* DividerViewController.swift */; };
 		C4A699B825CC24320040DFE8 /* ItemChatMessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A699B725CC24320040DFE8 /* ItemChatMessageTableViewCell.swift */; };
 		C4A699CD25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A699CC25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift */; };
 		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
@@ -121,7 +113,9 @@
 		C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */; };
 		C4DE27A625AFA8DD0051C763 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE27A525AFA8DD0051C763 /* HomeViewController.swift */; };
 		C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE27C125AFAD590051C763 /* ViewController.swift */; };
-		C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */; };
+		C4EABF8A25D5220D009CA4C6 /* ItemChatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EABF8925D5220D009CA4C6 /* ItemChatExtension.swift */; };
+		C4EABF8F25D52281009CA4C6 /* DesignSystemsColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EABF8E25D52281009CA4C6 /* DesignSystemsColor.swift */; };
+		C4EABF9725D53DE7009CA4C6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EABF9625D53DE7009CA4C6 /* CalendarViewController.swift */; };
 		E2DDDF156D645BBE5B3F057F /* Pods_heroes_rainbowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05564DB120C98EEAF52F1CEC /* Pods_heroes_rainbowTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -163,7 +157,6 @@
 		55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714D7EC566941EB213C98FE5 /* Pods-heroes_rainbowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87E74D6AB00EE26F9171CBE7 /* Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C423165125814D3A0034C171 /* ItemNamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNamingViewController.swift; sourceTree = "<group>"; };
 		C44DBF3125CB165D00B7D1BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C44DBF3425CB165D00B7D1BF /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C44DBF3525CB165D00B7D1BF /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
@@ -264,19 +257,12 @@
 		C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleColorEmoji@2x.ttf"; path = "../../../../../../../../Downloads/joypixels-6.1-free-fonts/ios/AppleColorEmoji@2x.ttf"; sourceTree = "<group>"; };
 		C47D03B025CDD45C004AFD6B /* Emojis.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Emojis.xcassets; sourceTree = "<group>"; };
 		C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoRec.swift; sourceTree = "<group>"; };
+		C47D043325D3F1B4004AFD6B /* ItemVideoEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoEdit.swift; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
-		C48229F62581149B0060C5CF /* RadioBtnViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioBtnViewController.swift; sourceTree = "<group>"; };
-		C48229F72581149B0060C5CF /* AutocompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutocompleteViewController.swift; sourceTree = "<group>"; };
-		C48229F82581149B0060C5CF /* ColorsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
-		C48229FA2581149B0060C5CF /* NavBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavBarViewController.swift; sourceTree = "<group>"; };
-		C48229FB2581149B0060C5CF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceViewController.swift; sourceTree = "<group>"; };
 		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
 		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
-		C4822A012581149B0060C5CF /* DayBoxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBoxViewController.swift; sourceTree = "<group>"; };
-		C4822A022581149B0060C5CF /* CellViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewController.swift; sourceTree = "<group>"; };
-		C4822A0A2581149B0060C5CF /* DividerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DividerViewController.swift; sourceTree = "<group>"; };
 		C4A699B725CC24320040DFE8 /* ItemChatMessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatMessageTableViewCell.swift; sourceTree = "<group>"; };
 		C4A699CC25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatAutomaticTableViewCell.swift; sourceTree = "<group>"; };
 		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
@@ -284,7 +270,9 @@
 		C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookTitle.swift; sourceTree = "<group>"; };
 		C4DE27A525AFA8DD0051C763 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C4DE27C125AFAD590051C763 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		C4EABF8925D5220D009CA4C6 /* ItemChatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatExtension.swift; sourceTree = "<group>"; };
+		C4EABF8E25D52281009CA4C6 /* DesignSystemsColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemsColor.swift; sourceTree = "<group>"; };
+		C4EABF9625D53DE7009CA4C6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		C717944000B6DB6CFFE474B4 /* Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		CC0698EC927A0741C7C39271 /* Pods-heroes_rainbow.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.debug.xcconfig"; sourceTree = "<group>"; };
 		F98A85454F27A3919FD4BFCF /* Pods-heroes_rainbowTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -703,6 +691,7 @@
 			isa = PBXGroup;
 			children = (
 				C47D042E25D3CB38004AFD6B /* ItemVideoRec.swift */,
+				C47D043325D3F1B4004AFD6B /* ItemVideoEdit.swift */,
 			);
 			path = "Item Video";
 			sourceTree = "<group>";
@@ -710,18 +699,8 @@
 		C48229F12581149B0060C5CF /* StoryBook Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C48229F72581149B0060C5CF /* AutocompleteViewController.swift */,
-				C4822A022581149B0060C5CF /* CellViewController.swift */,
-				C48229F82581149B0060C5CF /* ColorsViewController.swift */,
-				C4822A012581149B0060C5CF /* DayBoxViewController.swift */,
-				C4822A0A2581149B0060C5CF /* DividerViewController.swift */,
-				C48229FC2581149B0060C5CF /* FieldViewController.swift */,
-				C423165125814D3A0034C171 /* ItemNamingViewController.swift */,
-				C48229FA2581149B0060C5CF /* NavBarViewController.swift */,
-				C48229F62581149B0060C5CF /* RadioBtnViewController.swift */,
-				C48229FB2581149B0060C5CF /* SettingsViewController.swift */,
-				C4F283EB2590D3BD0025641E /* TimePickerViewController.swift */,
-				C48229FD2581149B0060C5CF /* TheVoice */,
+				C4EABF8925D5220D009CA4C6 /* ItemChatExtension.swift */,
+				C4EABF9B25D541DC009CA4C6 /* Views */,
 			);
 			path = "StoryBook Extensions";
 			sourceTree = "<group>";
@@ -764,8 +743,19 @@
 				C46D16002580E44000F151D1 /* R.generated.swift */,
 				C4DE27C125AFAD590051C763 /* ViewController.swift */,
 				C46D15932580E33100F151D1 /* Main.storyboard */,
+				C4EABF8E25D52281009CA4C6 /* DesignSystemsColor.swift */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		C4EABF9B25D541DC009CA4C6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C48229FC2581149B0060C5CF /* FieldViewController.swift */,
+				C4EABF9625D53DE7009CA4C6 /* CalendarViewController.swift */,
+				C48229FD2581149B0060C5CF /* TheVoice */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1093,37 +1083,36 @@
 				C44DBFC425CB165D00B7D1BF /* DSUILabel+Extensions.swift in Sources */,
 				C44DBFB425CB165D00B7D1BF /* Title.swift in Sources */,
 				C44DBFD025CB165D00B7D1BF /* GenericFlow.swift in Sources */,
-				C4822A132581149B0060C5CF /* SettingsViewController.swift in Sources */,
 				C44DBFBF25CB165D00B7D1BF /* PopupViewController.swift in Sources */,
 				C44DBFD125CB165D00B7D1BF /* GenericOnboardingViewController.swift in Sources */,
+				C47D043425D3F1B4004AFD6B /* ItemVideoEdit.swift in Sources */,
 				C44DBFBC25CB165D00B7D1BF /* MenuBar.swift in Sources */,
 				C44DBFAA25CB165D00B7D1BF /* MonthsView.swift in Sources */,
+				C4EABF9725D53DE7009CA4C6 /* CalendarViewController.swift in Sources */,
 				C44DBFA925CB165D00B7D1BF /* AutocompleteGeoloc.swift in Sources */,
 				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
 				C44DBFB525CB165D00B7D1BF /* CodeNumber.swift in Sources */,
 				C44DBFA525CB165D00B7D1BF /* ItemNav.swift in Sources */,
-				C4822A182581149B0060C5CF /* DayBoxViewController.swift in Sources */,
 				C44DBFC925CB165D00B7D1BF /* DSUIView+Extensions.swift in Sources */,
 				C44DBFC325CB165D00B7D1BF /* DSUIButton+extensions.swift in Sources */,
+				C4EABF8A25D5220D009CA4C6 /* ItemChatExtension.swift in Sources */,
 				C44DBFB325CB165D00B7D1BF /* Subtitle.swift in Sources */,
+				C4EABF8F25D52281009CA4C6 /* DesignSystemsColor.swift in Sources */,
 				C44DBFC125CB165D00B7D1BF /* DSPopupDialogManager.swift in Sources */,
 				C47D032A25CD68BC004AFD6B /* IconLabel.swift in Sources */,
 				C44DBFAD25CB165D00B7D1BF /* DayPicker.swift in Sources */,
 				C44DBFA825CB165D00B7D1BF /* AutocompleteAddress.swift in Sources */,
 				C47D042F25D3CB38004AFD6B /* ItemVideoRec.swift in Sources */,
-				C4822A192581149B0060C5CF /* CellViewController.swift in Sources */,
 				C44DBFC625CB165D00B7D1BF /* DSUIDevice+extensions.swift in Sources */,
 				C44DBFC225CB165D00B7D1BF /* MonthPickerData.swift in Sources */,
 				C4DE27A625AFA8DD0051C763 /* HomeViewController.swift in Sources */,
 				C44DBFAF25CB165D00B7D1BF /* InputPhone.swift in Sources */,
 				C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */,
 				C44DBFB925CB165D00B7D1BF /* ItemAction.swift in Sources */,
-				C4822A102581149B0060C5CF /* ColorsViewController.swift in Sources */,
 				C44DBFB825CB165D00B7D1BF /* ItemNaming.swift in Sources */,
 				C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */,
 				C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */,
 				C44DBFB625CB165D00B7D1BF /* TheVoice.swift in Sources */,
-				C423165225814D3A0034C171 /* ItemNamingViewController.swift in Sources */,
 				C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */,
 				C4A699CD25CC4D860040DFE8 /* ItemChatAutomaticTableViewCell.swift in Sources */,
 				C44DBFC725CB165D00B7D1BF /* DSUITextField+Extensions.swift in Sources */,
@@ -1131,7 +1120,6 @@
 				C44DBFA725CB165D00B7D1BF /* PrimaryBtn.swift in Sources */,
 				C4A699B825CC24320040DFE8 /* ItemChatMessageTableViewCell.swift in Sources */,
 				C44DBFBA25CB165D00B7D1BF /* ItemChoice.swift in Sources */,
-				C4822A122581149B0060C5CF /* NavBarViewController.swift in Sources */,
 				C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
 				C44DBFB225CB165D00B7D1BF /* ProfilePicker.swift in Sources */,
@@ -1142,16 +1130,12 @@
 				C44DBFBB25CB165D00B7D1BF /* Divider.swift in Sources */,
 				C44DBFBE25CB165D00B7D1BF /* TopBar.swift in Sources */,
 				C44DBFB025CB165D00B7D1BF /* InputPicker.swift in Sources */,
-				C4F283EC2590D3BD0025641E /* TimePickerViewController.swift in Sources */,
 				C44DBFB125CB165D00B7D1BF /* InputBirthday.swift in Sources */,
 				C47D035725CD885E004AFD6B /* R.generated.swift in Sources */,
-				C4822A0E2581149B0060C5CF /* RadioBtnViewController.swift in Sources */,
-				C4822A202581149B0060C5CF /* DividerViewController.swift in Sources */,
 				C44DBFF225CB165E00B7D1BF /* HoursHelper.swift in Sources */,
 				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
 				C44DBFC525CB165D00B7D1BF /* DSUIView+Layout.swift in Sources */,
 				C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */,
-				C4822A0F2581149B0060C5CF /* AutocompleteViewController.swift in Sources */,
 				C44DBFAE25CB165D00B7D1BF /* InputText.swift in Sources */,
 				C44DBFBD25CB165D00B7D1BF /* ControlBar.swift in Sources */,
 				C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */,

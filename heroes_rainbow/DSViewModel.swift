@@ -8,19 +8,20 @@ public struct DesignSystem {
 enum DesignSystemType {
     /*settings*/
     case colors
-    case fonts
+//    case fonts
     case lottie
     /*components*/
     case autocomplete
     case button
     case calendar
-    case cellsRadioBtn
+    case itemChoice
     case divider
     case input
     case itemAction
-    case itemNaming
+    case itemChat
     case itemVideo
-    case navBars
+    case topBar
+    case menuBar
     case theVoice
     case time
     case modal
@@ -41,33 +42,26 @@ public final class DSViewModel {
             designSystems: [
                 DesignSystem(type: .autocomplete, label: "Autocomplete"),
                 DesignSystem(type: .button, label: "Buttons"),
-                
-                ///La vue de calendar dépasse du cadre + ajouter les autres states du calendar
-                DesignSystem(type: .calendar, label: "Date Picker 🚧"),
-                
+                DesignSystem(type: .calendar, label: "Date Picker"),
                 DesignSystem(type: .divider, label: "Divider"),
                 DesignSystem(type: .itemAction, label: "Item Action"),
-                DesignSystem(type: .itemNaming, label: "Item Naming 🚧"),
-                DesignSystem(type: .navBars, label: "Top Bar"),
-                
-                ///Faire en sorte qu'on puisse mettre plusieurs lignes...
-                DesignSystem(type: .cellsRadioBtn, label: "Item Choice 🚧"),
-                
-                ///Il manque la barre au dessus des choix du picker, il faudrait l'intégrer dans le component
+                DesignSystem(type: .topBar, label: "Top Bar"),
+                DesignSystem(type: .itemChoice, label: "Item Choice"),
                 DesignSystem(type: .input, label: "Input"),
-                
                 DesignSystem(type: .theVoice, label: "The Voice"),
                 DesignSystem(type: .time, label: "Time Picker"),
                 DesignSystem(type: .modal, label: "Modal"),
-                DesignSystem(type: .itemVideo, label: "Item Video  ✨🚧"),
+                DesignSystem(type: .itemVideo, label: "Item Video ✨"),
+                DesignSystem(type: .itemChat, label: "Item Chat 🛠"),
+                DesignSystem(type: .menuBar, label: "Menu Bar"),
         ])
         
         var settings = (
             name: "Settings",
             designSystems: [
                 DesignSystem(type: .colors, label: "Colors"),
-                DesignSystem(type: .fonts, label: "Fonts ❌"),
-                DesignSystem(type: .lottie, label: "Animations ✨")
+//                DesignSystem(type: .fonts, label: "Fonts ❌"),
+                DesignSystem(type: .lottie, label: "Animations"),
             ])
         sections.append(settings)
 

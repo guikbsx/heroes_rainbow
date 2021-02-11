@@ -37,6 +37,7 @@
 		<string>rift regular.otf</string>
 		<string>AppleColorEmoji@2x.ttf</string>
 		<string>Gilroy-Heavy.otf</string>
+		<string>Gilroy-Semibold.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

@@ -1,28 +1,23 @@
-//
-//  HomeViewController.swift
-//  heroes_rainbow
-//
-//  Created by Guillaume Bisiaux on 13/01/2021.
-//
-
 import UIKit
 import Lottie
+import Emojica
 
 class HomeViewController: UIViewController {
     
     internal let viewModel: DSViewModel!
     
     internal let designSystemsColor: [DesignSystemsColor] = [
-        DesignSystemsColor(name: "Turquoise",       backgroundColor: R.color.turquoise()!,      textColor: .white, hex: "81FFD7"),
-        DesignSystemsColor(name: "Pink",            backgroundColor: R.color.pink()!,           textColor: .white, hex: "E46EF8"),
-        DesignSystemsColor(name: "Purple",          backgroundColor: R.color.purple()!,         textColor: .white, hex: "5F6BEF"),
-        DesignSystemsColor(name: "Blue Grey",       backgroundColor: R.color.blueGrey()!,       textColor: .white, hex: "5F6BEF"),
-        DesignSystemsColor(name: "Light Blue Grey", backgroundColor: R.color.lightBlueGrey()!,  textColor: .white, hex: "99A3C1"),
-        DesignSystemsColor(name: "Bold Grey",       backgroundColor: R.color.boldGrey()!,       textColor: .white, hex: "979797"),
-        DesignSystemsColor(name: "Light Grey",      backgroundColor: R.color.lightGrey()!,      textColor: .black, hex: "F2F2F2"),
-        DesignSystemsColor(name: "Light Red",       backgroundColor: R.color.lightRed()!,       textColor: .white, hex: "FF6C6C"),
-        DesignSystemsColor(name: "White",           backgroundColor: .white,                    textColor: .black, hex: "FFFFFF"),
-        DesignSystemsColor(name: "Black",           backgroundColor: .black,                    textColor: .white, hex: "000000"),
+        DesignSystemsColor(name: "Turquoise",       backgroundColor: R.color.turquoise()!,     hex: "81FFD7"),
+        DesignSystemsColor(name: "Pink",            backgroundColor: R.color.pink()!,          hex: "E46EF8"),
+        DesignSystemsColor(name: "Purple",          backgroundColor: R.color.purple()!,        hex: "5F6BEF"),
+        DesignSystemsColor(name: "Blue Grey",       backgroundColor: R.color.blueGrey()!,      hex: "5F6BEF"),
+        DesignSystemsColor(name: "Light Blue Grey", backgroundColor: R.color.lightBlueGrey()!, hex: "99A3C1"),
+        DesignSystemsColor(name: "Black",           backgroundColor: .black,                   hex: "000000"),
+        DesignSystemsColor(name: "Bold Grey",       backgroundColor: R.color.boldGrey()!,      hex: "979797"),
+        DesignSystemsColor(name: "Light Grey",      backgroundColor: R.color.lightGrey()!,     hex: "F2F2F2"),
+        DesignSystemsColor(name: "Light Red",       backgroundColor: R.color.lightRed()!,      hex: "FF6C6C"),
+        DesignSystemsColor(name: "White",           backgroundColor: .white,                   hex: "FFFFFF"),
+        DesignSystemsColor(name: "Inactive grey",   backgroundColor: R.color.inactiveGrey()!,  hex: "99A3C1")
     ]
     
     var animation = AnimationView(name: "wave")
@@ -59,46 +54,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-        
-//        /*TEST*/
-//        let shortMessage = ItemChatMessageTableViewCell()
-//        shortMessage.setup(type: .recipiant, text: "This is a message of the recipiant")
-//        let longMessage = ItemChatMessageTableViewCell()
-//        longMessage.setup(type: .recipiant, text: "This is a message with CTAs. It should take 80% of the max size of a screen. CTAs respect 16px of spacing.", CTA: true)
-//        let writtenMessage = ItemChatMessageTableViewCell()
-//        writtenMessage.setup(type: .writter, text: "This is a message of the writter")
-//
-//        let automaticMessage = ItemChatAutomaticTableViewCell()
-//        automaticMessage.setup(type: .message)
-//        let automaticCancel = ItemChatAutomaticTableViewCell()
-//        automaticCancel.setup(type: .cancel)
-//        let automaticNotification = ItemChatAutomaticTableViewCell()
-//        automaticNotification.setup(type: .notification)
-//        let automaticBooked = ItemChatAutomaticTableViewCell()
-//        automaticBooked.setup(type: .booked)
-//
-//        let automaticActiveInterview = ItemChatAutomaticTableViewCell()
-//        automaticActiveInterview.setup(type: .activeInterviewDetails)
-//        let automaticCancelInterview = ItemChatAutomaticTableViewCell()
-//        automaticCancelInterview.setup(type: .cancelInterviewDetails)
-//
-//        let vc = StoryBookExampleViewController(
-//            title: "Item Chat",
-//            components: [
-//                .init(title: "Short recipiant message", view: shortMessage),
-//                .init(title: "Long recipiant message", view: longMessage),
-//                .init(title: "Writter message", view: writtenMessage),
-//
-//                .init(title: "Automatic message", view: automaticMessage),
-//                .init(title: "Automatic cancel", view: automaticCancel),
-//                .init(title: "Automatic notification", view: automaticNotification),
-//                .init(title: "Automatic booked", view: automaticBooked),
-//                .init(title: "Automatic active interview", view: automaticActiveInterview),
-//                .init(title: "Automatic cancel interview", view: automaticCancelInterview),
-//            ])
-//        self.navigationController?.pushViewController(vc, animated: true)
-//        /*TEST*/
-
     }
 
     private func configure() {
@@ -154,7 +109,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     fileprivate func presentWithNavigationController(viewController: UIViewController ) {
         let nvc = UINavigationController(rootViewController: viewController)
         nvc.isNavigationBarHidden = true
-        //nvc.hero.isEnabled = false
         nvc.modalPresentationStyle = .overCurrentContext
         
         self.present(nvc, animated: true, completion: nil)
@@ -163,7 +117,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == viewModel.sections.count - 1 {
             let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
-            return Subtitle(text: "Created with 💜 by iOS Team\nRainbow v\(appVersion)")
+            let stackView = UIStackView(arrangedSubviews: [
+                Subtitle(attributedText: Emojica(font: R.font.gilroyBold(size: 18)!).convert(string: "✨ New ✨\n🛠 Work in progress 🛠\n🚧 Being repaired 🚧")),
+                Subtitle(attributedText: Emojica(font: R.font.gilroySemibold(size: 18)!).convert(string: "Created with 💜 by iOS Team\nRainbow Fwk v\(appVersion)")),
+            ])
+            stackView.axis = .vertical
+            return stackView
         } else {
             return UIView(frame: .zero)
         }
