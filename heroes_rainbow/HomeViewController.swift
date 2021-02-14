@@ -53,6 +53,9 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        let vc = TransitionVC(emoji: "😎", title: "Nice!\n Your Application is almost done.")
+//        vc.modalPresentationStyle = .fullScreen
+//        self.present(vc, animated: true, completion: nil)
         configure()
     }
 

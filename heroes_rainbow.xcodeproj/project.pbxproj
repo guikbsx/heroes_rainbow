@@ -12,6 +12,7 @@
 		C4138ED125D92D4D004B3293 /* ModuleVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */; };
 		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
 		C4138EE525D93D5D004B3293 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138EE425D93D5D004B3293 /* Modules.swift */; };
+		C4138EEB25D94F1E004B3293 /* TransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138EEA25D94F1E004B3293 /* TransitionVC.swift */; };
 		C44DBFA425CB165D00B7D1BF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44DBF3125CB165D00B7D1BF /* Colors.xcassets */; };
 		C44DBFA525CB165D00B7D1BF /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3425CB165D00B7D1BF /* ItemNav.swift */; };
 		C44DBFA625CB165D00B7D1BF /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3525CB165D00B7D1BF /* DayBox.swift */; };
@@ -163,6 +164,7 @@
 		C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleVideoViewController.swift; sourceTree = "<group>"; };
 		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C4138EE425D93D5D004B3293 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
+		C4138EEA25D94F1E004B3293 /* TransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionVC.swift; sourceTree = "<group>"; };
 		C44DBF3125CB165D00B7D1BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C44DBF3425CB165D00B7D1BF /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C44DBF3525CB165D00B7D1BF /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
@@ -344,6 +346,14 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C4138EE925D94F0D004B3293 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+				C4138EEA25D94F1E004B3293 /* TransitionVC.swift */,
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
 		C44DBF2E25CB165D00B7D1BF /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -377,6 +387,7 @@
 		C44DBF3225CB165D00B7D1BF /* Design System Component */ = {
 			isa = PBXGroup;
 			children = (
+				C4138EE925D94F0D004B3293 /* Transition */,
 				C4138ECF25D92D3D004B3293 /* Modules */,
 				C44DBF3825CB165D00B7D1BF /* Autocomplete */,
 				C44DBF5625CB165D00B7D1BF /* Bar */,
@@ -1144,6 +1155,7 @@
 				C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
 				C44DBFB225CB165D00B7D1BF /* ProfilePicker.swift in Sources */,
+				C4138EEB25D94F1E004B3293 /* TransitionVC.swift in Sources */,
 				C44DBFAB25CB165D00B7D1BF /* CalendarPicker.swift in Sources */,
 				C44DBFAC25CB165D00B7D1BF /* MonthAndYearLbl.swift in Sources */,
 				C472535C25B0505E005A9CC7 /* Components.swift in Sources */,
