@@ -8,7 +8,7 @@ extension HomeViewController {
         switch designSystem.type {
         
         case .moduleVideo:
-            let vc = ModuleVideoViewController()
+            let vc = ModuleVideoViewController(emoji: "😎", question: "What’s your greatest strength and explain why?\nWhat’s your greatest strength and explain why?")
             self.navigationController?.pushViewController(vc, animated: true)
             
         default: break
