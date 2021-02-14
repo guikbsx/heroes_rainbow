@@ -1,46 +1,11 @@
 import UIKit
-import Lottie
 
 extension HomeViewController {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func configureComponents(_ indexPath: IndexPath) {
         let designSystem = viewModel.designSystem(at: indexPath)
         
         switch designSystem.type {
-        /*Settings*/
-        case .colors:
-            var colorView: [StoryBookPackage] = []
-            designSystemsColor.forEach { color in
-                let cell = ItemAction()
-                cell.setupAsColorCell(name: "", backgroundColor: color.backgroundColor, textColor: .black)
-                colorView.append(.init(title: "\(color.name) #\(color.hex)", view: cell, color: color.backgroundColor))
-            }
-            let vc = StoryBookExampleViewController(title: "Colors", components: colorView)
-            self.navigationController?.pushViewController(vc, animated: true)
-            break
-            
-        case .lottie:
-            let loading = AnimationView(name: "loading")
-            let check = AnimationView(name: "check")
-            let thumbup = AnimationView(name: "thumbup")
-            let confetti = AnimationView(name: "confetti")
-            
-            [confetti, loading, check, thumbup].forEach { animation in
-                animation.play()
-                animation.loopMode = .loop
-            }
-                
-            let vc = StoryBookExampleViewController(
-                title: "Animations",
-                components: [
-                    .init(title: "Loading", view: loading),
-                    .init(title: "Check", view: check, color: R.color.boldGrey()!),
-                    .init(title: "Thumb up", view: thumbup),
-                    .init(title: "Confetti", view: confetti),
-                ])
-            self.navigationController?.pushViewController(vc, animated: true)
-            break
-
         /*Components*/
         case .button:
             let vc = StoryBookExampleViewController(
@@ -51,7 +16,7 @@ extension HomeViewController {
                     .init(title: "Loading state",       view: PrimaryBtn(text: "OK", state: .loading)),
                     .init(title: "Final step state (click to activate)", view: PrimaryBtn(text: "Submit", whiteShadow: true, state: .enabled, animated: true), color: R.color.boldGrey()!),
                     .init(title: "Trucated text",       view: PrimaryBtn(text: "This is a way to long text to be displayed", state: .enabled)),
-            ])
+                ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
@@ -73,7 +38,7 @@ extension HomeViewController {
             actionCell.setup(name: "Add a hiring event", image: R.image.addButton()!)
             let infoCell = ItemAction()
             infoCell.setup(name: "Nov. 19", interval: "11:45AM - 13:45AM", image: R.image.storeIcon()!)
-
+            
             let vc = StoryBookExampleViewController(
                 title: "Item Action",
                 components: [
@@ -88,7 +53,7 @@ extension HomeViewController {
             unselectedChoice.setup(label: "This is a choice", selected: false)
             let selectedChoice = ItemChoice()
             selectedChoice.setup(label: "This is another choice", selected: true)
-
+            
             let vc = StoryBookExampleViewController(
                 title: "Item Choice",
                 components: [
@@ -97,7 +62,7 @@ extension HomeViewController {
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
- 
+            
         case .topBar:
             let vc = StoryBookExampleViewController(
                 title: "Top Bar",
@@ -132,7 +97,7 @@ extension HomeViewController {
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
-        
+            
         case .autocomplete:
             let geolocCell = AutocompleteGeoloc()
             let addressCell = AutocompleteAddress()
@@ -156,10 +121,10 @@ extension HomeViewController {
                 title: "Time Picker",
                 components: [
                     .init(title: "", view: TimePicker(date: Date(), duration: 15)),
-            ])
+                ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
-
+            
         case .modal:
             let modalBtn = PrimaryBtn(text: "Activate Popup", state: .enabled)
             modalBtn.delegate = self
@@ -186,6 +151,8 @@ extension HomeViewController {
         case .itemChat:
             configureItemChat()
             break
+            
+        default: break
         }
     }
 }
@@ -212,6 +179,6 @@ extension HomeViewController: PrimaryBtnDelegate {
         default:
             break
         }
-
+        
     }
 }

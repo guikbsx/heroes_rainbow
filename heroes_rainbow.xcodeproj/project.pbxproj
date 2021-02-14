@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		12841F08E1B45B20E5ADFA75 /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */; };
 		3539B9BEAD3C6098E78F7065 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046744DA1580A6336CEE39A8 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework */; };
+		C4138ED125D92D4D004B3293 /* ModuleVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */; };
+		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
+		C4138EE525D93D5D004B3293 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138EE425D93D5D004B3293 /* Modules.swift */; };
 		C44DBFA425CB165D00B7D1BF /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C44DBF3125CB165D00B7D1BF /* Colors.xcassets */; };
 		C44DBFA525CB165D00B7D1BF /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3425CB165D00B7D1BF /* ItemNav.swift */; };
 		C44DBFA625CB165D00B7D1BF /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44DBF3525CB165D00B7D1BF /* DayBox.swift */; };
@@ -94,7 +97,7 @@
 		C46D159A2580E33200F151D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D15982580E33200F151D1 /* LaunchScreen.storyboard */; };
 		C46D15A52580E33200F151D1 /* heroes_rainbowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15A42580E33200F151D1 /* heroes_rainbowTests.swift */; };
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
-		C472535C25B0505E005A9CC7 /* HomeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* HomeExtension.swift */; };
+		C472535C25B0505E005A9CC7 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* Components.swift */; };
 		C47D032A25CD68BC004AFD6B /* IconLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D032925CD68BC004AFD6B /* IconLabel.swift */; };
 		C47D035725CD885E004AFD6B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47D035625CD885E004AFD6B /* R.generated.swift */; };
 		C47D039625CDCBC5004AFD6B /* AppleColorEmoji@2x.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */; };
@@ -157,6 +160,9 @@
 		55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714D7EC566941EB213C98FE5 /* Pods-heroes_rainbowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87E74D6AB00EE26F9171CBE7 /* Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleVideoViewController.swift; sourceTree = "<group>"; };
+		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C4138EE425D93D5D004B3293 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
 		C44DBF3125CB165D00B7D1BF /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C44DBF3425CB165D00B7D1BF /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C44DBF3525CB165D00B7D1BF /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
@@ -251,7 +257,7 @@
 		C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heroes_rainbowUITests.swift; sourceTree = "<group>"; };
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46D16002580E44000F151D1 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = R.generated.swift; path = heroes_rainbow/Ressources/R.generated.swift; sourceTree = SOURCE_ROOT; };
-		C472535B25B0505E005A9CC7 /* HomeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeExtension.swift; sourceTree = "<group>"; };
+		C472535B25B0505E005A9CC7 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		C47D032925CD68BC004AFD6B /* IconLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconLabel.swift; sourceTree = "<group>"; };
 		C47D035625CD885E004AFD6B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C47D037A25CDCAB3004AFD6B /* AppleColorEmoji@2x.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "AppleColorEmoji@2x.ttf"; path = "../../../../../../../../Downloads/joypixels-6.1-free-fonts/ios/AppleColorEmoji@2x.ttf"; sourceTree = "<group>"; };
@@ -330,6 +336,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C4138ECF25D92D3D004B3293 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		C44DBF2E25CB165D00B7D1BF /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,6 +377,7 @@
 		C44DBF3225CB165D00B7D1BF /* Design System Component */ = {
 			isa = PBXGroup;
 			children = (
+				C4138ECF25D92D3D004B3293 /* Modules */,
 				C44DBF3825CB165D00B7D1BF /* Autocomplete */,
 				C44DBF5625CB165D00B7D1BF /* Bar */,
 				C44DBF3625CB165D00B7D1BF /* Buttons */,
@@ -657,8 +672,11 @@
 		C46D158C2580E33100F151D1 /* heroes_rainbow */ = {
 			isa = PBXGroup;
 			children = (
+				C4EABFA925D587CF009CA4C6 /* README.md */,
 				C4DE27A525AFA8DD0051C763 /* HomeViewController.swift */,
-				C472535B25B0505E005A9CC7 /* HomeExtension.swift */,
+				C472535B25B0505E005A9CC7 /* Components.swift */,
+				C4138ED925D93C4D004B3293 /* Settings.swift */,
+				C4138EE425D93D5D004B3293 /* Modules.swift */,
 				C48229F22581149B0060C5CF /* DSViewModel.swift */,
 				C4DE27AA25AFACD10051C763 /* StoryBook Template */,
 				C48229F12581149B0060C5CF /* StoryBook Extensions */,
@@ -666,7 +684,6 @@
 				C46D15962580E33200F151D1 /* Assets.xcassets */,
 				C46D15982580E33200F151D1 /* LaunchScreen.storyboard */,
 				C46D159B2580E33200F151D1 /* Info.plist */,
-				C4EABFA925D587CF009CA4C6 /* README.md */,
 			);
 			path = heroes_rainbow;
 			sourceTree = "<group>";
@@ -1083,6 +1100,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C44DBFC425CB165D00B7D1BF /* DSUILabel+Extensions.swift in Sources */,
+				C4138EE525D93D5D004B3293 /* Modules.swift in Sources */,
 				C44DBFB425CB165D00B7D1BF /* Title.swift in Sources */,
 				C44DBFD025CB165D00B7D1BF /* GenericFlow.swift in Sources */,
 				C44DBFBF25CB165D00B7D1BF /* PopupViewController.swift in Sources */,
@@ -1106,6 +1124,7 @@
 				C44DBFA825CB165D00B7D1BF /* AutocompleteAddress.swift in Sources */,
 				C47D042F25D3CB38004AFD6B /* ItemVideoRec.swift in Sources */,
 				C44DBFC625CB165D00B7D1BF /* DSUIDevice+extensions.swift in Sources */,
+				C4138ED125D92D4D004B3293 /* ModuleVideoViewController.swift in Sources */,
 				C44DBFC225CB165D00B7D1BF /* MonthPickerData.swift in Sources */,
 				C4DE27A625AFA8DD0051C763 /* HomeViewController.swift in Sources */,
 				C44DBFAF25CB165D00B7D1BF /* InputPhone.swift in Sources */,
@@ -1127,9 +1146,10 @@
 				C44DBFB225CB165D00B7D1BF /* ProfilePicker.swift in Sources */,
 				C44DBFAB25CB165D00B7D1BF /* CalendarPicker.swift in Sources */,
 				C44DBFAC25CB165D00B7D1BF /* MonthAndYearLbl.swift in Sources */,
-				C472535C25B0505E005A9CC7 /* HomeExtension.swift in Sources */,
+				C472535C25B0505E005A9CC7 /* Components.swift in Sources */,
 				C44DBFA625CB165D00B7D1BF /* DayBox.swift in Sources */,
 				C44DBFBB25CB165D00B7D1BF /* Divider.swift in Sources */,
+				C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */,
 				C44DBFBE25CB165D00B7D1BF /* TopBar.swift in Sources */,
 				C44DBFB025CB165D00B7D1BF /* InputPicker.swift in Sources */,
 				C44DBFB125CB165D00B7D1BF /* InputBirthday.swift in Sources */,

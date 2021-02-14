@@ -8,8 +8,8 @@ public struct DesignSystem {
 enum DesignSystemType {
     /*settings*/
     case colors
-//    case fonts
     case lottie
+    
     /*components*/
     case autocomplete
     case button
@@ -25,10 +25,13 @@ enum DesignSystemType {
     case theVoice
     case time
     case modal
+    
+    /*modules*/
+    case moduleVideo
 }
 
 public final class DSViewModel {
-
+    
     public typealias SectionDS = (name: String?, designSystems: [DesignSystem])
     public var sections:[SectionDS] = [SectionDS]()
     
@@ -51,36 +54,39 @@ public final class DSViewModel {
                 DesignSystem(type: .theVoice, label: "The Voice"),
                 DesignSystem(type: .time, label: "Time Picker"),
                 DesignSystem(type: .modal, label: "Modal"),
-                DesignSystem(type: .itemVideo, label: "Item Video ✨"),
+                DesignSystem(type: .itemVideo, label: "Item Video"),
                 DesignSystem(type: .itemChat, label: "Item Chat 🛠"),
                 DesignSystem(type: .menuBar, label: "Menu Bar"),
-        ])
+            ])
+        
+        var modules = (
+            name: "Modules",
+            designSystems: [
+                DesignSystem(type: .moduleVideo, label: "Module Video ✨"),
+            ])
         
         var settings = (
             name: "Settings",
             designSystems: [
                 DesignSystem(type: .colors, label: "Colors"),
-//                DesignSystem(type: .fonts, label: "Fonts ❌"),
                 DesignSystem(type: .lottie, label: "Animations"),
             ])
-        sections.append(settings)
-
-        ///Trie par ordre alphabétique
-        settings.designSystems.sort {
-            $0.label < $1.label
-        }
-
-        components.designSystems.sort {
-            $0.label < $1.label
-        }
         
+        sections.append(modules)
         sections.append(components)
+        sections.append(settings)
+        
+        ///Trie par ordre alphabétique
+        settings.designSystems.sort { $0.label < $1.label }
+        components.designSystems.sort { $0.label < $1.label }
+        modules.designSystems.sort { $0.label < $1.label }
+        
     }
     
     public func section(at index: Int) -> SectionDS {
         return sections[index]
     }
-
+    
     public func designSystem(at indexPath: IndexPath) -> DesignSystem {
         return sections[indexPath.section].designSystems[indexPath.row]
     }
