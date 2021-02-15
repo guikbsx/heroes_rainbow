@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -23,6 +24,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let nav = UINavigationController(rootViewController: homeVC)
         nav.navigationBar.isHidden = true
         self.window?.rootViewController = nav
+        
+//        window?.rootViewController = UIHostingController(rootView: GradientView())
+        
         self.window?.makeKeyAndVisible()
     }
 

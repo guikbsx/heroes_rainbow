@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12841F08E1B45B20E5ADFA75 /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */; };
 		3539B9BEAD3C6098E78F7065 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 046744DA1580A6336CEE39A8 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework */; };
+		C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CE16E25D9CA840020FE62 /* GradientView.swift */; };
 		C4138ED125D92D4D004B3293 /* ModuleVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */; };
 		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
 		C4138EE525D93D5D004B3293 /* Modules.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138EE425D93D5D004B3293 /* Modules.swift */; };
@@ -161,6 +162,7 @@
 		55976DF538C22BC16A21E025 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		714D7EC566941EB213C98FE5 /* Pods-heroes_rainbowTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbowTests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbowTests/Pods-heroes_rainbowTests.debug.xcconfig"; sourceTree = "<group>"; };
 		87E74D6AB00EE26F9171CBE7 /* Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C40CE16E25D9CA840020FE62 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C4138ED025D92D4D004B3293 /* ModuleVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleVideoViewController.swift; sourceTree = "<group>"; };
 		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C4138EE425D93D5D004B3293 /* Modules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modules.swift; sourceTree = "<group>"; };
@@ -695,6 +697,7 @@
 				C46D15962580E33200F151D1 /* Assets.xcassets */,
 				C46D15982580E33200F151D1 /* LaunchScreen.storyboard */,
 				C46D159B2580E33200F151D1 /* Info.plist */,
+				C40CE16E25D9CA840020FE62 /* GradientView.swift */,
 			);
 			path = heroes_rainbow;
 			sourceTree = "<group>";
@@ -1166,6 +1169,7 @@
 				C44DBFB025CB165D00B7D1BF /* InputPicker.swift in Sources */,
 				C44DBFB125CB165D00B7D1BF /* InputBirthday.swift in Sources */,
 				C47D035725CD885E004AFD6B /* R.generated.swift in Sources */,
+				C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */,
 				C44DBFF225CB165E00B7D1BF /* HoursHelper.swift in Sources */,
 				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
 				C44DBFC525CB165D00B7D1BF /* DSUIView+Layout.swift in Sources */,

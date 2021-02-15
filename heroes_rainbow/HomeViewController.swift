@@ -1,6 +1,7 @@
 import UIKit
 import Lottie
 import Emojica
+import SwiftUI
 
 class HomeViewController: UIViewController {
     
@@ -53,10 +54,37 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let vc = TransitionVC(emoji: "😎", title: "Nice!\n Your Application is almost done.")
-//        vc.modalPresentationStyle = .fullScreen
-//        self.present(vc, animated: true, completion: nil)
         configure()
+//        setSplash()
+    }
+    
+    private func setSplash() {
+//        let splashView = UIView()
+//        view.addSubview(splashView)
+//        splashView.fillSuperview()
+//
+//        let swiftUIView = GradientView() // swiftUIView is View
+//        let controller = UIHostingController(rootView: swiftUIView)
+//        addChild(controller)
+//        splashView.addSubview(controller.view)
+//        controller.didMove(toParent: self)
+//        controller.view.centerInSuperview(size: .init(width: 200, height: 200))
+        
+//        let logo = UIImageView(image: R.image.logo_contour())
+//        splashView.addSubview(logo)
+//        logo.centerInSuperview(size: .init(width: 200, height: 200))
+//        
+//        let topView = UIView(backgroundColor: .white)
+//        let bottomView = UIView(backgroundColor: .white)
+//        let leftView = UIView(backgroundColor: .white)
+//        let rightView = UIView(backgroundColor: .white)
+//        
+//        [topView, bottomView, leftView, rightView].forEach { dir in splashView.addSubview(dir) }
+//        
+//        topView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: logo.topAnchor, trailing: view.trailingAnchor)
+//        bottomView.anchor(top: logo.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+//        leftView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: logo.leadingAnchor)
+//        rightView.anchor(top: view.topAnchor, leading: logo.trailingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
     }
 
     private func configure() {
