@@ -38,12 +38,15 @@ extension HomeViewController {
             actionCell.setup(name: "Add a hiring event", image: R.image.addButton()!)
             let infoCell = ItemAction()
             infoCell.setup(name: "Nov. 19", interval: "11:45AM - 13:45AM", image: R.image.storeIcon()!)
+            let linkCell = ItemAction()
+            linkCell.setupAsLink(text: "This is a link")
             
             let vc = StoryBookExampleViewController(
                 title: "Item Action",
                 components: [
                     .init(title: "Basic item", view: actionCell),
-                    .init(title: "Basic item with info", view: infoCell)
+                    .init(title: "Basic item with info", view: infoCell),
+                    .init(title: "Basic item with link", view: linkCell)
                 ])
             self.navigationController?.pushViewController(vc, animated: true)
             break
@@ -151,6 +154,35 @@ extension HomeViewController {
         case .itemChat:
             configureItemChat()
             break
+            
+        case .itemInfo:
+            let vc = StoryBookExampleViewController(
+                title: "Item Info",
+                components: [
+                    .init(title: "Arm", view: ItemInfo(.arm)),
+                    .init(title: "Eyes", view: ItemInfo(.eyes)),
+                    .init(title: "Lightbulb", view: ItemInfo(.lightbulb)),
+                    .init(title: "Monkey", view: ItemInfo(.monkey)),
+                    .init(title: "Smile", view: ItemInfo(.smile)),
+                    .init(title: "Sun", view: ItemInfo(.sun)),
+                    .init(title: "Tshirt", view: ItemInfo(.tshirt)),
+                ])
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+            
+        case .controlBar:
+            let bar = ControlBar(countdown: "5d 8h")
+            bar.constrainHeight(272)
+            bar.constrainWidth(56)
+            let vc = StoryBookExampleViewController(
+                title: "Control Bar",
+                components: [
+                    .init(title: "", view: bar, color: R.color.blueGrey()!),
+                ])
+            self.navigationController?.pushViewController(vc, animated: true)
+            break
+
+
             
         default: break
         }

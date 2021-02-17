@@ -162,7 +162,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         configureSettings(indexPath)
         configureComponents(indexPath)
-        configureModules(indexPath)
     }
     
 }

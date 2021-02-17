@@ -20,14 +20,13 @@ enum DesignSystemType {
     case itemAction
     case itemChat
     case itemVideo
+    case itemInfo
     case topBar
     case menuBar
     case theVoice
     case time
     case modal
-    
-    /*modules*/
-    case moduleVideo
+    case controlBar
 }
 
 public final class DSViewModel {
@@ -47,7 +46,7 @@ public final class DSViewModel {
                 DesignSystem(type: .button, label: "Buttons"),
                 DesignSystem(type: .calendar, label: "Date Picker"),
                 DesignSystem(type: .divider, label: "Divider"),
-                DesignSystem(type: .itemAction, label: "Item Action"),
+                DesignSystem(type: .itemAction, label: "Item Action ✨"),
                 DesignSystem(type: .topBar, label: "Top Bar"),
                 DesignSystem(type: .itemChoice, label: "Item Choice"),
                 DesignSystem(type: .input, label: "Input"),
@@ -57,12 +56,8 @@ public final class DSViewModel {
                 DesignSystem(type: .itemVideo, label: "Item Video"),
                 DesignSystem(type: .itemChat, label: "Item Chat 🛠"),
                 DesignSystem(type: .menuBar, label: "Menu Bar"),
-            ])
-        
-        var modules = (
-            name: "Modules",
-            designSystems: [
-                DesignSystem(type: .moduleVideo, label: "Module Video ✨"),
+                DesignSystem(type: .itemInfo, label: "Item Info ✨"),
+                DesignSystem(type: .controlBar, label: "Control Bar 🚧"),
             ])
         
         var settings = (
@@ -72,15 +67,15 @@ public final class DSViewModel {
                 DesignSystem(type: .lottie, label: "Animations"),
             ])
         
-        sections.append(modules)
+        settings.designSystems.sort { $0.label < $1.label }
+        components.designSystems.sort { $0.label < $1.label }
+        
+
+        
         sections.append(components)
         sections.append(settings)
         
-        ///Trie par ordre alphabétique
-        settings.designSystems.sort { $0.label < $1.label }
-        components.designSystems.sort { $0.label < $1.label }
-        modules.designSystems.sort { $0.label < $1.label }
-        
+
     }
     
     public func section(at index: Int) -> SectionDS {
