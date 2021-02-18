@@ -12,6 +12,8 @@
 		961D128F5F32780489A2F2AE /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */; };
 		C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CE16E25D9CA840020FE62 /* GradientView.swift */; };
 		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
+		C442D01225DE68BE0077BCD0 /* ItemActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */; };
+		C442D01B25DE6B710077BCD0 /* ItemActionLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */; };
 		C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158D2580E33100F151D1 /* AppDelegate.swift */; };
 		C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158F2580E33100F151D1 /* SceneDelegate.swift */; };
 		C46D15952580E33100F151D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D15932580E33100F151D1 /* Main.storyboard */; };
@@ -26,7 +28,6 @@
 		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
 		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
 		C4ADF1DF25DD31D80068169B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4ADF16525DD31D70068169B /* Colors.xcassets */; };
-		C4ADF1E025DD31D80068169B /* TransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16825DD31D70068169B /* TransitionVC.swift */; };
 		C4ADF1E125DD31D80068169B /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16A25DD31D70068169B /* ItemNav.swift */; };
 		C4ADF1E225DD31D80068169B /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16B25DD31D70068169B /* DayBox.swift */; };
 		C4ADF1E325DD31D80068169B /* ItemVideoRec.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16D25DD31D70068169B /* ItemVideoRec.swift */; };
@@ -162,6 +163,8 @@
 		B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40CE16E25D9CA840020FE62 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionExtension.swift; sourceTree = "<group>"; };
+		C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionLarge.swift; sourceTree = "<group>"; };
 		C46D158A2580E33100F151D1 /* heroes_rainbow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroes_rainbow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46D158D2580E33100F151D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46D158F2580E33100F151D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -182,7 +185,6 @@
 		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
 		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
 		C4ADF16525DD31D70068169B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
-		C4ADF16825DD31D70068169B /* TransitionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionVC.swift; sourceTree = "<group>"; };
 		C4ADF16A25DD31D70068169B /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C4ADF16B25DD31D70068169B /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
 		C4ADF16D25DD31D70068169B /* ItemVideoRec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemVideoRec.swift; sourceTree = "<group>"; };
@@ -335,6 +337,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		C442D01925DE6B420077BCD0 /* ItemAction */ = {
+			isa = PBXGroup;
+			children = (
+				C4ADF19025DD31D70068169B /* ItemAction.swift */,
+				C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */,
+			);
+			path = ItemAction;
+			sourceTree = "<group>";
+		};
 		C46D15812580E33100F151D1 = {
 			isa = PBXGroup;
 			children = (
@@ -366,7 +377,6 @@
 				C472535B25B0505E005A9CC7 /* Components.swift */,
 				C4138ED925D93C4D004B3293 /* Settings.swift */,
 				C48229F22581149B0060C5CF /* DSViewModel.swift */,
-				C4DE27AA25AFACD10051C763 /* StoryBook Template */,
 				C48229F12581149B0060C5CF /* StoryBook Extensions */,
 				C4DE27AB25AFACE10051C763 /* Ressources */,
 				C46D15962580E33200F151D1 /* Assets.xcassets */,
@@ -398,6 +408,7 @@
 		C48229F12581149B0060C5CF /* StoryBook Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */,
 				C4EABF8925D5220D009CA4C6 /* ItemChatExtension.swift */,
 				C4EABF9B25D541DC009CA4C6 /* Views */,
 			);
@@ -447,7 +458,6 @@
 		C4ADF16625DD31D70068169B /* Design System Component */ = {
 			isa = PBXGroup;
 			children = (
-				C4ADF16725DD31D70068169B /* Transition */,
 				C4ADF16925DD31D70068169B /* Cells */,
 				C4ADF16C25DD31D70068169B /* Item Video */,
 				C4ADF16F25DD31D70068169B /* Buttons */,
@@ -461,19 +471,12 @@
 				C4ADF18925DD31D70068169B /* TheVoice */,
 				C4ADF18B25DD31D70068169B /* Time Picker */,
 				C4ADF18D25DD31D70068169B /* Item */,
+				C442D01925DE6B420077BCD0 /* ItemAction */,
 				C4ADF19225DD31D70068169B /* Divider */,
 				C4ADF19425DD31D70068169B /* Bar */,
 				C4ADF19825DD31D70068169B /* Modal */,
 			);
 			path = "Design System Component";
-			sourceTree = "<group>";
-		};
-		C4ADF16725DD31D70068169B /* Transition */ = {
-			isa = PBXGroup;
-			children = (
-				C4ADF16825DD31D70068169B /* TransitionVC.swift */,
-			);
-			path = Transition;
 			sourceTree = "<group>";
 		};
 		C4ADF16925DD31D70068169B /* Cells */ = {
@@ -589,7 +592,6 @@
 			children = (
 				C4ADF18E25DD31D70068169B /* ItemNaming.swift */,
 				C4ADF18F25DD31D70068169B /* ItemInfo.swift */,
-				C4ADF19025DD31D70068169B /* ItemAction.swift */,
 				C4ADF19125DD31D70068169B /* ItemChoice.swift */,
 			);
 			path = Item;
@@ -742,19 +744,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4DE27AA25AFACD10051C763 /* StoryBook Template */ = {
+		C4DE27AA25AFACD10051C763 /* Template */ = {
 			isa = PBXGroup;
 			children = (
 				C4DE277925AF8E020051C763 /* StoryBookView.swift */,
 				C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */,
 				C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */,
 			);
-			path = "StoryBook Template";
+			path = Template;
 			sourceTree = "<group>";
 		};
 		C4DE27AB25AFACE10051C763 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C4DE27AA25AFACD10051C763 /* Template */,
 				C4ADF25C25DD32B20068169B /* R.generated.swift */,
 				C46D158D2580E33100F151D1 /* AppDelegate.swift */,
 				C46D158F2580E33100F151D1 /* SceneDelegate.swift */,
@@ -1101,10 +1104,12 @@
 				C4ADF1F225DD31D80068169B /* ItemChatAutomaticTableViewCell.swift in Sources */,
 				C4ADF1EE25DD31D80068169B /* InputPicker.swift in Sources */,
 				C4ADF1FE25DD31D80068169B /* MenuBar.swift in Sources */,
+				C442D01225DE68BE0077BCD0 /* ItemActionExtension.swift in Sources */,
 				C4ADF20425DD31D80068169B /* DSPopupDialogManager.swift in Sources */,
 				C4ADF20B25DD31D80068169B /* DSUIColor+Extensions.swift in Sources */,
 				C4ADF1E425DD31D80068169B /* ItemVideoEdit.swift in Sources */,
 				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
+				C442D01B25DE6B710077BCD0 /* ItemActionLarge.swift in Sources */,
 				C4ADF1EB25DD31D80068169B /* DayPicker.swift in Sources */,
 				C4ADF1EF25DD31D80068169B /* InputBirthday.swift in Sources */,
 				C4ADF20625DD31D80068169B /* DSUIButton+extensions.swift in Sources */,
@@ -1122,7 +1127,6 @@
 				C4ADF1E825DD31D80068169B /* MonthsView.swift in Sources */,
 				C4ADF20C25DD31D80068169B /* DSUIView+Extensions.swift in Sources */,
 				C4ADF1FF25DD31D80068169B /* ControlBar.swift in Sources */,
-				C4ADF1E025DD31D80068169B /* TransitionVC.swift in Sources */,
 				C4DE27A625AFA8DD0051C763 /* HomeViewController.swift in Sources */,
 				C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */,
 				C4ADF1E125DD31D80068169B /* ItemNav.swift in Sources */,

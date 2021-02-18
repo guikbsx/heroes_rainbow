@@ -34,21 +34,7 @@ extension HomeViewController {
             break
             
         case .itemAction:
-            let actionCell = ItemAction()
-            actionCell.setup(name: "Add a hiring event", image: R.image.addButton()!)
-            let infoCell = ItemAction()
-            infoCell.setup(name: "Nov. 19", interval: "11:45AM - 13:45AM", image: R.image.storeIcon()!)
-            let linkCell = ItemAction()
-            linkCell.setupAsLink(text: "This is a link")
-            
-            let vc = StoryBookExampleViewController(
-                title: "Item Action",
-                components: [
-                    .init(title: "Basic item", view: actionCell),
-                    .init(title: "Basic item with info", view: infoCell),
-                    .init(title: "Basic item with link", view: linkCell)
-                ])
-            self.navigationController?.pushViewController(vc, animated: true)
+            setupItemAction()
             break
             
         case .itemChoice:
