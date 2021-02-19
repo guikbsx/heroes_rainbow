@@ -5,6 +5,9 @@ import SwiftUI
 
 class HomeViewController: UIViewController {
     
+    let launchView = UIView()
+    let contentView = UIView()
+    
     internal let viewModel: DSViewModel!
     
     internal let designSystemsColor: [DesignSystemsColor] = [
@@ -46,6 +49,11 @@ class HomeViewController: UIViewController {
     public init(viewModel: DSViewModel = DSViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+        view.addSubview(contentView)
+        contentView.fillSuperview()
+        view.addSubview(launchView)
+        launchView.fillSuperview()
+        showLaunchScreen()
     }
     
     required init?(coder: NSCoder) {
@@ -55,51 +63,38 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-//        setSplash()
     }
     
-    private func setSplash() {
-//        let splashView = UIView()
-//        view.addSubview(splashView)
-//        splashView.fillSuperview()
-//
-//        let swiftUIView = GradientView() // swiftUIView is View
-//        let controller = UIHostingController(rootView: swiftUIView)
-//        addChild(controller)
-//        splashView.addSubview(controller.view)
-//        controller.didMove(toParent: self)
-//        controller.view.centerInSuperview(size: .init(width: 200, height: 200))
-        
-//        let logo = UIImageView(image: R.image.logo_contour())
-//        splashView.addSubview(logo)
-//        logo.centerInSuperview(size: .init(width: 200, height: 200))
-//        
-//        let topView = UIView(backgroundColor: .white)
-//        let bottomView = UIView(backgroundColor: .white)
-//        let leftView = UIView(backgroundColor: .white)
-//        let rightView = UIView(backgroundColor: .white)
-//        
-//        [topView, bottomView, leftView, rightView].forEach { dir in splashView.addSubview(dir) }
-//        
-//        topView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: logo.topAnchor, trailing: view.trailingAnchor)
-//        bottomView.anchor(top: logo.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
-//        leftView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: logo.leadingAnchor)
-//        rightView.anchor(top: view.topAnchor, leading: logo.trailingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+    func showLaunchScreen() {
+        let controller = UIHostingController(rootView: GradientView())
+        addChild(controller)
+        launchView.addSubview(controller.view)
+        controller.didMove(toParent: self)
+        controller.view.fillSuperview()
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.7, options: [.curveEaseIn], animations: {
+                self.launchView.alpha = 0
+            }, completion: { _ in
+                self.launchView.isHidden = true
+            })
+        }
     }
 
     private func configure() {
+        
         view.backgroundColor = .white
         
-        view.addSubview(animation)
-        animation.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: -10, left: 0, bottom: 0, right: 0))
+        contentView.addSubview(animation)
+        animation.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: -10, left: 0, bottom: 0, right: 0))
         animation.play()
         animation.loopMode = .autoReverse
         
-        view.addSubview(theVoice)
-        theVoice.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 30, left: 0, bottom: 0, right: 0))
+        contentView.addSubview(theVoice)
+        theVoice.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: 30, left: 0, bottom: 0, right: 0))
         
-        view.addSubview(tableView)
-        tableView.anchor(top: theVoice.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        contentView.addSubview(tableView)
+        tableView.anchor(top: theVoice.bottomAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor)
         tableView.backgroundColor = .clear
         
     }
