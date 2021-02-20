@@ -11,8 +11,8 @@ struct AnimatedBackground: View {
     @State var end = UnitPoint(x: 4, y: 0)
     
     let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
-//    let colors: [Color] = [Color(R.color.purple()!), Color(R.color.turquoise()!), Color(R.color.pink()!), Color(R.color.purple()!), Color(R.color.turquoise()!), Color(R.color.pink()!)]
-    let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple]
+    let colors: [Color] = [Color(R.color.purple()!), Color(R.color.turquoise()!), Color(R.color.pink()!), Color(R.color.purple()!), Color(R.color.turquoise()!), Color(R.color.pink()!)]
+//    let colors: [Color] = [.red, .orange, .yellow, .green, .blue, .purple]
     
     var body: some View {
         ZStack {

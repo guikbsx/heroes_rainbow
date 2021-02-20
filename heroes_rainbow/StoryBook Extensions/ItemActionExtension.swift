@@ -19,7 +19,7 @@ extension HomeViewController {
         deleteCell.setupAsDelete(text: "Delete label 🗑")
         
         let experienceCell = ItemActionLarge()
-        experienceCell.setup(job: "Barista", store: "Jack in the box", duration: "3 months")
+        experienceCell.setup(title: "Barista", subtitle: "Jack in the box", info: "3 months")
         
         let vc = StoryBookExampleViewController(
             title: "Item Action",
