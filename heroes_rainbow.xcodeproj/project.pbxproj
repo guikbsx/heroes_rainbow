@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -29,7 +29,10 @@
 		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
 		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
 		C4834E7625E0FDC9007D8C98 /* ConstructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */; };
-		C4A51B0325F12D5C00A434C4 /* iPages in Frameworks */ = {isa = PBXBuildFile; productRef = C4A51B0225F12D5C00A434C4 /* iPages */; };
+		C4A51B3B25F13E1700A434C4 /* video5.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4A51B2C25F138D700A434C4 /* video5.mp4 */; };
+		C4A51B3C25F13E1700A434C4 /* video2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4A51B2925F138D500A434C4 /* video2.mp4 */; };
+		C4A51B3E25F13E1700A434C4 /* video4.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4A51B2A25F138D500A434C4 /* video4.mp4 */; };
+		C4A51B4925F1451E00A434C4 /* video1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4A51B4825F1451E00A434C4 /* video1.mp4 */; };
 		C4ADF1DF25DD31D80068169B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4ADF16525DD31D70068169B /* Colors.xcassets */; };
 		C4ADF1E125DD31D80068169B /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16A25DD31D70068169B /* ItemNav.swift */; };
 		C4ADF1E225DD31D80068169B /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16B25DD31D70068169B /* DayBox.swift */; };
@@ -116,7 +119,7 @@
 		C4ADF23325DD31D80068169B /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4ADF1D325DD31D70068169B /* Gilroy-Thin.otf */; };
 		C4ADF23425DD31D80068169B /* HoursHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF1D525DD31D70068169B /* HoursHelper.swift */; };
 		C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF25C25DD32B20068169B /* R.generated.swift */; };
-		C4B8FC3425E8DD7100E3073A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC3325E8DD7100E3073A /* ContentView.swift */; };
+		C4B8FC3425E8DD7100E3073A /* ContentGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC3325E8DD7100E3073A /* ContentGradientView.swift */; };
 		C4B8FC3D25E8DE2400E3073A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */; };
 		C4B8FC4525E8E62400E3073A /* RSwift+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */; };
 		C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */; };
@@ -197,6 +200,10 @@
 		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
 		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
 		C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructViewController.swift; sourceTree = "<group>"; };
+		C4A51B2925F138D500A434C4 /* video2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video2.mp4; sourceTree = "<group>"; };
+		C4A51B2A25F138D500A434C4 /* video4.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video4.mp4; sourceTree = "<group>"; };
+		C4A51B2C25F138D700A434C4 /* video5.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video5.mp4; sourceTree = "<group>"; };
+		C4A51B4825F1451E00A434C4 /* video1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video1.mp4; sourceTree = "<group>"; };
 		C4ADF16525DD31D70068169B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C4ADF16A25DD31D70068169B /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C4ADF16B25DD31D70068169B /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
@@ -285,7 +292,7 @@
 		C4ADF1D525DD31D70068169B /* HoursHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursHelper.swift; sourceTree = "<group>"; };
 		C4ADF1D625DD31D70068169B /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
 		C4ADF25C25DD32B20068169B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		C4B8FC3325E8DD7100E3073A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C4B8FC3325E8DD7100E3073A /* ContentGradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentGradientView.swift; sourceTree = "<group>"; };
 		C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+SwiftUI.swift"; sourceTree = "<group>"; };
 		C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
@@ -313,7 +320,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				961D128F5F32780489A2F2AE /* Pods_heroes_rainbow.framework in Frameworks */,
-				C4A51B0325F12D5C00A434C4 /* iPages in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +377,7 @@
 		C469B0C925F12A4800B17BBA /* Workplace */ = {
 			isa = PBXGroup;
 			children = (
+				C4A51B2325F138C000A434C4 /* Videos */,
 				C4F9C5B125F11BCC0017105C /* TestView.swift */,
 				C469B0C225F12A4200B17BBA /* PageView.swift */,
 				C4F9C5B925F11D9E0017105C /* MessageView.swift */,
@@ -383,6 +390,10 @@
 		C46D15812580E33100F151D1 = {
 			isa = PBXGroup;
 			children = (
+				C4A51B4825F1451E00A434C4 /* video1.mp4 */,
+				C4A51B2925F138D500A434C4 /* video2.mp4 */,
+				C4A51B2A25F138D500A434C4 /* video4.mp4 */,
+				C4A51B2C25F138D700A434C4 /* video5.mp4 */,
 				C4ADF16225DD31D70068169B /* Submodules */,
 				C46D158C2580E33100F151D1 /* heroes_rainbow */,
 				C46D15A32580E33200F151D1 /* heroes_rainbowTests */,
@@ -468,6 +479,13 @@
 				C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */,
 			);
 			path = Compositions;
+			sourceTree = "<group>";
+		};
+		C4A51B2325F138C000A434C4 /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 		C4ADF16225DD31D70068169B /* Submodules */ = {
@@ -612,7 +630,7 @@
 			isa = PBXGroup;
 			children = (
 				C4ADF18825DD31D70068169B /* CodeNumber.swift */,
-				C4B8FC3325E8DD7100E3073A /* ContentView.swift */,
+				C4B8FC3325E8DD7100E3073A /* ContentGradientView.swift */,
 				C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */,
 			);
 			path = _More;
@@ -846,7 +864,6 @@
 			);
 			name = heroes_rainbow;
 			packageProductDependencies = (
-				C4A51B0225F12D5C00A434C4 /* iPages */,
 			);
 			productName = heroes_rainbow;
 			productReference = C46D158A2580E33100F151D1 /* heroes_rainbow.app */;
@@ -923,7 +940,6 @@
 			);
 			mainGroup = C46D15812580E33100F151D1;
 			packageReferences = (
-				C4A51B0125F12D5C00A434C4 /* XCRemoteSwiftPackageReference "iPages" */,
 			);
 			productRefGroup = C46D158B2580E33100F151D1 /* Products */;
 			projectDirPath = "";
@@ -965,12 +981,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4ADF21625DD31D80068169B /* Gilroy-Regular.otf in Resources */,
+				C4A51B4925F1451E00A434C4 /* video1.mp4 in Resources */,
 				C4ADF21025DD31D80068169B /* check.json in Resources */,
 				C4ADF21225DD31D80068169B /* thumbup.json in Resources */,
 				C4ADF22825DD31D80068169B /* Rift-BoldItalic.otf in Resources */,
 				C4ADF23325DD31D80068169B /* Gilroy-Thin.otf in Resources */,
 				C4ADF21F25DD31D80068169B /* Gilroy-HeavyItalic.otf in Resources */,
 				C4ADF22C25DD31D80068169B /* rift italic.otf in Resources */,
+				C4A51B3B25F13E1700A434C4 /* video5.mp4 in Resources */,
 				C46D159A2580E33200F151D1 /* LaunchScreen.storyboard in Resources */,
 				C4ADF20E25DD31D80068169B /* confetti.json in Resources */,
 				C4ADF21725DD31D80068169B /* rift medium.otf in Resources */,
@@ -1001,6 +1019,8 @@
 				C4ADF21125DD31D80068169B /* wave.json in Resources */,
 				C4ADF22725DD31D80068169B /* rift lightitalic.otf in Resources */,
 				C4ADF21D25DD31D80068169B /* Gilroy-LightItalic.otf in Resources */,
+				C4A51B3E25F13E1700A434C4 /* video4.mp4 in Resources */,
+				C4A51B3C25F13E1700A434C4 /* video2.mp4 in Resources */,
 				C46D15952580E33100F151D1 /* Main.storyboard in Resources */,
 				C4ADF21A25DD31D80068169B /* rift light.otf in Resources */,
 				C4ADF21C25DD31D80068169B /* Gilroy-RegularItalic.otf in Resources */,
@@ -1173,7 +1193,7 @@
 				C4EABF8A25D5220D009CA4C6 /* ItemChatExtension.swift in Sources */,
 				C4ADF1FB25DD31D80068169B /* ItemAction.swift in Sources */,
 				C4F9C5BF25F11DB00017105C /* StoriesView.swift in Sources */,
-				C4B8FC3425E8DD7100E3073A /* ContentView.swift in Sources */,
+				C4B8FC3425E8DD7100E3073A /* ContentGradientView.swift in Sources */,
 				C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */,
 				C4ADF20A25DD31D80068169B /* DSUITextField+Extensions.swift in Sources */,
 				C4EABF8F25D52281009CA4C6 /* DesignSystemsColor.swift in Sources */,
@@ -1571,25 +1591,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C4A51B0125F12D5C00A434C4 /* XCRemoteSwiftPackageReference "iPages" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/benjaminsage/iPages.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.13;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C4A51B0225F12D5C00A434C4 /* iPages */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C4A51B0125F12D5C00A434C4 /* XCRemoteSwiftPackageReference "iPages" */;
-			productName = iPages;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C46D15822580E33100F151D1 /* Project object */;
 }
