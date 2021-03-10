@@ -28,6 +28,13 @@
 		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
 		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
 		C4834E7625E0FDC9007D8C98 /* ConstructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */; };
+		C4A5EA1A25F8EC6800BBCFE6 /* ActiveBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1525F8EC5E00BBCFE6 /* ActiveBuilder.swift */; };
+		C4A5EA1B25F8EC6800BBCFE6 /* RegexParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1325F8EC5E00BBCFE6 /* RegexParser.swift */; };
+		C4A5EA1C25F8EC6800BBCFE6 /* StringTrimExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1425F8EC5E00BBCFE6 /* StringTrimExtension.swift */; };
+		C4A5EA1D25F8EC6800BBCFE6 /* ActiveLabelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1625F8EC5E00BBCFE6 /* ActiveLabelViewController.swift */; };
+		C4A5EA1E25F8EC6800BBCFE6 /* ActiveType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1725F8EC5E00BBCFE6 /* ActiveType.swift */; };
+		C4A5EA1F25F8EC6800BBCFE6 /* ActiveLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA1225F8EC5E00BBCFE6 /* ActiveLabel.swift */; };
+		C4A5EA5625F9184F00BBCFE6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA5525F9184F00BBCFE6 /* TableViewController.swift */; };
 		C4ADF1DF25DD31D80068169B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4ADF16525DD31D70068169B /* Colors.xcassets */; };
 		C4ADF1E125DD31D80068169B /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16A25DD31D70068169B /* ItemNav.swift */; };
 		C4ADF1E225DD31D80068169B /* DayBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF16B25DD31D70068169B /* DayBox.swift */; };
@@ -114,8 +121,6 @@
 		C4ADF23325DD31D80068169B /* Gilroy-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = C4ADF1D325DD31D70068169B /* Gilroy-Thin.otf */; };
 		C4ADF23425DD31D80068169B /* HoursHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF1D525DD31D70068169B /* HoursHelper.swift */; };
 		C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF25C25DD32B20068169B /* R.generated.swift */; };
-		C4B8FC3425E8DD7100E3073A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC3325E8DD7100E3073A /* ContentView.swift */; };
-		C4B8FC3D25E8DE2400E3073A /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */; };
 		C4B8FC4525E8E62400E3073A /* RSwift+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */; };
 		C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */; };
 		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
@@ -190,6 +195,13 @@
 		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
 		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
 		C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructViewController.swift; sourceTree = "<group>"; };
+		C4A5EA1225F8EC5E00BBCFE6 /* ActiveLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLabel.swift; sourceTree = "<group>"; };
+		C4A5EA1325F8EC5E00BBCFE6 /* RegexParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexParser.swift; sourceTree = "<group>"; };
+		C4A5EA1425F8EC5E00BBCFE6 /* StringTrimExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringTrimExtension.swift; sourceTree = "<group>"; };
+		C4A5EA1525F8EC5E00BBCFE6 /* ActiveBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveBuilder.swift; sourceTree = "<group>"; };
+		C4A5EA1625F8EC5E00BBCFE6 /* ActiveLabelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveLabelViewController.swift; sourceTree = "<group>"; };
+		C4A5EA1725F8EC5E00BBCFE6 /* ActiveType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveType.swift; sourceTree = "<group>"; };
+		C4A5EA5525F9184F00BBCFE6 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		C4ADF16525DD31D70068169B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C4ADF16A25DD31D70068169B /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
 		C4ADF16B25DD31D70068169B /* DayBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayBox.swift; sourceTree = "<group>"; };
@@ -278,8 +290,6 @@
 		C4ADF1D525DD31D70068169B /* HoursHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursHelper.swift; sourceTree = "<group>"; };
 		C4ADF1D625DD31D70068169B /* framework_ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = framework_ios.xcodeproj; sourceTree = "<group>"; };
 		C4ADF25C25DD32B20068169B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
-		C4B8FC3325E8DD7100E3073A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
 		C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+SwiftUI.swift"; sourceTree = "<group>"; };
 		C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
@@ -445,6 +455,19 @@
 			path = Compositions;
 			sourceTree = "<group>";
 		};
+		C4A5EA1125F8EC5E00BBCFE6 /* ActiveLabel */ = {
+			isa = PBXGroup;
+			children = (
+				C4A5EA1225F8EC5E00BBCFE6 /* ActiveLabel.swift */,
+				C4A5EA1325F8EC5E00BBCFE6 /* RegexParser.swift */,
+				C4A5EA1425F8EC5E00BBCFE6 /* StringTrimExtension.swift */,
+				C4A5EA1525F8EC5E00BBCFE6 /* ActiveBuilder.swift */,
+				C4A5EA1625F8EC5E00BBCFE6 /* ActiveLabelViewController.swift */,
+				C4A5EA1725F8EC5E00BBCFE6 /* ActiveType.swift */,
+			);
+			path = ActiveLabel;
+			sourceTree = "<group>";
+		};
 		C4ADF16225DD31D70068169B /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -587,8 +610,6 @@
 			isa = PBXGroup;
 			children = (
 				C4ADF18825DD31D70068169B /* CodeNumber.swift */,
-				C4B8FC3325E8DD7100E3073A /* ContentView.swift */,
-				C4B8FC3C25E8DE2400E3073A /* ProgressBar.swift */,
 			);
 			path = _More;
 			sourceTree = "<group>";
@@ -648,6 +669,7 @@
 		C4ADF19D25DD31D70068169B /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
+				C4A5EA1125F8EC5E00BBCFE6 /* ActiveLabel */,
 				C4ADF19E25DD31D70068169B /* Managers */,
 				C4ADF1A025DD31D70068169B /* Models */,
 				C4ADF1A225DD31D70068169B /* Extensions */,
@@ -773,6 +795,7 @@
 				C4DE277925AF8E020051C763 /* StoryBookView.swift */,
 				C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */,
 				C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */,
+				C4A5EA5525F9184F00BBCFE6 /* TableViewController.swift */,
 			);
 			path = Template;
 			sourceTree = "<group>";
@@ -1134,18 +1157,21 @@
 				C4ADF1E425DD31D80068169B /* ItemVideoEdit.swift in Sources */,
 				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
 				C442D01B25DE6B710077BCD0 /* ItemActionLarge.swift in Sources */,
+				C4A5EA1C25F8EC6800BBCFE6 /* StringTrimExtension.swift in Sources */,
+				C4A5EA1D25F8EC6800BBCFE6 /* ActiveLabelViewController.swift in Sources */,
 				C4ADF1EB25DD31D80068169B /* DayPicker.swift in Sources */,
 				C4834E7625E0FDC9007D8C98 /* ConstructViewController.swift in Sources */,
 				C4ADF1EF25DD31D80068169B /* InputBirthday.swift in Sources */,
 				C4ADF20625DD31D80068169B /* DSUIButton+extensions.swift in Sources */,
 				C4EABF8A25D5220D009CA4C6 /* ItemChatExtension.swift in Sources */,
 				C4ADF1FB25DD31D80068169B /* ItemAction.swift in Sources */,
-				C4B8FC3425E8DD7100E3073A /* ContentView.swift in Sources */,
 				C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */,
+				C4A5EA1F25F8EC6800BBCFE6 /* ActiveLabel.swift in Sources */,
 				C4ADF20A25DD31D80068169B /* DSUITextField+Extensions.swift in Sources */,
 				C4EABF8F25D52281009CA4C6 /* DesignSystemsColor.swift in Sources */,
 				C4ADF20525DD31D80068169B /* MonthPickerData.swift in Sources */,
 				C4ADF1FA25DD31D80068169B /* ItemInfo.swift in Sources */,
+				C4A5EA1A25F8EC6800BBCFE6 /* ActiveBuilder.swift in Sources */,
 				C4ADF1EA25DD31D80068169B /* MonthAndYearLbl.swift in Sources */,
 				C4ADF1F125DD31D80068169B /* ItemChatMessageTableViewCell.swift in Sources */,
 				C4ADF1F525DD31D80068169B /* Title.swift in Sources */,
@@ -1153,6 +1179,7 @@
 				C4ADF1E725DD31D80068169B /* AutocompleteGeoloc.swift in Sources */,
 				C4ADF1E825DD31D80068169B /* MonthsView.swift in Sources */,
 				C4ADF20C25DD31D80068169B /* DSUIView+Extensions.swift in Sources */,
+				C4A5EA1B25F8EC6800BBCFE6 /* RegexParser.swift in Sources */,
 				C4ADF1FF25DD31D80068169B /* ControlBar.swift in Sources */,
 				C4DE27A625AFA8DD0051C763 /* HomeViewController.swift in Sources */,
 				C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */,
@@ -1169,9 +1196,10 @@
 				C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */,
 				C4ADF20725DD31D80068169B /* DSUILabel+Extensions.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
+				C4A5EA5625F9184F00BBCFE6 /* TableViewController.swift in Sources */,
 				C4ADF1F325DD31D80068169B /* ProfilePicker.swift in Sources */,
+				C4A5EA1E25F8EC6800BBCFE6 /* ActiveType.swift in Sources */,
 				C4ADF1F025DD31D80068169B /* IconLabel.swift in Sources */,
-				C4B8FC3D25E8DE2400E3073A /* ProgressBar.swift in Sources */,
 				C4ADF1E225DD31D80068169B /* DayBox.swift in Sources */,
 				C472535C25B0505E005A9CC7 /* Components.swift in Sources */,
 				C4ADF1F925DD31D80068169B /* ItemNaming.swift in Sources */,

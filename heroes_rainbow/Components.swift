@@ -138,7 +138,9 @@ extension HomeViewController {
             break
             
         case .itemChat:
-            configureItemChat()
+			let vc = TableViewController()
+			self.navigationController?.pushViewController(vc, animated: true)
+//            configureItemChat()
             break
             
         case .itemInfo:
