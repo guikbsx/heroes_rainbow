@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window?.rootViewController = nav
         */
 //        window?.rootViewController = Host(rootView: StoriesView())
-		window?.rootViewController = UIHostingController(rootView: TestView())
+		window?.rootViewController = UIHostingController(rootView: HomeView())
         self.window?.makeKeyAndVisible()
     }
 
