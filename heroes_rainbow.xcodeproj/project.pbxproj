@@ -12,6 +12,7 @@
 		961D128F5F32780489A2F2AE /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */; };
 		C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CE16E25D9CA840020FE62 /* GradientView.swift */; };
 		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
+		C429CC5C25FBD04100429619 /* ItemChatDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429CC5B25FBD04100429619 /* ItemChatDetailsTableViewCell.swift */; };
 		C442D01225DE68BE0077BCD0 /* ItemActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */; };
 		C442D01B25DE6B710077BCD0 /* ItemActionLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */; };
 		C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158D2580E33100F151D1 /* AppDelegate.swift */; };
@@ -22,6 +23,7 @@
 		C46D15A52580E33200F151D1 /* heroes_rainbowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15A42580E33200F151D1 /* heroes_rainbowTests.swift */; };
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
 		C472535C25B0505E005A9CC7 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* Components.swift */; };
+		C481FEAC25FBC9FC00313EFA /* ItemChatAcceptedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C481FEAB25FBC9FC00313EFA /* ItemChatAcceptedTableViewCell.swift */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
 		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
 		C4822A152581149B0060C5CF /* TheVoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */; };
@@ -173,6 +175,7 @@
 		B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C40CE16E25D9CA840020FE62 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		C429CC5B25FBD04100429619 /* ItemChatDetailsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChatDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionExtension.swift; sourceTree = "<group>"; };
 		C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionLarge.swift; sourceTree = "<group>"; };
 		C46D158A2580E33100F151D1 /* heroes_rainbow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroes_rainbow.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +192,7 @@
 		C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = heroes_rainbowUITests.swift; sourceTree = "<group>"; };
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C472535B25B0505E005A9CC7 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		C481FEAB25FBC9FC00313EFA /* ItemChatAcceptedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatAcceptedTableViewCell.swift; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
 		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
 		C48229FE2581149B0060C5CF /* TheVoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceViewController.swift; sourceTree = "<group>"; };
@@ -585,6 +589,8 @@
 				C4ADF17F25DD31D70068169B /* IconLabel.swift */,
 				C4ADF18025DD31D70068169B /* ItemChatMessageTableViewCell.swift */,
 				C4ADF18125DD31D70068169B /* ItemChatAutomaticTableViewCell.swift */,
+				C481FEAB25FBC9FC00313EFA /* ItemChatAcceptedTableViewCell.swift */,
+				C429CC5B25FBD04100429619 /* ItemChatDetailsTableViewCell.swift */,
 			);
 			path = "Item Chat";
 			sourceTree = "<group>";
@@ -789,21 +795,9 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C4DE27AA25AFACD10051C763 /* Template */ = {
-			isa = PBXGroup;
-			children = (
-				C4DE277925AF8E020051C763 /* StoryBookView.swift */,
-				C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */,
-				C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */,
-				C4A5EA5525F9184F00BBCFE6 /* TableViewController.swift */,
-			);
-			path = Template;
-			sourceTree = "<group>";
-		};
 		C4DE27AB25AFACE10051C763 /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
-				C4DE27AA25AFACD10051C763 /* Template */,
 				C4ADF25C25DD32B20068169B /* R.generated.swift */,
 				C46D158D2580E33100F151D1 /* AppDelegate.swift */,
 				C46D158F2580E33100F151D1 /* SceneDelegate.swift */,
@@ -819,6 +813,10 @@
 			children = (
 				C48229FC2581149B0060C5CF /* FieldViewController.swift */,
 				C4EABF9625D53DE7009CA4C6 /* CalendarViewController.swift */,
+				C4A5EA5525F9184F00BBCFE6 /* TableViewController.swift */,
+				C4DE277925AF8E020051C763 /* StoryBookView.swift */,
+				C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */,
+				C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */,
 				C48229FD2581149B0060C5CF /* TheVoice */,
 			);
 			path = Views;
@@ -1147,6 +1145,7 @@
 			files = (
 				C4ADF20925DD31D80068169B /* DSUIDevice+extensions.swift in Sources */,
 				C4B8FC4525E8E62400E3073A /* RSwift+SwiftUI.swift in Sources */,
+				C481FEAC25FBC9FC00313EFA /* ItemChatAcceptedTableViewCell.swift in Sources */,
 				C4EABF9725D53DE7009CA4C6 /* CalendarViewController.swift in Sources */,
 				C4ADF1F225DD31D80068169B /* ItemChatAutomaticTableViewCell.swift in Sources */,
 				C4ADF1EE25DD31D80068169B /* InputPicker.swift in Sources */,
@@ -1219,6 +1218,7 @@
 				C4ADF1E625DD31D80068169B /* AutocompleteAddress.swift in Sources */,
 				C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */,
 				C4ADF1E925DD31D80068169B /* CalendarPicker.swift in Sources */,
+				C429CC5C25FBD04100429619 /* ItemChatDetailsTableViewCell.swift in Sources */,
 				C4ADF1EC25DD31D80068169B /* InputText.swift in Sources */,
 				C4ADF20125DD31D80068169B /* PopupViewController.swift in Sources */,
 			);

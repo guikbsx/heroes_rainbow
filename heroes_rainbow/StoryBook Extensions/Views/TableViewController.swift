@@ -23,21 +23,21 @@ class TableViewController: UIViewController {
 
 	lazy private var tableView: UITableView = {
 		let tableView = UITableView(frame: .zero, style: UITableView.Style.grouped)
+		tableView.contentInset = UIEdgeInsets(top: 90, left: 0, bottom: 0, right: 0)
 		tableView.delegate = self
 		tableView.dataSource = self
-		tableView.separatorStyle = .none
-		tableView.layoutIfNeeded()
 		tableView.tableFooterView = UIView()
-		tableView.layoutMargins = .zero
-		tableView.contentInset = .zero
-		tableView.backgroundColor = .clear
-		var frame = CGRect.zero
-		frame.size.height = .leastNormalMagnitude
-		tableView.tableHeaderView = UIView(frame: frame)
+		tableView.separatorStyle = .none
+		tableView.keyboardDismissMode = .onDrag
+		tableView.rowHeight = UITableView.automaticDimension
+		tableView.estimatedRowHeight = 300
+		tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
 		
 		tableView.register(ItemChatMessageTableViewCell.self, forCellReuseIdentifier: "ItemChatMessageTableViewCell")
 		tableView.register(ItemChatAutomaticTableViewCell.self, forCellReuseIdentifier: "ItemChatAutomaticTableViewCell")
-
+		tableView.register(ItemChatAcceptedTableViewCell.self, forCellReuseIdentifier: "ItemChatAcceptedTableViewCell")
+		tableView.register(ItemChatDetailsTableViewCell.self, forCellReuseIdentifier: "ItemChatDetailsTableViewCell")
+		
 		return tableView
 	}()
 	
@@ -80,49 +80,71 @@ extension TableViewController: UIScrollViewDelegate {
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return 11
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		if indexPath.row == 0 {
-			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatMessageTableViewCell") as! ItemChatMessageTableViewCell
-			cell.setup(type: .recipiant, text: "This is a message of the recipient", icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png")
-			return cell
+			if true {
+				let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatDetailsTableViewCell") as! ItemChatDetailsTableViewCell
+				cell.setup(message: ItemChatData(location: .store, status: .accepted, schedule: Date(), address: "This is a postal address that can take X ligns if necessary"))
+				
+				cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+				return cell
+			} else {
+				let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatMessageTableViewCell") as! ItemChatMessageTableViewCell
+				cell.setup(type: .recipiant, text: "This is a message of the recipient", icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png")
+				cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+				return cell
+			}
 		} else if indexPath.row == 1 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatMessageTableViewCell") as! ItemChatMessageTableViewCell
 			cell.setup(type: .recipiant, text: "This is a message with CTAs. It should take 80% of the max size of a screen. CTAs respect 16px of spacing.", icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", CTA: true)
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 2 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatMessageTableViewCell") as! ItemChatMessageTableViewCell
 			cell.setup(type: .writter, text: "This is a message of the writer", icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 3 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "", label: "This is an automatic message")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 4 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "😞", label: "We let them know you had to cancel.")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 5 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "😞", label: "We’re really sorry, the hiring manager had to cancel the interview.")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 6 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "😞", label: "We’re really sorry, the applicant had to cancel the interview.")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 7 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "😞", label: "We’re really sorry, your application has been rejected by the company.")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		} else if indexPath.row == 8 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "😞", label: "This applicant can’t make it to your hiring event.", CTA: true)
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
-		} else {
+		} else if indexPath.row == 9 {
 			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAutomaticTableViewCell") as! ItemChatAutomaticTableViewCell
 			cell.setup(emoji: "🔔", label: "We’ll let you know if new interview times become available.")
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
+			return cell
+		} else {
+			let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatAcceptedTableViewCell") as! ItemChatAcceptedTableViewCell
+			cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 			return cell
 		}
 	}
