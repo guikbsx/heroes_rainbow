@@ -89,7 +89,7 @@ struct TestVCPreview: PreviewProvider {
     
     struct TestVCContainerView: UIViewControllerRepresentable {
         func makeUIViewController(context: UIViewControllerRepresentableContext<TestVCPreview.TestVCContainerView>) -> UIViewController {
-			let component = ItemChatTextView()
+			let component = InputText(placeholder: "This is a placeholder")
             return TestViewController(
                 title: "This is test place",
                 components: [
