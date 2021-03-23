@@ -42,8 +42,8 @@ public final class DSViewModel {
         var components = (
             name: "Components",
             designSystems: [
-                DesignSystem(type: .autocomplete, label: "Autocomplete"),
-                DesignSystem(type: .button, label: "Buttons"),
+                DesignSystem(type: .autocomplete, label: "Autocomplete ✨"),
+                DesignSystem(type: .button, label: "Buttons ✨"),
                 DesignSystem(type: .calendar, label: "Date Picker"),
                 DesignSystem(type: .divider, label: "Divider"),
                 DesignSystem(type: .itemAction, label: "Item Action ✨"),
@@ -51,9 +51,9 @@ public final class DSViewModel {
                 DesignSystem(type: .itemChoice, label: "Item Choice"),
                 DesignSystem(type: .input, label: "Input"),
                 DesignSystem(type: .theVoice, label: "The Voice"),
-                DesignSystem(type: .time, label: "Time Picker"),
+                DesignSystem(type: .time, label: "Time Picker ✨"),
                 DesignSystem(type: .modal, label: "Modal"),
-                DesignSystem(type: .itemVideo, label: "Item Video"),
+                DesignSystem(type: .itemVideo, label: "Item Video 🚧"),
                 DesignSystem(type: .itemChat, label: "Item Chat 🛠"),
                 DesignSystem(type: .menuBar, label: "Menu Bar"),
                 DesignSystem(type: .itemInfo, label: "Item Info ✨"),

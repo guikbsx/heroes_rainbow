@@ -8,15 +8,28 @@ extension HomeViewController {
         switch designSystem.type {
         /*Components*/
         case .button:
+			let deleteCell = ItemAction()
+			deleteCell.setupAsDelete(text: "🗑 Delete label")
+			let customCell = ItemAction()
+			customCell.setupAsCustomButton(text: "Secondary label", color: R.color.purple()!)
+			let asBtnCell = ItemActionLarge()
+			asBtnCell.setup(title: "Job title", subtitle: "Company name", info: "Duration", type: .button)
+			let linkCell = ItemAction()
+			linkCell.setupAsLink(text: "This is a link")
+			
             let vc = StoryBookExampleViewController(
                 title: "Buttons",
                 components: [
-                    .init(title: "Disabled state",      view: PrimaryBtn(text: "OK", state: .disabled)),
-                    .init(title: "Enabled state",       view: PrimaryBtn(text: "Confirm Change", state: .enabled)),
-                    .init(title: "Loading state",       view: PrimaryBtn(text: "OK", state: .loading)),
-                    .init(title: "Final step state (click to activate)", view: PrimaryBtn(text: "Submit", whiteShadow: true, state: .enabled, animated: true), color: R.color.boldGrey()!),
-                    .init(title: "Trucated text",       view: PrimaryBtn(text: "This is a way to long text to be displayed", state: .enabled)),
-                ])
+                    .init(title: "Enabled state", view: PrimaryBtn(text: "Next", state: .enabled)),
+                    .init(title: "Disabled state", view: PrimaryBtn(text: "Next", state: .disabled)),
+					.init(title: "Enabled state with some information", view: PrimaryBtn(text: "Next", subtext: "This is a next step information for the user", state: .enabled)),
+                    .init(title: "Final step state (click to activate)", view: PrimaryBtn(text: "Submit", subtext: "Click to activate animation", state: .enabled, animated: true)),
+					.init(title: "Delete item", view: deleteCell),
+					.init(title: "Secondary item", view: customCell),
+					.init(title: "Large item as a button", view: asBtnCell),
+					.init(title: "Link item", view: linkCell),
+
+				])
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
@@ -89,14 +102,22 @@ extension HomeViewController {
             
         case .autocomplete:
             let geolocCell = AutocompleteGeoloc()
+			let geolocFocusCell = AutocompleteGeoloc()
+			geolocFocusCell.state(.focus)
             let addressCell = AutocompleteAddress()
             addressCell.setup(address: NSAttributedString(string:"1 Apple Park Way"), city: NSAttributedString(string: "Cupertino, CA 95014"))
-            
+			let focusCell = AutocompleteAddress()
+			focusCell.state(.focus)
+			focusCell.setup(address: NSAttributedString(string:"1 Apple Park Way"), city: NSAttributedString(string: "Cupertino, CA 95014"))
+			
             let vc = StoryBookExampleViewController(
                 title: "Autocomplete",
                 components: [
                     .init(title: "Autocomplete with geolocalisation", view: geolocCell, color: .white),
-                    .init(title: "Autocomplete with address", view: addressCell, color: .white),])
+					.init(title: "Autocomplete with focus geolocalisation", view: geolocFocusCell, color: .white),
+                    .init(title: "Autocomplete with address", view: addressCell, color: .white),
+					.init(title: "Autocomplete with focus address", view: focusCell, color: .white),
+				])
             self.navigationController?.pushViewController(vc, animated: true)
             break
             

@@ -145,7 +145,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
             let stackView = UIStackView(arrangedSubviews: [
                 Subtitle(attributedText: Emojica(font: R.font.gilroyBold(size: 18)!).convert(string: "✨ New ✨\n🛠 Work in progress 🛠\n🚧 Being repaired 🚧")),
-                Subtitle(attributedText: Emojica(font: R.font.gilroySemibold(size: 18)!).convert(string: "Created with 💜 by iOS Team\nRainbow Fwk v\(appVersion)")),
+                Subtitle(attributedText: Emojica(font: R.font.gilroySemibold(size: 18)!).convert(string: "Created with 💜 by best iOS Team ever")),
+				Subtitle(attributedText: Emojica(font: R.font.gilroyBold(size: 18)!).convert(string: "Rainbow Fwk v\(AppInfos.shortVersion) - build n°\(AppInfos.buildNumber)")),
             ])
             stackView.axis = .vertical
             return stackView

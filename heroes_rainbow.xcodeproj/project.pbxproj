@@ -129,6 +129,7 @@
 		C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF25C25DD32B20068169B /* R.generated.swift */; };
 		C4B8FC4525E8E62400E3073A /* RSwift+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */; };
 		C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */; };
+		C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAAAE8260A2A72004D966F /* AppInfos.swift */; };
 		C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE277925AF8E020051C763 /* StoryBookView.swift */; };
 		C4DE278425AF94690051C763 /* StoryBookExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */; };
 		C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */; };
@@ -304,6 +305,7 @@
 		C4ADF25C25DD32B20068169B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		C4B8FC4425E8E62400E3073A /* RSwift+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RSwift+SwiftUI.swift"; sourceTree = "<group>"; };
 		C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C4DAAAE8260A2A72004D966F /* AppInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
 		C4DE277925AF8E020051C763 /* StoryBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookView.swift; sourceTree = "<group>"; };
 		C4DE278325AF94690051C763 /* StoryBookExampleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookExampleViewController.swift; sourceTree = "<group>"; };
 		C4DE278B25AFA17E0051C763 /* StoryBookTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryBookTitle.swift; sourceTree = "<group>"; };
@@ -816,6 +818,7 @@
 				C4DE27C125AFAD590051C763 /* ViewController.swift */,
 				C46D15932580E33100F151D1 /* Main.storyboard */,
 				C4EABF8E25D52281009CA4C6 /* DesignSystemsColor.swift */,
+				C4DAAAE8260A2A72004D966F /* AppInfos.swift */,
 			);
 			path = Ressources;
 			sourceTree = "<group>";
@@ -1227,6 +1230,7 @@
 				C4ADF20025DD31D80068169B /* TopBar.swift in Sources */,
 				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
 				C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */,
+				C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */,
 				C4ADF1ED25DD31D80068169B /* InputPhone.swift in Sources */,
 				C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */,
 				C4ADF21325DD31D80068169B /* GenericFlow.swift in Sources */,
