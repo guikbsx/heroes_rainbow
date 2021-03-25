@@ -172,7 +172,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 	
 	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-		let animation = AnimationFactory.makeMoveUpWithFade(rowHeight: cell.frame.height, duration: 0.5, delayFactor: 0.05)
+		let animation = AnimationFactory.makeMoveUpWithFade(rowHeight: cell.frame.height, duration: 0.2, delayFactor: 0.05)
 		let animator = Animator(animation: animation)
 		animator.animate(cell: cell, at: indexPath, in: tableView)
 	}

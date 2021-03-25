@@ -11,7 +11,6 @@ class FieldViewController: UIViewController {
     private var topBar = TopBar(backBtn: true)
     private var titleLbl = StoryBookTitle(title: "Input")
     private var components: [StoryBookPackage]?
-    var animation = AnimationView(name: "wave")
     
     let firstNameTextField = InputText(placeholder: "Insert placeholder")
     let birthdayField = InputBirthday()
@@ -30,17 +29,13 @@ class FieldViewController: UIViewController {
     // MARK: - Properties
     
     private func configure() {
-        view.addSubview(animation)
-        animation.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: -40, left: 0, bottom: 0, right: 0))
-        animation.play()
-        animation.loopMode = .autoReverse
-        
-        view.addSubview(topBar)
-        topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
-        topBar.delegate = self
-
-        view.addSubview(titleLbl)
-        titleLbl.anchor(top: topBar.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+		view.addSubview(topBar)
+		topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+		topBar.delegate = self
+		
+		view.addSubview(titleLbl)
+		titleLbl.anchor(top: nil, leading: topBar.backBtn.trailingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+		titleLbl.centerYTo(topBar.backBtn.centerYAnchor)
         
         view.addSubview(scrollView)
         scrollView.anchor(top: titleLbl.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))

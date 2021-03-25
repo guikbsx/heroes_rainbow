@@ -12,7 +12,6 @@ class CalendarViewController: UIViewController {
     private var topBar = TopBar(backBtn: true)
     private var titleLbl = StoryBookTitle(title: "Title")
     private var components: [StoryBookPackage]?
-    var animation = AnimationView(name: "wave")
     
     
     override func viewDidLoad() {
@@ -49,22 +48,17 @@ class CalendarViewController: UIViewController {
             .init(title: "Full calendar", view: fullCalendar),
         ]
         
-        view.addSubview(animation)
-        animation.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: -40, left: 0, bottom: 0, right: 0))
-        animation.play()
-        animation.loopMode = .autoReverse
-        
-        view.addSubview(topBar)
-        topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
-        topBar.delegate = self
-
-        view.addSubview(titleLbl)
-        titleLbl.anchor(top: topBar.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+		view.addSubview(topBar)
+		topBar.anchor(top: view.safeAreaLayoutGuide.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor)
+		topBar.delegate = self
+		
+		view.addSubview(titleLbl)
+		titleLbl.anchor(top: nil, leading: topBar.backBtn.trailingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 20, left: 0, bottom: 0, right: 0))
+		titleLbl.centerYTo(topBar.backBtn.centerYAnchor)
         
         view.addSubview(scrollView)
         scrollView.anchor(top: titleLbl.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
         view.backgroundColor = R.color.lightGrey()
-        scrollView.delegate = self
         
         scrollView.addSubview(stackView)
         stackView.anchor(top: scrollView.topAnchor, leading: scrollView.leadingAnchor, bottom: scrollView.bottomAnchor, trailing: scrollView.trailingAnchor)
@@ -82,12 +76,6 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController: TopBarDelegate {
     func didTapLeftBtn() { self.navigationController?.popViewController(animated: true) }
     func didTapRightBtn() {}
-}
-
-extension CalendarViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) { animation.pause() }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) { animation.play() }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) { if !decelerate { animation.play() } }
 }
 
 
