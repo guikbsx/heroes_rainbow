@@ -17,6 +17,7 @@ pod 'PopupDialog'
 pod "Spring", :git => 'https://github.com/MengTo/Spring.git'
 pod 'Emojica'
 pod "UICircularProgressRing"
+pod 'Socket.IO-Client-Swift', '~> 15.2.0'
 
   target 'heroes_rainbowTests' do
     inherit! :search_paths

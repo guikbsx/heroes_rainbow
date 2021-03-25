@@ -11,8 +11,6 @@ class StoryBookTitle: UIView {
 
     lazy private var titleLbl: UILabel = {
         let label = UILabel()
-        label.text = "This is a test"
-        label.font = R.font.gilroyBold(size: 32)
         label.textColor = .black
         return label
     }()
@@ -20,7 +18,8 @@ class StoryBookTitle: UIView {
     init(title: String, bigTitle: Bool = false) {
         super.init(frame: .zero)
         titleLbl.text = title
-        titleLbl.font = R.font.gilroyBold(size: bigTitle ? 42 : 32)
+        titleLbl.font = R.font.riftBold(size: bigTitle ? 42 : 32)
+		titleLbl.textAlignment = bigTitle ? .center : .left
         configure()
     }
 

@@ -18,7 +18,10 @@ PODS:
   - R.swift (5.3.0):
     - R.swift.Library (~> 5.3.0)
   - R.swift.Library (5.3.0)
+  - Socket.IO-Client-Swift (15.2.0):
+    - Starscream (~> 3.1)
   - Spring (1.0.6)
+  - Starscream (3.1.1)
   - SwiftDate (6.3.1)
   - UICircularProgressRing (8.0.0)
 
@@ -31,6 +34,7 @@ DEPENDENCIES:
   - PhoneNumberKit
   - PopupDialog
   - R.swift
+  - Socket.IO-Client-Swift (~> 15.2.0)
   - Spring (from `https://github.com/MengTo/Spring.git`)
   - SwiftDate
   - UICircularProgressRing
@@ -47,6 +51,8 @@ SPEC REPOS:
     - PopupDialog
     - R.swift
     - R.swift.Library
+    - Socket.IO-Client-Swift
+    - Starscream
     - SwiftDate
     - UICircularProgressRing
 
@@ -70,10 +76,12 @@ SPEC CHECKSUMS:
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
   R.swift: 4170fb7161c67be3bc1a847040b79367d69c419f
   R.swift.Library: 0fc583cb55a99e28901299cc451614cad1161962
+  Socket.IO-Client-Swift: 1e3e3a1f09f3312a167f0d781eb2f383d477357c
   Spring: 3d113f14575ef79aec9c5f906dfa4f5001c03254
+  Starscream: 4bb2f9942274833f7b4d296a55504dcfc7edb7b0
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
 
-PODFILE CHECKSUM: d5e16e6f34065be2a17363b1b168aeb6fd94fd49
+PODFILE CHECKSUM: eff842206676cda23f76b116f3574cdf260b13d6
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
