@@ -41,11 +41,15 @@ class ItemChatViewController: UIViewController {
 	}()
 	
 	private var textView = ItemChatTextView()
+	private var keyboardConstraints: AnchoredConstraints!
+
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
-    }
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification , object:nil)
+		NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification , object:nil)
+	}
 
 	override func viewDidLayoutSubviews() {
 		super.viewDidLayoutSubviews()
@@ -63,7 +67,23 @@ class ItemChatViewController: UIViewController {
 		tableView.anchor(top: topBar.bottomAnchor, leading: view.leadingAnchor, bottom: nil, trailing: view.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 0, right: 0))
 		
 		view.addSubview(textView)
-		textView.anchor(top: tableView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
+		keyboardConstraints = textView.anchor(top: tableView.bottomAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor)
+	}
+	
+	@objc func keyboardWillShow(notification: NSNotification) {
+		if let keyboardHeight = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue.height {
+			self.keyboardConstraints.bottom?.constant = -keyboardHeight
+			UIView.animate(withDuration: 0.2, animations: {
+				self.view.layoutIfNeeded()
+			})
+		}
+	}
+	
+	@objc func keyboardWillHide(notification: NSNotification) {
+		self.keyboardConstraints.bottom?.constant = 0
+		UIView.animate(withDuration: 0.2, animations: {
+			self.view.layoutIfNeeded()
+		})
 	}
 	
 }

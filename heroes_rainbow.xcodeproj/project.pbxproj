@@ -10,11 +10,14 @@
 		531F8B14342394DB2BD7F0BB /* Pods_heroes_rainbowTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F59054E87822BEE0033E3D7 /* Pods_heroes_rainbowTests.framework */; };
 		830FE68272B1E2BCF7058963 /* Pods_heroes_rainbow_heroes_rainbowUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0B92B4877682115741FCFCD /* Pods_heroes_rainbow_heroes_rainbowUITests.framework */; };
 		961D128F5F32780489A2F2AE /* Pods_heroes_rainbow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */; };
-		C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40CE16E25D9CA840020FE62 /* GradientView.swift */; };
 		C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4138ED925D93C4D004B3293 /* Settings.swift */; };
 		C429CC5C25FBD04100429619 /* ItemChatActiveTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429CC5B25FBD04100429619 /* ItemChatActiveTableViewCell.swift */; };
 		C442D01225DE68BE0077BCD0 /* ItemActionExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */; };
 		C442D01B25DE6B710077BCD0 /* ItemActionLarge.swift in Sources */ = {isa = PBXBuildFile; fileRef = C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */; };
+		C447EB8C260CEB2C005C33E3 /* heart.json in Resources */ = {isa = PBXBuildFile; fileRef = C447EB89260CEB2C005C33E3 /* heart.json */; };
+		C45D45BB260D24380044A1E8 /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D45B8260D24370044A1E8 /* Animations.swift */; };
+		C45D45C0260D243D0044A1E8 /* Animator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D45BF260D243D0044A1E8 /* Animator.swift */; };
+		C45D45C5260D24750044A1E8 /* DSUITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45D45C4260D24750044A1E8 /* DSUITableView+Extensions.swift */; };
 		C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158D2580E33100F151D1 /* AppDelegate.swift */; };
 		C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D158F2580E33100F151D1 /* SceneDelegate.swift */; };
 		C46D15952580E33100F151D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D15932580E33100F151D1 /* Main.storyboard */; };
@@ -178,11 +181,14 @@
 		97BDB6E207423138F90605D2 /* Pods-heroes_rainbow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.release.xcconfig"; sourceTree = "<group>"; };
 		B2F469E9CC9387730EDB6AF9 /* Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow-heroes_rainbowUITests/Pods-heroes_rainbow-heroes_rainbowUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B9BAE121A349E8B5E6A53455 /* Pods_heroes_rainbow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_heroes_rainbow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C40CE16E25D9CA840020FE62 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C4138ED925D93C4D004B3293 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		C429CC5B25FBD04100429619 /* ItemChatActiveTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChatActiveTableViewCell.swift; sourceTree = "<group>"; };
 		C442D01125DE68BE0077BCD0 /* ItemActionExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionExtension.swift; sourceTree = "<group>"; };
 		C442D01A25DE6B710077BCD0 /* ItemActionLarge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionLarge.swift; sourceTree = "<group>"; };
+		C447EB89260CEB2C005C33E3 /* heart.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heart.json; sourceTree = "<group>"; };
+		C45D45B8260D24370044A1E8 /* Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		C45D45BF260D243D0044A1E8 /* Animator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animator.swift; sourceTree = "<group>"; };
+		C45D45C4260D24750044A1E8 /* DSUITableView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DSUITableView+Extensions.swift"; sourceTree = "<group>"; };
 		C46D158A2580E33100F151D1 /* heroes_rainbow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = heroes_rainbow.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C46D158D2580E33100F151D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C46D158F2580E33100F151D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -417,7 +423,6 @@
 				C46D15962580E33200F151D1 /* Assets.xcassets */,
 				C46D15982580E33200F151D1 /* LaunchScreen.storyboard */,
 				C46D159B2580E33200F151D1 /* Info.plist */,
-				C40CE16E25D9CA840020FE62 /* GradientView.swift */,
 			);
 			path = heroes_rainbow;
 			sourceTree = "<group>";
@@ -721,6 +726,7 @@
 		C4ADF1A225DD31D70068169B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C45D45C4260D24750044A1E8 /* DSUITableView+Extensions.swift */,
 				C4ADF1A325DD31D70068169B /* DSUIButton+extensions.swift */,
 				C4ADF1A425DD31D70068169B /* DSUILabel+Extensions.swift */,
 				C4ADF1A525DD31D70068169B /* DSUIView+Layout.swift */,
@@ -736,6 +742,7 @@
 		C4ADF1AB25DD31D70068169B /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				C447EB89260CEB2C005C33E3 /* heart.json */,
 				C4ADF1AC25DD31D70068169B /* confetti.json */,
 				C4ADF1AD25DD31D70068169B /* loading.json */,
 				C4ADF1AE25DD31D70068169B /* check.json */,
@@ -796,6 +803,8 @@
 			isa = PBXGroup;
 			children = (
 				C4ADF1D525DD31D70068169B /* HoursHelper.swift */,
+				C45D45B8260D24370044A1E8 /* Animations.swift */,
+				C45D45BF260D243D0044A1E8 /* Animator.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -995,6 +1004,7 @@
 				C4ADF20D25DD31D80068169B /* DSLocalizable.strings in Resources */,
 				C4ADF22025DD31D80068169B /* Gilroy-BoldItalic.otf in Resources */,
 				C4ADF20325DD31D80068169B /* Emojis.xcassets in Resources */,
+				C447EB8C260CEB2C005C33E3 /* heart.json in Resources */,
 				C4ADF22F25DD31D80068169B /* Gilroy-Light.otf in Resources */,
 				C4ADF1DF25DD31D80068169B /* Colors.xcassets in Resources */,
 				C4ADF22E25DD31D80068169B /* rift regular.otf in Resources */,
@@ -1188,6 +1198,7 @@
 				C4ADF20525DD31D80068169B /* MonthPickerData.swift in Sources */,
 				C4ADF1FA25DD31D80068169B /* ItemInfo.swift in Sources */,
 				C4A5EA1A25F8EC6800BBCFE6 /* ActiveBuilder.swift in Sources */,
+				C45D45C0260D243D0044A1E8 /* Animator.swift in Sources */,
 				C4ADF1EA25DD31D80068169B /* MonthAndYearLbl.swift in Sources */,
 				C4ADF1F125DD31D80068169B /* ItemChatMessageTableViewCell.swift in Sources */,
 				C4ADF1F525DD31D80068169B /* Title.swift in Sources */,
@@ -1216,17 +1227,18 @@
 				C4A5EA5625F9184F00BBCFE6 /* ItemChatViewController.swift in Sources */,
 				C4ADF1F325DD31D80068169B /* ProfilePicker.swift in Sources */,
 				C4A5EA1E25F8EC6800BBCFE6 /* ActiveType.swift in Sources */,
+				C45D45C5260D24750044A1E8 /* DSUITableView+Extensions.swift in Sources */,
 				C4ADF1F025DD31D80068169B /* IconLabel.swift in Sources */,
 				C4ADF1E225DD31D80068169B /* DayBox.swift in Sources */,
 				C472535C25B0505E005A9CC7 /* Components.swift in Sources */,
 				C4ADF1F925DD31D80068169B /* ItemNaming.swift in Sources */,
+				C45D45BB260D24380044A1E8 /* Animations.swift in Sources */,
 				C4ADF1F425DD31D80068169B /* Subtitle.swift in Sources */,
 				C4ADF1F725DD31D80068169B /* TheVoice.swift in Sources */,
 				C4ADF1FC25DD31D80068169B /* ItemChoice.swift in Sources */,
 				C4ADF1FD25DD31D80068169B /* Divider.swift in Sources */,
 				C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */,
 				C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */,
-				C40CE16F25D9CA840020FE62 /* GradientView.swift in Sources */,
 				C4ADF20025DD31D80068169B /* TopBar.swift in Sources */,
 				C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */,
 				C4DE278C25AFA17E0051C763 /* StoryBookTitle.swift in Sources */,

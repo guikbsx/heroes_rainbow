@@ -2,11 +2,12 @@ import UIKit
 import Lottie
 import Emojica
 import SwiftUI
+import Hero
 
 class HomeViewController: UIViewController {
     
-    let launchView = UIView()
-    let contentView = UIView()
+	let launchScreen = UIImageView(image: R.image.graphic_overlay())
+	let contentView = UIView(backgroundColor: R.color.lightGrey()!)
     
     internal let viewModel: DSViewModel!
     
@@ -24,10 +25,11 @@ class HomeViewController: UIViewController {
         DesignSystemsColor(name: "Inactive grey",   backgroundColor: R.color.inactiveGrey()!,  hex: "99A3C1")
     ]
     
-    var animation = AnimationView(name: "wave")
-    
-    lazy private var theVoice = StoryBookTitle(title: "Rainbow", bigTitle: true)
-    
+    private var animation = AnimationView(name: "heart")
+	private var hasAnimated = false
+    private var theVoice = StoryBookTitle(title: "Rainbow", bigTitle: true)
+	private var subtitle = Subtitle(text: "Design System for Heroes", type: .bold)
+	
     lazy private var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: UITableView.Style.grouped)
         tableView.register(ItemAction.self, forCellReuseIdentifier: "ItemAction")
@@ -49,11 +51,9 @@ class HomeViewController: UIViewController {
     public init(viewModel: DSViewModel = DSViewModel()) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
+		self.hero.isEnabled = true
         view.addSubview(contentView)
         contentView.fillSuperview()
-        view.addSubview(launchView)
-        launchView.fillSuperview()
-        showLaunchScreen()
     }
     
     required init?(coder: NSCoder) {
@@ -64,46 +64,58 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         configure()
     }
-    
-    func showLaunchScreen() {
-        let controller = UIHostingController(rootView: GradientView())
-        addChild(controller)
-        launchView.addSubview(controller.view)
-        controller.didMove(toParent: self)
-        controller.view.fillSuperview()
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.7, options: [.curveEaseIn], animations: {
-                self.launchView.alpha = 0
-            }, completion: { _ in
-                self.launchView.isHidden = true
-            })
-        }
-    }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		animate()
+	}
 
     private func configure() {
-        
-        view.backgroundColor = .white
-        
-        contentView.addSubview(animation)
-        animation.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: -10, left: 0, bottom: 0, right: 0))
-        animation.play()
-        animation.loopMode = .autoReverse
-        
-        contentView.addSubview(theVoice)
-        theVoice.anchor(top: contentView.safeAreaLayoutGuide.topAnchor, leading: contentView.leadingAnchor, bottom: nil, trailing: contentView.trailingAnchor, padding: .init(top: 30, left: 0, bottom: 0, right: 0))
-        
+                
+		contentView.addSubview(launchScreen)
+		launchScreen.fillSuperview()
+		launchScreen.alpha = 0
+		
         contentView.addSubview(tableView)
-        tableView.anchor(top: theVoice.bottomAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor)
+		tableView.anchor(top: contentView.topAnchor, leading: contentView.leadingAnchor, bottom: contentView.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 170, left: 0, bottom: 0, right: 0))
         tableView.backgroundColor = .clear
-        
+		tableView.alpha = 0
+		
+		contentView.addSubview(animation)
+		animation.frame = .init(x: 0, y: 0, width: 300, height: 300)
+		animation.center = view.center
+		
+		contentView.addSubview(theVoice)
+		theVoice.alpha = 0
+		
+		contentView.addSubview(subtitle)
+		subtitle.anchor(top: nil, leading: contentView.safeAreaLayoutGuide.leadingAnchor, bottom: contentView.safeAreaLayoutGuide.bottomAnchor, trailing: contentView.trailingAnchor, padding: .init(top: 0, left: 0, bottom: 10, right: 0))
     }
-}
-
-extension HomeViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) { animation.pause() }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) { animation.play() }
-    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) { if !decelerate { animation.play() } }
+	
+	private func animate() {
+		animation.play(completion: {_ in
+			UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseInOut], animations: {
+				self.animation.frame = .init(x: -10, y: 40, width: 150, height: 150)
+				if !self.hasAnimated {
+					self.theVoice.frame = .init(x: 40, y: 0, width: UIScreen.main.bounds.width, height: 150)
+					self.theVoice.center.y = self.animation.center.y
+					self.theVoice.transform = .init(translationX: 50, y: 0)
+				}
+			})
+			UIView.animate(withDuration: 0.4, delay: 0.2, usingSpringWithDamping: 0.7, initialSpringVelocity: 1.7, options: [.curveEaseOut], animations: {
+				self.theVoice.alpha = 1
+				self.subtitle.alpha = 0
+				self.theVoice.transform = .identity
+				if !self.hasAnimated {
+					self.tableView.alpha = 1
+					self.tableView.reloadData()
+				}
+			}, completion: { _ in
+				self.hasAnimated = true
+			})
+			
+		})
+	}
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
@@ -142,7 +154,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == viewModel.sections.count - 1 {
-            let appVersion = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? "Unknown"
             let stackView = UIStackView(arrangedSubviews: [
                 Subtitle(attributedText: Emojica(font: R.font.gilroyBold(size: 18)!).convert(string: "✨ New ✨\n🛠 Work in progress 🛠\n🚧 Being repaired 🚧")),
                 Subtitle(attributedText: Emojica(font: R.font.gilroySemibold(size: 18)!).convert(string: "Created with 💜 by best iOS Team ever")),
@@ -159,5 +170,32 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         configureSettings(indexPath)
         configureComponents(indexPath)
     }
+	
+	func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		let animation = AnimationFactory.makeMoveUpWithFade(rowHeight: cell.frame.height, duration: 0.2, delayFactor: 0.05)
+		let animator = Animator(animation: animation)
+		animator.animate(cell: cell, at: indexPath, in: tableView)
+	}
     
+}
+
+struct HomeVCPreview: PreviewProvider {
+	
+	static var previews: some View {
+		HomeVCContainerView()
+			.previewDevice(PreviewDevice(rawValue: "iPhone 7"))
+			.edgesIgnoringSafeArea(.all)
+	}
+	
+	struct HomeVCContainerView: UIViewControllerRepresentable {
+		func makeUIViewController(context: UIViewControllerRepresentableContext<HomeVCPreview.HomeVCContainerView>) -> UIViewController {
+			return HomeViewController()
+		}
+		
+		func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<HomeVCPreview.HomeVCContainerView>) {
+			
+		}
+		
+		typealias UIViewControllerType = UIViewController
+	}
 }
