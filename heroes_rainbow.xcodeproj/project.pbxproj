@@ -144,11 +144,13 @@
 		C49A6BA826138B05009A5EA3 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = C49A6B2A26138B04009A5EA3 /* .gitignore */; };
 		C4A5EA5625F9184F00BBCFE6 /* ItemChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A5EA5525F9184F00BBCFE6 /* ItemChatViewController.swift */; };
 		C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF25C25DD32B20068169B /* R.generated.swift */; };
+		C4C0060726160F5400F38894 /* ItemChatAccepted.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0060626160F5400F38894 /* ItemChatAccepted.swift */; };
+		C4C00611261611A700F38894 /* ItemChatActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C00610261611A700F38894 /* ItemChatActive.swift */; };
+		C4C0061626161F4700F38894 /* ItemChatCanceled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0061526161F4700F38894 /* ItemChatCanceled.swift */; };
 		C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */; };
 		C4D1EBEC2615B9C7002B26FC /* TheVoiceSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D1EBEB2615B9C7002B26FC /* TheVoiceSwiftUI.swift */; };
 		C4D1EBFE2615CDA5002B26FC /* UIViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D1EBFD2615CDA5002B26FC /* UIViewController+SwiftUI.swift */; };
 		C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAAAE8260A2A72004D966F /* AppInfos.swift */; };
-		C4DCEC282614B6C10006D0E5 /* ItemChatText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DCEC272614B6C10006D0E5 /* ItemChatText.swift */; };
 		C4DCEC3A2614CB9E0006D0E5 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DCEC392614CB9E0006D0E5 /* ChatView.swift */; };
 		C4DCEC412614CBB60006D0E5 /* GrowingTextInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DCEC3F2614CBB60006D0E5 /* GrowingTextInputView.swift */; };
 		C4DCEC422614CBB60006D0E5 /* TextViewWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DCEC402614CBB60006D0E5 /* TextViewWrapper.swift */; };
@@ -344,11 +346,13 @@
 		C49A6B2A26138B04009A5EA3 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		C4A5EA5525F9184F00BBCFE6 /* ItemChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemChatViewController.swift; sourceTree = "<group>"; };
 		C4ADF25C25DD32B20068169B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C4C0060626160F5400F38894 /* ItemChatAccepted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatAccepted.swift; sourceTree = "<group>"; };
+		C4C00610261611A700F38894 /* ItemChatActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatActive.swift; sourceTree = "<group>"; };
+		C4C0061526161F4700F38894 /* ItemChatCanceled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatCanceled.swift; sourceTree = "<group>"; };
 		C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C4D1EBEB2615B9C7002B26FC /* TheVoiceSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVoiceSwiftUI.swift; sourceTree = "<group>"; };
 		C4D1EBFD2615CDA5002B26FC /* UIViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftUI.swift"; sourceTree = "<group>"; };
 		C4DAAAE8260A2A72004D966F /* AppInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
-		C4DCEC272614B6C10006D0E5 /* ItemChatText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatText.swift; sourceTree = "<group>"; };
 		C4DCEC392614CB9E0006D0E5 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		C4DCEC3F2614CBB60006D0E5 /* GrowingTextInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GrowingTextInputView.swift; sourceTree = "<group>"; };
 		C4DCEC402614CBB60006D0E5 /* TextViewWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextViewWrapper.swift; sourceTree = "<group>"; };
@@ -507,6 +511,21 @@
 			path = Compositions;
 			sourceTree = "<group>";
 		};
+		C487240326160A680038BE5C /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				C49A6AB826138B04009A5EA3 /* ItemChatAcceptedTableViewCell.swift */,
+				C49A6ABD26138B04009A5EA3 /* ItemChatAutomaticTableViewCell.swift */,
+				C49A6AAA26138B04009A5EA3 /* ItemChatBar.swift */,
+				C49A6AAB26138B04009A5EA3 /* ItemChatTextView.swift */,
+				C49A6AAC26138B04009A5EA3 /* IconLabel.swift */,
+				C49A6AAD26138B04009A5EA3 /* ItemChatCanceledTableViewCell.swift */,
+				C49A6AAE26138B04009A5EA3 /* ItemChatActiveTableViewCell.swift */,
+				C49A6AAF26138B04009A5EA3 /* ItemChatMessageTableViewCell.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 		C49A6A8F26138B04009A5EA3 /* Submodules */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,16 +641,9 @@
 		C49A6AA926138B04009A5EA3 /* Item Chat */ = {
 			isa = PBXGroup;
 			children = (
-				C49A6AAA26138B04009A5EA3 /* ItemChatBar.swift */,
-				C49A6AAB26138B04009A5EA3 /* ItemChatTextView.swift */,
-				C49A6AAC26138B04009A5EA3 /* IconLabel.swift */,
-				C49A6AAD26138B04009A5EA3 /* ItemChatCanceledTableViewCell.swift */,
-				C49A6AAE26138B04009A5EA3 /* ItemChatActiveTableViewCell.swift */,
-				C49A6AAF26138B04009A5EA3 /* ItemChatMessageTableViewCell.swift */,
+				C487240326160A680038BE5C /* UIKit */,
 				C49A6AB026138B04009A5EA3 /* Ressources */,
-				C49A6AB826138B04009A5EA3 /* ItemChatAcceptedTableViewCell.swift */,
 				C49A6AB926138B04009A5EA3 /* SwiftUI */,
-				C49A6ABD26138B04009A5EA3 /* ItemChatAutomaticTableViewCell.swift */,
 			);
 			path = "Item Chat";
 			sourceTree = "<group>";
@@ -659,7 +671,9 @@
 				C49A6ABA26138B04009A5EA3 /* ItemChatMessageRight.swift */,
 				C49A6ABB26138B04009A5EA3 /* ItemChatAutomatic.swift */,
 				C49A6ABC26138B04009A5EA3 /* ItemChatMessageLeft.swift */,
-				C4DCEC272614B6C10006D0E5 /* ItemChatText.swift */,
+				C4C0060626160F5400F38894 /* ItemChatAccepted.swift */,
+				C4C00610261611A700F38894 /* ItemChatActive.swift */,
+				C4C0061526161F4700F38894 /* ItemChatCanceled.swift */,
 			);
 			path = SwiftUI;
 			sourceTree = "<group>";
@@ -1284,11 +1298,12 @@
 				C49A6B9E26138B05009A5EA3 /* Animator.swift in Sources */,
 				C49A6B5526138B04009A5EA3 /* ItemChatAutomaticTableViewCell.swift in Sources */,
 				C49A6B3F26138B04009A5EA3 /* DayPicker.swift in Sources */,
+				C4C00611261611A700F38894 /* ItemChatActive.swift in Sources */,
 				C4D1EBFE2615CDA5002B26FC /* UIViewController+SwiftUI.swift in Sources */,
-				C4DCEC282614B6C10006D0E5 /* ItemChatText.swift in Sources */,
 				C49A6B5026138B04009A5EA3 /* ActiveType.swift in Sources */,
 				C49A6B5D26138B04009A5EA3 /* ItemInfo.swift in Sources */,
 				C49A6B4226138B04009A5EA3 /* InputPicker.swift in Sources */,
+				C4C0060726160F5400F38894 /* ItemChatAccepted.swift in Sources */,
 				C49A6B6F26138B05009A5EA3 /* DSUIDevice+extensions.swift in Sources */,
 				C49A6B6026138B04009A5EA3 /* ItemActionLarge.swift in Sources */,
 				C49A6B5C26138B04009A5EA3 /* ItemNaming.swift in Sources */,
@@ -1339,6 +1354,7 @@
 				C49A6B3926138B04009A5EA3 /* PrimaryBtn.swift in Sources */,
 				C49A6B6426138B04009A5EA3 /* TopBar.swift in Sources */,
 				C49A6B5126138B04009A5EA3 /* ItemChatAcceptedTableViewCell.swift in Sources */,
+				C4C0061626161F4700F38894 /* ItemChatCanceled.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
 				C4DCEC472614CC080006D0E5 /* String+OrEmpty.swift in Sources */,
 				C49A6B7226138B05009A5EA3 /* DSUIView+Extensions.swift in Sources */,
