@@ -31,19 +31,13 @@ class ItemChatViewController: UIViewController {
 		tableView.transform = CGAffineTransform(scaleX: 1, y: -1)
 		tableView.backgroundColor = .white
 		
-		tableView.register(ItemChatMessageTableViewCell.self, forCellReuseIdentifier: "ItemChatMessageTableViewCell")
-		tableView.register(ItemChatAutomaticTableViewCell.self, forCellReuseIdentifier: "ItemChatAutomaticTableViewCell")
-		tableView.register(ItemChatAcceptedTableViewCell.self, forCellReuseIdentifier: "ItemChatAcceptedTableViewCell")
-		tableView.register(ItemChatActiveTableViewCell.self, forCellReuseIdentifier: "ItemChatDetailsTableViewCell")
-		tableView.register(ItemChatCanceledTableViewCell.self, forCellReuseIdentifier: "ItemChatCanceledTableViewCell")
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "UITableViewCell")
 		
 		return tableView
 	}()
 	
 	private var textView = ItemChatTextView()
 	private var keyboardConstraints: AnchoredConstraints!
-
-	let delegate = ItemChatMessageDelegate()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +64,6 @@ class ItemChatViewController: UIViewController {
 		
 		topBar.delegate = self
 		
-		delegate.didTapSecondBtn = { print("did tap good !") }
 	}
 	
 	@objc func keyboardWillShow(notification: NSNotification) {
@@ -98,19 +91,32 @@ extension ItemChatViewController: ItemChatBarDelegate {
 
 extension ItemChatViewController: UITableViewDelegate, UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return 10
+		return 100
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//		let cell = tableView.dequeueReusableCell(withIdentifier: "ItemChatMessageTableViewCell") as! ItemChatMessageTableViewCell
-//		cell.setup(type: .recipiant, text: "This is a message of the recipient", icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png")
-		let swiftUIView = ItemChatMessageLeft(message: "Test", image: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", action: true, delegate: delegate).toUIView()
-		let cell = UITableViewCell()
+		let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell")!
+
+//		let swiftUIView = ItemChatMessageLeft(message: "Test", image: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", action: true, delegate: self).toUIView()
+		
+		let swiftUIView = ItemChatAutomatic(emoji: "😞", label: "This is a test and i love that", option: false).toUIView()
 		cell.contentView.addSubview(swiftUIView)
 		cell.contentView.transform = CGAffineTransform(scaleX: 1, y: -1)
 		swiftUIView.fillSuperview()
 		return cell
 	}
+}
+
+extension ItemChatViewController: ItemChatMessageDelegate {
+	func didTapSecondBtn() {
+		
+	}
+	
+	func didTapPrimaryBtn() {
+		
+	}
+	
+	
 }
 
 struct TableVCPreview: PreviewProvider {

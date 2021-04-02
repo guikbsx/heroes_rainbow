@@ -122,7 +122,8 @@ extension HomeViewController {
             break
             
         case .calendar:
-            let vc = CalendarViewController()
+//            let vc = CalendarViewController()
+			let vc = TestViewController(title: "Test", components: [])
             self.navigationController?.pushViewController(vc, animated: true)
             break
             
@@ -159,8 +160,9 @@ extension HomeViewController {
             break
             
         case .itemChat:
-			let vc = ItemChatViewController()
-			self.navigationController?.pushViewController(vc, animated: true)
+			setupItemChat()
+//			let vc = ItemChatViewController()
+//			self.navigationController?.pushViewController(vc, animated: true)
             break
             
         case .itemInfo:

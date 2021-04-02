@@ -147,6 +147,7 @@
 		C4C0060726160F5400F38894 /* ItemChatAccepted.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0060626160F5400F38894 /* ItemChatAccepted.swift */; };
 		C4C00611261611A700F38894 /* ItemChatActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C00610261611A700F38894 /* ItemChatActive.swift */; };
 		C4C0061626161F4700F38894 /* ItemChatCanceled.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0061526161F4700F38894 /* ItemChatCanceled.swift */; };
+		C4C0062526176F7800F38894 /* LinkedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0062226176F7800F38894 /* LinkedText.swift */; };
 		C4CDBBBD25E0F813009D8CFF /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */; };
 		C4D1EBEC2615B9C7002B26FC /* TheVoiceSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D1EBEB2615B9C7002B26FC /* TheVoiceSwiftUI.swift */; };
 		C4D1EBFE2615CDA5002B26FC /* UIViewController+SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D1EBFD2615CDA5002B26FC /* UIViewController+SwiftUI.swift */; };
@@ -349,6 +350,7 @@
 		C4C0060626160F5400F38894 /* ItemChatAccepted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatAccepted.swift; sourceTree = "<group>"; };
 		C4C00610261611A700F38894 /* ItemChatActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatActive.swift; sourceTree = "<group>"; };
 		C4C0061526161F4700F38894 /* ItemChatCanceled.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemChatCanceled.swift; sourceTree = "<group>"; };
+		C4C0062226176F7800F38894 /* LinkedText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedText.swift; sourceTree = "<group>"; };
 		C4CDBBBA25E0F813009D8CFF /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C4D1EBEB2615B9C7002B26FC /* TheVoiceSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheVoiceSwiftUI.swift; sourceTree = "<group>"; };
 		C4D1EBFD2615CDA5002B26FC /* UIViewController+SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SwiftUI.swift"; sourceTree = "<group>"; };
@@ -785,6 +787,7 @@
 		C49A6ADB26138B04009A5EA3 /* SwiftUI Tools */ = {
 			isa = PBXGroup;
 			children = (
+				C4C0062226176F7800F38894 /* LinkedText.swift */,
 				C49A6ADC26138B04009A5EA3 /* EmojicaLabel.swift */,
 				C4D1EBFD2615CDA5002B26FC /* UIViewController+SwiftUI.swift */,
 			);
@@ -1309,6 +1312,7 @@
 				C49A6B5C26138B04009A5EA3 /* ItemNaming.swift in Sources */,
 				C49A6B4B26138B04009A5EA3 /* RegexParser.swift in Sources */,
 				C49A6B3E26138B04009A5EA3 /* MonthAndYearLbl.swift in Sources */,
+				C4C0062526176F7800F38894 /* LinkedText.swift in Sources */,
 				C49A6B9C26138B05009A5EA3 /* HoursHelper.swift in Sources */,
 				C4EABF9725D53DE7009CA4C6 /* CalendarViewController.swift in Sources */,
 				C442D01225DE68BE0077BCD0 /* ItemActionExtension.swift in Sources */,
