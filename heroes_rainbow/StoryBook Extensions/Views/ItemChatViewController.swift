@@ -16,7 +16,7 @@ class ItemChatViewController: UIViewController {
     private var scrollView = UIScrollView()
     private var contentView = UIView()
     private var stackView = UIStackView()
-    private var topBar = ItemChatBar(icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", user: "Pantéa Négui", job: "Barmade", actionBtnLbl: "view profile")
+    private var topBar = ItemChatBarUIKit(icon: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", user: "Pantéa Négui", job: "Barmade", actionBtnLbl: "view profile")
 
 	lazy private var tableView: UITableView = {
 		let tableView = UITableView(frame: .zero, style: UITableView.Style.grouped)
@@ -84,7 +84,7 @@ class ItemChatViewController: UIViewController {
 	
 }
 
-extension ItemChatViewController: ItemChatBarDelegate {
+extension ItemChatViewController: ItemChatBarUIKitDelegate {
     func didTapLeftBtn() { self.navigationController?.popViewController(animated: true) }
     func didTapRightBtn() {}
 }

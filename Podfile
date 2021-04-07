@@ -11,14 +11,14 @@ pod "PhoneNumberKit"
 pod "SwiftDate"
 pod 'R.swift'
 pod 'Hero'
-pod 'Kingfisher'
-pod 'Kingfisher/SwiftUI'
+pod 'Kingfisher', '~> 6.0'
 pod 'JTAppleCalendar'
 pod 'PopupDialog'
 pod "Spring", :git => 'https://github.com/MengTo/Spring.git'
 pod 'Emojica'
 pod "UICircularProgressRing"
 pod 'Socket.IO-Client-Swift', '~> 15.2.0'
+pod 'RxSwift', '~> 5'
 
   target 'heroes_rainbowTests' do
     inherit! :search_paths
