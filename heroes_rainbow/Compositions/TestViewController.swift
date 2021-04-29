@@ -13,8 +13,6 @@ class TestViewController: UIViewController {
     private var titleLbl = StoryBookTitle(title: "Title")
     private var components: [StoryBookPackage]?
     var animation = AnimationView(name: "wave")
-	
-	var delegate: ItemChatMessageDelegate?
     
     init(title: String, components: [StoryBookPackage]) {
         self.components = components
@@ -59,24 +57,7 @@ class TestViewController: UIViewController {
             let storybook = StoryBookView(view: component.view, title: component.title, color: component.color)
             stackView.addArrangedSubview(storybook)
         }
-		
-		let swiftUIView = ItemChatMessageLeft(message: "This is a test", image: "https://hellobiz.fr/wp-content/uploads/2018/02/Heroes.png", action: true, delegate: self).toUIView()
-		
-		view.addSubview(swiftUIView)
-		swiftUIView.centerInSuperview()
     }
-    
-}
-extension TestViewController: ItemChatMessageDelegate {
-	func didTapSecondBtn() {
-		print("secondary")
-	}
-	
-	func didTapPrimaryBtn() {
-		print("primary")
-	}
-	
-	
 }
 
 extension TestViewController: TopBarDelegate {
