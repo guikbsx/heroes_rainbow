@@ -11,11 +11,17 @@ extension HomeViewController {
         /*Settings*/
         case .colors:
             var colorView: [StoryBookPackage] = []
-            designSystemsColor.forEach { color in
+			
+			let powerCell = ItemAction()
+			powerCell.setupAsPowerCell()
+			colorView.append(.init(title: "Power", view: powerCell))
+			
+			designSystemsColor.forEach { color in
                 let cell = ItemAction()
                 cell.setupAsColorCell(name: "", backgroundColor: color.backgroundColor, textColor: .black)
                 colorView.append(.init(title: "\(color.name) #\(color.hex)", view: cell, color: color.backgroundColor))
             }
+			
             let vc = StoryBookExampleViewController(title: "Colors", components: colorView)
             self.navigationController?.pushViewController(vc, animated: true)
             break
