@@ -112,9 +112,19 @@ class HomeViewController: UIViewController {
 				}
 			}, completion: { _ in
 				self.hasAnimated = true
+				self.test()
 			})
 			
 		})
+	}
+	
+	func test() {
+		let vc = UIHostingController(rootView: ReviewCandidateView(dismiss: {
+			self.dismiss(animated: true, completion: nil)
+		}))
+		vc.view.backgroundColor = .clear
+		vc.modalPresentationStyle = .overCurrentContext
+		self.present(vc, animated: true, completion: nil)
 	}
 }
 
@@ -183,7 +193,6 @@ struct HomeVCPreview: PreviewProvider {
 	
 	static var previews: some View {
 		HomeVCContainerView()
-			.previewDevice(PreviewDevice(rawValue: "iPhone 7"))
 			.edgesIgnoringSafeArea(.all)
 	}
 	

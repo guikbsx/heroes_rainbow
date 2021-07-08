@@ -1,11 +1,11 @@
 import SwiftUI
 
 struct ReviewCandidateView: View {
-	@Environment(\.presentationMode) var presentationMode
 	@State var backgroundOpacity: Double = 0
 	@State var isFullScreen: Bool = false
 	@State var isSwitching: Bool = false
-	
+	var dismiss: () -> Void
+
 	var choices: [String] = ["Offer made", "No show", "Turned the applicant down", "Applicant is no longer interested"]
 	var offsetiPhone: CGFloat {
 		let device = UIDevice().deviceType
@@ -25,25 +25,21 @@ struct ReviewCandidateView: View {
 			backgroundView
 			
 			ZStack(alignment: .bottom) {
-			bigSheet
-				.frame(height: UIScreen.main.bounds.height * 0.9)
-				.opacity(isFullScreen ? 1 : 0)
-				.animation(.spring().delay(0.8))
-
-			littleSheet
-				.opacity(isFullScreen ? 0 : 1)
-				.animation(.spring())
-			
-			circleView
-				.offset(y: isFullScreen ? offsetiPhone : -280)
-				.animation(.spring().delay(0.5))
+				bigSheet
+					.frame(height: UIScreen.main.bounds.height * 0.9)
+					.opacity(isFullScreen ? 1 : 0)
+					.animation(.spring().delay(0.8))
+				
+				littleSheet
+					.opacity(isFullScreen ? 0 : 1)
+					.animation(.spring())
+				
+				circleView
+					.offset(y: isFullScreen ? offsetiPhone : -280)
+					.animation(.spring().delay(0.5))
 			}
 			.opacity(isSwitching ? 0 : 1)
-			.animation(.default)
-			
-			Button(action: {animateTransition()}, label: {
-				Text("This is a test")
-			})
+			.animation(.default.delay(0.2))
 		}
     }
 		
@@ -64,13 +60,15 @@ struct ReviewCandidateView: View {
 						.padding(.vertical, 16)
 						.padding(.horizontal, 20)
 					ForEach(choices, id: \.self) { choice in
-						ItemChoiceSwiftUI(text: choice)
-							
+						ItemChoiceSwiftUI(text: choice, onTap: {
+							animateTransition()
+						})
+						.disabled(isSwitching)
 					}
 				}
 			}
+			.padding(.top, 12)
 		}
-		.padding(.top, 12)
 	}
 	
 	var littleSheet: some View {
@@ -97,7 +95,13 @@ struct ReviewCandidateView: View {
 				.frame(height : isFullScreen ? UIScreen.main.bounds.height * 0.9 : 313)
 				.animation(.spring().delay(0.5))
 		}
-		.background(Color.gray.ignoresSafeArea())
+		.background(Color.black.opacity(backgroundOpacity).ignoresSafeArea())
+		.animation(.spring())
+		.onAppear {
+			DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+				self.backgroundOpacity = 0.5
+			}
+		}
 	}
 	
 	var circleView: some View {
@@ -134,14 +138,14 @@ struct ReviewCandidateView: View {
 				isSwitching.toggle()
 			}
 		} else { //C'est fini
-			presentationMode.wrappedValue.dismiss()
+			dismiss()
 		}
 	}
 }
 
 struct ReviewCandidateView_Previews: PreviewProvider {
     static var previews: some View {
-        ReviewCandidateView()
+		ReviewCandidateView(dismiss: {})
     }
 }
 

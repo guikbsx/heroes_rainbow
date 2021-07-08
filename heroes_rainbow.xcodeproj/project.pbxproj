@@ -480,8 +480,8 @@
 		C407BEBF2695B22F00832288 /* framework_ios */ = {
 			isa = PBXGroup;
 			children = (
-				C407BEC02695B22F00832288 /* Colors.xcassets */,
 				C407BEC12695B22F00832288 /* Design System Component */,
+				C407BEC02695B22F00832288 /* Colors.xcassets */,
 				C407BF1C2695B22F00832288 /* Images.xcassets */,
 				C407BF1D2695B22F00832288 /* Emojis.xcassets */,
 				C407BF1E2695B22F00832288 /* Ressources */,
