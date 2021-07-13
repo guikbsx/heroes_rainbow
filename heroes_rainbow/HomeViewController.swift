@@ -119,9 +119,30 @@ class HomeViewController: UIViewController {
 	}
 	
 	func test() {
-		let vc = UIHostingController(rootView: ReviewCandidateView(dismiss: {
-			self.dismiss(animated: true, completion: nil)
-		}))
+		let candidates: [Candidate] = [
+			.init(id: 1, name: "Erwan", avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png", date: Date(), job: "Barista"),
+			.init(id: 2, name: "Romain", avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png", date: Date(), job: "Barista"),
+			.init(id: 3, name: "Patrick", avatar: "http://borombo.com/wp-content/uploads/2018/11/LISA1904300227-SOLOX1-EVER-7-min-240x240.jpg", date: Date(), job: "Barista")
+		]
+		let avatar = "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png"
+		
+		let vc = UIHostingController(
+			rootView: ReviewCandidatePopupView(
+				candidates: candidates,
+				avatar: avatar,
+				update: {
+					self.dismiss(animated: true, completion: {
+						let newVC = UIHostingController(rootView: ReviewCandidateFullView(candidates: candidates, avatar: avatar))
+						newVC.view.backgroundColor = .clear
+						newVC.modalPresentationStyle = .overCurrentContext
+						self.present(newVC, animated: true, completion: nil)
+					})
+				},
+				dismiss: {
+					self.dismiss(animated: true, completion: nil)
+				}
+			)
+		)
 		vc.view.backgroundColor = .clear
 		vc.modalPresentationStyle = .overCurrentContext
 		self.present(vc, animated: true, completion: nil)

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ItemChoiceSwiftUI: View {
 	var text: String
-	@State var selected: Bool = false
+	@Binding var selected: Bool
 	var onTap: () -> Void
 	
 	var lightBlueGrey = R.color.lightBlueGrey.color.opacity(0.25)
@@ -74,7 +74,6 @@ struct ItemChoiceSwiftUI: View {
 
 struct ItemChoiceSwiftUI_Previews: PreviewProvider {
     static var previews: some View {
-		ItemChoiceSwiftUI(text: "Offer made", onTap: {})
-//			.previewLayout(.sizeThatFits)
+		ItemChoiceSwiftUI(text: "Offer made", selected: .constant(false), onTap: {})
     }
 }
