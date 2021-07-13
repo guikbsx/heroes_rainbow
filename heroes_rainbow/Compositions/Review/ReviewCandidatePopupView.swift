@@ -15,6 +15,13 @@ struct ReviewCandidatePopupView: View {
 	let candidates: [Candidate]
 	let avatar: String
 	
+	var mainLbl: String {
+		return candidates.count > 1 ? "You have \(candidates.count) applicants that require a status update" : "How was the interview with \(candidates[0].name)?"
+	}
+	var labelBtn: String {
+		return candidates.count > 1 ? "Update applicant status" : "Update Status"
+	}
+	
 	var update: () -> Void
 	var dismiss: () -> Void
     
@@ -30,26 +37,36 @@ struct ReviewCandidatePopupView: View {
 						ZStack {
 							Circle()
 								.strokeBorder(Color.white, lineWidth: 4)
-								.background(Circle().fill(Color.blue))
+								.background(Circle().fill(Color.white))
 								.frame(width: 64, height: 64)
 							KFImage(URL(string: avatar))
+								.placeholder {
+									Image(R.image.ios_icon_avatar_default)
+										.resizable()
+										.frame(width: 58, height: 58)
+								}
 								.resizable()
-								.frame(width: 60, height: 60)
+								.frame(width: 58, height: 58)
 								.cornerRadius(30)
 						}
 						.offset(x: 16, y: 0)
 						ZStack {
 							Circle()
 								.strokeBorder(Color.white, lineWidth: 4)
-								.background(Circle().fill(Color.blue))
+								.background(Circle().fill(R.color.purple.color))
 							if candidates.count > 1 {
 							Text("\(candidates.count)")
 								.font(.custom(R.font.riftBoldItalic, size: 40))
 								.foregroundColor(.white)
 							} else {
 								KFImage(URL(string: candidates.last?.avatar ?? ""))
+									.placeholder {
+										Image(R.image.ios_icon_avatar_default)
+											.resizable()
+											.frame(width: 58, height: 58)
+									}
 									.resizable()
-									.frame(width: 60, height: 60)
+									.frame(width: 58, height: 58)
 									.cornerRadius(30)
 							}
 						}
@@ -59,11 +76,11 @@ struct ReviewCandidatePopupView: View {
 					.offset(y:-16)
 				}
 				VStack {
-					Text("You have 3 applicants that require a status update")
+					Text(mainLbl)
 						.font(R.font.riftBoldItalic.swiftUI(size: 24))
 						.multilineTextAlignment(.center)
 					Button(action: { update() }, label: {
-						PrimaryBtnSwiftUI(text: "Update applicant Status", subtext: "", whiteShadow: false, state: .enabled, animated: false)
+						PrimaryBtnSwiftUI(text: labelBtn, subtext: "", whiteShadow: false, state: .enabled, animated: false)
 							.frame(height: 96)
 					})
 //					.fullScreenCover(isPresented: $isPresented, content: {

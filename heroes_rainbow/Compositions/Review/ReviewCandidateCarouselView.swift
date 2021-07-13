@@ -7,14 +7,7 @@
 
 import SwiftUI
 
-struct ReviewCandidateData {
-	var offset: CGFloat
-	var scaleEffect: CGFloat
-	var opacity: Double
-	@State var candidate: Candidate
-}
-
-struct ReviewCandidateFullView: View {
+struct ReviewCandidateCarouselView: View {
 	@State var opacityBackground: Double = 0
 	@State var state: Bool = true
 	
@@ -24,6 +17,8 @@ struct ReviewCandidateFullView: View {
 	@State var lastCandidate: Int = 1
 	@State var candidates: [Candidate]
 	var avatar: String
+	
+	var dismiss: (() -> Void)? = nil
 	
     var body: some View {
 		VStack {
@@ -67,7 +62,10 @@ struct ReviewCandidateFullView: View {
 	}
 	
 	func animate() {
-		guard lastCandidate != candidates.count else { return }
+		guard lastCandidate != candidates.count else {
+			dismiss?()
+			return
+		}
 		
 		lastCandidate += 1
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, execute: {
@@ -122,7 +120,7 @@ struct ReviewCandidateFullView: View {
 	}
 }
 
-struct ReviewCandidateFullView_Previews: PreviewProvider {
+struct ReviewCandidateCarouselView_Previews: PreviewProvider {
     static var previews: some View {
 		let candidates: [Candidate] = [
 			.init(id: 1, name: "Erwan", avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png", date: Date(), job: "Barista"),
@@ -130,7 +128,7 @@ struct ReviewCandidateFullView_Previews: PreviewProvider {
 			.init(id: 3, name: "Patrick", avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png", date: Date(), job: "Barista")
 		]
 		
-		ReviewCandidateFullView(candidates: candidates, avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png")
+		ReviewCandidateCarouselView(candidates: candidates, avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png")
 			.background(Color.black.ignoresSafeArea())
     }
 }

@@ -15,6 +15,7 @@ struct ReviewCandidateContentView: View {
 	var skip: () -> Void
 	var choice: () -> Void
 	
+	var topBarStruct: TopBarStruct = .init(left: .none, middle: .none, right: .skip)
 	var choices: [String] = ["Offer made", "No show", "Turned the applicant down", "Applicant is no longer interested"]
 	@State var selected : [Bool] = [false, false, false, false, false]
 	
@@ -22,7 +23,7 @@ struct ReviewCandidateContentView: View {
 		RoundedCorners(color: .white, tl: 20, tr: 20, bl: 0, br: 0)
 			.overlay(
 				VStack {
-					TopBarSwiftUI(skipBtn: {skip()})
+					TopBarSwiftUI(component: topBarStruct, rightBtn: {skip()})
 					NewVoice(text: "How did the interview go?")
 					circleView
 					subtitleView
@@ -40,7 +41,7 @@ struct ReviewCandidateContentView: View {
 					}
 					Spacer()
 				}
-				.padding(.top, 16)
+				.padding(.top, topBarStruct.right == .close ? 0 : 16)
 			)
 		
     }
@@ -53,8 +54,13 @@ struct ReviewCandidateContentView: View {
 					.background(Circle().fill(Color.white))
 					.frame(width: 64, height: 64)
 				KFImage(URL(string: avatar))
+					.placeholder {
+						Image(R.image.ios_icon_avatar_default)
+							.resizable()
+							.frame(width: 58, height: 58)
+					}
 					.resizable()
-					.frame(width: 60, height: 60)
+					.frame(width: 58, height: 58)
 					.cornerRadius(30)
 			}
 			.offset(x: 16, y: 0)
@@ -63,9 +69,14 @@ struct ReviewCandidateContentView: View {
 					.strokeBorder(Color.white, lineWidth: 4)
 					.background(Circle().fill(Color.white))
 				KFImage(URL(string: candidate.avatar))
-						.resizable()
-						.frame(width: 60, height: 60)
-						.cornerRadius(30)
+					.placeholder {
+						Image(R.image.ios_icon_avatar_default)
+							.resizable()
+							.frame(width: 58, height: 58)
+					}
+					.resizable()
+					.frame(width: 58, height: 58)
+					.cornerRadius(30)
 			}
 			.frame(width: 64, height: 64)
 			.offset(x: -16, y: 0)
@@ -93,6 +104,22 @@ struct ReviewCandidateContentView_Previews: PreviewProvider {
 			},
 			choice: {
 			
-			})
+			}
+		)
+		
+		ReviewCandidateContentView(
+			candidate:
+				.init(id: 1, name: "Erwan", avatar: "https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png", date: Date(), job: "Barista"),
+			avatar:
+				"https://upload.wikimedia.org/wikipedia/ru/thumb/3/35/Starbucks_Coffee_Logo.svg/1200px-Starbucks_Coffee_Logo.svg.png",
+			skip: {
+			
+			},
+			choice: {
+				
+			},
+			topBarStruct:
+				.init(left: .none, middle: .none, right: .close)
+		)
     }
 }

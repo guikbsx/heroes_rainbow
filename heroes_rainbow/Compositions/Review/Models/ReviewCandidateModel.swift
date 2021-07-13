@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import SwiftUI
 
 struct Candidate {
 	let id: Int
@@ -15,4 +17,9 @@ struct Candidate {
 	let job: String
 }
 
-
+struct ReviewCandidateData {
+	var offset: CGFloat
+	var scaleEffect: CGFloat
+	var opacity: Double
+	@State var candidate: Candidate
+}

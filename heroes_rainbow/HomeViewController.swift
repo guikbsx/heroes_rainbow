@@ -132,7 +132,9 @@ class HomeViewController: UIViewController {
 				avatar: avatar,
 				update: {
 					self.dismiss(animated: true, completion: {
-						let newVC = UIHostingController(rootView: ReviewCandidateFullView(candidates: candidates, avatar: avatar))
+						let newVC = UIHostingController(rootView: ReviewCandidateCarouselView(candidates: candidates, avatar: avatar, dismiss: {
+							self.dismiss(animated: true, completion: nil)
+						}))
 						newVC.view.backgroundColor = .clear
 						newVC.modalPresentationStyle = .overCurrentContext
 						self.present(newVC, animated: true, completion: nil)
