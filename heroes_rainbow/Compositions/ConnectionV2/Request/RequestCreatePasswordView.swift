@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct CreatePasswordView: View {
+struct RequestCreatePasswordView: View {
+	@EnvironmentObject var model: ConnectionModel
+
 	@State var upPassword: String = ""
 	@State var upPasswordState: InputTextState = .unfocus
 	
@@ -35,7 +37,12 @@ struct CreatePasswordView: View {
 			VStack(spacing: 0) {
 				InputTextSecure(text: upBinding, state: $upPasswordState, placeholder: "Password")
 				InputTextSecure(text: downBinding, state: $downPasswordState, placeholder: "Confirm password")
-				PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
+				Button(action: {
+					hideKeyboard()
+					model.next()
+				}) {
+					PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
+				}
 				Spacer()
 			}
 		}
@@ -55,6 +62,9 @@ struct CreatePasswordView: View {
 
 struct CreatePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        CreatePasswordView()
+		let model = ConnectionModel()
+		
+        RequestCreatePasswordView()
+			.environmentObject(model)
     }
 }

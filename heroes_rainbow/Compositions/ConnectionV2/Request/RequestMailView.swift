@@ -7,11 +7,9 @@
 
 import SwiftUI
 
-struct MailView: View {
-	@EnvironmentObject var model: OnboardingConnectionModel
-	@Binding var currentPage: Int
+struct RequestMailView: View {
+	@EnvironmentObject var model: ConnectionModel
 	
-	@State var mail: String = ""
 	@State var textState: InputTextState = .unfocus
 	@State var buttonState: PrimaryBtnState = .disabled
 	
@@ -19,28 +17,26 @@ struct MailView: View {
 		
 		//Handle iOS13 and the impossibility to use .onChange
 		let binding = Binding<String>(get: {
-			mail
+			model.emailLbl
 		}, set: {
-			mail = $0
-			buttonState = mail.isValidEmail() ? .enabled : .disabled
+			model.emailLbl = $0
+			buttonState = model.emailLbl.isValidEmail() ? .enabled : .disabled
 		})
 		
 		VStack(spacing: 0) {
 			InputTextSwiftUI(text: binding, state: $textState, placeholder: "Email")
 			Button(action: {
-				sendEmail(completion: { value in
-					if value {
-						
-					}
-				})
-				currentPage += 1
+				hideKeyboard()
+				model.next()
 			}) {
 				PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
 			}
+//			.disabled(buttonState != .enabled)
 			Spacer()
 		}
 		.animation(.spring())
 		.background(Color.white)
+
     }
 	
 	private func sendEmail(completion: (Bool) -> Void) {
@@ -49,11 +45,11 @@ struct MailView: View {
 	}
 }
 
-struct MailView_Previews: PreviewProvider {
+struct RequestMailView_Previews: PreviewProvider {
     static var previews: some View {
-		let model = OnboardingConnectionModel()
+		let model = ConnectionModel()
 		
-		MailView(currentPage: .constant(0))
+		RequestMailView()
 			.environmentObject(model)
     }
 }

@@ -120,10 +120,10 @@ class HomeViewController: UIViewController {
 	}
 	
 	func test() {
-		let vc = UIHostingController(rootView: CreatePasswordView())
+		let vc = UIHostingController(rootView: ConnectionView())
 		vc.modalPresentationStyle = .overCurrentContext
 		self.present(vc, animated: true, completion: nil)
-	} 
+	}
 }
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
