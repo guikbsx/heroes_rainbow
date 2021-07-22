@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RequestNotificationsView: View {
-	
     var body: some View {
 		ScrollView {
 			VStack(spacing: 12) {
@@ -18,11 +17,7 @@ struct RequestNotificationsView: View {
 					.padding(20)
 					.multilineTextAlignment(.center)
 					.font(R.font.gilroyRegular.swiftUI(size: 18))
-				Button(action: {
-					
-				}, label: {
-					PrimaryBtnSwiftUI(title: "Turn on notifications", subtitle: nil, state: .constant(.enabled))
-				})
+				PrimaryBtnSwiftUI(title: "Turn on notifications", subtitle: nil, state: .constant(.enabled), onTap: {})
 				Spacer()
 			}
 		}

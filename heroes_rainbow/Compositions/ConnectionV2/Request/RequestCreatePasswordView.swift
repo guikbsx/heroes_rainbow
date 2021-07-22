@@ -35,14 +35,12 @@ struct RequestCreatePasswordView: View {
 		
 		ScrollView {
 			VStack(spacing: 0) {
-				InputTextSecure(text: upBinding, state: $upPasswordState, placeholder: "Password")
-				InputTextSecure(text: downBinding, state: $downPasswordState, placeholder: "Confirm password")
-				Button(action: {
+				InputTextSecure(text: upBinding, state: $upPasswordState, contentType: .newPassword, placeholder: "Password")
+				InputTextSecure(text: downBinding, state: $downPasswordState, contentType: .newPassword, placeholder: "Confirm password")
+				PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState, onTap: {
 					hideKeyboard()
 					model.next()
-				}) {
-					PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
-				}
+				})
 				Spacer()
 			}
 		}

@@ -18,12 +18,10 @@ struct RequestPhoneNumberView: View {
 			VStack {
 				InputPhoneSwiftUI(phoneNumber: $model.phoneNumberLbl)
 					.frame(height: 78)
-				Button(action: {
+				PrimaryBtnSwiftUI(title: "Send Code", subtitle: nil, state: $buttonState, onTap: {
 					hideKeyboard()
 					model.next()
-				}) {
-					PrimaryBtnSwiftUI(title: "Send Code", subtitle: nil, state: $buttonState)
-				}
+				})
 			}
 		}
     }

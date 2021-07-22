@@ -25,13 +25,10 @@ struct RequestMailView: View {
 		
 		VStack(spacing: 0) {
 			InputTextSwiftUI(text: binding, state: $textState, placeholder: "Email")
-			Button(action: {
+			PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState, onTap: {
 				hideKeyboard()
 				model.next()
-			}) {
-				PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
-			}
-//			.disabled(buttonState != .enabled)
+			})
 			Spacer()
 		}
 		.animation(.spring())

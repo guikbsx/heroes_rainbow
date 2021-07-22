@@ -23,6 +23,10 @@
 		C472191D26A88833009D9A8E /* RequestCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472191C26A88833009D9A8E /* RequestCodeView.swift */; };
 		C472191F26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472191E26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift */; };
 		C472192126A96DF5009D9A8E /* RequestNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192026A96DF5009D9A8E /* RequestNotificationsView.swift */; };
+		C472192726A97FA1009D9A8E /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192626A97FA1009D9A8E /* ResetPasswordView.swift */; };
+		C472192926A97FC3009D9A8E /* TopBarSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192826A97FC3009D9A8E /* TopBarSwiftUI.swift */; };
+		C472192B26A98759009D9A8E /* DSScreen+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192A26A98759009D9A8E /* DSScreen+Extensions.swift */; };
+		C472192D26A98850009D9A8E /* VerificationCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192C26A98850009D9A8E /* VerificationCodeView.swift */; };
 		C472535C25B0505E005A9CC7 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* Components.swift */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
 		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
@@ -30,6 +34,8 @@
 		C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */; };
 		C4822A172581149B0060C5CF /* TheVoiceBirthdateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */; };
 		C4834E7625E0FDC9007D8C98 /* ConstructViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */; };
+		C49BEABA26A99BC100E41B91 /* WrapSignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BEAB926A99BC100E41B91 /* WrapSignView.swift */; };
+		C49BEABE26A9A10100E41B91 /* VerifyingAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49BEABD26A9A10100E41B91 /* VerifyingAccountView.swift */; };
 		C4A0FA84269C89C900CD8F97 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4A0F9C1269C89C800CD8F97 /* Colors.xcassets */; };
 		C4A0FA85269C89C900CD8F97 /* ItemNotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0F9C4269C89C800CD8F97 /* ItemNotificationTableViewCell.swift */; };
 		C4A0FA86269C89C900CD8F97 /* ItemNav.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A0F9C6269C89C800CD8F97 /* ItemNav.swift */; };
@@ -265,6 +271,10 @@
 		C472191C26A88833009D9A8E /* RequestCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCodeView.swift; sourceTree = "<group>"; };
 		C472191E26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleTextFieldForCode.swift; sourceTree = "<group>"; };
 		C472192026A96DF5009D9A8E /* RequestNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationsView.swift; sourceTree = "<group>"; };
+		C472192626A97FA1009D9A8E /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
+		C472192826A97FC3009D9A8E /* TopBarSwiftUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarSwiftUI.swift; sourceTree = "<group>"; };
+		C472192A26A98759009D9A8E /* DSScreen+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DSScreen+Extensions.swift"; sourceTree = "<group>"; };
+		C472192C26A98850009D9A8E /* VerificationCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationCodeView.swift; sourceTree = "<group>"; };
 		C472535B25B0505E005A9CC7 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
 		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
@@ -272,6 +282,8 @@
 		C48229FF2581149B0060C5CF /* TheVoiceFullNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceFullNameViewController.swift; sourceTree = "<group>"; };
 		C4822A002581149B0060C5CF /* TheVoiceBirthdateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheVoiceBirthdateViewController.swift; sourceTree = "<group>"; };
 		C4834E7525E0FDC9007D8C98 /* ConstructViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstructViewController.swift; sourceTree = "<group>"; };
+		C49BEAB926A99BC100E41B91 /* WrapSignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapSignView.swift; sourceTree = "<group>"; };
+		C49BEABD26A9A10100E41B91 /* VerifyingAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyingAccountView.swift; sourceTree = "<group>"; };
 		C4A0F9C1269C89C800CD8F97 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		C4A0F9C4269C89C800CD8F97 /* ItemNotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNotificationTableViewCell.swift; sourceTree = "<group>"; };
 		C4A0F9C6269C89C800CD8F97 /* ItemNav.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemNav.swift; sourceTree = "<group>"; };
@@ -550,6 +562,15 @@
 				C46D15B12580E33200F151D1 /* Info.plist */,
 			);
 			path = heroes_rainbowUITests;
+			sourceTree = "<group>";
+		};
+		C472192326A97F89009D9A8E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C472192626A97FA1009D9A8E /* ResetPasswordView.swift */,
+				C472192C26A98850009D9A8E /* VerificationCodeView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C48229F12581149B0060C5CF /* StoryBook Extensions */ = {
@@ -877,6 +898,7 @@
 		C4A0FA17269C89C800CD8F97 /* Bar */ = {
 			isa = PBXGroup;
 			children = (
+				C472192826A97FC3009D9A8E /* TopBarSwiftUI.swift */,
 				C4A0FA18269C89C800CD8F97 /* MenuBar.swift */,
 				C4A0FA19269C89C800CD8F97 /* ControlBar.swift */,
 				C4A0FA1A269C89C800CD8F97 /* TopBar.swift */,
@@ -955,6 +977,7 @@
 				C4A812D126A84D230026753E /* DSColor+Extensions.swift */,
 				C4A0FA35269C89C800CD8F97 /* RSwift+SwiftUI.swift */,
 				C4A812DC26A874A10026753E /* DSView+Extensions.swift */,
+				C472192A26A98759009D9A8E /* DSScreen+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1092,6 +1115,8 @@
 				C4A8116A26A6D57E0026753E /* ConnectionView.swift */,
 				C4A8116C26A6D5BF0026753E /* ConnectionModel.swift */,
 				C4A812DB26A85EE40026753E /* Request */,
+				C472192326A97F89009D9A8E /* Views */,
+				C49BEABD26A9A10100E41B91 /* VerifyingAccountView.swift */,
 			);
 			path = ConnectionV2;
 			sourceTree = "<group>";
@@ -1100,6 +1125,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A8115526A08DA60026753E /* RequestMailView.swift */,
+				C49BEAB926A99BC100E41B91 /* WrapSignView.swift */,
 				C4A8116026A6C36D0026753E /* RequestSignInView.swift */,
 				C4A8116826A6D2F20026753E /* RequestCreatePasswordView.swift */,
 				C4A812DE26A8763A0026753E /* RequestPhoneNumberView.swift */,
@@ -1475,9 +1501,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C49BEABA26A99BC100E41B91 /* WrapSignView.swift in Sources */,
 				C4A0FB0E269C89C900CD8F97 /* AppointmentEvents.swift in Sources */,
 				C4A0FA9A269C89C900CD8F97 /* ItemChatTextView.swift in Sources */,
 				C4A0FAE1269C89C900CD8F97 /* GenericFlow.swift in Sources */,
+				C472192726A97FA1009D9A8E /* ResetPasswordView.swift in Sources */,
 				C4A0FAC8269C89C900CD8F97 /* EmojicaLabel.swift in Sources */,
 				C4A0FB14269C89C900CD8F97 /* MessageEvents.swift in Sources */,
 				C4A0FA8D269C89C900CD8F97 /* PrimaryBtn.swift in Sources */,
@@ -1498,6 +1526,7 @@
 				C4A8116D26A6D5BF0026753E /* ConnectionModel.swift in Sources */,
 				C4A0FABE269C89C900CD8F97 /* PageTitle.swift in Sources */,
 				C4A0FB03269C89C900CD8F97 /* LoggingPrint.swift in Sources */,
+				C472192D26A98850009D9A8E /* VerificationCodeView.swift in Sources */,
 				C4A8116526A6CE310026753E /* SubtitleSwiftUI.swift in Sources */,
 				C4A0FAAB269C89C900CD8F97 /* TextViewWrapper.swift in Sources */,
 				C4A8115626A08DA60026753E /* RequestMailView.swift in Sources */,
@@ -1505,6 +1534,7 @@
 				C4A0FB0D269C89C900CD8F97 /* SocketIOEvent.swift in Sources */,
 				C4A0FAA2269C89C900CD8F97 /* ActiveLabel.swift in Sources */,
 				C4A0FA97269C89C900CD8F97 /* InputTextView.swift in Sources */,
+				C472192B26A98759009D9A8E /* DSScreen+Extensions.swift in Sources */,
 				C4822A162581149B0060C5CF /* TheVoiceFullNameViewController.swift in Sources */,
 				C4A0FB08269C89C900CD8F97 /* AppointmentHandlerModel.swift in Sources */,
 				C4A0FA9D269C89C900CD8F97 /* ItemChatBarUIKit.swift in Sources */,
@@ -1527,6 +1557,7 @@
 				C4A0FAA0269C89C900CD8F97 /* ItemChatAcceptedTableViewCell.swift in Sources */,
 				C472191F26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift in Sources */,
 				C4A0FAB2269C89C900CD8F97 /* ItemChatAccepted.swift in Sources */,
+				C49BEABE26A9A10100E41B91 /* VerifyingAccountView.swift in Sources */,
 				C4A0FB10269C89C900CD8F97 /* HiringEventEvents.swift in Sources */,
 				C4A0FA9F269C89C900CD8F97 /* ItemChatMessageTableViewCell.swift in Sources */,
 				C4A0FAB1269C89C900CD8F97 /* ItemChatMessageLeft.swift in Sources */,
@@ -1615,6 +1646,7 @@
 				C4A0FAD6269C89C900CD8F97 /* DSUIColor+Extensions.swift in Sources */,
 				C4DE277A25AF8E020051C763 /* StoryBookView.swift in Sources */,
 				C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */,
+				C472192926A97FC3009D9A8E /* TopBarSwiftUI.swift in Sources */,
 				C4A8116326A6CB550026753E /* DividerSwiftUI.swift in Sources */,
 				C4A0FA99269C89C900CD8F97 /* InputBirthday.swift in Sources */,
 				C4A0FA98269C89C900CD8F97 /* InputPicker.swift in Sources */,

@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 enum ConnectionState: CGFloat {
-	case mail = 0, createPassword = 1, signIn = 2, phoneNumber = 3, code = 4, notification = 5
+	case mail = 1, sign = 2, phoneNumber = 3, code = 4, notification = 5
 }
 
 class ConnectionModel: ObservableObject {
@@ -22,8 +22,11 @@ class ConnectionModel: ObservableObject {
 	
 	@Published public var newUser: Bool = false
 	
-	@Published public var actualStep: CGFloat = 0
+	@Published public var actualStep: CGFloat = 1
 	@Published internal var actualStepState: ConnectionState = .mail
+	
+	@Published var isShowingResetPassword: Bool = false
+	@Published var isShowingVerificationCode: Bool = false
 
 	var pastSlide		: CGFloat = -UIScreen.main.bounds.width
 	var actualSlide		: CGFloat = 0
@@ -34,36 +37,20 @@ class ConnectionModel: ObservableObject {
 	}
 	
 	var mailOffset: CGFloat {
-		if actualStepState.rawValue == 0 {
+		if actualStepState.rawValue == 1 {
 			return actualSlide
 		} else {
 			return pastSlide
 		}
 	}
 	
-	var createPasswordOffset: CGFloat {
-		if actualStepState.rawValue < 1 {
-			return previousSlide
-		} else if actualStepState.rawValue == 1 {
-			return actualSlide
-		} else if newUser {
-			return pastSlide
-		} else {
-			//No move
-			return previousSlide
-		}
-	}
-	
-	var signInOffset: CGFloat {
+	var signOffset: CGFloat {
 		if actualStepState.rawValue < 2 {
 			return previousSlide
 		} else if actualStepState.rawValue == 2 {
 			return actualSlide
-		} else if !newUser {
-			return pastSlide
 		} else {
-			//No move
-			return previousSlide
+			return pastSlide
 		}
 	}
 	
@@ -96,70 +83,55 @@ class ConnectionModel: ObservableObject {
 	}
 	
 	
-	func next(/*success: (Bool) -> Void */) {
+	func next() {
 		switch actualStepState {
 			case .mail:
 				//Call API
 				//If new user :
-				actualStepState = .createPassword
-				newUser = true
-				//If old user :
-//				actualStepState = .signIn
-//				newUser = false
+				actualStepState = .sign
 				break
-
-			case .createPassword:
+			case .sign:
 				//Call API
 				actualStepState = .phoneNumber
 				break
-				
-			case .signIn:
-				//Call API
-				actualStepState = .phoneNumber
-				break
-
 			case .phoneNumber:
 				//Call API
 				actualStepState = .code
 				break
-
-			
 			case .code:
 				//Call API
 				actualStepState = .notification
 				break
-
 			case .notification:
 				//quit
 				break
 		}
 		
-		actualStep = actualStepState.rawValue + 1
+		actualStep = actualStepState.rawValue
 		updateView()
 	}
 	
-	func previous(/*success: (Bool) -> Void */) {
+	func previous() {
+
 		switch actualStepState {
 			case .mail:
 				break
-			case .createPassword:
-				actualStepState = .mail
-				break
-			case .signIn:
+			case .sign:
 				actualStepState = .mail
 				break
 			case .phoneNumber:
-				actualStepState = newUser ? .createPassword : .signIn
+				actualStepState = .sign
 				break
 			case .code:
 				actualStepState = .phoneNumber
 				break
 			case .notification:
+				passwordLbl = ""
 				actualStepState = .code
 				break
 		}
 		
-		actualStep = actualStepState.rawValue + 1
+		actualStep = actualStepState.rawValue
 		updateView()
 	}
 	
@@ -169,29 +141,26 @@ class ConnectionModel: ObservableObject {
 				subtitleLbl = "Hello! Nice to see you!"
 				voiceLbl = "What’s your email address ?"
 				break
-			case .createPassword:
-				subtitleLbl = "Make an account"
-				voiceLbl = "Create a\npassword"
-				break
-			case .signIn:
-				subtitleLbl = "Welcome back!"
-				voiceLbl = "Log in to your\naccount"
-
+			case .sign:
+				if newUser {
+					subtitleLbl = "Make an account"
+					voiceLbl = "Create a\npassword"
+				} else {
+					subtitleLbl = "Welcome back!"
+					voiceLbl = "Log in to your\naccount"
+				}
 				break
 			case .phoneNumber:
 				subtitleLbl = " "
 				voiceLbl = "What’s your\nphone number?"
-
 				break
 			case .code:
 				subtitleLbl = "Code sent to \(phoneNumberLbl)"
 				voiceLbl = "Enter the code\nwe texted you"
-
 				break
 			case .notification:
 				subtitleLbl = " "
 				voiceLbl = "Stay on top of\nyour hiring"
-
 				break
 		}
 	}

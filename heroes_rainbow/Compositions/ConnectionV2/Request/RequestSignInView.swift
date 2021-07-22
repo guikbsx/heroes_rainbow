@@ -10,7 +10,6 @@ import SwiftUI
 struct RequestSignInView: View {
 	@EnvironmentObject var model: ConnectionModel
 
-	@State var mail: String = ""
 	@State var textState: InputTextState = .unfocus
 
 	@State var password: String = ""
@@ -21,32 +20,34 @@ struct RequestSignInView: View {
     var body: some View {
 		//Handle iOS13 and the impossibility to use .onChange
 		let mailBinding = Binding<String>(get: {
-			mail
+			model.emailLbl
 		}, set: {
-			mail = $0
-			buttonState = (mail.isValidEmail() && !password.isEmpty) ? .enabled : .disabled
+			model.emailLbl = $0
+			buttonState = (model.emailLbl.isValidEmail() && !password.isEmpty) ? .enabled : .disabled
 		})
 		
 		let passwordBinding = Binding<String>(get: {
 			password
 		}, set: {
 			password = $0
-			buttonState = (mail.isValidEmail() && !password.isEmpty) ? .enabled : .disabled
+			buttonState = (model.emailLbl.isValidEmail() && !password.isEmpty) ? .enabled : .disabled
 		})
 		
 		ScrollView {
 			VStack(spacing: 0) {
-				InputTextSwiftUI(text: mailBinding, state: $textState, placeholder: "Email")
-				InputTextSecure(text: passwordBinding, state: $passwordState, placeholder: "Password")
-				Button(action: {
+				InputTextSwiftUI(text: mailBinding, state: $textState, contentType: .emailAddress, placeholder: "Email")
+				InputTextSecure(text: passwordBinding, state: $passwordState, contentType: .password, placeholder: "Password")
+				PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState, onTap: {
 					hideKeyboard()
 					model.next()
-				}) {
-					PrimaryBtnSwiftUI(title: "Continue", subtitle: nil, state: $buttonState)
-				}
-//				.disabled(buttonState != .enabled)
+				})
 				DividerSwiftUI(text: "or")
-				ItemActionLink(text: "I forgot my password")
+				Button(action: {
+					hideKeyboard()
+					model.isShowingResetPassword.toggle()
+				}) {
+					ItemActionLink(text: "I forgot my password")
+				}
 				Spacer()
 			}
 			.background(Color.white)

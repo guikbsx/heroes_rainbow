@@ -12,9 +12,23 @@ struct ConnectionView: View {
 	@StateObject var model = ConnectionModel()
 
     var body: some View {
+		ZStack {
+			mainView
+			ResetPasswordView()
+				.environmentObject(model)
+				.offset(y: model.isShowingResetPassword ? 0 : UIScreen.height)
+				.animation(.spring())
+			VerificationCodeView()
+				.environmentObject(model)
+				.offset(y: model.isShowingVerificationCode ? 0 : UIScreen.height)
+				.animation(.spring())
+		}
+	}
+	
+	var mainView: some View {
 		VStack {
 			SubtitleSwiftUI(text: $model.subtitleLbl)
-			NewVoice(title: $model.voiceLbl, actualStep: $model.actualStep, numberOfStep: .constant(6))
+			NewVoice(title: $model.voiceLbl, actualStep: $model.actualStep, numberOfStep: .constant(5))
 			ZStack {
 				//5
 				RequestNotificationsView()
@@ -30,16 +44,11 @@ struct ConnectionView: View {
 				RequestPhoneNumberView()
 					.environmentObject(model)
 					.offset(x: model.phoneNumberOffset)
-				
-				//2 bis
-				RequestCreatePasswordView()
-					.environmentObject(model)
-					.offset(x: model.createPasswordOffset)
 
 				//2
-				RequestSignInView()
+				WrapSignView()
 					.environmentObject(model)
-					.offset(x: model.signInOffset)
+					.offset(x: model.signOffset)
 				
 				//1
 				RequestMailView()
@@ -48,21 +57,29 @@ struct ConnectionView: View {
 			}
 			.animation(.spring())
 			Spacer()
+			
+			//Test View to delete
 			HStack {
 				Button(action: { model.previous()}, label: {
+					Image(systemName: "arrowtriangle.backward.circle.fill")
 					Text("Previous")
 				})
 				Spacer()
+				Button(action: { model.newUser.toggle()}, label: {
+					Image(systemName: model.newUser ? "person.crop.circle.fill.badge.checkmark" : "person.crop.circle.fill.badge.xmark")
+					Text("New user : \(String(model.newUser))")
+				})
+				Spacer()
 				Button(action: { model.next()}, label: {
+					Image(systemName: "arrowtriangle.forward.circle.fill")
 					Text("Next")
 				})
 			}.padding()
 		}
+
 	}
 	
-	var connectionView: some View {
-		Text("test")
-	}
+	
 }
 
 struct OnboardingConnectionView_Previews: PreviewProvider {
