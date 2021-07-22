@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,9 +19,10 @@
 		C46D159A2580E33200F151D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46D15982580E33200F151D1 /* LaunchScreen.storyboard */; };
 		C46D15A52580E33200F151D1 /* heroes_rainbowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15A42580E33200F151D1 /* heroes_rainbowTests.swift */; };
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
-		C472191726A886DA009D9A8E /* RespondableTextField in Frameworks */ = {isa = PBXBuildFile; productRef = C472191626A886DA009D9A8E /* RespondableTextField */; };
 		C472191B26A886ED009D9A8E /* CodeSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472191A26A886ED009D9A8E /* CodeSwiftUI.swift */; };
 		C472191D26A88833009D9A8E /* RequestCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472191C26A88833009D9A8E /* RequestCodeView.swift */; };
+		C472191F26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472191E26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift */; };
+		C472192126A96DF5009D9A8E /* RequestNotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472192026A96DF5009D9A8E /* RequestNotificationsView.swift */; };
 		C472535C25B0505E005A9CC7 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = C472535B25B0505E005A9CC7 /* Components.swift */; };
 		C4822A0B2581149B0060C5CF /* DSViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229F22581149B0060C5CF /* DSViewModel.swift */; };
 		C4822A142581149B0060C5CF /* FieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48229FC2581149B0060C5CF /* FieldViewController.swift */; };
@@ -262,6 +263,8 @@
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C472191A26A886ED009D9A8E /* CodeSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSwiftUI.swift; sourceTree = "<group>"; };
 		C472191C26A88833009D9A8E /* RequestCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestCodeView.swift; sourceTree = "<group>"; };
+		C472191E26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvisibleTextFieldForCode.swift; sourceTree = "<group>"; };
+		C472192026A96DF5009D9A8E /* RequestNotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestNotificationsView.swift; sourceTree = "<group>"; };
 		C472535B25B0505E005A9CC7 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
 		C48229F22581149B0060C5CF /* DSViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DSViewModel.swift; sourceTree = "<group>"; };
 		C48229FC2581149B0060C5CF /* FieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FieldViewController.swift; sourceTree = "<group>"; };
@@ -454,7 +457,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C472191726A886DA009D9A8E /* RespondableTextField in Frameworks */,
 				7889EB94CD1B776A9C616B79 /* Pods_heroes_rainbow.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -915,6 +917,7 @@
 				C4A0FA23269C89C800CD8F97 /* LinkedText.swift */,
 				C4A0FA24269C89C800CD8F97 /* LottieView.swift */,
 				C4A0FA25269C89C800CD8F97 /* HostingCell.swift */,
+				C472191E26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift */,
 			);
 			path = "SwiftUI Tools";
 			sourceTree = "<group>";
@@ -1101,6 +1104,7 @@
 				C4A8116826A6D2F20026753E /* RequestCreatePasswordView.swift */,
 				C4A812DE26A8763A0026753E /* RequestPhoneNumberView.swift */,
 				C472191C26A88833009D9A8E /* RequestCodeView.swift */,
+				C472192026A96DF5009D9A8E /* RequestNotificationsView.swift */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -1163,7 +1167,6 @@
 			);
 			name = heroes_rainbow;
 			packageProductDependencies = (
-				C472191626A886DA009D9A8E /* RespondableTextField */,
 			);
 			productName = heroes_rainbow;
 			productReference = C46D158A2580E33100F151D1 /* heroes_rainbow.app */;
@@ -1240,7 +1243,6 @@
 			);
 			mainGroup = C46D15812580E33100F151D1;
 			packageReferences = (
-				C472191526A886DA009D9A8E /* XCRemoteSwiftPackageReference "RespondableTextField" */,
 			);
 			productRefGroup = C46D158B2580E33100F151D1 /* Products */;
 			projectDirPath = "";
@@ -1523,6 +1525,7 @@
 				C4A0FABA269C89C900CD8F97 /* TimePicker.swift in Sources */,
 				C4EABF8A25D5220D009CA4C6 /* ItemChatExtension.swift in Sources */,
 				C4A0FAA0269C89C900CD8F97 /* ItemChatAcceptedTableViewCell.swift in Sources */,
+				C472191F26A96AF5009D9A8E /* InvisibleTextFieldForCode.swift in Sources */,
 				C4A0FAB2269C89C900CD8F97 /* ItemChatAccepted.swift in Sources */,
 				C4A0FB10269C89C900CD8F97 /* HiringEventEvents.swift in Sources */,
 				C4A0FA9F269C89C900CD8F97 /* ItemChatMessageTableViewCell.swift in Sources */,
@@ -1579,6 +1582,7 @@
 				C4A0FA90269C89C900CD8F97 /* MonthsView.swift in Sources */,
 				C4A0FA85269C89C900CD8F97 /* ItemNotificationTableViewCell.swift in Sources */,
 				C4138EDA25D93C4D004B3293 /* Settings.swift in Sources */,
+				C472192126A96DF5009D9A8E /* RequestNotificationsView.swift in Sources */,
 				C4A8115B26A6BE1C0026753E /* DSString+Extensions.swift in Sources */,
 				C4A0FACC269C89C900CD8F97 /* HostingCell.swift in Sources */,
 				C4A0FAB4269C89C900CD8F97 /* ProfilePicker.swift in Sources */,
@@ -1959,25 +1963,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C472191526A886DA009D9A8E /* XCRemoteSwiftPackageReference "RespondableTextField" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/aaronLab/RespondableTextField.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.2;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C472191626A886DA009D9A8E /* RespondableTextField */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C472191526A886DA009D9A8E /* XCRemoteSwiftPackageReference "RespondableTextField" */;
-			productName = RespondableTextField;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C46D15822580E33100F151D1 /* Project object */;
 }

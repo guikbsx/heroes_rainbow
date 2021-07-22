@@ -17,7 +17,7 @@ struct ConnectionView: View {
 			NewVoice(title: $model.voiceLbl, actualStep: $model.actualStep, numberOfStep: .constant(6))
 			ZStack {
 				//5
-				Color.pinkDS
+				RequestNotificationsView()
 					.environmentObject(model)
 					.offset(x: model.notificationOffset)
 				
