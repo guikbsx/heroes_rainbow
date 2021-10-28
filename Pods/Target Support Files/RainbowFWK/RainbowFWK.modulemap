@@ -1,0 +1,6 @@
+framework module RainbowFWK {
+  umbrella header "RainbowFWK-umbrella.h"
+
+  export *
+  module * { export * }
+}

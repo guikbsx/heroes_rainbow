@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import RainbowFWK
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -19,11 +20,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
+		RainbowFWK.load()
+		
         self.window = UIWindow(windowScene: windowScene)
-        let homeVC = HomeViewController()
-        let nav = UINavigationController(rootViewController: homeVC)
-        nav.navigationBar.isHidden = true
-        self.window?.rootViewController = nav
+        let homeVC = UIHostingController(rootView: HomeView())
+        self.window?.rootViewController = homeVC
         
 //        window?.rootViewController = UIHostingController(rootView: GradientView())
         

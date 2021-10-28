@@ -1,0 +1,55 @@
+{
+  "name": "RainbowFWK",
+  "platforms": {
+    "ios": "13.0"
+  },
+  "summary": "RainbowFWK is Rainbow Framework Pod",
+  "requires_arc": true,
+  "version": "0.0.1",
+  "license": "Heroes Jobs",
+  "authors": {
+    "Patrick": "patrick@heroes.jobs"
+  },
+  "homepage": "https://gitlab.com/patrick_heroes/rainbow_fwk",
+  "source": {
+    "git": "https://gitlab.com/patrick_heroes/rainbow_fwk.git",
+    "tag": "0.0.1"
+  },
+  "source_files": "RainbowFWK/**/*.{swift}",
+  "resources": "RainbowFWK/**/*.{strings,otf,json,png,jpeg,jpg,storyboard,xib,xcassets}",
+  "dependencies": {
+    "Kingfisher": [
+      "~> 6.0"
+    ],
+    "R.swift": [
+
+    ],
+    "Socket.IO-Client-Swift": [
+      "~> 15.2.0"
+    ],
+    "RxSwift": [
+      "~> 5"
+    ],
+    "SwiftDate": [
+
+    ],
+    "lottie-ios": [
+
+    ],
+    "PopupDialog": [
+
+    ],
+    "Emojica": [
+
+    ],
+    "JTAppleCalendar": [
+
+    ],
+    "UICircularProgressRing": [
+
+    ],
+    "PhoneNumberKit": [
+
+    ]
+  }
+}

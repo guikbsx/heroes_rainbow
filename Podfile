@@ -7,18 +7,8 @@ target 'heroes_rainbow' do
 
   # Pods for heroes_rainbow
 pod "lottie-ios"
-pod "PhoneNumberKit"
-pod "SwiftDate"
 pod 'R.swift'
-pod 'Hero'
-pod 'Kingfisher', '~> 6.0'
-pod 'JTAppleCalendar'
-pod 'PopupDialog'
-pod "Spring", :git => 'https://github.com/MengTo/Spring.git'
-pod 'Emojica'
-pod "UICircularProgressRing"
-pod 'Socket.IO-Client-Swift', '~> 15.2.0'
-pod 'RxSwift', '~> 5'
+pod 'RainbowFWK', :path => '../rainbow_fwk'
 
   target 'heroes_rainbowTests' do
     inherit! :search_paths
