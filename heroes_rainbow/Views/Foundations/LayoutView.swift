@@ -4,8 +4,6 @@ import SwiftUI
 struct LayoutView: View {
 	@Environment(\.presentationMode) var presentationMode
 	
-	init() { RainbowFWK.load() }
-	
 	var body: some View {
 		VStack(alignment: .leading) {
 			Rectangle()

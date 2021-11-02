@@ -28,7 +28,12 @@
 		C496BD5B27299E56007ABCB9 /* DropDownPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD5A27299E56007ABCB9 /* DropDownPicker.swift */; };
 		C496BD5E272A99C2007ABCB9 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD5D272A99C2007ABCB9 /* ButtonsView.swift */; };
 		C496BD60272A9BC2007ABCB9 /* SuperTopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD5F272A9BC2007ABCB9 /* SuperTopBar.swift */; };
+		C496BD62272ACB16007ABCB9 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD61272ACB16007ABCB9 /* CardView.swift */; };
+		C496BD64272ACCBA007ABCB9 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD63272ACCBA007ABCB9 /* ChatListView.swift */; };
 		C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4ADF25C25DD32B20068169B /* R.generated.swift */; };
+		C4CE99BF272AE5F100116FF8 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE99BE272AE5F100116FF8 /* DividerView.swift */; };
+		C4CE99C1272AE69B00116FF8 /* InputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE99C0272AE69B00116FF8 /* InputView.swift */; };
+		C4CE99C3272AE87500116FF8 /* ItemActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE99C2272AE87500116FF8 /* ItemActionView.swift */; };
 		C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAAAE8260A2A72004D966F /* AppInfos.swift */; };
 		C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE27C125AFAD590051C763 /* ViewController.swift */; };
 /* End PBXBuildFile section */
@@ -83,7 +88,12 @@
 		C496BD5A27299E56007ABCB9 /* DropDownPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropDownPicker.swift; sourceTree = "<group>"; };
 		C496BD5D272A99C2007ABCB9 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		C496BD5F272A9BC2007ABCB9 /* SuperTopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperTopBar.swift; sourceTree = "<group>"; };
+		C496BD61272ACB16007ABCB9 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		C496BD63272ACCBA007ABCB9 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		C4ADF25C25DD32B20068169B /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
+		C4CE99BE272AE5F100116FF8 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		C4CE99C0272AE69B00116FF8 /* InputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputView.swift; sourceTree = "<group>"; };
+		C4CE99C2272AE87500116FF8 /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
 		C4DAAAE8260A2A72004D966F /* AppInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
 		C4DE27C125AFAD590051C763 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C4EABFA925D587CF009CA4C6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -230,6 +240,11 @@
 			isa = PBXGroup;
 			children = (
 				C496BD5D272A99C2007ABCB9 /* ButtonsView.swift */,
+				C496BD61272ACB16007ABCB9 /* CardView.swift */,
+				C496BD63272ACCBA007ABCB9 /* ChatListView.swift */,
+				C4CE99BE272AE5F100116FF8 /* DividerView.swift */,
+				C4CE99C0272AE69B00116FF8 /* InputView.swift */,
+				C4CE99C2272AE87500116FF8 /* ItemActionView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -519,17 +534,22 @@
 				C45DB2232726B69900850CA1 /* TextGrid.swift in Sources */,
 				C496BD5B27299E56007ABCB9 /* DropDownPicker.swift in Sources */,
 				C496BD60272A9BC2007ABCB9 /* SuperTopBar.swift in Sources */,
+				C4CE99BF272AE5F100116FF8 /* DividerView.swift in Sources */,
+				C496BD64272ACCBA007ABCB9 /* ChatListView.swift in Sources */,
 				C45DB21F2726B4F200850CA1 /* HomeView.swift in Sources */,
 				C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */,
 				C46D158E2580E33100F151D1 /* AppDelegate.swift in Sources */,
 				C496BD5E272A99C2007ABCB9 /* ButtonsView.swift in Sources */,
 				C40F2C7A2726FD0400512C34 /* CategoryView.swift in Sources */,
+				C4CE99C3272AE87500116FF8 /* ItemActionView.swift in Sources */,
 				C496BD57272982DB007ABCB9 /* ColorCell.swift in Sources */,
 				C40F2C762726FA0D00512C34 /* LayoutView.swift in Sources */,
 				C40F2C782726FCB900512C34 /* ElevationsView.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
 				C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */,
 				C496BD5927298EF3007ABCB9 /* TypographyView.swift in Sources */,
+				C4CE99C1272AE69B00116FF8 /* InputView.swift in Sources */,
+				C496BD62272ACB16007ABCB9 /* CardView.swift in Sources */,
 				C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

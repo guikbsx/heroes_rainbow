@@ -21,8 +21,8 @@ struct SuperTopBar: View {
 		)
 		VStack(alignment: .leading, spacing: 16) {
 			CategoryView(category)
-			Text(title)
-				.typography(.subtitle)
+			Text("\(title) ")
+				.typography(.header4)
 				.gradientForeground(gradient: Color.powerDS)
 		}
 		.padding(.horizontal, 20)

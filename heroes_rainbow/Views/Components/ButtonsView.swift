@@ -2,9 +2,6 @@ import SwiftUI
 import RainbowFWK
 
 struct ButtonsView: View {
-//	@Environment(\.presentationMode) var presentationMode
-	
-	init() { RainbowFWK.load() }
 	
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -28,7 +25,7 @@ struct ButtonsView: View {
 					Text("Primary Button")
 						.typography(.subtitleXS)
 						.padding(.horizontal, 20)
-					VStack {
+					VStack(alignment: .leading) {
 						Picker("State", selection: $primaryState) {
 							Text("Enabled").tag(PrimaryBtnState.enabled)
 							Text("Disabled").tag(PrimaryBtnState.disabled)
@@ -43,8 +40,6 @@ struct ButtonsView: View {
 								UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.purple500)
 								UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
 							}
-						} else {
-							// Fallback on earlier versions
 						}
 					}
 					.padding(12)
@@ -54,6 +49,14 @@ struct ButtonsView: View {
 					PrimaryBtnSwiftUI(title: "Next", subtitle: withSubtitle ? "This is a optional subtitle" : nil, state: $primaryState, onTap: {})
 						.background(Color.white)
 				}
+				VStack(alignment: .leading) {
+					Text("Primary Button")
+						.typography(.subtitleXS)
+						.padding(.horizontal, 20)
+					ItemActionLink(text: "This is a link")
+						.background(Color.white)
+				}
+				
 			}
 		}
 		.frame(width: UIScreen.width)

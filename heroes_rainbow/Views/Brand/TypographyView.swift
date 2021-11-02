@@ -2,7 +2,6 @@ import SwiftUI
 import RainbowFWK
 
 struct TypographyView: View {
-	init() { RainbowFWK.load() }
 	
 	var options: [FontStyle] = [.header1, .header2, .header3, .header4, .header5, .header6, .subtitle, .subtitleS, .subtitleXS, .body, .bodyXS, .caption]
 	@State var selection: FontStyle = .header4

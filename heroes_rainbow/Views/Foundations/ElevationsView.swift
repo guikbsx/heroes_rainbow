@@ -2,7 +2,6 @@ import SwiftUI
 import RainbowFWK
 
 struct ElevationsView: View {
-	@Environment(\.presentationMode) var presentationMode
 	@State var state: ElevationState = .default
 	
 	init() { RainbowFWK.load() }
@@ -10,12 +9,23 @@ struct ElevationsView: View {
 	var body: some View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Brand", title: "Typography")
-			Picker("State", selection: $state) {
-				Text("Default").tag(ElevationState.default)
-				Text("Error").tag(ElevationState.error)
-				Text("Focus").tag(ElevationState.focus)
+			VStack(alignment: .leading) {
+				Picker("State", selection: $state) {
+					Text("Default").tag(ElevationState.default)
+					Text("Error").tag(ElevationState.error)
+					Text("Focus").tag(ElevationState.focus)
+				}
+				.onAppear {
+					if #available(iOS 14.0, *) {
+						UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.purple500)
+						UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+					}
+					
+				}
 			}
 			.pickerStyle(SegmentedPickerStyle())
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
 			.padding(.horizontal, 20)
 			content
 				.padding(.vertical)
