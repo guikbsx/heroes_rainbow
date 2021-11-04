@@ -131,30 +131,6 @@ struct R: Rswift.Validatable {
     fileprivate init() {}
   }
 
-  /// This `R.image` struct is generated, and contains static references to 2 images.
-  struct image {
-    /// Image `logo_contour_color`.
-    static let logo_contour_color = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_contour_color")
-    /// Image `logo_contour`.
-    static let logo_contour = Rswift.ImageResource(bundle: R.hostingBundle, name: "logo_contour")
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "logo_contour", bundle: ..., traitCollection: ...)`
-    static func logo_contour(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.logo_contour, compatibleWith: traitCollection)
-    }
-    #endif
-
-    #if os(iOS) || os(tvOS)
-    /// `UIImage(named: "logo_contour_color", bundle: ..., traitCollection: ...)`
-    static func logo_contour_color(compatibleWith traitCollection: UIKit.UITraitCollection? = nil) -> UIKit.UIImage? {
-      return UIKit.UIImage(resource: R.image.logo_contour_color, compatibleWith: traitCollection)
-    }
-    #endif
-
-    fileprivate init() {}
-  }
-
   /// This `R.info` struct is generated, and contains static references to 1 properties.
   struct info {
     struct uiApplicationSceneManifest {

@@ -6,7 +6,6 @@ struct DividerView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Divider")
 			content
-				.padding(.vertical)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -15,13 +14,22 @@ struct DividerView: View {
 	}
 	
 	var content: some View {
-		VStack(spacing: 8) {
-			Group {
-				DividerSwiftUI()
-				DividerSwiftUI(text: "or")
-				DividerSwiftUI(text: "Divider indication")
-			}
-			.background(Color.white)
+		ScrollView {
+			ComponentContainer(title: "Divider", settings: {},
+				content: {
+					DividerSwiftUI()
+				}
+			)
+			ComponentContainer(title: "Divider variant 2", settings: {},
+				content: {
+					DividerSwiftUI(text: "or")
+				}
+			)
+			ComponentContainer(title: "Divider variant 3", settings: {},
+				content: {
+					DividerSwiftUI(text: "Divider indication")
+				}
+			)
 		}
 	}
 }

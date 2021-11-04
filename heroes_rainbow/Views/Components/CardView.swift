@@ -7,7 +7,6 @@ struct CardView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Card")
 			content
-				.padding(.vertical)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -16,9 +15,11 @@ struct CardView: View {
 	}
 	
 	var content: some View {
-		ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
-			.background(Color.white)
-	}
+		ComponentContainer(title: "Item Card", settings: {},
+			content: {
+				ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
+			})
+		}
 	
 	let store = Store(
 		id: 0,

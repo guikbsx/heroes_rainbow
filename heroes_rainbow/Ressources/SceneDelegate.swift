@@ -23,11 +23,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		RainbowFWK.load()
 		
         self.window = UIWindow(windowScene: windowScene)
-        let homeVC = UIHostingController(rootView: HomeView())
-        self.window?.rootViewController = homeVC
-        
-//        window?.rootViewController = UIHostingController(rootView: GradientView())
-        
+		if #available(iOS 14.0, *) {
+			let homeVC = UIHostingController(rootView: HomeView())
+			self.window?.rootViewController = homeVC
+		} else {
+			let homeVC = UIHostingController(rootView: Text("you need an iPhone with iOS 14 to use this app.").typography(.subtitle))
+			self.window?.rootViewController = homeVC
+		}
         self.window?.makeKeyAndVisible()
     }
 

@@ -1,7 +1,7 @@
 import SwiftUI
 import RainbowFWK
 
-struct ItemActionView: View {
+struct ItemChoiceView: View {
 	var body: some View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Item Action")
@@ -13,21 +13,20 @@ struct ItemActionView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
+	@State var selected: Bool = false
+	
 	var content: some View {
 		VStack {
-			ComponentContainer(title: "Item Action", settings: {}, content: {
-				ItemActionSwiftUI(
-					image: Image(systemName: "brain.head.profile"),
-					text: "This is a label",
-					onTap: {}
-				)
+			ComponentContainer(title: "Item Choice", settings: {}, content: {
+				ItemChoiceSwiftUI(text: "This is your choice", selected: $selected, onTap: {
+				})
 			})
 		}
 	}
 }
 
-struct ItemActionView_Previews: PreviewProvider {
+struct ItemChoiceView_Previews: PreviewProvider {
     static var previews: some View {
-        ItemActionView()
+        ItemChoiceView()
     }
 }

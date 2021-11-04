@@ -6,7 +6,6 @@ struct InputView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Input")
 			content
-				.padding(.vertical)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -18,27 +17,23 @@ struct InputView: View {
 	@State var state: InputTextState = .unfocus
 	
 	var content: some View {
-		VStack(alignment: .leading) {
-			Text("Text input")
-				.typography(.subtitleXS)
-				.padding(.horizontal, 20)
-			VStack(alignment: .leading, spacing: 8) {
-				if #available(iOS 14.0, *) {
-					Picker("State", selection: $state) {
-						Text("Unfocus").tag(InputTextState.unfocus)
-						Text("Focus").tag(InputTextState.focus)
-						Text("Error").tag(InputTextState.error)
-					}
-					.pickerStyle(SegmentedPickerStyle())
+		ComponentContainer(title: "Text input",
+			settings: {
+				Picker("State", selection: $state) {
+					Text("Unfocus").tag(InputTextState.unfocus)
+					Text("Focus").tag(InputTextState.focus)
+					Text("Error").tag(InputTextState.error)
 				}
+			},
+			content: {
+				InputTextSwiftUI(
+					text: $text,
+					state: $state,
+					disableAutocorrection: true,
+					placeholder: "Enter a mail"
+				)
 			}
-			.padding(12)
-			.background(Color.grey100.cornerRadius(8))
-			.padding(.horizontal, 20)
-
-			InputTextSwiftUI(text: $text, state: $state, disableAutocorrection: true, placeholder: "Enter a mail")
-				.background(Color.white)
-		}
+		)
 	}
 }
 
