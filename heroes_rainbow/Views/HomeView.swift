@@ -21,11 +21,11 @@ struct HomeView: View {
 		HomeData(
 			name: "Components",
 			categories: [
-				CategoryData(destination: Color.blue		, label: "Autocomplete", disabled: true),
+				CategoryData(destination: AutocompleteView(), label: "Autocomplete", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Badge", disabled: true),
-				CategoryData(destination: Color.blue		, label: "Banner", disabled: true),
-				CategoryData(destination: Color.blue		, label: "Bottom Bar", disabled: true),
-				CategoryData(destination: ButtonsView()		, label: "Button 👨‍💻"),
+				CategoryData(destination: BannersView()		, label: "Banner", isNew: true),
+				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧", isNew: true),
+				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
 				CategoryData(destination: CardView()		, label: "Card"),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider"),
@@ -83,7 +83,7 @@ struct HomeView: View {
 						}
 					)
 					.padding(20)
-						scrollView
+					scrollView
 				}
 			)
 			.navigationBarHidden(true)
@@ -109,7 +109,7 @@ struct HomeView: View {
 								NavigationLink(
 									destination: category.destination,
 									label: {
-										TextGrid(category.label)
+										TextGrid(category.label, isNew: category.isNew)
 									}
 								)
 								.frame(width: UIScreen.width / 2 - 28)
@@ -120,7 +120,7 @@ struct HomeView: View {
 									NavigationLink(
 										destination: category.destination,
 										label: {
-											TextGrid(category.label)
+											TextGrid(category.label, isNew: category.isNew)
 										}
 									)
 									.frame(width: UIScreen.width / 2 - 28)
@@ -159,14 +159,16 @@ struct HomeData {
 }
 
 struct CategoryData {
-	init<V>(destination : V, label: String, disabled: Bool = false) where V: View {
+	init<V>(destination : V, label: String, isNew: Bool = false, disabled: Bool = false) where V: View {
 		self.destination = AnyView(destination)
 		self.label = label
+		self.isNew = isNew
 		self.disabled = disabled
 	}
 	
 	let destination: AnyView
 	let label: String
+	let isNew: Bool
 	let disabled: Bool
 }
 

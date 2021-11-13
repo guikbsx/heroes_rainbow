@@ -1,6 +1,7 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct InputView: View {
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -13,30 +14,56 @@ struct InputView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
-	@State var text: String = ""
+	@State var inputTextSwiftUIText: String = ""
 	@State var state: InputTextState = .unfocus
 	
+	@State var inputChatTextViewText: String = ""
+	@State var isActive: Bool = true
+
+	
 	var content: some View {
-		ComponentContainer(title: "Text input",
-			settings: {
-				Picker("State", selection: $state) {
-					Text("Unfocus").tag(InputTextState.unfocus)
-					Text("Focus").tag(InputTextState.focus)
-					Text("Error").tag(InputTextState.error)
+		VStack {
+			ComponentContainer(
+				title: "Text input",
+				settings: {
+					Picker("State", selection: $state) {
+						Text("Unfocus").tag(InputTextState.unfocus)
+						Text("Focus").tag(InputTextState.focus)
+						Text("Error").tag(InputTextState.error)
+					}
+				},
+				content: {
+					InputTextSwiftUI(
+						text: $inputTextSwiftUIText,
+						state: $state,
+						disableAutocorrection: true,
+						placeholder: "Enter a mail"
+					)
 				}
-			},
-			content: {
-				InputTextSwiftUI(
-					text: $text,
-					state: $state,
-					disableAutocorrection: true,
-					placeholder: "Enter a mail"
-				)
-			}
-		)
+			)
+			ComponentContainer(
+				title: "Text View Input",
+				settings: {
+					Toggle(isOn: $isActive, label: {
+						Text("Active").typography(.bodyXS)
+					})
+				},
+				content: {
+					VStack {
+						InputChatTextView(placeholder: "Message") {_ in 
+							
+						}
+						.frame(maxHeight: 146)
+					}
+				}
+			)
+			.keyboardAdaptive()
+
+		}
 	}
 }
 
+@available(iOS 14.0, *)
 struct InputView_Previews: PreviewProvider {
     static var previews: some View {
         InputView()

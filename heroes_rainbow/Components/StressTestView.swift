@@ -10,8 +10,7 @@ import RainbowFWK
 
 struct StressTestView: View {
     var body: some View {
-		ItemNamingSocialWrapper(data: ItemNamingSocialData(avatar: "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png", name: "@Hello", description: "Coucou", hashtags: ["cava", "cavabien"]))
-			.frame(height: 100)
+		Text("hello")
     }
 	
 	func textWithHashtags(color: Color) -> Text {

@@ -7,14 +7,16 @@ struct ButtonsView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Button")
 			content
+				.animation(.spring())
 		}
 		.navigationBarHidden(true)
 		.background(Color.white100.edgesIgnoringSafeArea(.all))
 		
 	}
 	
-	@State var primaryState: PrimaryBtnState = .enabled
-	@State var withSubtitle: Bool = true
+	@State var primaryState: PrimaryBtnState = .disabled
+	@State var secondaryType: SecondaryBtnType = .secondary
+	@State var withSubtitle: Bool = false
 
 	var content: some View {
 		ScrollView {
@@ -22,8 +24,10 @@ struct ButtonsView: View {
 				settings: {
 					VStack {
 						Picker("State", selection: $primaryState) {
-							Text("Enabled").tag(PrimaryBtnState.enabled)
 							Text("Disabled").tag(PrimaryBtnState.disabled)
+							Text("Enabled").tag(PrimaryBtnState.enabled)
+							Text("Loading").tag(PrimaryBtnState.loading)
+							Text("Final Step").tag(PrimaryBtnState.finalStep)
 						}
 						Toggle(isOn: $withSubtitle, label: {
 							Text("With subtitle").typography(.bodyXS)
@@ -35,12 +39,17 @@ struct ButtonsView: View {
 						.background(Color.white)
 				}
 			)
-			
 			ComponentContainer(
-				title: "Link Button",
-				settings: {},
+				title: "Secondary Button",
+				settings: {
+					Picker("Type", selection: $secondaryType) {
+						Text("Secondary").tag(SecondaryBtnType.secondary)
+						Text("Delete").tag(SecondaryBtnType.delete)
+						Text("Link").tag(SecondaryBtnType.link)
+					}
+				},
 				content: {
-					ItemActionLink(text: "This is a link")
+					SecondaryBtn(type: secondaryType, text: "This is a link"){}
 				}
 			)
 		}
