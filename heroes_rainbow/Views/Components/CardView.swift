@@ -14,12 +14,51 @@ struct CardView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
+	@State var type: CardExperienceType = .company
+	@State var withAvatar: Bool = true
+	@State var now: Bool = true
+	
 	var content: some View {
-		ComponentContainer(title: "Item Card", settings: {},
-			content: {
-				ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
-			})
+		ScrollView {
+			VStack {
+				ComponentContainer(
+					title: "Card Experience",
+					settings: {
+						VStack {
+							Picker("Type", selection: $type) {
+								Text("Company").tag(CardExperienceType.company)
+								Text("School").tag(CardExperienceType.school)
+								Text("Activity").tag(CardExperienceType.activity)
+							}
+							Toggle(isOn: $withAvatar, label: {
+								Text("Avatar").typography(.bodyXS)
+							})
+							Toggle(isOn: $now, label: {
+								Text("Now").typography(.bodyXS)
+							})
+						}
+					},
+					content: {
+						CardExperience(
+							type: type,
+							avatar: withAvatar ? "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png" : nil,
+							title: "MacDonald's",
+							subtitle: "Front of house",
+							caption: "San Francisco",
+							date: "3 months",
+							now: now
+						)
+						.padding(.horizontal, 20)
+						.animation(.spring())
+					}
+				)
+				ComponentContainer(title: "Item Card", settings: {},
+								   content: {
+									ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
+								   })
+			}
 		}
+	}
 	
 	let store = Store(
 		id: 0,

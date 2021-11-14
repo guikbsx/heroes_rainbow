@@ -26,7 +26,7 @@ struct HomeView: View {
 				CategoryData(destination: BannersView()		, label: "Banner", isNew: true),
 				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧", isNew: true),
 				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
-				CategoryData(destination: CardView()		, label: "Card"),
+				CategoryData(destination: CardView()		, label: "Card", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider"),
 				CategoryData(destination: InputView()		, label: "Input 👨‍💻"),
