@@ -19,10 +19,13 @@ struct ComponentContainer<Settings: View, Content: View> : View {
 	}
 	
     var body: some View {
-		VStack(alignment: .leading) {
-			Text(title)
-				.typography(.subtitleXS)
-				.padding(.horizontal, 20)
+		VStack {
+			HStack {
+				Text(title)
+					.typography(.subtitleXS)
+				Spacer()
+			}
+			.padding(.horizontal, 20)
 			if #available(iOS 14.0, *) {
 				settings
 					.padding(12)
@@ -35,7 +38,6 @@ struct ComponentContainer<Settings: View, Content: View> : View {
 						UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
 					}
 			}
-
 			content
 				.background(Color.white)
 		}

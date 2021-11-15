@@ -48,7 +48,6 @@ struct CardView: View {
 							date: "3 months",
 							now: now
 						)
-						.padding(.horizontal, 20)
 						.animation(.spring())
 					}
 				)

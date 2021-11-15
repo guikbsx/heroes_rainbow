@@ -21,12 +21,12 @@ struct HomeView: View {
 		HomeData(
 			name: "Components",
 			categories: [
-				CategoryData(destination: AutocompleteView(), label: "Autocomplete", isNew: true),
+				CategoryData(destination: AutocompleteView(), label: "Autocomplete"),
 				CategoryData(destination: Color.blue		, label: "Badge", disabled: true),
-				CategoryData(destination: BannersView()		, label: "Banner", isNew: true),
-				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧", isNew: true),
-				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
-				CategoryData(destination: CardView()		, label: "Card", isNew: true),
+				CategoryData(destination: BannersView()		, label: "Banner"),
+				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧"),
+				CategoryData(destination: ButtonsView()		, label: "Button"),
+				CategoryData(destination: CardView()		, label: "Card"),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider"),
 				CategoryData(destination: InputView()		, label: "Input 👨‍💻"),
