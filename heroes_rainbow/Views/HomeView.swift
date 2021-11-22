@@ -27,6 +27,7 @@ struct HomeView: View {
 				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧", disabled: true),
 				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
 				CategoryData(destination: CardView()		, label: "Card"),
+				CategoryData(destination: ChatListView()	, label: "Chat List", isNew: true),
 				CategoryData(destination: CommentView()		, label: "Comment", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider", isNew: true),
@@ -46,7 +47,7 @@ struct HomeView: View {
 				CategoryData(destination: SubtitleView()	, label: "Subtitle"),
 				CategoryData(destination: TabsView()		, label: "Tabs", isNew: true),
 				CategoryData(destination: TheVoiceView()	, label: "The Voice", isNew: true),
-				CategoryData(destination: TopBarView()		, label: "Top Bar"),
+				CategoryData(destination: TopBarView()		, label: "Top Bar", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Time Picker", disabled: true),
 			]
 		),

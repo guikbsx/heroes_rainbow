@@ -649,6 +649,7 @@
 		C347F8BC7B288E1B6A7F6F18FF75BF41 /* wave.json in Resources */ = {isa = PBXBuildFile; fileRef = E0800696F075E8BD727CA2781E21977A /* wave.json */; };
 		C3E620CEA1EEB3D02DB6E7D958FC10E4 /* NewVoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C2F92B1728402BD6BF6D6580D0387C5 /* NewVoice.swift */; };
 		C41214A0274BFD4900D8A915 /* FollowBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C412149F274BFD4900D8A915 /* FollowBtn.swift */; };
+		C41214AA274C0CFB00D8A915 /* TopBarChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41214A9274C0CFB00D8A915 /* TopBarChat.swift */; };
 		C4A91CABE85913971FEA588669963325 /* SkipWhile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936CB79B13241B9CF615A0FCF2FCE0 /* SkipWhile.swift */; };
 		C4BDAD7ED893BA07EEC28A14146519A5 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = E98754F4121813F30507E24E78005B00 /* Sample.swift */; };
 		C4F7F26C274C6377BACD02D8DAEC339E /* DateInRegion+Compare.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB2D21B60D661DDCA575DD27D5BDDCD /* DateInRegion+Compare.swift */; };
@@ -1812,6 +1813,7 @@
 		C3EA42DAF8064421413CBF37417DD364 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C412149F274BFD4900D8A915 /* FollowBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FollowBtn.swift; sourceTree = "<group>"; };
+		C41214A9274C0CFB00D8A915 /* TopBarChat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarChat.swift; sourceTree = "<group>"; };
 		C4E782DD80DFFDE38C4BA0AABD25FE45 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		C536351397D89BDA5B040DB8DFA1C661 /* Tabs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
 		C58491BAA83228EAF8CC952AFE581596 /* Pods-heroes_rainbowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-heroes_rainbowTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -2468,6 +2470,7 @@
 			children = (
 				FB04EA5139E926208E226CFEB4164BE0 /* ToolBar.swift */,
 				3AF26EB66B5FCCB8262C04A96E7D892D /* TopBarSwiftUI.swift */,
+				C41214A9274C0CFB00D8A915 /* TopBarChat.swift */,
 			);
 			path = Bar;
 			sourceTree = "<group>";
@@ -4894,6 +4897,7 @@
 				2D860CA95AF0B2959FB28EA2EB78FD2B /* ItemChatTextView.swift in Sources */,
 				A66ACEA45D1EB08C2C21E7D18ECB0BA7 /* ItemChoice.swift in Sources */,
 				088010B8F5F0D9FF2B6B181107FEB175 /* ItemChoiceSwiftUI.swift in Sources */,
+				C41214AA274C0CFB00D8A915 /* TopBarChat.swift in Sources */,
 				95B78E579C7BA916A2DCC8170EA5197E /* ItemCommentTableViewCell.swift in Sources */,
 				B4AB7C8537DBA6F4ED23B2FFD019A20B /* ItemInfo.swift in Sources */,
 				A03F3C6D99CA2EFEBCC0EBD8B61DB759 /* ItemNamingSocial.swift in Sources */,

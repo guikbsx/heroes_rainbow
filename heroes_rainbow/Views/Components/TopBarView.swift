@@ -16,6 +16,8 @@ struct TopBarView: View {
 	@State var left: TopBarLeft = .back
 	@State var middle: TopBarMiddle = .none
 	@State var right: TopBarRight = .none
+	
+	@State var withAvatar: Bool = false
 
 	var content: some View {
 		VStack {
@@ -43,6 +45,13 @@ struct TopBarView: View {
 				}
 			}, content: {
 				TopBarSwiftUI(component: .constant(TopBarStruct(left: left, middle: middle, right: right)), centerLbl: .constant("This is an info"))
+			})
+			ComponentContainer(title: "Top Bar Chat", settings: {
+				Toggle(isOn: $withAvatar, label: {
+					Text("Avatar").typography(.bodyXS)
+				})
+			}, content: {
+				TopBarChat(avatar: withAvatar ? "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freelogovectors.net%2Fwp-content%2Fuploads%2F2012%2F09%2Fchipotle-mexican-grill-logo.jpg&f=1&nofb=1" : nil, title: "Chipotle", didTapName: {}, didTapBack: {})
 			})
 		}
 		.animation(.spring())
