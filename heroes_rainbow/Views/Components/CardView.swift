@@ -14,7 +14,7 @@ struct CardView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
-	@State var type: CardExperienceType = .company
+	@State var type: CardExperienceType = .job
 	@State var withAvatar: Bool = true
 	@State var now: Bool = true
 	
@@ -22,12 +22,19 @@ struct CardView: View {
 		ScrollView {
 			VStack {
 				ComponentContainer(
+					title: "Item Card",
+					settings: {},
+					content: {
+						ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
+					}
+				)
+				ComponentContainer(
 					title: "Card Experience",
 					settings: {
 						VStack {
 							Picker("Type", selection: $type) {
-								Text("Company").tag(CardExperienceType.company)
-								Text("School").tag(CardExperienceType.school)
+								Text("Job").tag(CardExperienceType.job)
+								Text("Study").tag(CardExperienceType.study)
 								Text("Activity").tag(CardExperienceType.activity)
 							}
 							Toggle(isOn: $withAvatar, label: {
@@ -39,22 +46,21 @@ struct CardView: View {
 						}
 					},
 					content: {
-						CardExperience(
-							type: type,
-							avatar: withAvatar ? "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png" : nil,
-							title: "MacDonald's",
-							subtitle: "Front of house",
-							caption: "San Francisco",
-							date: "3 months",
-							now: now
-						)
+						HStack {
+							CardExperience(
+								type: type.rawValue,
+								avatar: withAvatar ? "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png" : nil,
+								title: "MacDonald's",
+								subtitle: "Front of house",
+								caption: "San Francisco",
+								date: "3 months",
+								now: now
+							)
+							Spacer()
+						}
 						.animation(.spring())
 					}
 				)
-				ComponentContainer(title: "Item Card", settings: {},
-								   content: {
-									ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
-								   })
 			}
 		}
 	}

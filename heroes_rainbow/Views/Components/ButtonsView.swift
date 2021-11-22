@@ -17,6 +17,7 @@ struct ButtonsView: View {
 	@State var primaryState: PrimaryBtnState = .disabled
 	@State var secondaryType: SecondaryBtnType = .secondary
 	@State var withSubtitle: Bool = false
+	@State var isFollowed: Bool = false
 
 	var content: some View {
 		ScrollView {
@@ -52,6 +53,12 @@ struct ButtonsView: View {
 					SecondaryBtn(type: secondaryType, text: "This is a link"){}
 				}
 			)
+			ComponentContainer(
+				title: "Follow Button",
+				settings: {},
+				content: {
+					FollowBtn(isFollowed: $isFollowed) {}
+				})
 		}
 		.frame(width: UIScreen.width)
 	}

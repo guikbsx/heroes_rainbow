@@ -30,6 +30,12 @@ struct DividerView: View {
 					DividerSwiftUI(text: "Divider indication")
 				}
 			)
+			
+			ComponentContainer(title: "Divider variant 4", settings: {},
+							   content: {
+								DividerSwiftUI(category: true)
+							   }
+			)
 		}
 	}
 }

@@ -22,43 +22,43 @@ struct HomeView: View {
 			name: "Components",
 			categories: [
 				CategoryData(destination: AutocompleteView(), label: "Autocomplete"),
-				CategoryData(destination: Color.blue		, label: "Badge", disabled: true),
+				CategoryData(destination: BadgeView()		, label: "Badge", isNew: true),
 				CategoryData(destination: BannersView()		, label: "Banner"),
-				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧"),
-				CategoryData(destination: ButtonsView()		, label: "Button"),
+				CategoryData(destination: BottomBarView()	, label: "Bottom Bar 🚧", disabled: true),
+				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
 				CategoryData(destination: CardView()		, label: "Card"),
+				CategoryData(destination: CommentView()		, label: "Comment", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
-				CategoryData(destination: DividerView()		, label: "Divider"),
+				CategoryData(destination: DividerView()		, label: "Divider", isNew: true),
 				CategoryData(destination: InputView()		, label: "Input 👨‍💻"),
-				CategoryData(destination: ItemActionView()	, label: "Item Action"),
+				CategoryData(destination: ItemActionView()	, label: "Item Action", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Item Info", disabled: true),
 				CategoryData(destination: ItemChatView()	, label: "Item Chat"),
 				CategoryData(destination: ItemChoiceView()	, label: "Item Choice"),
-				CategoryData(destination: Color.blue		, label: "Item Comment", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Item Naming", disabled: true),
-				CategoryData(destination: Color.blue		, label: "Item Notification", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Item Rate", disabled: true),
 				CategoryData(destination: ItemVideoView()	, label: "Item Videos"),
 				CategoryData(destination: LoaderView()		, label: "Loader"),
 				CategoryData(destination: MessagesView()	, label: "Message"),
 				CategoryData(destination: Color.blue		, label: "Menu Bar", disabled: true),
+				CategoryData(destination: NotificationView(), label: "Notification", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Profile Picker", disabled: true),
 				CategoryData(destination: SubtitleView()	, label: "Subtitle"),
-				CategoryData(destination: Color.blue		, label: "Tabs", disabled: true),
-				CategoryData(destination: Color.blue		, label: "The Voice", disabled: true),
+				CategoryData(destination: TabsView()		, label: "Tabs", isNew: true),
+				CategoryData(destination: TheVoiceView()	, label: "The Voice", isNew: true),
 				CategoryData(destination: TopBarView()		, label: "Top Bar"),
 				CategoryData(destination: Color.blue		, label: "Time Picker", disabled: true),
 			]
 		),
-//		HomeData(
-//			name: "Organism",
-//			categories: [
-//				CategoryData(destination: Color.blue		, label: "Header Profile", disabled: true),
-//				CategoryData(destination: Color.blue		, label: "Bottom Sheet", disabled: true),
-//				CategoryData(destination: Color.blue		, label: "Modal", disabled: true),
-//				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
-//			]
-//		),
+		HomeData(
+			name: "Organism",
+			categories: [
+				CategoryData(destination: HeaderProfileView(), label: "Header Profile", isNew: true),
+				CategoryData(destination: Color.blue		, label: "Bottom Sheet", disabled: true),
+				CategoryData(destination: Color.blue		, label: "Modal", disabled: true),
+				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
+			]
+		),
 	]
 	
 	@State var isShowingAllCategories: Bool = false
