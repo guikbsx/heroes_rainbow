@@ -14,14 +14,20 @@ struct BottomBarView: View {
 	}
 	
 	@State var currentItem: BottomBarCellItem = .social
+	@State var withPlusButton: Bool = false
 	
 	var content: some View {
 		ScrollView {
 			ComponentContainer(
 				title: "Bottom Bar",
-				settings: {},
+				settings: {
+					Toggle(isOn: $withPlusButton, label: {
+						Text("Plus button")
+					})
+				},
 				content: {
-					BottomBar(currentItem: $currentItem)
+					BottomBar(currentItem: $currentItem, didTapAdd: withPlusButton ? {} : nil)
+						.animation(.spring())
 				}
 			)
 		}

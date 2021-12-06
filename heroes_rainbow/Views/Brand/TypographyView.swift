@@ -25,9 +25,9 @@ struct TypographyView: View {
 
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Foundations", title: "Shadows & Elevations")
+			SuperTopBar(category: "Foundations", title: "Fonts")
 			if #available(iOS 14.0, *) {
-				DropdownPicker(title: "Font", selection: $selection, options: options)
+				DropdownPicker(title: "Fonts", selection: $selection, options: options)
 					.padding(.horizontal, 20)
 			}
 			content
