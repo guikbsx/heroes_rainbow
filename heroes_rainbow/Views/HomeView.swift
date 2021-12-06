@@ -24,7 +24,7 @@ struct HomeView: View {
 				CategoryData(destination: AutocompleteView(), label: "Autocomplete"),
 				CategoryData(destination: BadgeView()		, label: "Badge"),
 				CategoryData(destination: BannersView()		, label: "Banner"),
-				CategoryData(destination: BottomBarView()	, label: "Bottom Bar", isNew: true),
+				CategoryData(destination: BottomBarView()	, label: "Bottom Bar"),
 				CategoryData(destination: ButtonsView()		, label: "Button"),
 				CategoryData(destination: CardView()		, label: "Card"),
 				CategoryData(destination: ChatListView()	, label: "Chat List"),
@@ -36,7 +36,7 @@ struct HomeView: View {
 				CategoryData(destination: Color.blue		, label: "Item Info", disabled: true),
 				CategoryData(destination: ItemChatView()	, label: "Item Chat"),
 				CategoryData(destination: ItemChoiceView()	, label: "Item Choice"),
-				CategoryData(destination: ItemNamingView()	, label: "Item Naming", isNew: true),
+				CategoryData(destination: ItemNamingView()	, label: "Item Naming"),
 				CategoryData(destination: Color.blue		, label: "Item Rate"),
 				CategoryData(destination: ItemVideoView()	, label: "Item Videos"),
 				CategoryData(destination: LoaderView()		, label: "Loader"),
@@ -54,7 +54,7 @@ struct HomeView: View {
 		HomeData(
 			name: "Organism",
 			categories: [
-				CategoryData(destination: HeaderProfileView(), label: "Header Profile", isNew: true),
+				CategoryData(destination: HeaderProfileView(), label: "Header Profile"),
 				CategoryData(destination: Color.blue		, label: "Bottom Sheet", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Modal", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
