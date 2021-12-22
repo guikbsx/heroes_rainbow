@@ -13,10 +13,13 @@ struct TextGrid: View {
 	var body: some View {
 		VStack {
 			if isNew {
-				Image(systemName: "star.circle.fill")
-					.resizable()
+				Color.powerDS
+					.mask(
+						Image(systemName: "star.circle.fill")
+							.resizable()
+							.frame(width: 18, height: 18)
+					)
 					.frame(width: 18, height: 18)
-					.foregroundColor(.purple500)
 			}
 			HStack {
 				Spacer()

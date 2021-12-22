@@ -51,11 +51,11 @@ struct CardView: View {
 							CardExperience(
 								type: type.rawValue,
 								avatar: withAvatar ? "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png" : nil,
-								title: "MacDonald's",
-								subtitle: "Front of house",
-								caption: "San Francisco",
-								date: "3 months",
-								now: now
+								place: "MacDonald's",
+								title: "Front of house",
+								city: "San Francisco",
+								time: "3 months",
+								isCurrent: now
 							)
 							Spacer()
 						}

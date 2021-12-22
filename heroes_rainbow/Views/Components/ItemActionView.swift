@@ -30,18 +30,21 @@ struct ItemActionView: View {
 						.resizable()
 						.aspectRatio(contentMode: .fit)
 						.foregroundColor(.purple500)
-				}, text: withSubtitle ? "Mon. DD" : "This is a label", subtitle: withSubtitle ? "HH:MM AM- HH:MM AM" : nil, onTap: {
-				})
+				}, text: withSubtitle ? "Mon. DD" : "This is a label", subtitle: withSubtitle ? "HH:MM AM- HH:MM AM" : nil)
 			})
 			ComponentContainer(title: "Item Action Location", settings: {
 				Toggle(isOn: $withLabel, label: {
 					Text("Label").typography(.bodyXS)
 				})
 			}, content: {
-				ItemActionLocation(
-					text: withLabel ? "Brooklyn Bridge" : "",
-					onTap: {}
-				)
+				if #available(iOS 14.0, *) {
+					ItemActionLocation(
+						text: withLabel ? "Brooklyn Bridge" : "",
+						onTap: {}
+					)
+				} else {
+					// Fallback on earlier versions
+				}
 			})
 		}
 		}

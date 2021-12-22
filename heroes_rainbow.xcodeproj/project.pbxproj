@@ -26,6 +26,8 @@
 		C41214A4274C001D00D8A915 /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41214A3274C001D00D8A915 /* NotificationView.swift */; };
 		C41214A6274C022A00D8A915 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41214A5274C022A00D8A915 /* CommentView.swift */; };
 		C429B0B2275E7D9E0068110F /* ItemNamingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429B0B1275E7D9E0068110F /* ItemNamingView.swift */; };
+		C43F150D277378EE0032399C /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F150C277378EE0032399C /* AvatarView.swift */; };
+		C43F150F27737F250032399C /* InputTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F150E27737F250032399C /* InputTextView.swift */; };
 		C452B6E1273C248C002ECD5D /* AutocompleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6E0273C248C002ECD5D /* AutocompleteView.swift */; };
 		C452B6EE273EDC4B002ECD5D /* BannersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6ED273EDC4B002ECD5D /* BannersView.swift */; };
 		C452B6FD27401807002ECD5D /* BottomBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C452B6FC27401807002ECD5D /* BottomBarView.swift */; };
@@ -42,7 +44,6 @@
 		C46E3E22274270C8000F2EAD /* HeaderProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E21274270C8000F2EAD /* HeaderProfileView.swift */; };
 		C46E3E2A27428BA5000F2EAD /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E2927428BA5000F2EAD /* TabsView.swift */; };
 		C4935D572754EBF300D6B07C /* HomeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4935D562754EBF300D6B07C /* HomeTestView.swift */; };
-		C4935D5A2755276100D6B07C /* InputTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4935D592755276100D6B07C /* InputTextview.swift */; };
 		C496BD552729815C007ABCB9 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD542729815C007ABCB9 /* ColorsView.swift */; };
 		C496BD57272982DB007ABCB9 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD56272982DB007ABCB9 /* ColorCell.swift */; };
 		C496BD5927298EF3007ABCB9 /* TypographyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD5827298EF3007ABCB9 /* TypographyView.swift */; };
@@ -102,6 +103,8 @@
 		C41214A3274C001D00D8A915 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		C41214A5274C022A00D8A915 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		C429B0B1275E7D9E0068110F /* ItemNamingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemNamingView.swift; sourceTree = "<group>"; };
+		C43F150C277378EE0032399C /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		C43F150E27737F250032399C /* InputTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextView.swift; sourceTree = "<group>"; };
 		C452B6E0273C248C002ECD5D /* AutocompleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutocompleteView.swift; sourceTree = "<group>"; };
 		C452B6ED273EDC4B002ECD5D /* BannersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersView.swift; sourceTree = "<group>"; };
 		C452B6FC27401807002ECD5D /* BottomBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomBarView.swift; sourceTree = "<group>"; };
@@ -124,7 +127,6 @@
 		C46E3E21274270C8000F2EAD /* HeaderProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderProfileView.swift; sourceTree = "<group>"; };
 		C46E3E2927428BA5000F2EAD /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
 		C4935D562754EBF300D6B07C /* HomeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestView.swift; sourceTree = "<group>"; };
-		C4935D592755276100D6B07C /* InputTextview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextview.swift; sourceTree = "<group>"; };
 		C496BD542729815C007ABCB9 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 		C496BD56272982DB007ABCB9 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
 		C496BD5827298EF3007ABCB9 /* TypographyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypographyView.swift; sourceTree = "<group>"; };
@@ -190,7 +192,7 @@
 			children = (
 				C4E34753274FA6150014CD76 /* HashtagsView.swift */,
 				C4935D562754EBF300D6B07C /* HomeTestView.swift */,
-				C4935D592755276100D6B07C /* InputTextview.swift */,
+				C43F150E27737F250032399C /* InputTextView.swift */,
 			);
 			path = "War Room";
 			sourceTree = "<group>";
@@ -306,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				C452B6E0273C248C002ECD5D /* AutocompleteView.swift */,
+				C43F150C277378EE0032399C /* AvatarView.swift */,
 				C459A9902747E77F007ABA29 /* BadgeView.swift */,
 				C452B6ED273EDC4B002ECD5D /* BannersView.swift */,
 				C452B6FC27401807002ECD5D /* BottomBarView.swift */,
@@ -648,8 +651,9 @@
 				C4935D572754EBF300D6B07C /* HomeTestView.swift in Sources */,
 				C406EB68273301B4007C025E /* ItemVideoView.swift in Sources */,
 				C46D15902580E33100F151D1 /* SceneDelegate.swift in Sources */,
-				C4935D5A2755276100D6B07C /* InputTextview.swift in Sources */,
+				C43F150D277378EE0032399C /* AvatarView.swift in Sources */,
 				C4ADF25D25DD32B20068169B /* R.generated.swift in Sources */,
+				C43F150F27737F250032399C /* InputTextView.swift in Sources */,
 				C452B6E1273C248C002ECD5D /* AutocompleteView.swift in Sources */,
 				C496BD5927298EF3007ABCB9 /* TypographyView.swift in Sources */,
 				C4CE99C1272AE69B00116FF8 /* InputView.swift in Sources */,
