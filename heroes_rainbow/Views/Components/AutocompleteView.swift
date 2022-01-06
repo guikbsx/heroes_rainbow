@@ -1,19 +1,19 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct AutocompleteView: View {
+	
+	@State var isLoading: Bool = false
+	@State var withSeparator: Bool = true
+
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Autocomplete")
-			if #available(iOS 14.0, *) {
-				Toggle(isOn: $withSeparator, label: {
-					Text("Separator").typography(.bodyXS)
-				})
-				.toggleStyle(SwitchToggleStyle(tint: .purple500))
-				.padding(12)
-				.background(Color.grey100.cornerRadius(8))
-				.padding(.horizontal, 20)
+			SuperTopBar(category: "Components", title: "Autocomplete", isLoading: $isLoading)
+			VStack {
+				Toggle(isOn: $withSeparator, label: { Text("Separator").typography(.bodyXS) })
 			}
+			.rainbowToggle()
 			content
 				.animation(.spring())
 			Spacer()
@@ -24,33 +24,30 @@ struct AutocompleteView: View {
 	}
 	
 	@State var currentIndex: Int? = nil
-	@State var withSeparator: Bool = true
 	
 	var content: some View {
 		ScrollView {
 			ComponentContainer(
 				title: "Geoloc",
-				settings: {
-				},
+				settings: {},
 				content: {
-					Autocomplete(index: 0, currentIndex: $currentIndex, separator: withSeparator, onTap: {
-						
-					})
+					Autocomplete(index: 0, currentIndex: $currentIndex, separator: withSeparator, onTap: {})
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
 			ComponentContainer(
 				title: "Address",
 				settings: {},
 				content: {
-					Autocomplete(title: "1 rue de Nice", subtitle: "Alforville, France", index: 1, currentIndex: $currentIndex, separator: withSeparator, onTap: {
-						
-					})
+					Autocomplete(title: "1 rue de Nice", subtitle: "Alforville, France", index: 1, currentIndex: $currentIndex, separator: withSeparator, onTap: {})
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
 		}
 	}
 }
 
+@available(iOS 14.0, *)
 struct AutocompleteView_Previews: PreviewProvider {
     static var previews: some View {
         AutocompleteView()

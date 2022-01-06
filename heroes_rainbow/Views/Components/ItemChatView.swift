@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct ItemChatView: View {
+	
+	@State var isLoading = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Item Chat")
+			SuperTopBar(category: "Components", title: "Item Chat", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -50,9 +54,11 @@ struct ItemChatView: View {
 				if activeAppointmentMessage {
 					ItemChatActive(data: data, appointment: appointment, user: user)
 						.fixedSize(horizontal: false, vertical: true)
+						.redacted(reason: isLoading ? .placeholder : [])
 				} else {
 					ItemChatCanceled(data: data, appointment: appointment)
 						.fixedSize(horizontal: false, vertical: true)
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			}
 			)
@@ -74,6 +80,7 @@ struct ItemChatView: View {
 					state: activeGrey ? .active : .fullyInactive,
 					delegate: nil
 				)
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 			
 			ComponentContainer(title: "Automatic Message (white)", settings: {
@@ -91,12 +98,14 @@ struct ItemChatView: View {
 					delegate: nil
 				)
 				.fixedSize(horizontal: false, vertical: true)
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
 		.animation(.spring())
 	}
 }
 
+@available(iOS 14.0, *)
 struct ItemChatView_Previews: PreviewProvider {
     static var previews: some View {
         ItemChatView()

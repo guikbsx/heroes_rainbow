@@ -6,28 +6,8 @@ struct LayoutView: View {
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			Rectangle()
-				.fill(Color.purple500)
-				.edgesIgnoringSafeArea(.all)
-				.frame(height: 0)
-			TopBarSwiftUI(
-				component: .constant(.init(left: .back, middle: .none, right: .none)),
-				leftBtn: {
-					self.presentationMode.wrappedValue.dismiss()
-				},
-				centerLbl: .constant("")
-			)
+			SuperTopBar(category: "Foundations", title: "Grid")
 			ScrollView {
-				VStack(alignment: .leading, spacing: 16) {
-					HStack {
-						CategoryView("Foundations")
-						Spacer()
-					}
-					Text("Grid")
-						.typography(.subtitle)
-						.gradientForeground(gradient: Color.powerDS)
-				}
-				.padding(.horizontal, 20)
 				gridView
 					.padding(.top)
 				

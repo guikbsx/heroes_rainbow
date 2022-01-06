@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct BadgeView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Badge")
+			SuperTopBar(category: "Components", title: "Badge", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -32,11 +36,13 @@ struct BadgeView: View {
 					},
 					text: "Text"
 				)
+				.redacted(reason: isLoading ? .placeholder : [])
 			}
 		)
 	}
 }
 
+@available(iOS 14.0, *)
 struct BadgeView_Previews: PreviewProvider {
     static var previews: some View {
         BadgeView()

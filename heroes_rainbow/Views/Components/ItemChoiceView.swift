@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct ItemChoiceView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Item Action")
+			SuperTopBar(category: "Components", title: "Item Action", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -20,11 +24,13 @@ struct ItemChoiceView: View {
 			ComponentContainer(title: "Item Choice", settings: {}, content: {
 				ItemChoiceSwiftUI(text: "This is your choice", selected: $selected, onTap: {
 				})
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
 	}
 }
 
+@available(iOS 14.0, *)
 struct ItemChoiceView_Previews: PreviewProvider {
     static var previews: some View {
         ItemChoiceView()

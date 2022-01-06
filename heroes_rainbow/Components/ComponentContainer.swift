@@ -28,11 +28,8 @@ struct ComponentContainer<Settings: View, Content: View> : View {
 			.padding(.horizontal, 20)
 			if #available(iOS 14.0, *) {
 				settings
-					.padding(12)
-					.background(Color.grey100.cornerRadius(8))
-					.padding(.horizontal, 20)
+					.rainbowToggle()
 					.pickerStyle(SegmentedPickerStyle())
-					.toggleStyle(SwitchToggleStyle(tint: .purple500))
 					.onAppear {
 						UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.purple500)
 						UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
@@ -45,19 +42,37 @@ struct ComponentContainer<Settings: View, Content: View> : View {
 		.padding(.vertical)
     }
 }
-
+import RainbowFWK
 struct ComponentContainer_Previews: PreviewProvider {
     static var previews: some View {
-		ComponentContainer(
-			title: "Primary Button",
-			settings: {
-				Text("Here can go some settings... Or not !")
-			},
-			content: {
-				RoundedRectangle(cornerRadius: 20)
-					.frame(height: 100)
-			}
-		)
+		ScrollView {
+			ComponentContainer(
+				title: "Primary Button",
+				settings: {
+					Toggle(isOn: .constant(true), label: { Text("Label").typography(.bodyXS) })
+				},
+				content: {
+					PrimaryBtnSwiftUI(title: "Hello", subtitle: nil, state: .constant(.enabled))
+				}
+			)
+			.previewLayout(.sizeThatFits)
+			ComponentContainer(
+				title: "Secondary Button",
+				settings: {
+					VStack {
+						Toggle(isOn: .constant(false), label: { Text("Label").typography(.bodyXS) })
+						Toggle(isOn: .constant(false), label: { Text("Label").typography(.bodyXS) })
+						Toggle(isOn: .constant(false), label: { Text("Label").typography(.bodyXS) })
+						Toggle(isOn: .constant(false), label: { Text("Label").typography(.bodyXS) })
+					}
+				},
+				content: {
+					VStack {
+						SecondaryBtn(type: .secondary, text: "Hello") {}
+					}
+				}
+			)
+		}
 		.previewLayout(.sizeThatFits)
     }
 }

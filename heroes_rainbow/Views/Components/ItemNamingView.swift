@@ -3,9 +3,12 @@ import RainbowFWK
 
 @available(iOS 14.0, *)
 struct ItemNamingView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Item Naming")
+			SuperTopBar(category: "Components", title: "Item Naming", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -16,6 +19,7 @@ struct ItemNamingView: View {
 	
 	@State var withAvatar: Bool = true
 	@State var currentHashtag: Hashtag? = nil
+
 	var content: some View {
 		VStack {
 			ComponentContainer(title: "Item Choice", settings: {
@@ -29,26 +33,29 @@ struct ItemNamingView: View {
 					.typography(.bodyXS)
 				}
 			}, content: {
-//				ItemNamingSocialSwiftUI(
-//					avatar: withAvatar ? "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.freelogovectors.net%2Fwp-content%2Fuploads%2F2012%2F09%2Fchipotle-mexican-grill-logo.jpg&f=1&nofb=1" : nil,
-//					name: "Chipotle",
-//					description: "This is a wonderful job you find ! This is a wonderful job you find ! This is a wonderful job you find ! This is a wonderful job you find !",
-//					hashtags: [
-//						.init(id: "", name: "fun"),
-//						.init(id: "", name: "young"),
-//						.init(id: "", name: "tryByYourself"),
-//						.init(id: "", name: "happy"),
-//					],
-//					currentHashtag: $currentHashtag
-//				)
-//				.background(Color.grey500)
 				HStack {
 					Text("ℹ️")
-					Text("A gray colored background has been applied here to distinguish white fonts.")
+					Text("A Grey500 colored background has been applied here to distinguish white fonts.")
 						.typography(.caption)
 						.typography(.bodyXS)
 						.foregroundColor(.grey500)
+						.padding(.horizontal, 20)
+						.lineLimit(2)
+						.fixedSize(horizontal: false, vertical: true)
+						.padding(.top)
 				}
+				ItemNamingSocialSwiftUI(
+					currentHashtag: $currentHashtag,
+					avatar: withAvatar ? "https://static.wixstatic.com/media/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png/v1/fill/w_163,h_163,q_90/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png" : "",
+					name: "Pantéa Négui",
+					description: "This is the best Product Designer !",
+					hashtags: [.init(id: "0", name: "HeroesJobs"), .init(id: "1", name: "Product")],
+					isInfluencer: false,
+					didTapLogo: {},
+					didTapBrand: {}
+				)
+				.redacted(reason: isLoading ? .placeholder : [])
+				.background(Color.grey500)
 			})
 		}
 	}

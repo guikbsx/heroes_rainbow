@@ -3,9 +3,12 @@ import RainbowFWK
 
 @available(iOS 14.0, *)
 struct CommentView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Comment")
+			SuperTopBar(category: "Components", title: "Comment", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -40,6 +43,7 @@ struct CommentView: View {
 					}, didTapLike: {
 						
 					})
+					.redacted(reason: isLoading ? .placeholder : [])
 			})
 			.valueChanged(value: withLikes, onChange: { withLikes in
 				withAnimation {

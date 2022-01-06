@@ -9,25 +9,21 @@ struct HomeTestView: View {
 
 	var body: some View {
 		VStack(spacing: 0) {
-			ZStack {
-				if currentItem == .social {
-					Color.purple500
-						.ignoresSafeArea()
+			TabView(
+				selection: $currentItem,
+				content:  {
+					Text("Tab Content 1")
+						.tag(BottomBarCellItem.social)
+					Text("Tab Content 2")
+						.tag(BottomBarCellItem.chat)
+					Text("Tab Content 3")
+						.tag(BottomBarCellItem.me)
+					Text("Tab Content 4")
+						.tag(BottomBarCellItem.jobs)
 				}
-				if currentItem == .chat {
-					Color.turquoise500
-				}
-				if currentItem == .me {
-					Color.pink500
-				}
-				if currentItem == .jobs {
-					Color.grey500
-				}
-			}
-			BottomBar(currentItem: $currentItem) {
-				print("done")
-			}
-			.animation(.spring().speed(2))
+			)
+			.tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+			BottomBar(currentItem: $currentItem)
 			Color.black.ignoresSafeArea().frame(height: 0)
 		}
 	}

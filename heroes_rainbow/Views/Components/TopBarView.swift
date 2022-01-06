@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct TopBarView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Top Bar")
+			SuperTopBar(category: "Components", title: "Top Bar", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -84,12 +88,14 @@ struct TopBarView: View {
 					isBrand: isBrand,
 					elevation: elevation
 				)
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
 		.animation(.spring())
 	}
 }
 
+@available(iOS 14.0, *)
 struct TopBarView_Previews: PreviewProvider {
     static var previews: some View {
         TopBarView()

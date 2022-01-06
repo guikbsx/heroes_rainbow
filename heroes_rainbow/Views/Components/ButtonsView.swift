@@ -1,11 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct ButtonsView: View {
+	
+	@State var isLoading: Bool = false
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Button")
+			SuperTopBar(category: "Components", title: "Button", isLoading: $isLoading)
 			content
 				.animation(.spring())
 		}
@@ -38,6 +41,7 @@ struct ButtonsView: View {
 				content: {
 					PrimaryBtnSwiftUI(title: "Next", subtitle: withSubtitle ? "This is a optional subtitle" : nil, state: $primaryState, onTap: {})
 						.background(Color.white)
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
 			ComponentContainer(
@@ -51,19 +55,26 @@ struct ButtonsView: View {
 				},
 				content: {
 					SecondaryBtn(type: secondaryType, text: "This is a link"){}
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
 			ComponentContainer(
 				title: "Follow Button",
-				settings: {},
+				settings: {
+					Toggle(isOn: $isFollowed, label: {
+						Text("Is following")
+					})
+				},
 				content: {
 					FollowBtn(isFollowed: $isFollowed) {}
+						.redacted(reason: isLoading ? .placeholder : [])
 				})
 		}
 		.frame(width: UIScreen.width)
 	}
 }
 
+@available(iOS 14.0, *)
 struct ButtonsView_Previews: PreviewProvider {
     static var previews: some View {
         ButtonsView()

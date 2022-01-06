@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct TheVoiceView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "The Voice")
+			SuperTopBar(category: "Components", title: "The Voice", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -21,12 +25,14 @@ struct TheVoiceView: View {
 			ComponentContainer(title: "Original Voice", settings: {
 				Stepper("Change voice step (\(Int(actualStep)))", value: $actualStep, in: 1...5).typography(.bodyXS)
 			}, content: {
-				NewVoice(title: .constant("This is a voice of a page"), actualStep: $actualStep, numberOfStep: .constant(5))
+				NewVoice(title: .constant("\(isLoading ? "placeholder " : "This is a voice of a page")"), actualStep: $actualStep, numberOfStep: .constant(5))
+					.redacted(reason: isLoading ? .placeholder : [])
 			})
 			
 			ComponentContainer(title: "Centering page title", settings: {}, content: {
 				PageTitle(textAlignment: .leading, onTap: {})
 					.environmentObject(PageTitleModel(title: "Centered Title", buttonTitle: "", notifications: 0))
+					.redacted(reason: isLoading ? .placeholder : [])
 			})
 			
 			ComponentContainer(title: "Leading page title", settings: {
@@ -36,9 +42,11 @@ struct TheVoiceView: View {
 				if notified {
 					PageTitle(textAlignment: .leading, onTap: {})
 						.environmentObject(PageTitleModel(title: "Left Title", buttonTitle: "Button", notifications: 10))
+						.redacted(reason: isLoading ? .placeholder : [])
 				} else {
 					PageTitle(textAlignment: .leading, onTap: {})
 						.environmentObject(PageTitleModel(title: "Left Title", buttonTitle: "Button", notifications: 0))
+						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			})
 		}
@@ -46,6 +54,7 @@ struct TheVoiceView: View {
 	}
 }
 
+@available(iOS 14.0, *)
 struct TheVoiceView_Previews: PreviewProvider {
     static var previews: some View {
         TheVoiceView()

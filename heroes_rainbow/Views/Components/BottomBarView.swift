@@ -22,7 +22,7 @@ struct BottomBarView: View {
 				title: "Bottom Bar",
 				settings: {
 					Toggle(isOn: $withPlusButton, label: {
-						Text("Plus button")
+						Text("Plus button").typography(.bodyXS)
 					})
 				},
 				content: {

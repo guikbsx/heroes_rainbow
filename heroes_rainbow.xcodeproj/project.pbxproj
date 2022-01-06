@@ -43,6 +43,7 @@
 		C46D15B02580E33200F151D1 /* heroes_rainbowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46D15AF2580E33200F151D1 /* heroes_rainbowUITests.swift */; };
 		C46E3E22274270C8000F2EAD /* HeaderProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E21274270C8000F2EAD /* HeaderProfileView.swift */; };
 		C46E3E2A27428BA5000F2EAD /* TabsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46E3E2927428BA5000F2EAD /* TabsView.swift */; };
+		C48CE868277CA53D006A5B0F /* LoadingSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48CE867277CA53D006A5B0F /* LoadingSuccessView.swift */; };
 		C4935D572754EBF300D6B07C /* HomeTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4935D562754EBF300D6B07C /* HomeTestView.swift */; };
 		C496BD552729815C007ABCB9 /* ColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD542729815C007ABCB9 /* ColorsView.swift */; };
 		C496BD57272982DB007ABCB9 /* ColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C496BD56272982DB007ABCB9 /* ColorCell.swift */; };
@@ -126,6 +127,7 @@
 		C46D15B12580E33200F151D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C46E3E21274270C8000F2EAD /* HeaderProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderProfileView.swift; sourceTree = "<group>"; };
 		C46E3E2927428BA5000F2EAD /* TabsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsView.swift; sourceTree = "<group>"; };
+		C48CE867277CA53D006A5B0F /* LoadingSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingSuccessView.swift; sourceTree = "<group>"; };
 		C4935D562754EBF300D6B07C /* HomeTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTestView.swift; sourceTree = "<group>"; };
 		C496BD542729815C007ABCB9 /* ColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsView.swift; sourceTree = "<group>"; };
 		C496BD56272982DB007ABCB9 /* ColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorCell.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				C4E34753274FA6150014CD76 /* HashtagsView.swift */,
 				C4935D562754EBF300D6B07C /* HomeTestView.swift */,
 				C43F150E27737F250032399C /* InputTextView.swift */,
+				C48CE867277CA53D006A5B0F /* LoadingSuccessView.swift */,
 			);
 			path = "War Room";
 			sourceTree = "<group>";
@@ -627,6 +630,7 @@
 				C4CE99BF272AE5F100116FF8 /* DividerView.swift in Sources */,
 				C452B6EE273EDC4B002ECD5D /* BannersView.swift in Sources */,
 				C406EB7827332BAF007C025E /* StressTestView.swift in Sources */,
+				C48CE868277CA53D006A5B0F /* LoadingSuccessView.swift in Sources */,
 				C496BD64272ACCBA007ABCB9 /* ChatListView.swift in Sources */,
 				C406EB6627330043007C025E /* ItemChoiceView.swift in Sources */,
 				C45DB21F2726B4F200850CA1 /* HomeView.swift in Sources */,

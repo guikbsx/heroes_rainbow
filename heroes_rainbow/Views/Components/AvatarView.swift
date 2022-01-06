@@ -26,9 +26,7 @@ struct AvatarView: View {
 		ComponentContainer(
 			title: "Avatar",
 			settings: {
-				Toggle(isOn: $plus, label: {
-					Text("Plus").typography(.bodyXS)
-				})
+				Toggle(isOn: $plus, label: { Text("Plus").typography(.bodyXS) })
 			},
 			content: {
 				Avatar(size: 64, plus: plus)

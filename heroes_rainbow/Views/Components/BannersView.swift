@@ -3,6 +3,7 @@ import RainbowFWK
 
 @available(iOS 14.0, *)
 struct BannersView: View {
+	
 	var body: some View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Banner")

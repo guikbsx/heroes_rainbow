@@ -8,7 +8,7 @@ struct ElevationsView: View {
 	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Brand", title: "Typography")
+			SuperTopBar(category: "Foundations", title: "Elevations")
 			VStack(alignment: .leading) {
 				Picker("State", selection: $state) {
 					Text("Default").tag(ElevationState.default)

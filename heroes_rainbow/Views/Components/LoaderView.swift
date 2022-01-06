@@ -20,7 +20,7 @@ struct LoaderView: View {
 		VStack {
 			ComponentContainer(title: "Circular loader", settings: {}, content: {
 				lottie
-					.frame(height: 250)
+					.frame(height: 100)
 					.onAppear {
 						lottie.play()
 						lottie.animation.loopMode = .loop

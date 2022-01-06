@@ -37,7 +37,7 @@ struct HomeView: View {
 				CategoryData(destination: Color.blue		, label: "Item Info", disabled: true),
 				CategoryData(destination: ItemChatView()	, label: "Item Chat"),
 				CategoryData(destination: ItemChoiceView()	, label: "Item Choice"),
-				CategoryData(destination: ItemNamingView()	, label: "Item Naming"),
+				CategoryData(destination: ItemNamingView()	, label: "Item Naming", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Item Rate"),
 				CategoryData(destination: ItemVideoView()	, label: "Item Videos"),
 				CategoryData(destination: LoaderView()		, label: "Loader"),
@@ -55,7 +55,7 @@ struct HomeView: View {
 		HomeData(
 			name: "Organism",
 			categories: [
-				CategoryData(destination: HeaderProfileView(), label: "Header Profile"),
+				CategoryData(destination: HeaderProfileView(), label: "Header Profile", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Bottom Sheet", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Modal", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
@@ -96,55 +96,36 @@ struct HomeView: View {
 		ScrollView {
 			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible()) ]
 			
-			ScrollViewReader { reader in
-				Toggle(isOn: $isShowingAllCategories, label: {
-					Text("Show all categories").typography(.bodyXS)
-				})
-				.toggleStyle(SwitchToggleStyle(tint: .purple500))
-				ForEach(data.indices, id: \.self) { homeIndex in
-					let home = data[homeIndex]
-					DividerSwiftUI(text: home.name).padding(.horizontal, -16)
-					LazyVGrid(columns: vGridLayout) {
-						ForEach(home.categories.indices, id: \.self) { categoryIndex in
-							let category = home.categories[categoryIndex]
-							if isShowingAllCategories {
-								NavigationLink(
-									destination: category.destination,
-									label: {
-										TextGrid(category.label, isNew: category.isNew)
-									}
-								)
-								.frame(width: UIScreen.width / 2 - 28)
-								.disabled(category.disabled)
-								.opacity(category.disabled ? 0.25 : 1)
-							} else {
-								if !category.disabled {
-									NavigationLink(
-										destination: category.destination,
-										label: {
-											TextGrid(category.label, isNew: category.isNew)
-										}
-									)
-									.frame(width: UIScreen.width / 2 - 28)
-									.disabled(category.disabled)
-									.opacity(category.disabled ? 0.25 : 1)
-									
+			ForEach(data.indices, id: \.self) { homeIndex in
+				let home = data[homeIndex]
+				DividerSwiftUI(text: home.name).padding(.horizontal, -16)
+				LazyVGrid(columns: vGridLayout) {
+					ForEach(home.categories.indices, id: \.self) { categoryIndex in
+						let category = home.categories[categoryIndex]
+						if !category.disabled {
+							NavigationLink(
+								destination: category.destination,
+								label: {
+									TextGrid(category.label, isNew: category.isNew)
 								}
-							}
+							)
+							.frame(width: UIScreen.width / 2 - 28)
+							.disabled(category.disabled)
+							.opacity(category.disabled ? 0.25 : 1)
+							
 						}
 					}
 					.padding(.bottom)
-					.onAppear {
-						reader.scrollTo(0)
-					}
 				}
-				Text("Dev with ♥️ by iOS Team")
-					.padding(.bottom)
-					.typography(.subtitleXS)
-					.foregroundColor(.grey400)
-			}.padding(.horizontal, 20)
+			}
+			.padding(.horizontal, 20)
+			Text("Dev with ♥️ by iOS Team")
+				.padding(.bottom)
+				.typography(.subtitleXS)
+				.foregroundColor(.grey400)
 		}
 	}
+	
 }
 
 

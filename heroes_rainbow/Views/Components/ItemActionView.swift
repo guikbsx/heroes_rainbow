@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct ItemActionView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Item Action")
+			SuperTopBar(category: "Components", title: "Item Action", isLoading: $isLoading)
 			content
 				.animation(.spring())
 			Spacer()
@@ -31,26 +35,25 @@ struct ItemActionView: View {
 						.aspectRatio(contentMode: .fit)
 						.foregroundColor(.purple500)
 				}, text: withSubtitle ? "Mon. DD" : "This is a label", subtitle: withSubtitle ? "HH:MM AM- HH:MM AM" : nil)
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 			ComponentContainer(title: "Item Action Location", settings: {
 				Toggle(isOn: $withLabel, label: {
 					Text("Label").typography(.bodyXS)
 				})
 			}, content: {
-				if #available(iOS 14.0, *) {
-					ItemActionLocation(
-						text: withLabel ? "Brooklyn Bridge" : "",
-						onTap: {}
-					)
-				} else {
-					// Fallback on earlier versions
-				}
+				ItemActionLocation(
+					text: withLabel ? "Brooklyn Bridge" : "",
+					onTap: {}
+				)
+				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
 		}
 	}
 }
 
+@available(iOS 14.0, *)
 struct ItemActionView_Previews: PreviewProvider {
     static var previews: some View {
         ItemActionView()

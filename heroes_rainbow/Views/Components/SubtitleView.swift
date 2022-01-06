@@ -1,10 +1,14 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct SubtitleView: View {
+	
+	@State var isLoading: Bool = false
+	
 	var body: some View {
 		VStack(alignment: .leading) {
-			SuperTopBar(category: "Components", title: "Subtitle")
+			SuperTopBar(category: "Components", title: "Subtitle", isLoading: $isLoading)
 			content
 			Spacer()
 		}
@@ -18,10 +22,12 @@ struct SubtitleView: View {
 			ComponentContainer(title: "Subtitle", settings: {}, content: {
 				SubtitleSwiftUI(text: .constant("This is a very very long subtitle that will be handle in 3 lines like this. This is the design system "))
 					.frame(width: UIScreen.width)
+					.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
 	}}
 
+@available(iOS 14.0, *)
 struct SubtitleView_Previews: PreviewProvider {
     static var previews: some View {
         SubtitleView()
