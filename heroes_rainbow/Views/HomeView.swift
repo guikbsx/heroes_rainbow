@@ -96,6 +96,35 @@ struct HomeView: View {
 		ScrollView {
 			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible()) ]
 			
+			HStack {
+				Image(systemName: "text.redaction")
+					.foregroundColor(.purple500)
+				Text("Added new functionality: placeholder. You can now see compatible components in content loading state.")
+					.typography(.caption)
+					.typography(.bodyXS)
+					.foregroundColor(.grey500)
+					.fixedSize(horizontal: false, vertical: true)
+				Spacer()
+			}
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
+			.padding(.horizontal, 20)
+			
+			HStack {
+				Image(systemName: "hand.tap.fill")
+					.foregroundColor(.purple500)
+				Text("Added new functionality: taptic touch. Clicking on the button triggers haptic feedback.")
+					.typography(.caption)
+					.typography(.bodyXS)
+					.foregroundColor(.grey500)
+					.fixedSize(horizontal: false, vertical: true)
+				Spacer()
+			}
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
+			.padding(.horizontal, 20)
+			.padding(.bottom)
+			
 			ForEach(data.indices, id: \.self) { homeIndex in
 				let home = data[homeIndex]
 				DividerSwiftUI(text: home.name).padding(.horizontal, -16)
