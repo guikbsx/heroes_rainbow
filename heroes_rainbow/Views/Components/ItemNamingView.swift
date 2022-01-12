@@ -18,6 +18,8 @@ struct ItemNamingView: View {
 	}
 	
 	@State var withAvatar: Bool = true
+	@State var isInfluencer: Bool = true
+	@State var isShowingOnboarding: Bool = true
 	@State var currentHashtag: Hashtag? = nil
 
 	var content: some View {
@@ -25,6 +27,9 @@ struct ItemNamingView: View {
 			ComponentContainer(title: "Item Choice", settings: {
 				VStack(alignment: .leading) {
 					Toggle(isOn: $withAvatar, label: { Text("Avatar").typography(.bodyXS) })
+					Toggle(isOn: $isInfluencer, label: { Text("Influencer").typography(.bodyXS) })
+					Toggle(isOn: $isShowingOnboarding, label: { Text("Onboarding").typography(.bodyXS) })
+
 					HStack(spacing: 2) {
 						Text("Tapped hashtag : ")
 						Text(currentHashtag == nil ? "none" : currentHashtag!.name)
@@ -50,12 +55,14 @@ struct ItemNamingView: View {
 					name: "Pantéa Négui",
 					description: "This is the best Product Designer !",
 					hashtags: [.init(id: "0", name: "HeroesJobs"), .init(id: "1", name: "Product")],
-					isInfluencer: false,
+					isInfluencer: isInfluencer,
 					didTapLogo: {},
-					didTapBrand: {}
+					didTapBrand: {},
+					isShowingOnboarding: isShowingOnboarding
 				)
 				.redacted(reason: isLoading ? .placeholder : [])
 				.background(Color.grey500)
+				.animation(.spring())
 			})
 		}
 	}

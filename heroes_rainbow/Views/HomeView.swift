@@ -5,20 +5,6 @@ struct HomeView: View {
 	
 	var data: [HomeData] = [
 		HomeData(
-			name: "Foundations",
-			categories: [
-				CategoryData(destination: LayoutView()		, label: "Layout"),
-				CategoryData(destination: ElevationsView()	, label: "Elevations & Shadow"),
-			]
-		),
-		HomeData(
-			name: "Brand",
-			categories: [
-				CategoryData(destination: ColorsView()		, label: "Colors"),
-				CategoryData(destination: TypographyView()	, label: "Typography"),
-			]
-		),
-		HomeData(
 			name: "Components",
 			categories: [
 				CategoryData(destination: AutocompleteView(), label: "Autocomplete"),
@@ -61,6 +47,20 @@ struct HomeView: View {
 				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
 			]
 		),
+		HomeData(
+			name: "Foundations",
+			categories: [
+				CategoryData(destination: LayoutView()		, label: "Layout"),
+				CategoryData(destination: ElevationsView()	, label: "Elevations & Shadow"),
+			]
+		),
+		HomeData(
+			name: "Brand",
+			categories: [
+				CategoryData(destination: ColorsView()		, label: "Colors"),
+				CategoryData(destination: TypographyView()	, label: "Typography"),
+			]
+		)
 	]
 	
 	@State var isShowingAllCategories: Bool = false

@@ -59,7 +59,7 @@
 		C4CE99C3272AE87500116FF8 /* ItemActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CE99C2272AE87500116FF8 /* ItemActionView.swift */; };
 		C4DAAAE9260A2A72004D966F /* AppInfos.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DAAAE8260A2A72004D966F /* AppInfos.swift */; };
 		C4DE27C225AFAD590051C763 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4DE27C125AFAD590051C763 /* ViewController.swift */; };
-		C4E34754274FA6150014CD76 /* HashtagsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E34753274FA6150014CD76 /* HashtagsView.swift */; };
+		C4E34754274FA6150014CD76 /* ItemVideoRecSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E34753274FA6150014CD76 /* ItemVideoRecSwiftUI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,7 +143,7 @@
 		C4CE99C2272AE87500116FF8 /* ItemActionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemActionView.swift; sourceTree = "<group>"; };
 		C4DAAAE8260A2A72004D966F /* AppInfos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfos.swift; sourceTree = "<group>"; };
 		C4DE27C125AFAD590051C763 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4E34753274FA6150014CD76 /* HashtagsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagsView.swift; sourceTree = "<group>"; };
+		C4E34753274FA6150014CD76 /* ItemVideoRecSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoRecSwiftUI.swift; sourceTree = "<group>"; };
 		C4EABFA925D587CF009CA4C6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CC2AC870F5106991A8E96CD1 /* Pods-heroes_rainbow.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-heroes_rainbow.release.xcconfig"; path = "Target Support Files/Pods-heroes_rainbow/Pods-heroes_rainbow.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,7 +192,7 @@
 		C406EB7E27341CF6007C025E /* War Room */ = {
 			isa = PBXGroup;
 			children = (
-				C4E34753274FA6150014CD76 /* HashtagsView.swift */,
+				C4E34753274FA6150014CD76 /* ItemVideoRecSwiftUI.swift */,
 				C4935D562754EBF300D6B07C /* HomeTestView.swift */,
 				C43F150E27737F250032399C /* InputTextView.swift */,
 				C48CE867277CA53D006A5B0F /* LoadingSuccessView.swift */,
@@ -619,7 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C496BD552729815C007ABCB9 /* ColorsView.swift in Sources */,
-				C4E34754274FA6150014CD76 /* HashtagsView.swift in Sources */,
+				C4E34754274FA6150014CD76 /* ItemVideoRecSwiftUI.swift in Sources */,
 				C406EB6F273309D7007C025E /* SubtitleView.swift in Sources */,
 				C46E3E2A27428BA5000F2EAD /* TabsView.swift in Sources */,
 				C45DB2232726B69900850CA1 /* TextGrid.swift in Sources */,

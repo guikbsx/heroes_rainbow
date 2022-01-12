@@ -645,6 +645,7 @@
 		C385BA9D84052634201998E23519C2D2 /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA273579A80AE891E5640313879BC0D /* CompatibleAnimationView.swift */; };
 		C40240155BF1E51FCAAF89329DD46C93 /* Debug.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E217D79110852D437C4347E8545B1DB /* Debug.swift */; };
 		C403D1392787162A005F8AE3 /* View Modifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403D1382787162A005F8AE3 /* View Modifier.swift */; };
+		C403D13F278D8743005F8AE3 /* ItemVideoRecSwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C403D13E278D8743005F8AE3 /* ItemVideoRecSwiftUI.swift */; };
 		C4F40071B0A6BEAD5D4397E43289FD71 /* SocketAnyEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7A0E21675377FA9C7386930FE4372B4 /* SocketAnyEvent.swift */; };
 		C52ECAA50E0EB67A97A420B48B5EAAF4 /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F15900F1A4DBFDF46CA164068168D82 /* InvertedMatteLayer.swift */; };
 		C60BE1FA828EA5AB3878B9908E2ACFDE /* BlurLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC27872D0A2A5F7CF6CAB2C73910A2AE /* BlurLayer.swift */; };
@@ -1809,6 +1810,7 @@
 		C3EA42DAF8064421413CBF37417DD364 /* ColorResource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorResource.swift; path = Library/Core/ColorResource.swift; sourceTree = "<group>"; };
 		C3F44C782D64D7EB20B61CE3844EBFAD /* Kingfisher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Kingfisher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C403D1382787162A005F8AE3 /* View Modifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Modifier.swift"; sourceTree = "<group>"; };
+		C403D13E278D8743005F8AE3 /* ItemVideoRecSwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemVideoRecSwiftUI.swift; sourceTree = "<group>"; };
 		C4E782DD80DFFDE38C4BA0AABD25FE45 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
 		C58491BAA83228EAF8CC952AFE581596 /* Pods-heroes_rainbowTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-heroes_rainbowTests-acknowledgements.plist"; sourceTree = "<group>"; };
 		C5A674D136D58B4A4B178FE58D6D08B5 /* CGContext+CGImage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGContext+CGImage.swift"; path = "Sources/DynamicBlurView/CGContext+CGImage.swift"; sourceTree = "<group>"; };
@@ -3466,6 +3468,7 @@
 			children = (
 				F7DD11E77AF46AEC7D0C2F4AB9E931A5 /* ItemVideoBar.swift */,
 				DEFACDECDFB7049B26782AFEDD6B2497 /* ItemVideoNotification.swift */,
+				C403D13E278D8743005F8AE3 /* ItemVideoRecSwiftUI.swift */,
 			);
 			path = "Item Video";
 			sourceTree = "<group>";
@@ -4820,6 +4823,7 @@
 				0CBACA9A43276B98D931C9C855B4DE95 /* RSwift+SwiftUI.swift in Sources */,
 				68399948AF9EAEF0FFA128657E501778 /* ScheduleEvents.swift in Sources */,
 				C7FEDE30696FA2B179E1C45BD95C03E0 /* ScheduleHandlerModel.swift in Sources */,
+				C403D13F278D8743005F8AE3 /* ItemVideoRecSwiftUI.swift in Sources */,
 				D0C259C08FCB0CEB5DC547E30A6EB4B8 /* SecondaryBtn.swift in Sources */,
 				7A8DDC7F0F891A947E42B680DABA1851 /* SocketEvents.swift in Sources */,
 				630E1EB3A3A8B4608A7839371B320658 /* SocketIOEvent.swift in Sources */,
