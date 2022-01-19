@@ -34,7 +34,7 @@ struct HomeView: View {
 				CategoryData(destination: SubtitleView()	, label: "Subtitle"),
 				CategoryData(destination: TabsView()		, label: "Tabs"),
 				CategoryData(destination: TheVoiceView()	, label: "The Voice"),
-				CategoryData(destination: TopBarView()		, label: "Top Bar"),
+				CategoryData(destination: TopBarView()		, label: "Top Bar", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Time Picker", disabled: true),
 			]
 		),

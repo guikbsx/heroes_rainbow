@@ -42,6 +42,7 @@ struct TopBarView: View {
 					Picker("Left", selection: $left) {
 						Text("None").tag(TopBarLeft.none)
 						Text("Back").tag(TopBarLeft.back)
+						Text("Back").tag(TopBarLeft.close)
 					}
 					.padding(.bottom)
 					
@@ -59,7 +60,6 @@ struct TopBarView: View {
 					Picker("Right", selection: $right) {
 						Text("None").tag(TopBarRight.none)
 						Text("Button").tag(TopBarRight.button)
-						Text("Close").tag(TopBarRight.close)
 					}
 					.padding(.bottom)
 					
