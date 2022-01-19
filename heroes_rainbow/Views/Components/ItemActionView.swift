@@ -10,7 +10,8 @@ struct ItemActionView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Item Action", isLoading: $isLoading)
 			content
-				.animation(.spring())
+				.animation(.spring(), value: withSubtitle)
+				.animation(.spring(), value: withLabel)
 			Spacer()
 		}
 		.navigationBarHidden(true)

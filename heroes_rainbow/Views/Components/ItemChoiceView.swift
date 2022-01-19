@@ -17,13 +17,16 @@ struct ItemChoiceView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
-	@State var selected: Bool = false
-	
+	@State var currentIndex: Int? = nil
+
 	var content: some View {
 		VStack {
 			ComponentContainer(title: "Item Choice", settings: {}, content: {
-				ItemChoiceSwiftUI(text: "This is your choice", selected: $selected, onTap: {
-				})
+				Group {
+					ItemChoiceSwiftUI(text: "Input name", index: 0, currentIndex: $currentIndex, onTap: {})
+					ItemChoiceSwiftUI(text: "This is a long input name that lives int two lines on an item", index: 1, currentIndex: $currentIndex, onTap: {})
+					ItemChoiceSwiftUI(text: "Athleta", subtitle: "255 Sutter ST, San Francisco, CA 94108, USA", index: 2, currentIndex: $currentIndex, onTap: {})
+				}
 				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}

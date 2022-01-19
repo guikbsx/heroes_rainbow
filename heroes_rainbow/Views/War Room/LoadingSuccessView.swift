@@ -5,12 +5,13 @@ enum LoadingSucessType {
 	case loading, success
 }
 
+@available(iOS 14.0, *)
 struct LoadingSuccessView: View {
 	
 	@State private var sliderValue: Double = 10
 	private let maxValue: Double = 100
 	
-	@State var type: LoadingSucessType
+	@State var type: LoadingSucessType = .success
 	
 	var body: some View {
 		ZStack {
@@ -34,7 +35,8 @@ struct LoadingSuccessView: View {
 	
 	var successView: some View {
 		VStack {
-			EmojicaLabelSwiftUI(text: "🎉", font: UIFont.boldSystemFont(ofSize: 70))
+			Image(emoji: "🎉")
+				.resizable()
 				.frame(width: 70, height: 70)
 			Text(" Love it! ")
 				.typography(.header3)
@@ -62,6 +64,7 @@ struct LoadingSuccessView: View {
 	}
 }
 
+@available(iOS 14.0, *)
 struct LoadingSuccessView_Previews: PreviewProvider {
     static var previews: some View {
 		LoadingSuccessView(type: .loading)

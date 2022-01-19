@@ -10,6 +10,13 @@ struct TopBarView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Top Bar", isLoading: $isLoading)
 			content
+				.animation(.spring(), value: left)
+				.animation(.spring(), value: middle)
+				.animation(.spring(), value: right)
+				.animation(.spring(), value: withAvatar)
+				.animation(.spring(), value: isBrand)
+				.animation(.spring(), value: elevation)
+				.animation(.spring(), value: caption)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -91,7 +98,6 @@ struct TopBarView: View {
 				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
-		.animation(.spring())
 	}
 }
 

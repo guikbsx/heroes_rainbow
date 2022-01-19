@@ -10,6 +10,10 @@ struct ItemNamingView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Item Naming", isLoading: $isLoading)
 			content
+				.animation(.spring(), value: withAvatar)
+				.animation(.spring(), value: isInfluencer)
+				.animation(.spring(), value: isShowingOnboarding)
+				.animation(.spring(), value: currentHashtag)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -62,7 +66,6 @@ struct ItemNamingView: View {
 				)
 				.redacted(reason: isLoading ? .placeholder : [])
 				.background(Color.grey500)
-				.animation(.spring())
 			})
 		}
 	}

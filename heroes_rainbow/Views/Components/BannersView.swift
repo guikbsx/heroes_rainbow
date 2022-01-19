@@ -8,7 +8,6 @@ struct BannersView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Banner")
 			content
-				.animation(.spring())
 		}
 		.navigationBarHidden(true)
 		.background(Color.white100.edgesIgnoringSafeArea(.all))

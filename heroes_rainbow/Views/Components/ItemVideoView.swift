@@ -1,6 +1,7 @@
 import SwiftUI
 import RainbowFWK
 
+@available(iOS 14.0, *)
 struct ItemVideoView: View {
 	var body: some View {
 		VStack(alignment: .leading) {
@@ -13,20 +14,23 @@ struct ItemVideoView: View {
 		.edgesIgnoringSafeArea(.bottom)
 	}
 	
+	@State var model = ItemVideoRecData(maxValue: 60)
+	
 	var content: some View {
 		VStack {
 			ComponentContainer(
-				title: "Item Videos",
+				title: "Item Videos Rec",
 				settings: {
-					
 				}, content: {
-					
+					ItemVideoRecSwiftUI()
+						.environmentObject(model)
 				}
 			)
 		}
 	}
 }
 
+@available(iOS 14.0, *)
 struct ItemVideoView_Previews: PreviewProvider {
     static var previews: some View {
         ItemVideoView()

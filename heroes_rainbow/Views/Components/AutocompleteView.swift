@@ -15,7 +15,7 @@ struct AutocompleteView: View {
 			}
 			.rainbowToggle()
 			content
-				.animation(.spring())
+				.animation(.spring(), value: currentIndex)
 			Spacer()
 		}
 		.navigationBarHidden(true)

@@ -30,7 +30,7 @@ struct AvatarView: View {
 			},
 			content: {
 				Avatar(size: 64, plus: plus)
-					.animation(.spring())
+					.animation(.spring(), value: plus)
 			}
 		)
 	}

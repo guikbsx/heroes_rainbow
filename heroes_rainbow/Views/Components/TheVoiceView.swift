@@ -10,6 +10,9 @@ struct TheVoiceView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "The Voice", isLoading: $isLoading)
 			content
+				.animation(.spring(), value: actualStep)
+				.animation(.spring(), value: notified)
+
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -50,7 +53,6 @@ struct TheVoiceView: View {
 				}
 			})
 		}
-		.animation(.spring())
 	}
 }
 

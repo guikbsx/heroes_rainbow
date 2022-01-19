@@ -10,6 +10,13 @@ struct ItemChatView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Item Chat", isLoading: $isLoading)
 			content
+				.animation(.spring(), value: withEmoji)
+				.animation(.spring(), value: withSubtitle)
+				.animation(.spring(), value: activeGrey)
+				.animation(.spring(), value: activeWhite)
+				.animation(.spring(), value: location)
+				.animation(.spring(), value: user)
+				.animation(.spring(), value: activeAppointmentMessage)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -101,7 +108,6 @@ struct ItemChatView: View {
 				.redacted(reason: isLoading ? .placeholder : [])
 			})
 		}
-		.animation(.spring())
 	}
 }
 

@@ -10,7 +10,11 @@ struct ButtonsView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Button", isLoading: $isLoading)
 			content
-				.animation(.spring())
+				.animation(.spring(), value: primaryState)
+				.animation(.spring(), value: secondaryType)
+				.animation(.spring(), value: withSubtitle)
+				.animation(.spring(), value: isFollowed)
+
 		}
 		.navigationBarHidden(true)
 		.background(Color.white100.edgesIgnoringSafeArea(.all))

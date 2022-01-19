@@ -31,7 +31,9 @@ struct BadgeView: View {
 				Badge(
 					icon: {
 						if isOn {
-							EmojicaLabelSwiftUI(text: "🏋️", font: .systemFont(ofSize: 12))
+							Image(emoji: "🥕")
+								.resizable()
+								.frame(width: 12, height: 12)
 						}
 					},
 					text: "Text"
