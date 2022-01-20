@@ -18,7 +18,7 @@ struct HomeView: View {
 				CategoryData(destination: CommentView()		, label: "Comment"),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider"),
-				CategoryData(destination: InputView()		, label: "Input"),
+				CategoryData(destination: InputView()		, label: "Input", isNew: true),
 				CategoryData(destination: ItemActionView()	, label: "Item Action"),
 				CategoryData(destination: Color.blue		, label: "Item Info", disabled: true),
 				CategoryData(destination: ItemChatView()	, label: "Item Chat", isNew: true),
@@ -50,6 +50,7 @@ struct HomeView: View {
 		HomeData(
 			name: "Foundations",
 			categories: [
+				CategoryData(destination: EmojiView()		, label: "Emojis", isNew: true),
 				CategoryData(destination: LayoutView()		, label: "Layout"),
 				CategoryData(destination: ElevationsView()	, label: "Elevations & Shadow"),
 			]

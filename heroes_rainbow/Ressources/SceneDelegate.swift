@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 		
         self.window = UIWindow(windowScene: windowScene)
 		if #available(iOS 14.0, *) {
-			let homeVC = UIHostingController(rootView: Text(emoji: "c'est un test 🤩", fontSize: 75).typography(.header1))
+			let homeVC = UIHostingController(rootView: HomeView())
 			self.window?.rootViewController = homeVC
 		} else {
 			let homeVC = UIHostingController(rootView: Text("you need an iPhone with iOS 14 to use this app.").typography(.subtitle))

@@ -20,9 +20,26 @@ struct InputView: View {
 	@State var inputChatTextViewText: String = ""
 	@State var isActive: Bool = true
 
+	@State var newDate: Date? = nil
+	@State var isValidBirthday: Bool = false
+	@State var elevationState: ElevationState = .default
 	
 	var content: some View {
 		VStack {
+			ComponentContainer(
+				title: "Input Birthday",
+				settings: {
+					VStack {
+						Toggle(isOn: $isValidBirthday, label: {
+							Text("Valid birthday").typography(.bodyXS)
+						}).disabled(true)
+						.animation(.spring(), value: isValidBirthday)
+					}
+				},
+				content: {
+					InputBirthdaySwiftUI(date: nil, isValidBirthday: $isValidBirthday, elevationState: $elevationState, newDate: $newDate)
+				})
+			
 			ComponentContainer(
 				title: "Text input",
 				settings: {
@@ -30,7 +47,7 @@ struct InputView: View {
 						Text("Unfocus").tag(InputTextState.unfocus)
 						Text("Focus").tag(InputTextState.focus)
 						Text("Error").tag(InputTextState.error)
-					}
+					}.disabled(true)
 				},
 				content: {
 					InputTextSwiftUI(
