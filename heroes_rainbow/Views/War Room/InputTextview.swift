@@ -1,195 +1,171 @@
 //import SwiftUI
+//import Kingfisher
 //import RainbowFWK
 //
-//public struct InputBirthdaySwiftUI: View {
+//public protocol ItemChatListDelegate: NSObject {
+//	func didTapSelector(model: ItemChatListModel)
+//}
+//
+//public struct ItemChatList: View {
 //	
-//	//	@State var date: Date? = nil
-//	@Binding var isValidBirthday: Bool
-//	@Binding var elevationState: ElevationState
+//	var model: ItemChatListModel
+//	var message: String
+//	var unread: Bool
+//	var isCompany: Bool
+//	weak var delegate: ItemChatListDelegate?
 //	
-//	@Binding var newDate: Date?
-//	@State var text: String
-//	
-//	var accentColor: Color {
-//		switch elevationState {
-//			case .default: return .clear
-//			case .error: return .red500
-//			case .focus: return .purple500
-//		}
-//	}
-//	
-//	public init(date: String?, isValidBirthday: Binding<Bool>, elevationState: Binding<ElevationState>, newDate: Binding<Date?>) {
-//		self._elevationState = elevationState
-//		self._isValidBirthday = isValidBirthday
-//		self._newDate = newDate
-//		if let date = date, date.count == 10  {
-//			// standardformat : "yyyy-MM-dd"
-//			let standardDateFormater = DateFormatter()
-//			standardDateFormater.dateFormat = "yyyy-MM-dd"
-//			// newFormat : "MMddyyyy
-//			let textDateFormater = DateFormatter()
-//			textDateFormater.dateFormat = "MMddyyyy"
-//			
-//			let standardDate = standardDateFormater.date(from: date)
-//			let textDate = textDateFormater.string(for: standardDate) ?? ""
-//			self._text = .init(initialValue: textDate)
-//		} else {
-//			self._text = .init(initialValue: "")
-//		}
+//	public init(model: ItemChatListModel, message: String, unread: Bool, isCompany: Bool = false, delegate: ItemChatListDelegate? = nil) {
+//		self.model = model
+//		self.message = message
+//		self.unread = unread
+//		self.delegate = delegate
+//		self.isCompany = isCompany
 //	}
 //	
 //	public var body: some View {
-//		content
-//			.onReceive(text.publisher.last()) { output in
-//				if self.text.count>8{ //set count as you want
-//					self.text = String(self.text.dropLast())
+//		VStack(spacing: 0) {
+//			HStack(spacing:8) {
+//				ZStack {
+//					KFImage(URL(string: model.candidate.avatar ?? ""))
+//						.placeholder {
+//							Avatar(size: 56)
+//						}
+//						.resizable()
+//						.aspectRatio(contentMode: .fill)
+//						.frame(width: 56, height: 56)
+//						.cornerRadius(28)
+//					ZStack {
+//						Circle()
+//							.fill(Color.white)
+//							.frame(width: 24, height: 24)
+//						Circle()
+//							.fill(Color.lightRedDS)
+//							.frame(width: 16, height: 16)
+//					}.offset(x: 20, y: -20)
+//					.opacity(unread ? 1 : 0)
+//					.animation(.spring(), value: unread)
 //				}
-//			}
-//			.valueChanged(value: text, onChange: { value in
-//				if text.count < 8 { isValidBirthday = false }
-//				
-//				let dateFormatter = DateFormatter()
-//				dateFormatter.dateFormat = "MMddyyyy"
-//				let hasfillMonth = text.count == 2
-//				let hasFillDay = text.count == 4
-//				let hasFillYear = text.count == 8
-//				
-//				if hasFillYear {
-//					if let newDate = dateFormatter.date(from: text) {
-//						let after1900 = dateFormatter.date(from: "01011990")
-//						if newDate.isInRange(date: after1900!, and: Date()) {
-//							withAnimation(.spring()) { elevationState = .focus }
-//							self.newDate = newDate
-//							self.isValidBirthday = true
-//						} else {
-//							withAnimation(.spring()) { elevationState = .error }
-//							self.isValidBirthday = false
+//				VStack(alignment: .leading, spacing: 0) {
+//					if !isCompany {
+//					Text(model.jobs.count == 1 ? model.jobs.first!.name.uppercased() : "TEAM MEMBER")
+//						.typography(.caption)
+//						.foregroundColor(.purple500)
+//					}
+//					HStack(alignment: .center) {
+//						Text(model.candidate.name)
+//							.typography(.subtitleS)
+//							.foregroundColor(.black)
+//						if isCompany {
+//							Circle().fill(Color.purple500)
+//								.frame(width: 16, height: 16)
+//								.offset(y: -1)
 //						}
 //					}
-//				} else if hasFillDay {
-//					if let _ = dateFormatter.date(from: "\(text)2016") {
-//						withAnimation(.spring()) { elevationState = .focus }
-//					} else {
-//						withAnimation(.spring()) { elevationState = .error }
-//					}
-//				} else if hasfillMonth {
-//					if let _ = dateFormatter.date(from:"\(text)152016") {
-//						withAnimation(.spring()) { elevationState = .focus }
-//					} else {
-//						withAnimation(.spring()) { elevationState = .error }
-//					}
+//					Text(message)
+//						.typography(.bodyXS)
+//						.foregroundColor(.blueGreyDS)
+//						.lineLimit(1)
 //				}
-//			})
-//			.onAppear {
-//				
-//			}
-//	}
-//	
-//	var content: some View {
-//		ZStack {
-//			VStack(alignment: .leading, spacing: 8) {
-//				HStack(spacing: 4) {
-//					HStack(spacing: 2) {
-//						NumberBirthdayView(index: 0, text: text, placeholder: "M", accentColor: accentColor, isFirst: true)
-//						NumberBirthdayView(index: 1, text: text, placeholder: "M", accentColor: accentColor)
-//					}
-//					Text("/").typography(.bodyXS).foregroundColor(.grey300)
-//					HStack(spacing: 2) {
-//						NumberBirthdayView(index: 2, text: text, placeholder: "D", accentColor: accentColor)
-//						NumberBirthdayView(index: 3, text: text, placeholder: "D", accentColor: accentColor)
-//					}
-//					Text("/").typography(.bodyXS).foregroundColor(.grey300)
-//					HStack(spacing: 2) {
-//						NumberBirthdayView(index: 4, text: text, placeholder: "Y", accentColor: accentColor)
-//						NumberBirthdayView(index: 5, text: text, placeholder: "Y", accentColor: accentColor)
-//						NumberBirthdayView(index: 6, text: text, placeholder: "Y", accentColor: accentColor)
-//						NumberBirthdayView(index: 7, text: text, placeholder: "Y", accentColor: accentColor)
-//					}
-//					Spacer()
-//				}
-//				.padding(.horizontal, 24)
-//				.padding(.vertical, 16)
-//				.background(
-//					Color.white
-//						.cornerRadius(36)
-//						.addBorder(accentColor, cornerRadius: 36)
-//						.elevation(style: .hills, state: elevationState)
-//				)
-//				if elevationState == .error {
-//					Text("Please enter a valid date.")
-//						.foregroundColor(.red500)
-//						.typography(.caption)
-//						.transition(.asymmetric(insertion: .move(edge: .bottom), removal: .move(edge: .top).combined(with: .opacity)))
+//				Spacer()
+//				if let _ = delegate {
+//					Button(action: { delegate?.didTapSelector(model: model) }, label: {
+//						Spacer()
+//							.frame(width: 20)
+//						VStack(spacing: 4) {
+//							Circle()
+//								.fill(Color.lightBlueGreyDS)
+//								.frame(width: 4, height: 4)
+//							Circle()
+//								.fill(Color.lightBlueGreyDS)
+//								.frame(width: 4, height: 4)
+//							Circle()
+//								.fill(Color.lightBlueGreyDS)
+//								.frame(width: 4, height: 4)
+//						}
+//						.frame(height: 50)
+//					})
 //				}
 //			}
-//			.padding(.horizontal, 20)
-//			.padding(.vertical, 8)
-//			
-//			TextField("Birthday", text: $text, onEditingChanged: { value in
-//				elevationState = value ? .focus : .default
-//			}, onCommit: {
-//				
-//			})
-//			.opacity(0.1)
-//			.foregroundColor(.clear)
-//			.colorMultiply(.clear)
-//			.keyboardType(.decimalPad)
-//			.padding(.horizontal, 40)
+//			.padding(.vertical, 16)
+//			Rectangle()
+//				.fill(Color.lightBlueGreyDS)
+//				.frame(height: 0.5)
 //		}
-//		
-//		
+//		.padding(.horizontal, 20)
 //	}
 //}
 //
-//struct NumberBirthdayView: View {
-//	var index: Int
-//	var text: String
-//	var placeholder: String
-//	var accentColor: Color
-//	var isFirst: Bool = false
-//	
-//	let timer = Timer.publish(every: 0.5, on: .main, in: .common).autoconnect()
-//	
-//	@State var isActive: Bool = false
-//	
-//	var isLastNumber: Bool {
-//		text.count == index + 1
-//	}
-//	
-//	var isEmpty: Bool {
-//		index == 0 && text[index].isEmpty
-//	}
-//	
-//	var info: String {
-//		if text[index] != "" {
-//			return text[index]
-//		} else {
-//			return placeholder
+//struct ItemChatList_Previews: PreviewProvider {
+//	static var previews: some View {
+//		Group {
+//			ItemChatList(
+//				model: ItemChatListModel(
+//					id: 0,
+//					candidate: ItemChatListCandidate(
+//						id: 0,
+//						name: "Nabile Chopin",
+//						avatar: ""
+//					),
+//					jobs: [.init(id: 0, name: "Back of house")],
+//					interviewDate: Date()),
+//				message: "Did you have more information ?",
+//				unread: false
+//			)
+//			ItemChatList(
+//				model: ItemChatListModel(
+//					id: 0,
+//					candidate: ItemChatListCandidate(
+//						id: 0,
+//						name: "Kaleb Aubuchon",
+//						avatar: "https://assets.heroes.jobs/users/119086/avatar1625771174.jpg"
+//					),
+//					jobs: [.init(id: 0, name: "Product Manager")],
+//					interviewDate: Date()),
+//				message: "I'm quiet nervous ... But I'm ready to give everything I have !",
+//				unread: false
+//			)
+//			ItemChatList(
+//				model: ItemChatListModel(
+//					id: 0,
+//					candidate: ItemChatListCandidate(
+//						id: 0,
+//						name: "Pantéa Négui",
+//						avatar: "https://static.wixstatic.com/media/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png/v1/fill/w_163,h_163,q_90/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png"
+//					),
+//					jobs: [.init(id: 0, name: "Product Manager")],
+//					interviewDate: Date()),
+//				message: "I love this jobs !",
+//				unread: true
+//			)
+//			ItemChatList(
+//				model: ItemChatListModel(
+//					id: 0,
+//					candidate: ItemChatListCandidate(
+//						id: 0,
+//						name: "Jozadak",
+//						avatar: "https://assets.heroes.jobs/medias/6084/1637227980488.png"
+//					),
+//					jobs: [],
+//					interviewDate: Date()),
+//				message: "I hope you like my last video !",
+//				unread: false,
+//				isCompany: true
+//			)
+//			ItemChatList(
+//				model: ItemChatListModel(
+//					id: 0,
+//					candidate: ItemChatListCandidate(
+//						id: 0,
+//						name: "Chiptole",
+//						avatar: "https://assets.heroes.jobs/medias/21/Chipotle_logo.jpg"
+//					),
+//					jobs: [],
+//					interviewDate: Date()),
+//				message: "This is the last message",
+//				unread: true,
+//				isCompany: true
+//			)
 //		}
-//	}
-//	
-//	var body: some View {
-//		ZStack(alignment: .bottom) {
-//			HStack(spacing: -5) {
-//				Rectangle()
-//					.fill(isEmpty ? accentColor : .clear)
-//					.frame(width: 2, height: 17)
-//				Text(info)
-//					.frame(width: 20)
-//					.typography(info != placeholder ? .subtitleXS : .bodyXS)
-//					.foregroundColor(info != placeholder ? .grey900 : .grey300)
-//				Rectangle()
-//					.fill(isLastNumber ? (isActive ? accentColor : .clear) : .clear)
-//					.frame(width: 2, height: 17)
-//			}
-//			Rectangle()
-//				.fill(Color.grey300)
-//				.frame(width: 10, height: 1)
-//				.offset(x: 0, y: -3)
-//		}
-//		.onReceive(timer, perform: { _ in
-//			withAnimation(.spring()) { isActive.toggle() }
-//		})
-//		
+//		.previewLayout(.sizeThatFits)
 //	}
 //}

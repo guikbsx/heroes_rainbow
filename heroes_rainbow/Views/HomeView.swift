@@ -13,8 +13,8 @@ struct HomeView: View {
 				CategoryData(destination: BannersView()		, label: "Banner"),
 				CategoryData(destination: BottomBarView()	, label: "Bottom Bar"),
 				CategoryData(destination: ButtonsView()		, label: "Button"),
-				CategoryData(destination: CardView()		, label: "Card"),
-				CategoryData(destination: ChatListView()	, label: "Chat List"),
+				CategoryData(destination: CardView()		, label: "Card", isNew: true),
+				CategoryData(destination: ChatListView()	, label: "Chat List", isNew: true),
 				CategoryData(destination: CommentView()		, label: "Comment"),
 				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
 				CategoryData(destination: DividerView()		, label: "Divider"),
@@ -95,22 +95,35 @@ struct HomeView: View {
 	
 	var scrollView: some View {
 		ScrollView {
-			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible()) ]
+			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible())]
 			
-//			HStack {
-//				Image(systemName: "hand.tap.fill")
-//					.foregroundColor(.purple500)
-//				Text("Added new functionality: taptic touch. Clicking on the button triggers haptic feedback.")
-//					.typography(.caption)
-//					.typography(.bodyXS)
-//					.foregroundColor(.grey500)
-//					.fixedSize(horizontal: false, vertical: true)
-//				Spacer()
-//			}
-//			.padding(12)
-//			.background(Color.grey100.cornerRadius(8))
-//			.padding(.horizontal, 20)
-//			.padding(.bottom)
+			HStack {
+				Image(systemName: "sun.max.fill")
+					.foregroundColor(.purple500)
+				Text("Hope you like all our hard work !")
+					.typography(.caption)
+					.typography(.bodyXS)
+					.foregroundColor(.grey500)
+					.fixedSize(horizontal: false, vertical: true)
+				Spacer()
+			}
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
+			.padding(.horizontal, 20)
+			
+			HStack {
+				Image(systemName: "face.dashed.fill")
+					.foregroundColor(.purple500)
+				Text("Added new foundation : emojis ! You can see all emoji with JoyPixel style. You'll see all emojis that isn't compatible with our converter. 🥺")
+					.typography(.caption)
+					.typography(.bodyXS)
+					.foregroundColor(.grey500)
+					.fixedSize(horizontal: false, vertical: true)
+				Spacer()
+			}
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
+			.padding(.horizontal, 20)
 			
 			ForEach(data.indices, id: \.self) { homeIndex in
 				let home = data[homeIndex]
@@ -125,13 +138,12 @@ struct HomeView: View {
 									TextGrid(category.label, isNew: category.isNew)
 								}
 							)
-							.frame(width: UIScreen.width / 2 - 28)
 							.disabled(category.disabled)
 							.opacity(category.disabled ? 0.25 : 1)
+							.buttonStyle(PlainButtonStyle())
 							
 						}
 					}
-					.padding(.bottom)
 				}
 			}
 			.padding(.horizontal, 20)

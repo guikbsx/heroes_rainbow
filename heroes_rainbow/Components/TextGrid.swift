@@ -12,28 +12,28 @@ struct TextGrid: View {
 	
 	var body: some View {
 		VStack {
-			if isNew {
-				Color.powerDS
-					.mask(
-						Image(systemName: "star.circle.fill")
-							.resizable()
-							.frame(width: 18, height: 18)
-					)
-					.frame(width: 18, height: 18)
-			}
+			
 			HStack {
-				Spacer()
-				
 				Text(label)
 					.typography(.subtitleXS)
-					.foregroundColor(.black)
-					.multilineTextAlignment(.center)
+					.foregroundColor(.grey900)
+					.multilineTextAlignment(.leading)
 					.lineLimit(2)
+//					.fixedSize()
 				Spacer()
+				if isNew {
+					Color.powerDS
+						.mask(
+							Image(systemName: "star.circle.fill")
+								.resizable()
+								.frame(width: 18, height: 18)
+						)
+						.frame(width: 18, height: 18)
+				}
 			}
 		}
 		.padding(16)
-		.frame(height: 80)
+		.frame(height: 60)
 		.background(Color.grey100)
 		.cornerRadius(16)
     }
@@ -41,11 +41,10 @@ struct TextGrid: View {
 
 struct TextGrid_Previews: PreviewProvider {
     static var previews: some View {
-		TextGrid("Layout")
-			.frame(width: UIScreen.width / 2 - 40)
+		TextGrid("Layout of body sunset")
 			.previewLayout(.sizeThatFits)
+			.frame(width: UIScreen.width / 3)
 		TextGrid("Layout", isNew: true)
-			.frame(width: UIScreen.width / 2 - 40)
 			.previewLayout(.sizeThatFits)
     }
 }
