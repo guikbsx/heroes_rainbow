@@ -7,12 +7,12 @@ struct HomeView: View {
 		HomeData(
 			name: "Components",
 			categories: [
-				CategoryData(destination: AutocompleteView(), label: "Autocomplete"),
+				CategoryData(destination: AutocompleteView(), label: "Autocomplete", isNew: true),
 				CategoryData(destination: AvatarView()		, label: "Avatar"),
 				CategoryData(destination: BadgeView()		, label: "Badge"),
-				CategoryData(destination: BannersView()		, label: "Banner"),
+				CategoryData(destination: BannersView()		, label: "Banner", isNew: true),
 				CategoryData(destination: BottomBarView()	, label: "Bottom Bar"),
-				CategoryData(destination: ButtonsView()		, label: "Button"),
+				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
 				CategoryData(destination: CardView()		, label: "Card", isNew: true),
 				CategoryData(destination: ChatListView()	, label: "Chat List", isNew: true),
 				CategoryData(destination: CommentView()		, label: "Comment"),
@@ -96,35 +96,21 @@ struct HomeView: View {
 	var scrollView: some View {
 		ScrollView {
 			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible())]
-			
-			HStack {
-				Image(systemName: "sun.max.fill")
-					.foregroundColor(.purple500)
-				Text("Hope you like all our hard work !")
-					.typography(.caption)
-					.typography(.bodyXS)
-					.foregroundColor(.grey500)
-					.fixedSize(horizontal: false, vertical: true)
-				Spacer()
-			}
-			.padding(12)
-			.background(Color.grey100.cornerRadius(8))
-			.padding(.horizontal, 20)
-			
-			HStack {
-				Image(systemName: "face.dashed.fill")
-					.foregroundColor(.purple500)
-				Text("Added new foundation : emojis ! You can see all emoji with JoyPixel style. You'll see all emojis that isn't compatible with our converter. 🥺")
-					.typography(.caption)
-					.typography(.bodyXS)
-					.foregroundColor(.grey500)
-					.fixedSize(horizontal: false, vertical: true)
-				Spacer()
-			}
-			.padding(12)
-			.background(Color.grey100.cornerRadius(8))
-			.padding(.horizontal, 20)
-			
+
+//			HStack {
+//				Image(systemName: "sun.max.fill")
+//					.foregroundColor(.purple500)
+//				Text("Hope you like all our hard work !")
+//					.typography(.caption)
+//					.typography(.bodyXS)
+//					.foregroundColor(.grey500)
+//					.fixedSize(horizontal: false, vertical: true)
+//				Spacer()
+//			}
+//			.padding(12)
+//			.background(Color.grey100.cornerRadius(8))
+//			.padding(.horizontal, 20)
+
 			ForEach(data.indices, id: \.self) { homeIndex in
 				let home = data[homeIndex]
 				DividerSwiftUI(text: home.name).padding(.horizontal, -16)

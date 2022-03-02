@@ -8,6 +8,7 @@ target 'heroes_rainbow' do
   # Pods for heroes_rainbow
 pod "lottie-ios"
 pod 'R.swift'
+pod 'Kingfisher', :git => 'https://github.com/onevcat/Kingfisher.git', :branch => 'version6-xcode13'
 pod 'RainbowFWK', :path => '../rainbow_fwk'
 
   target 'heroes_rainbowTests' do

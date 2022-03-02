@@ -11,21 +11,10 @@ struct BannersView: View {
 		}
 		.navigationBarHidden(true)
 		.background(Color.white100.edgesIgnoringSafeArea(.all))
-		.banner(
-			title: "Make sure your internet connection is stable.",
-			avatar: withAvatar ?  "https://taylordonato.com/wp-content/uploads/2020/10/Starbucks-Logo-1987.png" : nil,
-			type: type,
-			persistent: isPersistent,
-			closeBtn: withCloseBtn,
-			show: $isShowingBanner
-		) {
-			print("do something")
-		}
 	}
 	
 	@State var isShowingBanner: Bool = false
 
-	@State var isPersistent: Bool = true
 	@State var withAvatar: Bool = false
 	@State var withCloseBtn: Bool = false
 	@State var type: BannerType = .info
@@ -34,14 +23,11 @@ struct BannersView: View {
 		ScrollView {
 			ComponentContainer(title: "Banner", settings: {
 				VStack {
-					Toggle(isOn: $isPersistent, label: {
-						Text("Persistent").typography(.bodyXS)
+					Toggle(isOn: $withCloseBtn, label: {
+						Text("Close Button").typography(.bodyXS)
 					})
 					Toggle(isOn: $withAvatar, label: {
 						Text("Avatar").typography(.bodyXS)
-					})
-					Toggle(isOn: $withCloseBtn, label: {
-						Text("Close Button").typography(.bodyXS)
 					})
 					Picker("Type", selection: $type) {
 						Text("Info").tag(BannerType.info)
@@ -49,9 +35,14 @@ struct BannersView: View {
 					}
 				}
 			}, content: {
-				SecondaryBtn(type: .secondary, text: "Activate banner") {
-					isShowingBanner.toggle()
-				}
+				BannerView(
+					title: withAvatar ? "Pantéa Negui commented your video" : type == .info ? "Make sure your internet connection is stable." : "The code you entered is wrong. Please verify your sms and retry.",
+					avatar: withAvatar ? "https://static.wixstatic.com/media/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png/v1/fill/w_163,h_163,q_90/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png": nil,
+					image: nil,
+					type: type,
+					persistent: withCloseBtn,
+					closeBtn: withCloseBtn
+				)
 			})
 			
 		}

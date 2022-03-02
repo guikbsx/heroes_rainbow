@@ -25,8 +25,8 @@ struct CardView: View {
 					title: "Item Card",
 					settings: {},
 					content: {
-						ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
-						ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob2, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: {_ in })
+						ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: { })
+						ItemCard(model: ItemCardModel(id: 0, storeJob: storeJob2, store: store), onVideoTap: {}, onDescriptionTap: {}, onBookmarkTap: { })
 					}
 				)
 				ComponentContainer(

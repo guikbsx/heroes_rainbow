@@ -35,6 +35,7 @@ PODS:
   - UICircularProgressRing (8.0.0)
 
 DEPENDENCIES:
+  - Kingfisher (from `https://github.com/onevcat/Kingfisher.git`, branch `version6-xcode13`)
   - lottie-ios
   - R.swift
   - RainbowFWK (from `../rainbow_fwk`)
@@ -44,7 +45,6 @@ SPEC REPOS:
     - DynamicBlurView
     - Emojica
     - JTAppleCalendar
-    - Kingfisher
     - lottie-ios
     - PhoneNumberKit
     - PopupDialog
@@ -57,14 +57,22 @@ SPEC REPOS:
     - UICircularProgressRing
 
 EXTERNAL SOURCES:
+  Kingfisher:
+    :branch: version6-xcode13
+    :git: https://github.com/onevcat/Kingfisher.git
   RainbowFWK:
     :path: "../rainbow_fwk"
+
+CHECKOUT OPTIONS:
+  Kingfisher:
+    :commit: 5ecd8df18f1750efaa57d1b9623090156da01ef3
+    :git: https://github.com/onevcat/Kingfisher.git
 
 SPEC CHECKSUMS:
   DynamicBlurView: 58e18fae80bb614e34681a4486870e7d257b62e8
   Emojica: 97f8fd80445fe3014ba73637954c5a0e976cfa6b
   JTAppleCalendar: 932cadea40b1051beab10f67843451d48ba16c99
-  Kingfisher: 016c8b653a35add51dd34a3aba36b580041acc74
+  Kingfisher: 8b783c3d7be73a99b2172a743a5bc0a4dd331d79
   lottie-ios: 3a3758ef5a008e762faec9c9d50a39842f26d124
   PhoneNumberKit: 4ce83273551c4d2ae10b7361162f4283dd02835f
   PopupDialog: 720c92befd8bc23c13442254945213db5612f149
@@ -77,6 +85,6 @@ SPEC CHECKSUMS:
   SwiftDate: 72d28954e8e1c6c1c0f917ccc8005e4f83c7d4b2
   UICircularProgressRing: 19927375b2b21b5fa5fd9582f15ccdef9659da16
 
-PODFILE CHECKSUM: c9a0a0b29df311348b2bcd52f48aceaa4344eaf5
+PODFILE CHECKSUM: f1911c7c781cf1de3a57b47b682753fb594f8323
 
 COCOAPODS: 1.10.1

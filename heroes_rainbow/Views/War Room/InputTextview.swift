@@ -1,171 +1,203 @@
+////
+////  FlexiblePicker.swift
+////  FlexiblePickerExample
+////
+////  Created by Jędrzej Chołuj on 23/01/2022.
+////
+//
 //import SwiftUI
-//import Kingfisher
 //import RainbowFWK
 //
-//public protocol ItemChatListDelegate: NSObject {
-//	func didTapSelector(model: ItemChatListModel)
-//}
-//
-//public struct ItemChatList: View {
+//struct FlexiblePicker<T: Selectable>: View {
 //	
-//	var model: ItemChatListModel
-//	var message: String
-//	var unread: Bool
-//	var isCompany: Bool
-//	weak var delegate: ItemChatListDelegate?
+//	@Binding var inputData: [T]
 //	
-//	public init(model: ItemChatListModel, message: String, unread: Bool, isCompany: Bool = false, delegate: ItemChatListDelegate? = nil) {
-//		self.model = model
-//		self.message = message
-//		self.unread = unread
-//		self.delegate = delegate
-//		self.isCompany = isCompany
-//	}
+//	var fontWeight: FontWeight = .medium
+//	var fontSize: CGFloat = 14
+//	var spacing: CGFloat = 8
+//	var textPadding: CGFloat = 8
+//	var textColor: Color = .black
+//	var selectedColor: Color = .blue
+//	var notSelectedColor: Color = .clear
+//	var borderWidth: CGFloat = 2
+//	var borderColor: Color = .blue
+//	var alignment: HorizontalAlignment = .leading
+//	var cornerRadius: CGFloat = 10
+//	var isSelectable: Bool = true
 //	
-//	public var body: some View {
-//		VStack(spacing: 0) {
-//			HStack(spacing:8) {
-//				ZStack {
-//					KFImage(URL(string: model.candidate.avatar ?? ""))
-//						.placeholder {
-//							Avatar(size: 56)
-//						}
-//						.resizable()
-//						.aspectRatio(contentMode: .fill)
-//						.frame(width: 56, height: 56)
-//						.cornerRadius(28)
-//					ZStack {
-//						Circle()
-//							.fill(Color.white)
-//							.frame(width: 24, height: 24)
-//						Circle()
-//							.fill(Color.lightRedDS)
-//							.frame(width: 16, height: 16)
-//					}.offset(x: 20, y: -20)
-//					.opacity(unread ? 1 : 0)
-//					.animation(.spring(), value: unread)
-//				}
-//				VStack(alignment: .leading, spacing: 0) {
-//					if !isCompany {
-//					Text(model.jobs.count == 1 ? model.jobs.first!.name.uppercased() : "TEAM MEMBER")
-//						.typography(.caption)
-//						.foregroundColor(.purple500)
-//					}
-//					HStack(alignment: .center) {
-//						Text(model.candidate.name)
-//							.typography(.subtitleS)
-//							.foregroundColor(.black)
-//						if isCompany {
-//							Circle().fill(Color.purple500)
-//								.frame(width: 16, height: 16)
-//								.offset(y: -1)
+//	var body: some View {
+//		GeometryReader { geo in
+//			VStack(alignment: alignment, spacing: spacing) {
+//				ForEach(
+//					divideDataIntoLines(lineWidth: geo.size.width - 40)
+//						.map { (data: $0, id: UUID()) },
+//					id: \.id
+//				) { dataArray in
+//					Group {
+//						HStack(spacing: spacing) {
+//							ForEach(dataArray.data, id: \.id) { data in
+//								Button(action: { }) {
+//									
+//									Text(data.displayedName)
+//										.lineLimit(1)
+//										.foregroundColor(textColor)
+//										.typography(.subtitleXS)
+//										.padding(.horizontal, 8)
+//										.padding(.vertical, 2)
+//								}
+//								.background(
+//									data.isSelected
+//									? selectedColor.opacity(0.5)
+//									: notSelectedColor.opacity(0.5)
+//								)
+//								.cornerRadius(10)
+//								.disabled(!isSelectable)
+//								.overlay(RoundedRectangle(cornerRadius: 10)
+//											.stroke(borderColor, lineWidth: borderWidth))
+//							}
 //						}
 //					}
-//					Text(message)
-//						.typography(.bodyXS)
-//						.foregroundColor(.blueGreyDS)
-//						.lineLimit(1)
-//				}
-//				Spacer()
-//				if let _ = delegate {
-//					Button(action: { delegate?.didTapSelector(model: model) }, label: {
-//						Spacer()
-//							.frame(width: 20)
-//						VStack(spacing: 4) {
-//							Circle()
-//								.fill(Color.lightBlueGreyDS)
-//								.frame(width: 4, height: 4)
-//							Circle()
-//								.fill(Color.lightBlueGreyDS)
-//								.frame(width: 4, height: 4)
-//							Circle()
-//								.fill(Color.lightBlueGreyDS)
-//								.frame(width: 4, height: 4)
-//						}
-//						.frame(height: 50)
-//					})
 //				}
 //			}
-//			.padding(.vertical, 16)
-//			Rectangle()
-//				.fill(Color.lightBlueGreyDS)
-//				.frame(height: 0.5)
+//			.frame(width: geo.size.width - 40, height: calculateVStackHeight(width: geo.size.width))
 //		}
-//		.padding(.horizontal, 20)
+//	}
+//	
+//	private func updateSelectedData(with data: T) {
+//		guard let index = inputData.indices
+//				.first(where: { inputData[$0] == data }) else { return }
+//		inputData[index].isSelected.toggle()
+//	}
+//	
+//	private func divideDataIntoLines(lineWidth: CGFloat) -> [[T]] {
+//		let data = calculateWidths(for: inputData)
+//		var singleLineWidth = lineWidth
+//		var allLinesResult = [[T]]()
+//		var singleLineResult = [T]()
+//		var partialWidthResult: CGFloat = 0
+//		data.forEach { (selectableType, width) in
+//			partialWidthResult = singleLineWidth - width
+//			if partialWidthResult > 0 {
+//				singleLineResult.append(selectableType)
+//				singleLineWidth -= width
+//			} else {
+//				allLinesResult.append(singleLineResult)
+//				singleLineResult = [selectableType]
+//				singleLineWidth = lineWidth - width
+//			}
+//		}
+//		guard !singleLineResult.isEmpty else { return allLinesResult }
+//		allLinesResult.append(singleLineResult)
+//		return allLinesResult
+//	}
+//	
+//	private func calculateWidths(for data: [T]) -> [(value: T, width: CGFloat)] {
+//		return data.map { selectableType -> (T, CGFloat) in
+//			let font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight.uiFontWeight)
+//			let textWidth = selectableType.displayedName.getWidth(with: font)
+//			let width = [textPadding, textPadding, borderWidth, borderWidth, spacing]
+//				.reduce(textWidth, +)
+//			return (selectableType, width)
+//		}
+//	}
+//	
+//	private func calculateVStackHeight(width: CGFloat) -> CGFloat {
+//		let data = divideDataIntoLines(lineWidth: width)
+//		let font = UIFont.systemFont(ofSize: fontSize, weight: fontWeight.uiFontWeight)
+//		guard let textHeight = data.first?.first?.displayedName
+//				.getHeight(with: font) else { return 16 }
+//		let result = [textPadding, textPadding, borderWidth, borderWidth, spacing]
+//			.reduce(textHeight, +)
+//		return result * CGFloat(data.count)
 //	}
 //}
 //
-//struct ItemChatList_Previews: PreviewProvider {
-//	static var previews: some View {
-//		Group {
-//			ItemChatList(
-//				model: ItemChatListModel(
-//					id: 0,
-//					candidate: ItemChatListCandidate(
-//						id: 0,
-//						name: "Nabile Chopin",
-//						avatar: ""
-//					),
-//					jobs: [.init(id: 0, name: "Back of house")],
-//					interviewDate: Date()),
-//				message: "Did you have more information ?",
-//				unread: false
-//			)
-//			ItemChatList(
-//				model: ItemChatListModel(
-//					id: 0,
-//					candidate: ItemChatListCandidate(
-//						id: 0,
-//						name: "Kaleb Aubuchon",
-//						avatar: "https://assets.heroes.jobs/users/119086/avatar1625771174.jpg"
-//					),
-//					jobs: [.init(id: 0, name: "Product Manager")],
-//					interviewDate: Date()),
-//				message: "I'm quiet nervous ... But I'm ready to give everything I have !",
-//				unread: false
-//			)
-//			ItemChatList(
-//				model: ItemChatListModel(
-//					id: 0,
-//					candidate: ItemChatListCandidate(
-//						id: 0,
-//						name: "Pantéa Négui",
-//						avatar: "https://static.wixstatic.com/media/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png/v1/fill/w_163,h_163,q_90/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png"
-//					),
-//					jobs: [.init(id: 0, name: "Product Manager")],
-//					interviewDate: Date()),
-//				message: "I love this jobs !",
-//				unread: true
-//			)
-//			ItemChatList(
-//				model: ItemChatListModel(
-//					id: 0,
-//					candidate: ItemChatListCandidate(
-//						id: 0,
-//						name: "Jozadak",
-//						avatar: "https://assets.heroes.jobs/medias/6084/1637227980488.png"
-//					),
-//					jobs: [],
-//					interviewDate: Date()),
-//				message: "I hope you like my last video !",
-//				unread: false,
-//				isCompany: true
-//			)
-//			ItemChatList(
-//				model: ItemChatListModel(
-//					id: 0,
-//					candidate: ItemChatListCandidate(
-//						id: 0,
-//						name: "Chiptole",
-//						avatar: "https://assets.heroes.jobs/medias/21/Chipotle_logo.jpg"
-//					),
-//					jobs: [],
-//					interviewDate: Date()),
-//				message: "This is the last message",
-//				unread: true,
-//				isCompany: true
-//			)
+////struct FlexiblePicker_Previews: PreviewProvider {
+////	static var previews: some View {
+////		FlexiblePicker<SelectableModel>(inputData: .constant([]))
+////	}
+////}
+//
+//extension String {
+//	func getWidth(with font: UIFont) -> CGFloat {
+//		let fontAttributes = [NSAttributedString.Key.font: font]
+//		let size = self.size(withAttributes: fontAttributes)
+//		return size.width
+//	}
+//	
+//	func getHeight(with font: UIFont) -> CGFloat {
+//		let fontAttributes = [NSAttributedString.Key.font: font]
+//		let size = self.size(withAttributes: fontAttributes)
+//		return size.height
+//	}
+//}
+//
+//protocol Selectable: Identifiable, Hashable {
+//	var emoji: String { get }
+//	var displayedName: String { get }
+//	var isSelected: Bool { get set }
+//	
+//	init(emoji: String, displayedName: String)
+//}
+//
+//struct SelectableModel: Selectable, Identifiable {
+//	
+//	static func == (lhs: SelectableModel, rhs: SelectableModel) -> Bool {
+//		lhs.id == rhs.id
+//	}
+//	
+//	func hash(into hasher: inout Hasher) {
+//		hasher.combine(self.id)
+//	}
+//	
+//	var emoji: String
+//	var displayedName: String
+//	var isSelected: Bool
+//	let id: UUID = UUID()
+//	
+//	init(emoji: String, displayedName: String) {
+//		self.emoji = emoji
+//		self.displayedName = displayedName
+//		self.isSelected = false
+//	}
+//}
+//
+//enum FontWeight {
+//	case light
+//	case thin
+//	case medium
+//	case regular
+//	case semibold
+//	case bold
+//	case ultralight
+//	case heavy
+//	case black
+//	
+//	var swiftUIFontWeight: Font.Weight {
+//		switch self {
+//			case .light:            return .light
+//			case .thin:             return .thin
+//			case .medium:           return .medium
+//			case .regular:          return .regular
+//			case .semibold:         return .semibold
+//			case .bold:             return .bold
+//			case .ultralight:       return .ultraLight
+//			case .heavy:            return .heavy
+//			case .black:            return .black
 //		}
-//		.previewLayout(.sizeThatFits)
+//	}
+//	
+//	var uiFontWeight: UIFont.Weight {
+//		switch self {
+//			case .light:            return .light
+//			case .thin:             return .thin
+//			case .medium:           return .medium
+//			case .regular:          return .regular
+//			case .semibold:         return .semibold
+//			case .bold:             return .bold
+//			case .ultralight:       return .ultraLight
+//			case .heavy:            return .heavy
+//			case .black:            return .black
+//		}
 //	}
 //}

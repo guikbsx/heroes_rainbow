@@ -53,6 +53,7 @@ struct InputView: View {
 					InputTextSwiftUI(
 						text: $inputTextSwiftUIText,
 						state: $state,
+						contentType: .emailAddress,
 						disableAutocorrection: true,
 						placeholder: "Enter a mail"
 					)
