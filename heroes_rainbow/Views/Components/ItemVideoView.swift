@@ -22,7 +22,7 @@ struct ItemVideoView: View {
 				title: "Item Videos Rec",
 				settings: {
 				}, content: {
-					ItemVideoRecSwiftUI()
+					ItemVideoRec()
 						.environmentObject(model)
 				}
 			)

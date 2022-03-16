@@ -40,8 +40,8 @@ struct LoadingSuccessView: View {
 				.frame(width: 70, height: 70)
 			Text(" Love it! ")
 				.typography(.header3)
-			SubtitleSwiftUI(text: .constant("A Heroes team member will be in touch to help make your profile even better."))
-			PrimaryBtnSwiftUI(title: "Done", subtitle: nil, state: .constant(.enabled)) {
+			Subtitle(text: .constant("A Heroes team member will be in touch to help make your profile even better."))
+			PrimaryBtn(title: "Done", subtitle: nil, state: .constant(.enabled)) {
 				print("done")
 				withAnimation(.spring()) { type = .loading}
 			}
@@ -57,7 +57,7 @@ struct LoadingSuccessView: View {
 				   in: 0...maxValue)
 			Text("Posting...")
 				.typography(.header3)
-			SubtitleSwiftUI(text: .constant("2 mins remaining. Stay on this screen\nuntil it’s complete! "))
+			Subtitle(text: .constant("2 mins remaining. Stay on this screen\nuntil it’s complete! "))
 			Spacer()
 		}
 		.frame(width: UIScreen.width)

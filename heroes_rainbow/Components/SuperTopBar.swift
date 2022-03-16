@@ -26,7 +26,7 @@ struct SuperTopBar: View {
 			.fill(Color.purple500)
 			.edgesIgnoringSafeArea(.all)
 			.frame(height: 0)
-		TopBarSwiftUI(
+		TopBar(
 			component: .constant(.init(left: .back, middle: .none, right: .none)),
 			leftBtn: {
 				self.presentationMode.wrappedValue.dismiss()

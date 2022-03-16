@@ -30,7 +30,7 @@ struct ItemActionView: View {
 					Text("Subtitle").typography(.bodyXS)
 				})
 			}, content: {
-				ItemActionSwiftUI(image: {
+				ItemAction(image: {
 					Image(systemName: "airplane")
 						.resizable()
 						.aspectRatio(contentMode: .fit)

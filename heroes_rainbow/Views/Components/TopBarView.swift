@@ -10,13 +10,13 @@ struct TopBarView: View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Top Bar", isLoading: $isLoading)
 			content
-				.animation(.spring(), value: left)
+				.animation(.spring(), value: self.left)
 				.animation(.spring(), value: middle)
-				.animation(.spring(), value: right)
+				.animation(.spring(), value: self.right)
 				.animation(.spring(), value: withAvatar)
 				.animation(.spring(), value: isBrand)
-				.animation(.spring(), value: elevation)
 				.animation(.spring(), value: caption)
+				.animation(.spring(), value: theme)
 			Spacer()
 		}
 		.navigationBarHidden(true)
@@ -30,59 +30,80 @@ struct TopBarView: View {
 	
 	@State var withAvatar: Bool = true
 	@State var isBrand: Bool = true
-	@State var elevation: Bool = false
 	@State var caption: Bool = false
+	
+	@State var theme: TopBarTheme = .white
 
 	var content: some View {
 		VStack {
 			ComponentContainer(title: "Top Bar", settings: {
 				VStack(alignment: .leading) {
-					Text("Left")
-						.gilroyFont(style: .regular, size: 12, color: .grey400)
-					Picker("Left", selection: $left) {
-						Text("None").tag(TopBarLeft.none)
-						Text("Back").tag(TopBarLeft.back)
-						Text("Back").tag(TopBarLeft.close)
+					Group {
+						Text("Theme")
+							.gilroyFont(style: .regular, size: 12, color: .grey400)
+						Picker("Theme", selection: $theme) {
+							Text("White").tag(TopBarTheme.white)
+							Text("Dark").tag(TopBarTheme.dark)
+						}
+						.padding(.bottom)
 					}
-					.padding(.bottom)
 					
-					Text("Middle")
-						.gilroyFont(style: .regular, size: 12, color: .grey400)
-					Picker("Middle", selection: $middle) {
-						Text("None").tag(TopBarMiddle.none)
-						Text("Label").tag(TopBarMiddle.label)
-						Text("Chat").tag(TopBarMiddle.chat)
-					}
-					.padding(.bottom)
+					Group {
+						Text("Left")
+							.gilroyFont(style: .regular, size: 12, color: .grey400)
+						Picker("Left", selection: $left) {
+							Text("None").tag(TopBarLeft.none)
+							Text("Back").tag(TopBarLeft.back)
+							Text("Close").tag(TopBarLeft.close)
+						}
+						.padding(.bottom)
+					}.disabled(theme == .dark)
+
+					Group {
+						Text("Middle")
+							.gilroyFont(style: .regular, size: 12, color: .grey400)
+						Picker("Middle", selection: $middle) {
+							Text("None").tag(TopBarMiddle.none)
+							Text("Label").tag(TopBarMiddle.label)
+							Text("Chat").tag(TopBarMiddle.chat)
+						}
+						.padding(.bottom)
+					}.disabled(theme == .dark)
 					
-					Text("Right")
-						.gilroyFont(style: .regular, size: 12, color: .grey400)
-					Picker("Right", selection: $right) {
-						Text("None").tag(TopBarRight.none)
-						Text("Button").tag(TopBarRight.button)
-					}
-					.padding(.bottom)
+					Group {
+						Text("Right")
+							.gilroyFont(style: .regular, size: 12, color: .grey400)
+						Picker("Right", selection: $right) {
+							Text("None").tag(TopBarRight.none)
+							Text("Button").tag(TopBarRight.button)
+							Text("Option").tag(TopBarRight.option)
+						}
+						.padding(.bottom)
+					}.disabled(theme == .dark)
 					
-					Toggle(isOn: $withAvatar, label: {
-						Text("Avatar").typography(.bodyXS)
-					})
-					Toggle(isOn: $isBrand, label: {
-						Text("Brand").typography(.bodyXS)
-					})
-					Toggle(isOn: $caption, label: {
-						Text("Caption").typography(.bodyXS)
-					})
-					Toggle(isOn: $elevation, label: {
-						Text("Elevation").typography(.bodyXS)
-					})
+					Group {
+						Toggle(isOn: $withAvatar, label: {
+							Text("Avatar").typography(.bodyXS)
+						})
+						Toggle(isOn: $isBrand, label: {
+							Text("Brand").typography(.bodyXS)
+						})
+						Toggle(isOn: $caption, label: {
+							Text("Caption").typography(.bodyXS)
+						})
+					}.disabled(theme == .dark)
+
+					
 				}
 			}, content: {
-				TopBarSwiftUI(
-					component: .constant(.init(
-									left: left,
-									middle: middle,
-									right: right
-					)),
+				TopBar(
+					component: .constant(
+						.init(
+							left: left,
+							middle: middle,
+							right: right
+						)
+					),
 					leftBtn: {},
 					middleBtn: {},
 					rightBtn: {},
@@ -93,9 +114,16 @@ struct TopBarView: View {
 					subtitle: isBrand ? nil : "Barista",
 					caption: isBrand ? nil : caption ? "$15 / hour" : nil,
 					isBrand: isBrand,
-					elevation: elevation
+					theme: theme
 				)
 				.redacted(reason: isLoading ? .placeholder : [])
+				.background(theme == .white ? Color.clear : Color.black)
+				.onChange(of: theme) {
+					guard $0 == .dark else { return }
+					left = .close
+					middle = .none
+					right = .none
+				}
 			})
 		}
 	}

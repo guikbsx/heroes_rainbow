@@ -53,7 +53,7 @@ struct ItemNamingView: View {
 						.fixedSize(horizontal: false, vertical: true)
 						.padding(.top)
 				}
-				ItemNamingSocialSwiftUI(
+				ItemNamingSocial(
 					currentHashtag: $currentHashtag,
 					avatar: withAvatar ? "https://static.wixstatic.com/media/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png/v1/fill/w_163,h_163,q_90/4a9356_2f46a7b44e4d4a3ca99063979ec26f1a~mv2.png" : "",
 					name: "Pantéa Négui",

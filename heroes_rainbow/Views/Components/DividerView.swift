@@ -19,29 +19,38 @@ struct DividerView: View {
 	
 	var content: some View {
 		ScrollView {
-			ComponentContainer(title: "Divider", settings: {},
+			ComponentContainer(
+				title: "Divider",
+				settings: {},
 				content: {
-					DividerSwiftUI()
+					HeroesDivider()
 						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
-			ComponentContainer(title: "Divider variant 2", settings: {},
+			ComponentContainer(
+				title: "Divider variant 2",
+				settings: {},
+				
 				content: {
-					DividerSwiftUI(text: "or")
+					HeroesDivider(text: "or")
 						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
-			ComponentContainer(title: "Divider variant 3", settings: {},
+			ComponentContainer(
+				title: "Divider variant 3",
+				settings: {},
+				
 				content: {
-					DividerSwiftUI(text: "Divider indication")
+					HeroesDivider(text: "Divider indication")
 						.redacted(reason: isLoading ? .placeholder : [])
 				}
 			)
-			
-			ComponentContainer(title: "Divider variant 4", settings: {},
-							   content: {
-								DividerSwiftUI(category: true)
-							   }
+			ComponentContainer(
+				title: "Divider variant 4",
+				settings: {},
+				content: {
+					HeroesDivider(category: true)
+				}
 			)
 		}
 	}
@@ -49,7 +58,7 @@ struct DividerView: View {
 
 @available(iOS 14.0, *)
 struct DividerView_Previews: PreviewProvider {
-    static var previews: some View {
-        DividerView()
-    }
+	static var previews: some View {
+		DividerView()
+	}
 }

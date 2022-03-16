@@ -1,41 +1,46 @@
 import SwiftUI
 import RainbowFWK
+import SSToastMessage
+
 @available(iOS 14.0, *)
 struct HomeView: View {
 	
+	@State var isPresented: Bool = false
+
 	var data: [HomeData] = [
 		HomeData(
 			name: "Components",
 			categories: [
-				CategoryData(destination: AutocompleteView(), label: "Autocomplete", isNew: true),
-				CategoryData(destination: AvatarView()		, label: "Avatar"),
-				CategoryData(destination: BadgeView()		, label: "Badge"),
-				CategoryData(destination: BannersView()		, label: "Banner", isNew: true),
-				CategoryData(destination: BottomBarView()	, label: "Bottom Bar"),
-				CategoryData(destination: ButtonsView()		, label: "Button", isNew: true),
-				CategoryData(destination: CardView()		, label: "Card", isNew: true),
-				CategoryData(destination: ChatListView()	, label: "Chat List", isNew: true),
-				CategoryData(destination: CommentView()		, label: "Comment"),
-				CategoryData(destination: Color.blue		, label: "Date Picker", disabled: true),
-				CategoryData(destination: DividerView()		, label: "Divider"),
-				CategoryData(destination: InputView()		, label: "Input", isNew: true),
-				CategoryData(destination: ItemActionView()	, label: "Item Action"),
-				CategoryData(destination: Color.blue		, label: "Item Info", disabled: true),
-				CategoryData(destination: ItemChatView()	, label: "Item Chat", isNew: true),
-				CategoryData(destination: ItemChoiceView()	, label: "Item Choice", isNew: true),
-				CategoryData(destination: ItemNamingView()	, label: "Item Naming"),
-				CategoryData(destination: Color.blue		, label: "Item Rate", disabled: true),
-				CategoryData(destination: ItemVideoView()	, label: "Item Videos", isNew: true),
-				CategoryData(destination: LoaderView()		, label: "Loader"),
-				CategoryData(destination: MessagesView()	, label: "Message"),
-				CategoryData(destination: Color.blue		, label: "Menu Bar", disabled: true),
-				CategoryData(destination: NotificationView(), label: "Notification"),
-				CategoryData(destination: Color.blue		, label: "Profile Picker", disabled: true),
-				CategoryData(destination: SubtitleView()	, label: "Subtitle"),
-				CategoryData(destination: TabsView()		, label: "Tabs"),
-				CategoryData(destination: TheVoiceView()	, label: "The Voice"),
-				CategoryData(destination: TopBarView()		, label: "Top Bar", isNew: true),
-				CategoryData(destination: Color.blue		, label: "Time Picker", disabled: true),
+				CategoryData(destination: AutocompleteView(), label: "Autocomplete"		, isNew: false		),
+				CategoryData(destination: AvatarView()		, label: "Avatar"			, isNew: false		),
+				CategoryData(destination: BadgeView()		, label: "Badge"			, isNew: false		),
+				CategoryData(destination: BannersView()		, label: "Banner"			, isNew: false		),
+				CategoryData(destination: BottomBarView()	, label: "Bottom Bar"		, isNew: false		),
+				CategoryData(destination: ButtonsView()		, label: "Button"			, isNew: true		),
+				CategoryData(destination: CardView()		, label: "Card"				, isNew: false		),
+				CategoryData(destination: ChatListView()	, label: "Chat List"		, isNew: false		),
+				CategoryData(destination: CommentView()		, label: "Comment"			, isNew: false		),
+//				CategoryData(destination: Color.blue		, label: "Date Picker"		, isNew: true		),
+				CategoryData(destination: DividerView()		, label: "Divider"			, isNew: false		),
+				CategoryData(destination: InputView()		, label: "Input"			, isNew: false		),
+				CategoryData(destination: ItemActionView()	, label: "Item Action"		, isNew: false		),
+//				CategoryData(destination: Color.blue		, label: "Item Info"		, isNew: false		),
+				CategoryData(destination: ItemChatView()	, label: "Item Chat"		, isNew: false		),
+				CategoryData(destination: ItemNamingView()	, label: "Item Naming"		, isNew: false		),
+//				CategoryData(destination: Color.blue		, label: "Item Rate"		, isNew: true		),
+				CategoryData(destination: ItemVideoView()	, label: "Item Videos"		, isNew: false		),
+				CategoryData(destination: LoaderView()		, label: "Loader"			, isNew: false		),
+				CategoryData(destination: MessagesView()	, label: "Message"			, isNew: false		),
+//				CategoryData(destination: Color.blue		, label: "Menu Bar"			, isNew: true		),
+				CategoryData(destination: NotificationView(), label: "Notification"		, isNew: false		),
+//				CategoryData(destination: Color.blue		, label: "Profile Picker"	, isNew: true		),
+				CategoryData(destination: RadioView()		, label: "Radio"			, isNew: true		),
+				CategoryData(destination: SnackBarView()	, label: "Snack Bar"		, isNew: true		),
+				CategoryData(destination: SubtitleView()	, label: "Subtitle"			, isNew: false		),
+				CategoryData(destination: TabsView()		, label: "Tabs"				, isNew: false		),
+				CategoryData(destination: TheVoiceView()	, label: "The Voice"		, isNew: false		),
+				CategoryData(destination: TopBarView()		, label: "Top Bar"			, isNew: true		),
+//				CategoryData(destination: Color.blue		, label: "Time Picker"		, isNew: true		),
 			]
 		),
 		HomeData(
@@ -113,7 +118,7 @@ struct HomeView: View {
 
 			ForEach(data.indices, id: \.self) { homeIndex in
 				let home = data[homeIndex]
-				DividerSwiftUI(text: home.name).padding(.horizontal, -16)
+				HeroesDivider(text: home.name).padding(.horizontal, -16)
 				LazyVGrid(columns: vGridLayout) {
 					ForEach(home.categories.indices, id: \.self) { categoryIndex in
 						let category = home.categories[categoryIndex]

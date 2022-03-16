@@ -20,6 +20,7 @@ struct ButtonsView: View {
 		
 	}
 	
+	@State var primaryTheme: PrimaryBtnTheme = .white
 	@State var primaryState: PrimaryBtnState = .disabled
 	@State var withSubtitle: Bool = false
 	
@@ -42,6 +43,10 @@ struct ButtonsView: View {
 			ComponentContainer(title: "CTA — Primary Button",
 							   settings: {
 				VStack {
+					Picker("Theme", selection: $primaryTheme) {
+						Text("White").tag(PrimaryBtnTheme.white)
+						Text("Dark").tag(PrimaryBtnTheme.dark)
+					}
 					Picker("State", selection: $primaryState) {
 						Text("Disabled").tag(PrimaryBtnState.disabled)
 						Text("Enabled").tag(PrimaryBtnState.enabled)
@@ -54,8 +59,14 @@ struct ButtonsView: View {
 				}
 			},
 							   content: {
-				PrimaryBtnSwiftUI(title: "Next", subtitle: withSubtitle ? "This is a optional subtitle" : nil, state: $primaryState, onTap: {})
-					.background(Color.white)
+				PrimaryBtn(
+					title: "Next",
+					subtitle: withSubtitle ? "This is a optional subtitle" : nil,
+					theme: primaryTheme,
+					state: $primaryState,
+					onTap: {}
+				)
+					.background(primaryTheme == .white ? Color.white : Color.grey900)
 					.redacted(reason: isLoading ? .placeholder : [])
 			}
 			)

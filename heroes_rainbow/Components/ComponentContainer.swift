@@ -52,7 +52,7 @@ struct ComponentContainer_Previews: PreviewProvider {
 					Toggle(isOn: .constant(true), label: { Text("Label").typography(.bodyXS) })
 				},
 				content: {
-					PrimaryBtnSwiftUI(title: "Hello", subtitle: nil, state: .constant(.enabled))
+					PrimaryBtn(title: "Hello", subtitle: nil, state: .constant(.enabled))
 				}
 			)
 			.previewLayout(.sizeThatFits)
