@@ -10,10 +10,6 @@ struct AutocompleteView: View {
 	var body: some View {
 		VStack(alignment: .leading) {
 			SuperTopBar(category: "Components", title: "Autocomplete", isLoading: $isLoading)
-			VStack {
-				Toggle(isOn: $withSeparator, label: { Text("Separator").typography(.bodyXS) })
-			}
-			.rainbowToggle()
 			content
 				.animation(.spring(), value: currentIndex)
 			Spacer()
@@ -25,27 +21,56 @@ struct AutocompleteView: View {
 	
 	@State var currentIndex: Int? = nil
 	
+	@State var type: AutocompleteType = .address
+	@State var withImage: Bool = true
+	@State var withSubtitle: Bool = true
+	@State var separator: Bool = true
+
 	@State var isFollowed: Bool = false
 	@State var withAvatar: Bool = true
 	
 	var content: some View {
 		ScrollView {
 			ComponentContainer(
-				title: "Geoloc",
-				settings: {},
+				title: "Autocomplete",
+				settings: {
+					VStack {
+						Picker("Type", selection: $type) {
+							Text("Classic").tag(AutocompleteType.address)
+							Text("Geoloc").tag(AutocompleteType.geoloc)
+						}
+						Group {
+							Toggle(isOn: $withImage) { Text("Image").typography(.bodyXS) }
+							Toggle(isOn: $withSubtitle) { Text("Subtitle").typography(.bodyXS) }
+							Toggle(isOn: $separator) { Text("Separator").typography(.bodyXS) }
+						}
+						.disabled(type == .geoloc)
+					}
+				},
 				content: {
-					Autocomplete(index: 0, currentIndex: $currentIndex, onTap: {})
-						.redacted(reason: isLoading ? .placeholder : [])
+					Autocomplete(
+						type: type,
+						icon: {
+							if withImage {
+								Image(systemName: "airpods.gen3")
+							} else {
+								EmptyView()
+							}
+						},
+						title: "2044 Bridgerton Avenue",
+						subtitle: withSubtitle ? "Seattle, WA, USA" : "",
+						separator: separator,
+						index: 0,
+						currentIndex: $currentIndex,
+						onTap: {
+						
+						}
+					)
+					.redacted(reason: isLoading ? .placeholder : [])
+					.animation(.spring())
 				}
 			)
-			ComponentContainer(
-				title: "Address",
-				settings: {},
-				content: {
-					Autocomplete(title: "1 rue de Nice", subtitle: "Alforville, France", index: 1, currentIndex: $currentIndex, onTap: {})
-						.redacted(reason: isLoading ? .placeholder : [])
-				}
-			)
+
 			ComponentContainer(
 				title: "Contact List",
 				settings: {

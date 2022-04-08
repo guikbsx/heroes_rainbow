@@ -1,6 +1,5 @@
 import SwiftUI
 import RainbowFWK
-import SSToastMessage
 
 @available(iOS 14.0, *)
 struct HomeView: View {
@@ -11,7 +10,7 @@ struct HomeView: View {
 		HomeData(
 			name: "Components",
 			categories: [
-				CategoryData(destination: AutocompleteView(), label: "Autocomplete"		, isNew: false		),
+				CategoryData(destination: AutocompleteView(), label: "Autocomplete"		, isNew: true		),
 				CategoryData(destination: AvatarView()		, label: "Avatar"			, isNew: false		),
 				CategoryData(destination: BadgeView()		, label: "Badge"			, isNew: false		),
 				CategoryData(destination: BannersView()		, label: "Banner"			, isNew: false		),
@@ -96,25 +95,31 @@ struct HomeView: View {
 			)
 			.navigationBarHidden(true)
 		}
+		.toast(isPresented: $isActive, type: .toast, position: .bottom) {
+			SnackBar(label: "Test")
+		}
 	}
+	
+	@State var isActive: Bool = false
 	
 	var scrollView: some View {
 		ScrollView {
 			let vGridLayout = [ GridItem(.flexible()), GridItem(.flexible())]
 
-//			HStack {
-//				Image(systemName: "sun.max.fill")
-//					.foregroundColor(.purple500)
-//				Text("Hope you like all our hard work !")
-//					.typography(.caption)
-//					.typography(.bodyXS)
-//					.foregroundColor(.grey500)
-//					.fixedSize(horizontal: false, vertical: true)
-//				Spacer()
-//			}
-//			.padding(12)
-//			.background(Color.grey100.cornerRadius(8))
-//			.padding(.horizontal, 20)
+			HStack {
+				Image(systemName: "sun.max.fill")
+					.foregroundColor(.purple500)
+				Text("Hope you like all our hard work !")
+					.typography(.caption)
+					.typography(.bodyXS)
+					.foregroundColor(.grey500)
+					.fixedSize(horizontal: false, vertical: true)
+				Spacer()
+			}
+			.padding(12)
+			.background(Color.grey100.cornerRadius(8))
+			.padding(.horizontal, 20)
+
 
 			ForEach(data.indices, id: \.self) { homeIndex in
 				let home = data[homeIndex]
@@ -149,11 +154,19 @@ struct HomeView: View {
 
 
 @available(iOS 14.0, *)
-struct HomeView_Previews: PreviewProvider {
+class HomeView_Previews: PreviewProvider {
 	static var previews: some View {
 		HomeView()
 	}
+
+	#if DEBUG
+	@objc class func injected() {
+		UIApplication.shared.windows.first?.rootViewController =
+				UIHostingController(rootView: HomeView())
+	}
+	#endif
 }
+
 
 struct HomeData {
 	let name: String

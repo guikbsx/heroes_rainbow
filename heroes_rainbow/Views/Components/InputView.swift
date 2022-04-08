@@ -30,8 +30,26 @@ struct InputView: View {
 	@State var isValidDate: Bool = false
 	@State var elevationState2: ElevationState = .default
 	
+	//InputTextView
+	@State var activateMax: Bool = true
+	@State private var text: NSAttributedString = .init()
+	
 	var content: some View {
-		VStack {
+		ScrollView {
+			ComponentContainer(
+				title: "Input Date",
+				settings: {
+					VStack {
+						Toggle(isOn: $activateMax) {
+							Text("Activate maximum character (150)").typography(.body)
+						}
+					}
+				},
+				content: {
+					InputTextView($text, maximumCharacter: activateMax ? 150 : nil)
+						.placeholder("Add a placeholder here")
+				})
+			
 			ComponentContainer(
 				title: "Input Date",
 				settings: {
@@ -100,7 +118,6 @@ struct InputView: View {
 					}
 				}
 			)
-			.keyboardAdaptive()
 
 		}
 	}

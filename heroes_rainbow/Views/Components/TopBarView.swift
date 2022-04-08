@@ -40,7 +40,8 @@ struct TopBarView: View {
 				VStack(alignment: .leading) {
 					Group {
 						Text("Theme")
-							.gilroyFont(style: .regular, size: 12, color: .grey400)
+							.typography(.caption)
+							.foregroundColor(.grey500)
 						Picker("Theme", selection: $theme) {
 							Text("White").tag(TopBarTheme.white)
 							Text("Dark").tag(TopBarTheme.dark)
@@ -50,7 +51,8 @@ struct TopBarView: View {
 					
 					Group {
 						Text("Left")
-							.gilroyFont(style: .regular, size: 12, color: .grey400)
+							.typography(.caption)
+							.foregroundColor(.grey500)
 						Picker("Left", selection: $left) {
 							Text("None").tag(TopBarLeft.none)
 							Text("Back").tag(TopBarLeft.back)
@@ -61,7 +63,8 @@ struct TopBarView: View {
 
 					Group {
 						Text("Middle")
-							.gilroyFont(style: .regular, size: 12, color: .grey400)
+							.typography(.caption)
+							.foregroundColor(.grey500)
 						Picker("Middle", selection: $middle) {
 							Text("None").tag(TopBarMiddle.none)
 							Text("Label").tag(TopBarMiddle.label)
@@ -72,7 +75,8 @@ struct TopBarView: View {
 					
 					Group {
 						Text("Right")
-							.gilroyFont(style: .regular, size: 12, color: .grey400)
+							.typography(.caption)
+							.foregroundColor(.grey500)
 						Picker("Right", selection: $right) {
 							Text("None").tag(TopBarRight.none)
 							Text("Button").tag(TopBarRight.button)
