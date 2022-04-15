@@ -647,6 +647,7 @@
 		C414248727EB187300B363D7 /* SSToastMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414248427EB187300B363D7 /* SSToastMessage.swift */; };
 		C414248827EB187300B363D7 /* DispatchWorkHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414248527EB187300B363D7 /* DispatchWorkHolder.swift */; };
 		C414248927EB187300B363D7 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C414248627EB187300B363D7 /* MessageView.swift */; };
+		C4427CA228081967007BD4EA /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4427CA128081967007BD4EA /* SuccessView.swift */; };
 		C4949B349C31EDBCD37083182FC8F2A1 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9E1F8E97AB3BE12F88E1E3E05DA0B3 /* Compression.swift */; };
 		C551B710BDF14D3737C5338F8BD892FF /* Dematerialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2CCA63420B6A030AC211BE042B292A /* Dematerialize.swift */; };
 		C59A1FC311EFA53219F279FAE34E07AA /* UIResponder+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C784B975FB7B3EEBF7FA7F3736BAA2 /* UIResponder+Current.swift */; };
@@ -1844,6 +1845,7 @@
 		C414248427EB187300B363D7 /* SSToastMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SSToastMessage.swift; sourceTree = "<group>"; };
 		C414248527EB187300B363D7 /* DispatchWorkHolder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DispatchWorkHolder.swift; sourceTree = "<group>"; };
 		C414248627EB187300B363D7 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		C4427CA128081967007BD4EA /* SuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
 		C4C24ED83E6BA3147970588F58B4FBE7 /* DSString+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "DSString+Extensions.swift"; sourceTree = "<group>"; };
 		C4C58A1475BB6853875CC80429528A58 /* ItemVideoRec.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ItemVideoRec.swift; sourceTree = "<group>"; };
 		C4E782DD80DFFDE38C4BA0AABD25FE45 /* NSButton+Kingfisher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSButton+Kingfisher.swift"; path = "Sources/Extensions/NSButton+Kingfisher.swift"; sourceTree = "<group>"; };
@@ -3421,6 +3423,7 @@
 		A93156501958DA8A91F3988A7EC195F4 /* Organisms */ = {
 			isa = PBXGroup;
 			children = (
+				C4427CA028081955007BD4EA /* Success Page */,
 				CBF1128AA7F1207B3B2BB5680224735C /* Header Profile */,
 			);
 			name = Organisms;
@@ -3618,6 +3621,14 @@
 				C414248627EB187300B363D7 /* MessageView.swift */,
 			);
 			path = Toast;
+			sourceTree = "<group>";
+		};
+		C4427CA028081955007BD4EA /* Success Page */ = {
+			isa = PBXGroup;
+			children = (
+				C4427CA128081967007BD4EA /* SuccessView.swift */,
+			);
+			path = "Success Page";
 			sourceTree = "<group>";
 		};
 		C853B7FD9E7613B04C6908DA0A6D10C6 /* Support Files */ = {
@@ -5223,6 +5234,7 @@
 				289A65DE3CFCFB48F050C5B33C13817E /* ItemInfo.swift in Sources */,
 				1F4E8E6BE4435D36645B1BD852972F44 /* ItemNamingSocial.swift in Sources */,
 				1240301437E415C44357F99F242583EA /* ItemNamingSocialUIKit.swift in Sources */,
+				C4427CA228081967007BD4EA /* SuccessView.swift in Sources */,
 				E01289D64ABB8C9BB20775659F7FD3F6 /* ItemNav.swift in Sources */,
 				0C057C76B2065E3E039214B1272B7996 /* ItemNotificationTableViewCell.swift in Sources */,
 				5F9F4F26B1540492F73C547762621937 /* ItemVideoBar.swift in Sources */,

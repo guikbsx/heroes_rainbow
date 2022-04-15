@@ -48,7 +48,7 @@ struct HomeView: View {
 				CategoryData(destination: HeaderProfileView(), label: "Header Profile", isNew: true),
 				CategoryData(destination: Color.blue		, label: "Bottom Sheet", disabled: true),
 				CategoryData(destination: Color.blue		, label: "Modal", disabled: true),
-				CategoryData(destination: Color.blue		, label: "Success Page", disabled: true),
+				CategoryData(destination: SuccessPageView()	, label: "Success Page", isNew: true),
 			]
 		),
 		HomeData(
